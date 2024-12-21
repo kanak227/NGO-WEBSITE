@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page Load</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        .navbar button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .navbar button:hover {
+            background-color: #777;
+        }
+        #content {
+            margin-top: 10px;
+            width: 100%;
+            height: 90vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>My Website</h1>
+        <div>
+            <button onclick="loadPage('page1.html')">Load Page</button>
+            <button onclick="loadPage('donation.html')">Donation Page</button>
+        </div>
+    </div>
+    <iframe id="content" src="" title="Content Area"></iframe>
+
+    <script>
+        function loadPage(url) {
+            document.getElementById('content').src = url;
+        }
+    </script>
+</body>
+</html>

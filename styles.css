@@ -57,6 +57,7 @@
     /* background-color: violet; */
     height: 50px;
     display: flex;
+    justify-content: space-between;
 }
 .image{
     height: 40px;
@@ -92,6 +93,7 @@
     align-items: center;
     margin-top: 6px;
     margin-left: 160px;
+    margin-right: 50px;
 }
 
 

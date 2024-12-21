@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Causes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .container h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content .category {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #e63946;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .card-content .category.education {
+            background: #f77f00;
+        }
+        .card-content .category.shelter {
+            background: #e63946;
+        }
+        .card-content h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .card-content p {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            position: relative;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: #e63946;
+        }
+        .progress-bar span.education {
+            background: #f77f00;
+        }
+        .progress-bar span.shelter {
+            background: #e63946;
+        }
+        .load-more {
+            margin: 30px auto;
+            text-align: center;
+        }
+        .load-more button {
+            padding: 10px 20px;
+            background: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .load-more button:hover {
+            background: #c02634;
+        }
+        .newsletter {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 40px;
+        }
+        .newsletter p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .newsletter input {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            background: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .newsletter button:hover {
+            background: #e63946;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="subheading" style="font-size: 1.8rem; margin-bottom: 1px;">Trending causes</p>
+        <h1 style="margin-bottom: 70px; font-size: 2.6rem; margin-top: 15px;">We are always where other people need help</h1>
+        <div class="card-grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="card1.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category">Food & Water</span>
+                    <h3>Collect fund for drinking water & healthy food</h3>
+                    <p>65 days remaining</p>
+                    <div class="progress-bar"><span style="width: 85%;"></span></div>
+                    <p>Goal: $10,000</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="card2.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category education">Education</span>
+                    <h3>Give children a good education & better life</h3>
+                    <p>52 days remaining</p>
+                    <div class="progress-bar"><span class="education" style="width: 45%;"></span></div>
+                    <p>Goal: $7,000</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="card3.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category shelter">Home & Shelter</span>
+                    <h3>Collect fund for drinking water & healthy food</h3>
+                    <p>147 days remaining</p>
+                    <div class="progress-bar"><span class="shelter" style="width: 55%;"></span></div>
+                    <p>Goal: $25,000</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="card4.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category">Food & Water</span>
+                    <h3>Help provide clean water for communities</h3>
+                    <p>30 days remaining</p>
+                    <div class="progress-bar"><span style="width: 70%;"></span></div>
+                    <p>Goal: $8,000</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="card5.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category education">Education</span>
+                    <h3>Support literacy programs for children</h3>
+                    <p>90 days remaining</p>
+                    <div class="progress-bar"><span class="education" style="width: 60%;"></span></div>
+                    <p>Goal: $12,000</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="card6.png" alt="Cause Image">
+                <div class="card-content">
+                    <span class="category shelter">Home & Shelter</span>
+                    <h3>Build safe homes for families</h3>
+                    <p>120 days remaining</p>
+                    <div class="progress-bar"><span class="shelter" style="width: 40%;"></span></div>
+                    <p>Goal: $15,000</p>
+                </div>
+            </div>
+        </div>
+        <div class="load-more">
+            <button>Load more...</button>
+        </div>
+    </div>
+    <div class="newsletter">
+        <p>To get weekly & monthly news, subscribe to our newsletter.</p>
+        <form>
+            <input type="email" placeholder="Your email address">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</body>
+</html>
