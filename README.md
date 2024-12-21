@@ -23,6 +23,13 @@ Our NGO is dedicated to [insert your NGO's mission or cause, e.g., "empowering u
 
 ---
 
+## 🛠️ Technologies Used
+
+- **HTML**: For the structure of the website.
+- **CSS**: For styling and layout.
+
+---
+
 ## 📂 Project Structure  
 ```plaintext
 ├── index.html           # Homepage
