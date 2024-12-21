@@ -61,10 +61,8 @@ We welcome contributions to improve the website. If you'd like to contribute:
    ```bash
    git push origin feature-branch-name
    ```
-5. Create a pull request. 🔄  
-
-## License 📜
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+5. Create a pull request. 🔄
+   
 
 ## Acknowledgments 🙏
 - Inspiration from various NGO websites. 🌈  
