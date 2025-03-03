@@ -19,12 +19,7 @@ assignees: ""
 
 ## 📷 Mockups/Screenshots (if applicable)  
 <!-- Attach screenshots, wireframes, or diagrams to illustrate your idea. -->
-<details>
-  <summary>Click to expand</summary>
 
-  ![Mockup/Screenshot](image-url)
-
-</details>
 
 ## 🏆 Are You a Contributor in Any Program?  
 - [ ] Open Source Program (e.g., GSSoC, Hacktoberfest, SWOC)  
