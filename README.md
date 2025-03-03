@@ -46,22 +46,8 @@ ngo-website/
 2. Navigate through the pages using the menu. 🧭  
 3. Explore the NGO’s mission, projects, and contact options. 💡
 
-## Contribution Guidelines 🤝
-We welcome contributions to improve the website. If you'd like to contribute:  
-1. Fork the repository. 🍴  
-2. Create a new branch:  
-   ```bash
-   git checkout -b feature-branch-name
-   ```
-3. Make your changes and commit:  
-   ```bash
-   git commit -m "Add new feature or fix bug"
-   ```
-4. Push your changes:  
-   ```bash
-   git push origin feature-branch-name
-   ```
-5. Create a pull request. 🔄
+## 🤝 Contributing Guidelines
+We welcome contributions to **NGO-WEBSITE**! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated. Please read our [Contributing Guidelines](./CONTRIBUTING.md) to get started. 🚀
    
 
 ## Acknowledgments 🙏
