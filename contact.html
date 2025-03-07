@@ -207,32 +207,38 @@
       }
 
       .footer {
-        background-color: #222;
+        background-color: #333;
         color: #fff;
-        padding: 50px 20px;
-        font-family: "Poppins", sans-serif;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
       }
 
       .footer-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
         max-width: 1200px;
         margin: 0 auto;
-        text-align: center;
+      }
+
+      .footer-about,
+      .footer-links,
+      .footer-contact {
+        flex: 1;
+        min-width: 250px;
       }
 
       .footer h3 {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 15px;
-        color: #f8c100;
       }
 
       .footer p,
       .footer ul,
       .footer a {
-        font-size: 15px;
-        line-height: 1.8;
+        font-size: 14px;
+        line-height: 1.6;
         text-decoration: none;
         color: #ccc;
       }
@@ -243,41 +249,18 @@
       }
 
       .footer ul li {
-        margin-bottom: 12px;
-      }
-
-      .footer ul li a {
-        transition: color 0.3s ease-in-out;
+        margin-bottom: 10px;
       }
 
       .footer ul li a:hover {
-        color: #f8c100;
-      }
-
-      .footer-socials {
-        margin-top: 15px;
+        color: #fff;
       }
 
       .footer-socials a {
-        display: inline-block;
-        margin: 0 8px;
+        margin-right: 10px;
         color: #ccc;
         font-size: 18px;
-        transition: transform 0.3s, color 0.3s;
-      }
-
-      .footer-socials a:hover {
-        color: #f8c100;
-        transform: scale(1.1);
-      }
-
-      .footer-bottom {
-        text-align: center;
-        margin-top: 30px;
-        border-top: 1px solid #444;
-        padding-top: 15px;
-        font-size: 14px;
-        color: #bbb;
+        transition: color 0.3s;
       }
 
       .footer-socials a:hover {
@@ -363,38 +346,48 @@
         </form>
       </div>
     </div>
-
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>About Us</h3>
-                <p>We are committed to making a difference by helping those in need through our welfare initiatives.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="causes.html">Causes</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jagowelfare@gmail.com">jagowelfare@gmail.com</a></p>
-                <p>Phone: +123-456-7890</p>
-                <div class="footer-socials">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem et
+            commodi culpa facilis nostrum eum.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Jago Welfare. All Rights Reserved.</p>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Causes</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:example@example.com">jagowelfare@gmail.com</a>
+          </p>
+          <p>Phone: +123-456-7890</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
