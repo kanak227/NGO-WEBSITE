@@ -1,278 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events - NGO Awareness</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .header {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #e63946;
-            color: #fff;
-        }
-        .header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 20px auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-        .main-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .main-content img.header-image {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .main-content h1 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .main-content h2 {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .main-content h3 {
-            font-size: 18px;
-            color: #333;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .main-content p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        .image-grid img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .card p, .card a {
-            color: #555;
-            font-size: 14px;
-        }
-        .card a {
-            color: #e63946;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .card a:hover {
-            text-decoration: underline;
-        }
-        .register-btn {
-            display: block;
-            background: #e63946;
-            color: #fff;
-            text-align: center;
-            padding: 12px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: transform 0.3s ease;
-        }
-        .register-btn:hover {
-            transform: scale(1.05);
-        }
-        .newsletter {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-top: 20px;
-        }
-        .newsletter p {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-        .newsletter input {
-            padding: 10px;
-            width: 70%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-        .newsletter button {
-            padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        .newsletter button:hover {
-            background: #0056b3;
-        }
-        .map {
-            height: 200px;
-            background: url('https://via.placeholder.com/350x200') no-repeat center center/cover;
-            border-radius: 8px;
-        }
-        .organizers {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .organizer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .organizer img {
-            width: 60px;
-            height: 60px;
-            border-radius: 10%;
-            object-fit: cover;
-        }
-        .organizer .details {
-            font-size: 14px;
-        }
-        li::marker{
-            color: #e63946;
-        }
-        .list{
-            line-height: 40px;
-            color: #555;
-        }
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      .header {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #e63946;
+        color: #fff;
+      }
+      .header h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+      .main-content {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .main-content img.header-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      .main-content h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      .main-content h2 {
+        font-size: 20px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .main-content h3 {
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .main-content p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .image-grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .card p,
+      .card a {
+        color: #555;
+        font-size: 14px;
+      }
+      .card a {
+        color: #e63946;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .card a:hover {
+        text-decoration: underline;
+      }
+      .register-btn {
+        display: block;
+        background: #e63946;
+        color: #fff;
+        text-align: center;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: transform 0.3s ease;
+      }
+      .register-btn:hover {
+        transform: scale(1.05);
+      }
+      .newsletter {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-top: 20px;
+      }
+      .newsletter p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #555;
+      }
+      .newsletter input {
+        padding: 10px;
+        width: 70%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      .newsletter button {
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .newsletter button:hover {
+        background: #0056b3;
+      }
+      .map {
+        height: 200px;
+        background: url("https://via.placeholder.com/350x200") no-repeat center
+          center/cover;
+        border-radius: 8px;
+      }
+      .organizers {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .organizer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .organizer img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10%;
+        object-fit: cover;
+      }
+      .organizer .details {
+        font-size: 14px;
+      }
+      li::marker {
+        color: #e63946;
+      }
+      .list {
+        line-height: 40px;
+        color: #555;
+      }
+
+      .footer {
+        background-color: #222;
+        color: #fff;
+        padding: 50px 20px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .footer h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+        color: #f8c100;
+      }
+
+      .footer p,
+      .footer ul,
+      .footer a {
+        font-size: 15px;
+        line-height: 1.8;
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer ul li {
+        margin-bottom: 12px;
+      }
+
+      .footer ul li a {
+        transition: color 0.3s ease-in-out;
+      }
+
+      .footer ul li a:hover {
+        color: #f8c100;
+      }
+
+      .footer-socials {
+        margin-top: 15px;
+      }
+
+      .footer-socials a {
+        display: inline-block;
+        margin: 0 8px;
+        color: #ccc;
+        font-size: 18px;
+        transition: transform 0.3s, color 0.3s;
+      }
+
+      .footer-socials a:hover {
+        color: #f8c100;
+        transform: scale(1.1);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        border-top: 1px solid #444;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #bbb;
+      }
+
+      .footer-socials a:hover {
+        color: #fff;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #444;
+        padding-top: 10px;
+        font-size: 14px;
+        color: #aaa;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <h1>Events</h1>
+      <h1>Events</h1>
     </div>
     <div class="container">
-        <div class="main-content">
-            <img src="main.png" alt="Header Image" class="header-image">
-            <h1 style="font-size: 1.5rem; color: #e63946; margin-bottom: 6px;">#FoodCamp</h1>
-            <h2 style="font-size: 2.3rem; margin-top: 6px;">Healthy Food and Nutrition Awareness Campaign - December</h2>
-            <p>Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available but the majority.
-<br>
-<br>
-                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrang hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true.</p>
-            <h3 style="font-size: 1.7rem; color: #555;">We Want to Ensure Education for the Kids</h3>
-            <p>Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don't look even slightly believable.</p>
-            
-            <ul class="list">
-                <li><i class="fas fa-circle" ></i> Lorem ipsum dolor sit amet, cibo mundi ea duo, vim
-                    exerci phaedrum.</li>
-                <li><i class="fas fa-circle"></i> There are many variations of passages of Lorem Ipsum.
-                </li>
-                <li><i class="fas fa-circle"></i> Available but the majority have alteration in some
-                    injected or words.</li>
-                <li><i class="fas fa-circle"></i> There are many variations of passages of Lorem Ipsum
-                    which don't look even slightly
-                    believable.</li>
-            </ul>
-            <div class="image-grid">
-                <img src="event.png" alt="Event Image">
-                <img src="children.png" alt="Children Image">
-            </div>
-            <p style="margin-top: 30px;">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum. There are many variations of passages of Lorem Ipsum available, but the majority have alteration in some injected or words which don't look even slightly believable.</p>
+      <div class="main-content">
+        <img src="main.png" alt="Header Image" class="header-image" />
+        <h1 style="font-size: 1.5rem; color: #e63946; margin-bottom: 6px">
+          #FoodCamp
+        </h1>
+        <h2 style="font-size: 2.3rem; margin-top: 6px">
+          Healthy Food and Nutrition Awareness Campaign - December
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum.
+          There are many variations of passages of Lorem Ipsum available but the
+          majority.
+          <br />
+          <br />
+          If you are going to use a passage of Lorem Ipsum, you need to be sure
+          there isn't anything embarrang hidden in the middle of text. All the
+          Lorem Ipsum generators on the Internet tend to repeat predefined
+          chunks as necessary, making this the first true.
+        </p>
+        <h3 style="font-size: 1.7rem; color: #555">
+          We Want to Ensure Education for the Kids
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum.
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have alteration in some injected or words which don't
+          look even slightly believable.
+        </p>
+
+        <ul class="list">
+          <li>
+            <i class="fas fa-circle"></i> Lorem ipsum dolor sit amet, cibo mundi
+            ea duo, vim exerci phaedrum.
+          </li>
+          <li>
+            <i class="fas fa-circle"></i> There are many variations of passages
+            of Lorem Ipsum.
+          </li>
+          <li>
+            <i class="fas fa-circle"></i> Available but the majority have
+            alteration in some injected or words.
+          </li>
+          <li>
+            <i class="fas fa-circle"></i> There are many variations of passages
+            of Lorem Ipsum which don't look even slightly believable.
+          </li>
+        </ul>
+        <div class="image-grid">
+          <img src="event.png" alt="Event Image" />
+          <img src="children.png" alt="Children Image" />
+        </div>
+        <p style="margin-top: 30px">
+          Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci phaedrum.
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have alteration in some injected or words which don't
+          look even slightly believable.
+        </p>
+      </div>
+
+      <div class="sidebar">
+        <div class="card">
+          <h3>Event Details</h3>
+          <p><strong>Category:</strong> Food and Nutrition</p>
+          <p><strong>Location:</strong> 950 Green Hill Bronx, NY</p>
+          <p><strong>Date:</strong> 20 Dec, 2021</p>
+          <p><strong>Email:</strong> register@maildomain.com</p>
+          <p><strong>Phone:</strong> +880 123 456 789</p>
+          <a
+            href="#"
+            style="color: white; font-size: 1.2rem"
+            class="register-btn"
+            >Register</a
+          >
         </div>
 
-        <div class="sidebar">
-            <div class="card">
-                <h3>Event Details</h3>
-                <p><strong>Category:</strong> Food and Nutrition</p>
-                <p><strong>Location:</strong> 950 Green Hill Bronx, NY</p>
-                <p><strong>Date:</strong> 20 Dec, 2021</p>
-                <p><strong>Email:</strong> register@maildomain.com</p>
-                <p><strong>Phone:</strong> +880 123 456 789</p>
-                <a href="#" style="color: white; font-size: 1.2rem;" class="register-btn">Register</a>
-            </div>
+        <div class="card">
+          <h3>About the Campaign</h3>
+          <p>
+            Our goal is to raise awareness about nutrition and ensure every
+            child has access to healthy food. Join us in making a difference!
+          </p>
+        </div>
 
-            <div class="card">
-                <h3>About the Campaign</h3>
-                <p>Our goal is to raise awareness about nutrition and ensure every child has access to healthy food. Join us in making a difference!</p>
+        <div class="card">
+          <h3>Event Organizer</h3>
+          <div class="organizers">
+            <div class="organizer">
+              <img src="donor1.png" alt="Organizer" />
+              <div class="details">
+                <strong>Mike Richard</strong>
+                <p>Director</p>
+              </div>
             </div>
+            <div class="organizer">
+              <img src="donor2.png" alt="Organizer" />
+              <div class="details">
+                <strong>Jennifer Lawrence</strong>
+                <p>Entrepreneur</p>
+              </div>
+            </div>
+            <div class="organizer">
+              <img src="donor3.png" alt="Organizer" />
+              <div class="details">
+                <strong>David Jovan</strong>
+                <p>Manager</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            <div class="card">
-                <h3>Event Organizer</h3>
-                <div class="organizers">
-                    <div class="organizer">
-                        <img src="donor1.png" alt="Organizer">
-                        <div class="details">
-                            <strong>Mike Richard</strong>
-                            <p>Director</p>
-                        </div>
-                    </div>
-                    <div class="organizer">
-                        <img src="donor2.png" alt="Organizer">
-                        <div class="details">
-                            <strong>Jennifer Lawrence</strong>
-                            <p>Entrepreneur</p>
-                        </div>
-                    </div>
-                    <div class="organizer">
-                        <img src="donor3.png" alt="Organizer">
-                        <div class="details">
-                            <strong>David Jovan</strong>
-                            <p>Manager</p>
-                        </div>
-                    </div>
+        <div class="card">
+          <h3>Location Map</h3>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224176.69698534257!2d76.76037529453126!3d28.60694920000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bebddef3a4b%3A0xf7ea2f4af17a9076!2sAsha%20Foundation%20(NGO)%2C%20Best%20NGO%20in%20Delhi%20NCR%2CTop%20NGO%20in%20Delhi!5e0!3m2!1sen!2sin!4v1734764611463!5m2!1sen!2sin"
+              width="350"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="newsletter">
+          <p>To get weekly & monthly news, subscribe to our newsletter.</p>
+          <form>
+            <input type="email" placeholder="Your email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are committed to making a difference by helping those in need through our welfare initiatives.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="causes.html">Causes</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:jagowelfare@gmail.com">jagowelfare@gmail.com</a></p>
+                <p>Phone: +123-456-7890</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-
-            <div class="card">
-                <h3>Location Map</h3>
-                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224176.69698534257!2d76.76037529453126!3d28.60694920000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bebddef3a4b%3A0xf7ea2f4af17a9076!2sAsha%20Foundation%20(NGO)%2C%20Best%20NGO%20in%20Delhi%20NCR%2CTop%20NGO%20in%20Delhi!5e0!3m2!1sen!2sin!4v1734764611463!5m2!1sen!2sin" width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            </div>
-
-            <div class="newsletter">
-                <p>To get weekly & monthly news, subscribe to our newsletter.</p>
-                <form>
-                    <input type="email" placeholder="Your email address">
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
         </div>
-    </div>
-</body>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jago Welfare. All Rights Reserved.</p>
+        </div>
+    </footer>
+  </body>
 </html>
