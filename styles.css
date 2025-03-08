@@ -69,8 +69,8 @@
 
 /*for socials div*/
 .modalbtn {
-    margin-top: 6px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 .socials {
     display: flex;
@@ -134,11 +134,26 @@ header {
     justify-content: right;
     align-items: center;
     margin-top: 7px;
-    margin-left: 100px;
+    margin-left: 120px;
     margin-top: 10px;
 }
-
-
+.login-btn{
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 110px;
+}
+.login-btn:hover{
+    color: white;
+}
+.login-btn a {
+    text-decoration: none;
+    color: #e04444;
+}
+.login-btn a:hover{
+    color: white;
+}
 .mainbox {
     height: 630px;
     width: 100%;
