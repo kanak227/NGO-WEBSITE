@@ -206,7 +206,8 @@
                 <div class="login">
                     <button type="button" class="btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
                 </div>
-                <div class="rightitems">
+
+                <!--
                     <a href="https://www.facebook.com/?_rdr">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="socialssvg"
                             fill="currentColor" viewBox="0 0 16 16">
@@ -234,35 +235,39 @@
                         </svg>
                     </a>
                     <!-- Button trigger modal -->
+                <div>
+                   <a href="login.html"><button type="button" class="btn login-btn btn-outline-danger">Login</button></a>
+                </div>
+                <div>
                     <button type="button" class="btn btn-danger modalbtn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
                         Contact Info
                     </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Information</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Phone No : +9145673824</p>
+                                <p>Email : kanakverma325@gmail.com</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Information</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Phone No : +9145673824</p>
-                                    <p>Email : kanakverma325@gmail.com</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
         </div>
     </header>
     <div class="header">
