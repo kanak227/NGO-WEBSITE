@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 
+/*
 .upper{
     width: 100%;
     height: 30px;
     display: flex;
-    /* background-color: pink; */
     align-items: center;
     justify-content: space-between;
     align-items: center;
@@ -58,25 +58,42 @@
     gap: 35px;
     margin-bottom: 9px;
 }
+*/
+.rightitems {
+    margin-left: 40px;
+}
 .socialssvg {
     color: #000;
-    transition: all 0.5s ease-in;
+   
 }
-.socialssvg:hover {
-    color: #e04444;
-    transform: scale(1.2);
-}
-/*for socials div*/
 
+/*for socials div*/
+.modalbtn {
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .socials {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+.rightitems a svg {
+    margin: 15px;
+    margin-top: 20px;
+    
 }
 .lower{
     /* background-color: violet; */
-    height: 50px;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
+    
+    
+}
+
+header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
 }
 .image{
     height: 40px;
@@ -84,6 +101,7 @@
     align-items: center;
     gap: 10px;
     margin-right: 200px;
+    margin-top: 7px;
 }
 .image img{
     height: 50px;
@@ -106,21 +124,18 @@
 .navbar a{
      text-decoration: none;
      color: black;
-     transition: all 0.5s ease-in;
+   
      font-weight: 400;
 }
 
-.navbar a:hover {
-    color: #e04444;
-    transform: scale(1.1);
-}
+
 
 .login{
     justify-content: right;
     align-items: center;
     margin-top: 6px;
-    margin-left: 160px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-top: 10px;
 }
 
 
