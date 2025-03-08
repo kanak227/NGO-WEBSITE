@@ -303,14 +303,110 @@
             </div>
             <!-- Contact Form -->
             <div class="form-box">
-                <form>
-                    <input type="text" placeholder="Your full name*" required>
-                    <input type="email" placeholder="Your email address*" required>
-                    <input type="text" placeholder="Subject*" required>
-                    <textarea placeholder="Message*" required></textarea>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your full name*" required>
+                    <span class="error" id="nameError"></span>
+            
+                    <input type="email" id="email" placeholder="Your email address*" required>
+                    <span class="error" id="emailError"></span>
+            
+                    <input type="text" id="subject" placeholder="Subject*" required>
+                    <span class="error" id="subjectError"></span>
+            
+                    <textarea id="message" placeholder="Message*" required></textarea>
+                    <span class="error" id="messageError"></span>
+            
                     <button type="submit">Send message</button>
                 </form>
             </div>
+            
+            <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("contactForm");
+                const nameInput = document.getElementById("name");
+                const emailInput = document.getElementById("email");
+                const subjectInput = document.getElementById("subject");
+                const messageInput = document.getElementById("message");
+            
+                const nameError = document.getElementById("nameError");
+                const emailError = document.getElementById("emailError");
+                const subjectError = document.getElementById("subjectError");
+                const messageError = document.getElementById("messageError");
+            
+                function validateName() {
+                    const nameRegex = /^[A-Za-z\s]+$/;
+                    if (!nameRegex.test(nameInput.value)) {
+                        nameError.textContent = "Only alphabets and spaces allowed!";
+                        nameInput.style.borderColor = "red";
+                        return false;
+                    } else {
+                        nameError.textContent = "";
+                        nameInput.style.borderColor = "green";
+                        return true;
+                    }
+                }
+            
+                function validateEmail() {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailInput.value)) {
+                        emailError.textContent = "Enter a valid email address!";
+                        emailInput.style.borderColor = "red";
+                        return false;
+                    } else {
+                        emailError.textContent = "";
+                        emailInput.style.borderColor = "green";
+                        return true;
+                    }
+                }
+            
+                function validateSubject() {
+                    if (subjectInput.value.trim() === "") {
+                        subjectError.textContent = "Subject is required!";
+                        subjectInput.style.borderColor = "red";
+                        return false;
+                    } else {
+                        subjectError.textContent = "";
+                        subjectInput.style.borderColor = "green";
+                        return true;
+                    }
+                }
+            
+                function validateMessage() {
+                    if (messageInput.value.trim() === "") {
+                        messageError.textContent = "Message cannot be empty!";
+                        messageInput.style.borderColor = "red";
+                        return false;
+                    } else {
+                        messageError.textContent = "";
+                        messageInput.style.borderColor = "green";
+                        return true;
+                    }
+                }
+            
+                // Real-time validation
+                nameInput.addEventListener("input", validateName);
+                emailInput.addEventListener("input", validateEmail);
+                subjectInput.addEventListener("input", validateSubject);
+                messageInput.addEventListener("input", validateMessage);
+            
+                form.addEventListener("submit", function (event) {
+                    if (!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
+                        event.preventDefault(); // Prevent form submission if validation fails
+                        alert("Please fix the errors before submitting!");
+                    }
+                });
+            });
+            </script>
+            
+            <style>
+                .error {
+                    color: red;
+                    font-size: 14px;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            </style>
+            
         </div>
         <div class="info-section">
             <div class="info-card" style="background-color: rgb(231, 204, 204)">
