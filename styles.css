@@ -10,6 +10,8 @@
     display: flex;
     /* background-color: pink; */
     align-items: center;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: solid azure 0.1px;
 }
 .leftitems{
@@ -17,7 +19,7 @@
     margin-left: 80px;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     margin-top: 5px;
     gap: 40px;
 }
@@ -25,24 +27,28 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 80px;
 }
 .email p{
     margin-top: 8px;
 }
 .email svg{
     margin-bottom: 5px;
+    color: #e04444;
 }
 
 .call{
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-right: 100px;
 }
 .call p{
     margin-top: 8px;
 }
 .call svg{
     margin-bottom: 3px;
+    color: #e04444;
 }
 
 .rightitems{
@@ -52,7 +58,20 @@
     gap: 35px;
     margin-bottom: 9px;
 }
+.socialssvg {
+    color: #000;
+    transition: all 0.5s ease-in;
+}
+.socialssvg:hover {
+    color: #e04444;
+    transform: scale(1.2);
+}
+/*for socials div*/
 
+.socials {
+    display: flex;
+    flex-direction: row;
+}
 .lower{
     /* background-color: violet; */
     height: 50px;
@@ -64,7 +83,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 270px;
+    margin-right: 200px;
 }
 .image img{
     height: 50px;
@@ -74,18 +93,26 @@
 .image p{
     margin-top: 20px;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .navbar{
      gap: 60px;
      justify-content: center;
      align-items: center;
+     margin-left: -10px;
 }
 
 .navbar a{
      text-decoration: none;
      color: black;
+     transition: all 0.5s ease-in;
+     font-weight: 400;
+}
+
+.navbar a:hover {
+    color: #e04444;
+    transform: scale(1.1);
 }
 
 .login{
