@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+   
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 460px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background-color: whitesmoke;
+    color: #212121;
+    border: 1px solid #333;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #d30073;
+  }
+
+  .title::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #d30073;
+  }
+
+  .message,
+  .signin {
+    font-size: 14.5px;
+    color: #333;
+  }
+
+  .signin {
+    text-align: center;
+  }
+
+  .signin a:hover {
+    text-decoration: underline green;
+  }
+
+  .signin a {
+    color: #d30073;
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .form label {
+    position: relative;
+  }
+
+  .form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+
+  .form label .input+span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+
+  .form label .input:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+  }
+
+  .form label .input:focus+span,
+  .form label .input:valid+span {
+    color: #d30073;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .input {
+    font-size: medium;
+  }
+
+  .submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #d30073;
+    font-size: 16px;
+    transform: 0.3s ease;
+    background-color: whitesmoke;
+    border: 1px solid #d30073;
+  }
+
+  .submit:hover {
+    background-color: #d30073;
+    color: whitesmoke;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  .lastname {
+    margin-left: 20px;
+  }
+</style>
+
+<body>
+  <!-- From Uiverse.io by marc_remus -->
+  <form class="form">
+    <p class="title">Register</p>
+     
+    <div class="flex">
+      <label>
+        <input required="" placeholder="" type="text" class="input" />
+        <span>Firstname</span>
+      </label>
+
+      <label class="lastname">
+        <input required="" placeholder="" type="text" class="input" />
+        <span>Lastname</span>
+      </label>
+    </div>
+
+    <label>
+      <input required="" placeholder="" type="email" class="input" />
+      <span>Email</span>
+    </label>
+
+    <label>
+      <input required="" placeholder="" type="password" class="input" />
+      <span>Password</span>
+    </label>
+    <label>
+      <input required="" placeholder="" type="password" class="input" />
+      <span>Confirm password</span>
+    </label>
+    <button class="submit">Submit</button>
+    <p class="signin">Already have an acount ? <a href="login.html">Sign In</a></p>
+
+    
+  </form>
+
+</body>
+
+</html>
