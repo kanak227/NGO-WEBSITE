@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
+/*
 .upper{
     width: 100%;
     height: 30px;
     display: flex;
-    /* background-color: pink; */
+    align-items: center;
+    justify-content: space-between;
     align-items: center;
     border-bottom: solid azure 0.1px;
 }
@@ -17,7 +19,7 @@
     margin-left: 80px;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     margin-top: 5px;
     gap: 40px;
 }
@@ -25,24 +27,28 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: 80px;
 }
 .email p{
     margin-top: 8px;
 }
 .email svg{
     margin-bottom: 5px;
+    color: #e04444;
 }
 
 .call{
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-right: 100px;
 }
 .call p{
     margin-top: 8px;
 }
 .call svg{
     margin-bottom: 3px;
+    color: #e04444;
 }
 
 .rightitems{
@@ -52,19 +58,50 @@
     gap: 35px;
     margin-bottom: 9px;
 }
+*/
+.rightitems {
+    margin-left: 40px;
+}
+.socialssvg {
+    color: #000;
+   
+}
 
+/*for socials div*/
+.modalbtn {
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.rightitems a svg {
+    margin: 15px;
+    margin-top: 20px;
+    
+}
 .lower{
     /* background-color: violet; */
-    height: 50px;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
+    
+    
+}
+
+header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
 }
 .image{
     height: 40px;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 270px;
+    margin-right: 200px;
+    margin-top: 7px;
 }
 .image img{
     height: 50px;
@@ -74,26 +111,31 @@
 .image p{
     margin-top: 20px;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .navbar{
      gap: 60px;
      justify-content: center;
      align-items: center;
+     margin-left: -10px;
 }
 
 .navbar a{
      text-decoration: none;
      color: black;
+   
+     font-weight: 400;
 }
+
+
 
 .login{
     justify-content: right;
     align-items: center;
-    margin-top: 6px;
-    margin-left: 160px;
-    margin-right: 50px;
+    margin-top: 7px;
+    margin-left: 100px;
+    margin-top: 10px;
 }
 
 
