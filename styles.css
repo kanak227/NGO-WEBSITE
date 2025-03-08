@@ -142,8 +142,10 @@ header {
     align-items: center;
     margin-top: 10px;
     margin-left: 20px;
-   width: 110px;
-   color: white;
+    width: 110px;
+}
+.login-btn:hover{
+    color: white;
 }
 .login-btn a {
     text-decoration: none;
