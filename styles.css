@@ -114,18 +114,41 @@ header {
     font-size: 1.1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar{
-     gap: 60px;
-     justify-content: center;
-     align-items: center;
-     margin-left: -10px;
+.navbar {
+    display: flex;
+    gap: 20px; /* Adjust spacing between items */
 }
 
-.navbar a{
-     text-decoration: none;
-     color: black;
-   
-     font-weight: 400;
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    position: relative;
+    padding: 10px 15px; /* Adds some padding for better spacing */
+    display: inline-block; /* Ensures the underline stays within each item */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Ensures the line appears below each navbar item */
+    width: 100%;
+    height: 2px;
+    background: red;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: red;
+    /* scale: 1.2; */
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1); /* Expands fully on hover */
 }
 
 
