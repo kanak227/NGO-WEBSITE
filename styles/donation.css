@@ -1,0 +1,228 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f8fa;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+header span {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.donation-form {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.donation-form h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.donation-form .form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.donation-form input, .donation-form textarea, .donation-form select {
+  width: calc(50% - 10px);
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #ffe6f0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-form input:hover, .donation-form textarea:hover {
+  background-color: #ffd9e8;
+  box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
+}
+
+.donation-form input.full-width, .donation-form textarea {
+  width: 100%;
+}
+
+.donation-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.donation-form .payment-options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.donation-form .payment-options img {
+  width: 80px;
+  height: auto;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.donation-form button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.donation-form button:hover {
+  background-color: #d1283b;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.sidebar .card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar .card ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar .card ul li {
+  margin-bottom: 8px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .card ul li img {
+  width: 70px;
+  height: 70px;
+  /* border-radius: 50%; */
+  margin-right: 10px;
+}
+
+.sidebar .project-organizer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.sidebar .project-organizer strong {
+  display: block;
+  color: #333;
+}
+
+.progress-bar {
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar div {
+  width: 85%;
+  background: #e63946;
+  height: 100%;
+}
+
+.footer {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.footer input:hover {
+  background-color: #ffe6f0;
+}
+
+.footer button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer button:hover {
+  background-color: #d1283b;
+}
+
+.footer .links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer .links div {
+  margin: 10px 0;
+}
+
+.footer .links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 5px;
+}
+
+.footer .links a:hover {
+  color: #e63946;
+}
+
+.bottom-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f7f8fa;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}

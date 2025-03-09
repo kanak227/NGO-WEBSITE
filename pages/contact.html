@@ -3,288 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/contact.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .heading h1 {
-            font-size: 36px;
-            color: #333;
-        }
-
-        .heading span {
-            color: #e63946;
-        }
-
-        .contact-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .contact-box {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: left;
-        }
-
-        .contact-box h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .contact-box p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-            margin: 5px 0;
-        }
-
-        .contact-box i {
-            font-size: 20px;
-            color: #e63946;
-            margin-right: 10px;
-        }
-
-        .form-box {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .form-box input,
-        .form-box textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-
-        .form-box textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        .form-box button {
-            padding: 10px 20px;
-            background: #e63946;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .form-box button:hover {
-            background: #c02634;
-        }
-
-        .info-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .info-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow change */
-    cursor: pointer;
-        }
-
-        .info-card img {
-            margin-bottom: 10px;
-        }
-
-        .info-card h4 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .info-card p {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 1px;
-        }
-
-        .info-card a {
-            display: inline-block;
-            font-size: 14px;
-            color: #e63946;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .info-card a:hover {
-            text-decoration: underline;
-        }
-        .info-card:hover{
- transform: scale(1.05); /* Enlarge slightly on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-    background-color: rgb(255, 248, 220); /* Slight color change on hover */
-}
-
-        .map {
-            width: 100%;
-            height: 300px;
-            background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
-            border-radius: 8px;
-            margin-bottom: 40px;
-        }
-
-        .newsletter {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .newsletter p {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .newsletter input {
-            padding: 10px;
-            width: 70%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-
-        .newsletter button {
-            padding: 10px 20px;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .newsletter button:hover {
-            background: #0056b3;
-        }
-
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-about,
-        .footer-links,
-        .footer-contact {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .footer h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .footer p, .footer ul, .footer a {
-            font-size: 14px;
-            line-height: 1.6;
-            text-decoration: none;
-            color: #ccc;
-        }
-
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer ul li {
-            margin-bottom: 10px;
-        }
-
-        .footer ul li a:hover {
-            color: #fff;
-        }
-
-        .footer-socials a {
-            margin-right: 10px;
-            color: #ccc;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-
-        .footer-socials a:hover {
-            color: #fff;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 20px;
-            border-top: 1px solid #444;
-            padding-top: 10px;
-            font-size: 14px;
-            color: #aaa;
-        }
-
-    </style>
+   
 </head>
 <body>
     <header>
         <div class="lower">
             <div class="image">
-                <img src="assets/logo.png.png" alt="Image">
+                <img src="../assets/logo.png.png" alt="Image">
                 <p>Jago Welfare</p>
             </div>
             <div class="navbar">
-                <a href="index.html">Home</a>
+                <a href="../index.html">Home</a>
                 <!-- <a href="">About us</a> -->
                 <a href="causes.html">Causes</a>
                 <a href="events.html">Events</a>
@@ -484,17 +220,17 @@
         </div>
         <div class="info-section">
             <div class="info-card" style="background-color: rgb(231, 204, 204)">
-                <img src="assets/message.png" alt="Chat">
+                <img src="../assets/message.png" alt="Chat">
                 <h4>Chat with live experts</h4>
                 <a href="#">Chat now</a>
             </div>
             <div class="info-card" style="background-color: rgb(203, 217, 232)";>
-                <img src="assets/shake.png" alt="Partner">
+                <img src="../assets/shake.png" alt="Partner">
                 <h4>Enhance your helping hand</h4>
                 <a href="#">Join now</a>
             </div>
             <div class="info-card" style="background-color: rgb(178, 210, 178)";>
-                <img src="assets/querty.png" alt="FAQ">
+                <img src="../assets/querty.png" alt="FAQ">
                 <h4>Ask your question & get updates</h4>
                 <a href="#">Ask now</a>
             </div>
