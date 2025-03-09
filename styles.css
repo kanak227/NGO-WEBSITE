@@ -309,7 +309,7 @@
     margin-bottom: 50px;
 }
 .fourth{
-    margin-top: 10px;
+      margin-top: 10px;
     height: 900px;
     background-color:white;
     /* justify-content: center;
@@ -340,20 +340,26 @@
     gap: 40px;
     display: flex;
 }
-.leftcard{
+.leftcard {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height:700px;
-    width: 500px;
-    margin-left: 120px;
+    height: 650px; 
+    width: 450px; 
+    max-width: 100%;
+    margin-left: auto; 
+    margin-right: auto; 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
     transition: transform 0.3s ease;
+    overflow: hidden;
+   
 }
-.leftcard:hover{
+
+.leftcard:hover {
     transform: scale(1.03);
 }
+
 .text{
     margin-left: 30px;
     width: 450px;
@@ -433,7 +439,7 @@ margin-top: 25px;
 .contento{
     color:white;
     position: absolute;
-    top: 430%;
+    top: 480%;
     left: 50%;
     transform: translate(-50% , -50%);
     width: 70%;
@@ -491,12 +497,24 @@ margin-top: 25px;
     height:120px;
 }
 
-.cards3{
-    display: flex;
-    gap: 1px;
-    width:100%;
-    margin-top: 50px;
-}
+
+
+    .cards3 {
+        display: flex;
+        flex-wrap: nowrap; /* Ensures all cards remain in one row */
+        gap: 5px; /* Reduces space between cards */
+        width: 100%;
+        justify-content: center; /* Centers the cards */
+        overflow: hidden; /* Prevents horizontal scrolling */
+        padding: 0 10px; /* Ensures cards don't touch screen edges */
+    }
+    
+    .cards3 .card1 {
+        width: 220px; /* Reduce width to fit in one row */
+        height: 180px; /* Adjust height proportionally */
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
 
 
 
