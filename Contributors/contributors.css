@@ -1,0 +1,274 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables for Colors */
+:root {
+    --primary-color: #6366f1; /* Indigo */
+    --secondary-color: #1e1e1e; /* Dark gray */
+    --background-dark: #0a0a0a; /* Near black */
+    --background-light: #ffffff; /* White */
+    --text-dark: #ffffff; /* White text */
+    --text-light: #000000; /* Black text */
+    --accent-glow: rgba(99, 102, 241, 0.2); /* Indigo glow */
+    --glass-bg-dark: rgba(255, 255, 255, 0.1); /* Glass effect dark */
+    --glass-bg-light: rgba(0, 0, 0, 0.1); /* Glass effect light */
+    scrollbar-width: none; /* Hide scrollbar */
+}
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Back Button Styling */
+.back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Canvas Background */
+.canvas-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Constrain to viewport height */
+    z-index: -1; /* Keep behind content */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 3rem 2rem 2rem;
+    margin: 4rem auto;
+    position: relative;
+    z-index: 1; /* Ensure content stays above canvas */
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    background: linear-gradient(135deg, var(--primary-color), #a855f7); /* Gradient text */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px var(--accent-glow);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Contributor Card Grid */
+.contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* 2 cards max on desktop */
+    gap: 3rem;
+    justify-content: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Contributor Card Styling */
+.contributor-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: rgba(17, 25, 40, 0.25);
+    width: 100%;
+    max-width: 550px;
+}
+
+.contributor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 48px rgba(99, 102, 241, 0.2);
+}
+
+.contributor-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.contributor-card h3 {
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.contributor-card a {
+    display: inline-block;
+    margin: 5px 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contributor-card a:hover {
+    color: #a855f7; /* Purple hover */
+}
+
+/* Animated Button */
+.button {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), #a855f7);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* Animations */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px) rotateX(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotateX(5deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto; /* Reduced top margin */
+        padding: 1.5rem 1rem 1rem; /* Reduced padding */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .contributors-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+        gap: 2rem;
+        max-width: 350px;
+        justify-items: center;
+    }
+
+    .contributor-card {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .contributor-card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contributor-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .contributor-card a {
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .contributors-grid {
+        grid-template-columns: repeat(2, 1fr); /* Exactly 2 cards per row */
+        max-width: 1200px;
+    }
+    .container {
+        margin-top: -2rem; /* Shift container upward on desktop */
+    }
+}
