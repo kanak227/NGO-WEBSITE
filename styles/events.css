@@ -1,0 +1,243 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #e63946;
+  color: #fff;
+}
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.main-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.main-content img.header-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.main-content h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.main-content h2 {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.main-content h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.main-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.image-grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.card p, .card a {
+  color: #555;
+  font-size: 14px;
+}
+.card a {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.register-btn {
+  display: block;
+  background: #e63946;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+.register-btn:hover {
+  transform: scale(1.05);
+}
+.newsletter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.newsletter input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.newsletter button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+.newsletter button:hover {
+  background: #0056b3;
+}
+.map {
+  height: 200px;
+  background: url('https://via.placeholder.com/350x200') no-repeat center center/cover;
+  border-radius: 8px;
+}
+.organizers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.organizer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.organizer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+.organizer .details {
+  font-size: 14px;
+}
+li::marker{
+  color: #e63946;
+}
+.list{
+  line-height: 40px;
+  color: #555;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.footer p, .footer ul, .footer a {
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.footer-socials a {
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
