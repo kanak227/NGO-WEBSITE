@@ -144,7 +144,19 @@ header {
 
 .navbar a:hover {
     color: red;
+    font-weight: 600;
+    transition: 1s ease-in 0.2s;
+    font-size: 18px;
+    
+
     /* scale: 1.2; */
+}
+.navbar a:active
+{
+    color:rgb(8, 8, 16);
+    font-weight:bold ;
+    box-shadow:2px solid #555 underline;
+
 }
 
 .navbar a:hover::after {
@@ -169,6 +181,7 @@ header {
 }
 .login-btn:hover{
     color: white;
+    background-color: #e04444;
 }
 .login-btn a {
     text-decoration: none;

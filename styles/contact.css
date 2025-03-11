@@ -40,6 +40,7 @@ body {
   padding: 20px;
   text-align: left;
 }
+c
 
 .contact-box h3 {
   font-size: 18px;
@@ -58,6 +59,11 @@ body {
   font-size: 20px;
   color: #e63946;
   margin-right: 10px;
+}
+.contact-box i:hover{
+  color: #e70d1f;
+  box-shadow: #aaa;
+  border: #333;
 }
 
 .form-box {
@@ -95,7 +101,7 @@ body {
 }
 
 .form-box button:hover {
-  background: #c02634;
+  background: maroon;
 }
 
 .info-section {
