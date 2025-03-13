@@ -71,6 +71,33 @@ a:hover {
     text-decoration: underline;
   }
 
+  /* Color Scheme */
+body {
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
+}
+
+h1, h2, h3 {
+    color: #2c3e50; /* Darker shade for headings */
+}
+
+/* Typography */
+body {
+    font-family: 'Arial', sans-serif; /* Modern font */
+    line-height: 1.6; /* Improved readability */
+}
+
+h1 {
+    font-size: 2.5em; /* Larger heading */
+}
+
+h2 {
+    font-size: 2em; /* Medium heading */
+}
+
+h3 {
+    font-size: 1.5em; /* Smaller heading */
+}
 /*for socials div*/
 .modalbtn {
     margin-top: 10px;
@@ -362,6 +389,20 @@ header {
     font-size: 1rem;
     color: crimson;
 }
+/* Button Styles */
+.button {
+    background-color: #3498db; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
 
 .sad{
     /* background-color: pink; */
@@ -611,8 +652,64 @@ margin-top: 25px;
 }
 
 
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
 
 
+.section {
+    margin-bottom: 40px; 
+}
+
+img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+.image-container:hover img {
+    transform: scale(1.05); 
+    transition: transform 0.3s; 
+}
+
+
+.testimonial {
+    background-color: #ecf0f1; 
+    border-left: 5px solid #3498db; 
+    padding: 20px; 
+    margin: 20px 0; /* Margin */
+    font-style: italic; 
+}
+
+
+.social-buttons {
+    display: flex; 
+    gap: 10px; /* Space between buttons */
+}
+
+.social-button {
+    background-color: #e74c3c; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s; 
+}
+
+.social-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+a {
+    color: #3498db; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 .footer {
     background-color: #333;
@@ -681,7 +778,7 @@ margin-top: 25px;
     font-size: 14px;
     color: #aaa;
 }
-/* Scroll to Top Button */
+
 #scrollToTop {
     position: fixed;
     bottom: 20px;
@@ -736,4 +833,18 @@ margin-top: 25px;
     stroke-dasharray: 138;
     stroke-dashoffset: 138;
     transition: stroke-dashoffset 0.2s;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 2em; 
+
+    .button {
+        width: 100%; 
+    }
 }
