@@ -705,3 +705,8 @@ margin-top: 25px;
     stroke-dashoffset: 138;
     transition: stroke-dashoffset 0.2s;
 }
+
+.cont1 h1 {
+    transition: all 0.3s ease;
+    font-variant-numeric: tabular-nums; /* Ensures numbers maintain consistent width */
+}
