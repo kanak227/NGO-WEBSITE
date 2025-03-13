@@ -20,3 +20,50 @@ window.addEventListener("scroll", () => {
 scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Animate numbers function
+function animateNumbers() {
+    const counters = document.querySelectorAll('.cont1 h1');
+    const animationDuration = 3000; // 3 seconds
+    const frameDuration = 1000 / 60; // 60 frames per second
+
+    counters.forEach(counter => {
+        const target = parseInt(counter.innerText.replace(/,/g, ''));
+        const startTime = Date.now();
+        
+        // Format number with commas
+        const formatNumber = num => num.toLocaleString();
+
+        const updateCounter = () => {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / animationDuration, 1);
+            const currentNumber = Math.floor(progress * target);
+
+            counter.textContent = formatNumber(currentNumber);
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = formatNumber(target);
+            }
+        };
+
+        requestAnimationFrame(updateCounter);
+    });
+}
+
+// Initialize animation when element comes into view
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateNumbers();
+            observer.disconnect();
+        }
+    });
+});
+
+// Observe the stats section
+const statsSection = document.querySelector('.horizontal');
+if (statsSection) {
+    observer.observe(statsSection);
+}
