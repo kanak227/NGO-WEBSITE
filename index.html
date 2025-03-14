@@ -35,19 +35,43 @@
 
         </div>
     -->
+    <header>
         <div class="lower">
-            <div class="image">
-                <img src="assets/logo.png.png" alt="Image">
-                <p>Jago Welfare</p>
-            </div>
-            <div class="navbar">
-                <a href="index.html">Home</a>
-                <!-- <a href="">About us</a> -->
-                <a href="pages/causes.html">Causes</a>
-                <a href="pages/events.html">Events</a>
-                <a href="pages/news.html">News</a>
-                <a href="pages/contact.html">Contact</a>
-            </div>
+          <div class="image">
+            <img src="assets/logo.png.png" alt="Logo">
+            <p>Jago Welfare</p>
+         <!-- Mobile Menu Icon (Only for Mobile) -->
+<div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <div class="menu-header">
+        
+        <div class="menu-close" onclick="toggleMenu()">&times;</div>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="pages/causes.html">Causes</a>
+    <a href="pages/events.html">Events</a>
+    <a href="pages/news.html">News</a>
+    <a href="pages/contact.html">Contact</a>
+
+</div>
+
+<!-- Desktop Navbar (Visible only on large screens) -->
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="pages/causes.html">Causes</a>
+    <a href="pages/events.html">Events</a>
+    <a href="pages/news.html">News</a>
+    <a href="pages/contact.html">Contact</a>
+</nav>
+
+      </header>
+
+      
+      
             <div class="socials">
                 <div class="login">
                     <button type="button" class="btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
@@ -369,7 +393,7 @@
     </main>
     <div class="break"></div>
 
-    <main>
+    <main class="fight">
         <div class="image1">
             <img src="assets/kids.jpg" alt="">
         </div>
@@ -610,6 +634,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.mobile-menu').classList.toggle('active');
+            }
+        
+            // Close menu when clicking outside
+            document.addEventListener("click", function(event) {
+                let menu = document.querySelector('.mobile-menu');
+                let icon = document.querySelector('.menu-icon');
+                if (!menu.contains(event.target) && !icon.contains(event.target)) {
+                    menu.classList.remove('active');
+                }
+            });
+        </script>
+        
+          
 </body>
 
 </html>
