@@ -75,6 +75,7 @@ a:hover {
 body {
     background-color: #f4f4f4; /* Light background */
     color: #333; /* Dark text color */
+    
 }
 
 h1, h2, h3 {
@@ -153,8 +154,9 @@ header {
     align-items: center;
     background: linear-gradient(to right, #ff005d, #12000a);
     padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
+    
 
 .navbar a {
     text-decoration: none;
@@ -166,13 +168,17 @@ header {
     transition: color 0.3s ease;
     color: #ffffff;
 }
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     padding: 15px 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     color: #ffffff;
     text-decoration: none;
     padding: 15px 20px;
@@ -183,10 +189,12 @@ header {
     color: #ffcc00; /* Bright hover color */
     background-color: rgba(255, 255, 255, 0.1); /* Subtle background change */
   }
+.navbar a:active
+{
+      border-bottom: 3px solid #ffcc00; /* Thicker underline */
+        font-weight: bold; /* Bold text */
+    }
   
-  .navbar .active {
-    border-bottom: 2px solid #ffffff; /* Active link underline */
-  }
 
 .navbar a::after {
     content: "";
@@ -210,7 +218,22 @@ header {
     transform: scaleX(1); /* Expands fully on hover */
 }
 
+.navbar .dropdown {
+    position: relative;
+}
 
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .login{
     justify-content: right;
@@ -718,6 +741,16 @@ a:hover {
     font-family: Arial, sans-serif;
 }
 
+.footer a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #ffffff; /* Brighten on hover */
+    text-decoration: underline; /* Underline effect */
+}
+
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -761,14 +794,15 @@ a:hover {
 
 .footer-socials a {
     margin-right: 10px;
-    color: #ccc;
+    color: #686666;
     font-size: 18px;
-    transition: color 0.3s;
-}
-
-.footer-socials a:hover {
-    color: #fff;
-}
+    transition: transform 0.3s;
+    }
+    
+    .footer-socials a:hover {
+        transform: scale(1.2); /* Scale effect on hover */
+        color: #fff;
+    }
 
 .footer-bottom {
     text-align: center;
@@ -777,6 +811,13 @@ a:hover {
     padding-top: 10px;
     font-size: 14px;
     color: #aaa;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Increased gap for better spacing */
 }
 
 #scrollToTop {
@@ -795,7 +836,13 @@ a:hover {
     opacity: 0;
     transform: scale(0.5);
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
+    }
+    
+    #scrollToTop:hover {
+        background: #e84118; /* Darker shade on hover */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
 
 /* Show Button on Scroll */
 #scrollToTop.show {
