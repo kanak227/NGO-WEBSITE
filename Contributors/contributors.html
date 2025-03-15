@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the contributors of the QR Code File Transfer project.">
+  <title>Contributors | NGO_WEBSITE</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="contributors.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion/dist/framer-motion.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.qrcode@1.0.0/jquery.qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="image">
+         <a href="/index.html"> <img src="/assets/logo.png.png" alt="Logo"></a>
+          <p>Jago Welfare</p>
+        </div>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="navbar-menu">
+          <button class="navbar-close" aria-label="Close navigation">
+            <i class="fas fa-times"></i>
+          </button>
+          <a href="/index.html">Home</a>
+          <a href="/pages/causes.html">Causes</a>
+          <a href="/pages/events.html">Events</a>
+          <a href="/pages/news.html">News</a>
+          <a href="/pages/contact.html">Contact</a>
+          <div class="navbar-socials">
+            <button type="button" class="btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+            <a href="/pages/login.html"><button type="button" class="btn login-btn btn-outline-danger">Login</button></a>
+            <button type="button" class="btn btn-danger contact-btn">Contact Info</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Custom Contact Popup -->
+    <div class="contact-popup" id="contactPopup">
+      <div class="contact-popup-content">
+        <span class="contact-close">×</span>
+        <h2>Contact Information</h2>
+        <p>Phone No: +9145673824</p>
+        <p>Email: kanakverma325@gmail.com</p>
+      </div>
+    </div>
+  </header>
+
+  <canvas class="canvas-bg" id="bgCanvas"></canvas>
+  <div class="container">
+    <h1>Meet Our Contributors</h1>
+    <div id="contributors" class="contributors-grid"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem et commodi culpa facilis nostrum eum.
+            </p>
+        </div>
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/pages/index.html">Home</a></li>
+                <li><a href="/index.html#about">About</a></li>
+                <li><a href="/pages/causes.html">Causes</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:example@example.com">jagowelfare@gmail.com</a></p>
+            <p>Phone: +123-456-7890</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </div>
+  
+</footer>
+
+  <script src="contributors.js"></script>
+  <script src="../app.js"></script>
+</body>
+</html>
