@@ -1470,3 +1470,101 @@ margin-top: 25px;
         left: 100px;
     }
 }
+/* Dark mode styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .navbar a {
+    color: white !important;
+}
+
+/* Optional: Add transition for smooth color change */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Consistent button styling */
+.btn-outline-danger, .btn-danger {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+/* Dark mode toggle specific */
+.mode-toggle {
+    width: 36px;
+    padding: 0;
+    border-radius: 5px !important;
+}
+
+.mode-toggle svg {
+    margin: 0 auto;
+}
+
+/* Hover states */
+.btn-outline-danger:hover {
+    transform: translateY(-1px);
+}
+
+/* Dark mode adjustments */
+.dark-mode .mode-toggle {
+    border-color: #fff;
+    color: #fff;
+}
+
+.dark-mode .btn-outline-danger:not(.mode-toggle) {
+    border-color: #dc3545;
+}
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Base button styling */
+.btn {
+    padding: 8px 16px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* Dark mode toggle specific */
+.mode-toggle {
+    width: 38px;
+    padding: 0;
+    margin: 0 4px;
+}
+
+/* Contact Info button alignment */
+.btn-danger {
+    margin-left: auto; /* Pushes to the right end */
+}
+
+/* Icon alignment */
+.mode-toggle svg {
+    margin: 0 auto;
+}
+
+/* Hover states */
+.btn-outline-danger:hover {
+    transform: translateY(-1px);
+}
+
+/* Dark mode adjustments */
+.dark-mode .mode-toggle {
+    border-color: #fff;
+    color: #fff;
+}
