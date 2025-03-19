@@ -1,131 +1,129 @@
-*{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*
-.upper{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid azure 0.1px;
-}
-.leftitems{
-    width: 100%;
-    margin-left: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-    gap: 40px;
-}
-.email{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 80px;
-}
-.email p{
-    margin-top: 8px;
-}
-.email svg{
-    margin-bottom: 5px;
-    color: #e04444;
-}
-
-.call{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-right: 100px;
-}
-.call p{
-    margin-top: 8px;
-}
-.call svg{
-    margin-bottom: 3px;
-    color: #e04444;
-}
-
-.rightitems{
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    gap: 35px;
-    margin-bottom: 9px;
-}
-*/
+/* Social Icons */
 .rightitems {
     margin-left: 40px;
 }
+
 .socialssvg {
     color: #000;
-   
 }
 
-/*for socials div*/
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Socials Section */
 .modalbtn {
     margin-top: 10px;
     margin-left: 20px;
 }
+
 .socials {
     display: flex;
+    padding: 0 3%;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    gap: 4%;
+    width: 35vw;
 }
+
 .rightitems a svg {
     margin: 15px;
     margin-top: 20px;
-    
-}
-.lower{
-    /* background-color: violet; */
-    height: 60px;
-    display: flex;
-    
-    
 }
 
+/* Header */
 header {
-    height: 60px;
+    height: fit-content;
+    width: 100%;
+    background-color: chartreuse;
     display: flex;
     justify-content: center;
 }
-.image{
-    height: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 200px;
-    margin-top: 7px;
+
+.navBtn {
+    white-space: nowrap;
+    margin: 0 !important;
 }
-.image img{
+
+.login {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Logo */
+.logoContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer img {
+    margin: 0 !important;
+    width: 3rem;
+    height: auto;
+}
+
+.logoContainer p {
+    margin: 0 !important;
+}
+
+/* Lower Navbar */
+.lower {
+    background-color: violet;
+    padding: 0.01% 4vw;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: center;
+    width: 100% !important;
+}
+
+.image {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.image img {
     height: 50px;
     margin-left: 70px;
     margin-top: 10px;
 }
-.image p{
+
+.image p {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.1rem;
+    white-space: nowrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* Navbar */
 .navbar {
-    display: flex;
-    gap: 20px; /* Adjust spacing between items */
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2.5vw !important;
+    width: fit-content !important;
+    margin: 0 !important;
+    padding: 0 ;
 }
 
 .navbar a {
     text-decoration: none;
     color: black;
     font-weight: 400;
-    position: relative;
-    padding: 10px 15px; /* Adds some padding for better spacing */
-    display: inline-block; /* Ensures the underline stays within each item */
+    display: inline-block;
     transition: color 0.3s ease-in-out;
 }
 
@@ -133,110 +131,110 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* Ensures the line appears below each navbar item */
+    bottom: 0;
     width: 100%;
     height: 2px;
     background: red;
-    transform: scaleX(0); /* Initially hidden */
+    transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
 }
 
 .navbar a:hover {
     color: red;
-    /* scale: 1.2; */
 }
 
 .navbar a:hover::after {
-    transform: scaleX(1); /* Expands fully on hover */
+    transform: scaleX(1);
 }
 
-
-
-.login{
-    justify-content: right;
+/* Login */
+.login {
+    display: flex;
     align-items: center;
-    margin-top: 7px;
     margin-left: 120px;
     margin-top: 10px;
 }
-.login-btn{
-    justify-content: right;
-    align-items: center;
-    margin-top: 10px;
+
+.login-btn {
     margin-left: 20px;
-    width: 110px;
+    min-width: 110px;
 }
-.login-btn:hover{
+
+.login-btn:hover {
     color: white;
 }
+
 .login-btn a {
     text-decoration: none;
     color: #e04444;
 }
-.login-btn a:hover{
+
+.login-btn a:hover {
     color: white;
 }
+
+/* Hero Section */
 .mainbox {
     height: 630px;
     width: 100%;
     background-color: rgb(219, 229, 234);
-    display: flex; /* Enables Flexbox for layout */
-    align-items: center; /* Vertically centers text and image */
-    justify-content: space-between; /* Ensures spacing between text and image */
-    padding: 0 100px; /* Adds horizontal padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
 }
 
+/* Text Content */
 .text-content {
-    max-width: 45%; /* Limits text area width */
+    max-width: 45%;
     display: flex;
-    flex-direction: column; /* Aligns text vertically */
-    gap: 10px; /* Adds consistent spacing between elements */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .text-content p {
-    font-size: 3.4rem; /* Adjusted size for subtext */
-    margin: 0; /* Removes default margin */
-    color: #333; /* Neutral color for readability */
+    font-size: 3.4rem;
+    margin: 0;
+    color: #333;
     line-height: 0.8;
-    font-family:'Times New Roman', Times, serif; /* Ensures proper line spacing for clarity */
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #heading {
-    font-size: 4rem; /* Main heading larger and bolder */
+    font-size: 4rem;
     font-weight: bold;
-    color: #000; /* Stronger contrast for emphasis */
-    margin-bottom: 1px; /* Adds spacing below the heading */
+    color: #000;
+    margin-bottom: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} 
-
-
-#text {
-    font-size: 1.2rem; /* Smaller font for paragraph text */
-    color: #555; /* Softer tone for descriptive text */
-    line-height: 1.5; /* Adds more space for better readability */
-    margin-top: 15px;
-    margin-bottom: 10px; /* Separates from preceding text */
 }
 
+#text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Donate Button */
 .donate-btn {
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #ff4d4d; /* Button color */
-    color: #fff; /* White text */
+    background-color: #ff4d4d;
+    color: #fff;
     font-size: 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     max-width: fit-content;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .donate-btn:hover {
     transform: scale(1.03);
-    background-color: #e04444; /* Slightly darker on hover */
+    background-color: #e04444;
 }
 
 .img img {
@@ -1171,6 +1169,7 @@ margin-top: 25px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      width: 100%;
       padding: 0 15px;  /* add some side padding */
     }
   
