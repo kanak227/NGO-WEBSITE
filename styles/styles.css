@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Social Icons */
 .rightitems {
     margin-left: 40px;
@@ -33,7 +32,7 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 4%;
-    width: 35vw;
+    width: fit-content !important;
 }
 
 .rightitems a svg {
@@ -44,8 +43,7 @@
 /* Header */
 header {
     height: fit-content;
-    width: 100%;
-    background-color: chartreuse;
+    width: fit-content;
     display: flex;
     justify-content: center;
 }
@@ -80,12 +78,12 @@ header {
 
 /* Lower Navbar */
 .lower {
-    background-color: violet;
     padding: 0.01% 4vw;
     display: flex;
-    justify-content: space-around !important;
-    align-items: center;
-    width: 100% !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 65vw !important;
+    gap: 2vw;
 }
 
 .image {
@@ -109,17 +107,19 @@ header {
 
 /* Navbar */
 .navbar {
+    position: static !important;
     display: flex !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 2.5vw !important;
+    gap: 2vw !important;
     width: fit-content !important;
     margin: 0 !important;
     padding: 0 ;
 }
 
 .navbar a {
+    position: relative;
     text-decoration: none;
     color: black;
     font-weight: 400;
@@ -332,8 +332,10 @@ header {
 .sad{
     /* background-color: pink; */
     width: 100%;
-    height: 420px;
+    /* height: 420px; */
+    height: fit-content;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     align-items: center;
     justify-content: center;
@@ -342,7 +344,8 @@ header {
 
 .para{
     width: 40%;
-    height: 450px;
+    /* height: 450px; */
+    height: fit-content;
     align-items: baseline;
     justify-content: center;
 }
@@ -446,7 +449,8 @@ header {
     display:table;
 }
 .rcard{
-    width: 550px;
+    /* width: 550px; */
+    width: 48vw;
     height: 210px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -459,7 +463,8 @@ header {
 }
 
 .lastcard{
-    width: 550px;
+    /* width: 550px; */
+    width: 48vw;
     height: 210px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4%;
@@ -708,6 +713,22 @@ margin-top: 25px;
     transition: all 0.3s ease;
     font-variant-numeric: tabular-nums; /* Ensures numbers maintain consistent width */
 }
+
+@media only screen and (max-width: 905px)
+{
+    .navBtn{
+        font-size: 70% !important;
+    }
+
+    .lower{
+        width: 65vw !important;
+    }
+
+    .navbar a{
+        font-size: 0.9rem !important;
+    }
+}
+
 /* Mobile Responsive Styles */
 /* Mobile Responsive Styles */
 @media only screen and (max-width: 768px) {
@@ -720,13 +741,19 @@ margin-top: 25px;
   
     /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
-      display: none;
+      display: none !important;
     }
+
+    .logoContainer{
+        margin-left: 20% !important;
+    }
+
     .menu-icon {
       display: block;
       position: absolute;
-      top: 15px;
-      right: 20px;
+      top: 7px !important;
+      right: 1px !important;
+      margin: 0 !important;
       font-size: 30px;
       cursor: pointer;
       z-index: 999;
@@ -784,6 +811,16 @@ margin-top: 25px;
       height: auto;
       margin: 0 auto;
       padding: 20px;
+    }
+
+    .sad{
+        margin: 0 !important;
+    }
+
+    .para{
+        width: fit-content;
+        margin: 0;
+        padding: 0 10vw;
     }
   
     /* Image & text blocks: vertical, no overlap */
