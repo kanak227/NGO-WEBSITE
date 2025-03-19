@@ -1,17 +1,26 @@
 body {
-
   display: flex;
   justify-content: center;
-  margin-top: 115px;
-  background-color:beige;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgb(109, 120, 125); 
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05) 1px, 
+    transparent 1px
+  ), linear-gradient(
+    90deg, rgba(255, 255, 255, 0.05) 1px, 
+    transparent 1px
+  );
+  background-size: 50px 50px; 
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: bisque;
-  /*box-shadow: 5px 5px 5px  #F14336;*/
+  background-color: rgb(173, 194, 205);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
   padding: 30px;
   width: 450px;
   border-radius: 20px;
@@ -31,6 +40,19 @@ body {
   font-weight: 600;
 }
 
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+}
+
+.eye-icon:hover {
+  color: #222;
+}
+
 .inputForm {
   border: 1.5px solid #ecedec;
   border-radius: 10px;
@@ -39,6 +61,7 @@ body {
   align-items: center;
   padding-left: 10px;
   transition: 0.2s ease-in-out;
+  position: relative;
 }
 
 .input {
@@ -103,6 +126,9 @@ body {
   width: 100%;
   cursor: pointer;
 }
+.button-submit.clicked {
+  background-color: #85898e; 
+}
 
 .p {
   text-align: center;
@@ -121,14 +147,54 @@ body {
   align-items: center;
   font-weight: 500;
   gap: 10px;
-  border: 1px solid #ededef;
+  
+  border: 2px solid transparent; 
   background-color: white;
+  color: #F14336; 
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: transparent;
+  border-top: 2px solid rgb(58, 63, 66);
+  border-bottom: 2px solid rgb(58, 63, 66);
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
 }
 
 .btn:hover {
-  border: 1px solid #2d79f3;
-  ;
+  color: white;
+  background-color: rgb(109, 120, 125);
+  border-color: rgb(58, 63, 66);
+}
 
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* .btn:hover {
+  border: 1px solid #2d79f3;
+
+} */
+
+.flex-row div {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+.remember-me {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff; 
+  vertical-align: middle;
 }

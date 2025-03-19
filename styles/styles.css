@@ -376,6 +376,7 @@ header {
 .button svg{
     margin-left: 40px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .button p{
     margin-top: 8px;
