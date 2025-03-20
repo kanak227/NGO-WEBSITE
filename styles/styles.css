@@ -42,10 +42,20 @@
 
 /* Header */
 header {
+    background: #fff;
     height: fit-content;
     width: fit-content;
     display: flex;
     justify-content: center;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999 !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero{
+    margin-top: 8vh !important;
 }
 
 .navBtn {
@@ -183,6 +193,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
+    margin-top: 8vh;
 }
 
 /* Text Content */
