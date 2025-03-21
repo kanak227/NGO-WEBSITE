@@ -59,6 +59,7 @@ header {
     top: 0 !important;
     left: 0 !important;
     z-index: 999 !important;
+    padding: 0.4em 0;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -771,7 +772,7 @@ margin-top: 25px;
     .menu-icon {
       display: block;
       position: absolute;
-      top: 7px !important;
+      top: 14px !important;
       right: 1px !important;
       margin: 0 !important;
       font-size: 30px;
@@ -1468,6 +1469,7 @@ margin-top: 25px;
     flex-direction: column;
     padding: 20px;
     transition: left 0.4s ease-in-out;
+    z-index: 1000;
 }
 
 /* When menu is active, slide in */
