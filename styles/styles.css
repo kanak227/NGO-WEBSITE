@@ -809,6 +809,10 @@ margin-top: 25px;
       margin: 0 auto;
       padding: 20px;
     }
+
+    .mainbox{
+        margin-top: 8vh !important;
+    }
   
     /* Force all card sections to stack vertically with spacing */
     .cards,
