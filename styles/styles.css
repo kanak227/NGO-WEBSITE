@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /*
 .upper{
     width: 100%;
@@ -178,7 +182,7 @@ header {
     color: white;
 }
 .mainbox {
-    height: 630px;
+    height: auto;
     width: 100%;
     background-color: rgb(219, 229, 234);
     display: flex; /* Enables Flexbox for layout */
@@ -188,7 +192,7 @@ header {
 }
 
 .text-content {
-    max-width: 45%; /* Limits text area width */
+    max-width: 100%; 
     display: flex;
     flex-direction: column; /* Aligns text vertically */
     gap: 10px; /* Adds consistent spacing between elements */
@@ -196,10 +200,11 @@ header {
 
 .text-content p {
     font-size: 3.4rem; /* Adjusted size for subtext */
-    margin: 0; /* Removes default margin */
+    margin: 30px 0 0 0;
     color: #333; /* Neutral color for readability */
     line-height: 0.8;
     font-family:'Times New Roman', Times, serif; /* Ensures proper line spacing for clarity */
+    text-align: center;
 }
 
 #heading {
@@ -240,7 +245,7 @@ header {
 }
 
 .img img {
-    height: 610px; /* Keeps the image height consistent */
+    height: auto;
     max-width: 100%; /* Prevents overflow */
     object-fit: contain; /* Maintains aspect ratio */
 }
@@ -596,6 +601,8 @@ margin-top: 25px;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
 }
 
 .footer-about,
@@ -603,6 +610,7 @@ margin-top: 25px;
 .footer-contact {
     flex: 1;
     min-width: 250px;
+    margin-bottom: 30px;
 }
 
 .footer h3 {
@@ -778,13 +786,28 @@ margin-top: 25px;
     }
   
     /* Individual cards expand to fit content & no overlap */
-    .card1,
-    .leftcard,
     .rcard,
     .lastcard {
       width: 90%;
       height: auto;
       margin: 0 auto;
+      padding: 20px;
+    }
+
+    .leftcard {
+      height: auto;
+      padding: 20px;
+    }
+
+    .leftcard, .rightcards {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card1 {
+      width: 90%;
+      height: auto;
+      margin: 10px 0;
       padding: 20px;
     }
   
@@ -885,11 +908,16 @@ margin-top: 25px;
       gap: 20px;                     /* Space between items */
       height: auto !important;       /* Let it grow with content */
     }
+
+    .bar {
+        flex-direction: column;
+        padding: 20px;
+    }
   
     /* Each stat container is centered */
     .cont1 {
       width: auto !important;
-      margin: 10px !important;       /* Add spacing around each item */
+      margin: 10px 0 !important;       /* Add spacing around each item */
       text-align: center !important; /* Center text and icons */
     }
   }
@@ -1247,7 +1275,8 @@ margin-top: 25px;
   }
   /* Desktop styles */
 .menu-icon {
-    display: none; /* Hidden on desktop */
+    display: block;
+    z-index: 1001;
   }
   
   .navbar {
@@ -1400,14 +1429,15 @@ margin-top: 25px;
     position: fixed;
     top: 0;
     left: -100%; /* Start off-screen */
-    width: 75%;
-    height: 20vh;
+    width: 100%;
+    height: 100vh;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     padding: 20px;
-    transition: left 0.4s ease-in-out;
+    transition: left 0.3s ease;
+    z-index: 1000;
 }
 
 /* When menu is active, slide in */
@@ -1469,4 +1499,9 @@ margin-top: 25px;
     .navbar{
         left: 100px;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

@@ -1,0 +1,324 @@
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .mainbox {
+        padding: 0 30px;
+    }
+
+    .card1 {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Header adjustments */
+    .image {
+        margin-right: 100px;
+    }
+
+    /* Hero section */
+    .text-content p {
+        font-size: 2.8rem;
+    }
+
+    /* Cards grid */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Events layout */
+    .cards2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats bar */
+    .bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Devices (desktops, 992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Navigation adjustments */
+    .navbar {
+        gap: 15px;
+    }
+
+    /* Hero image sizing */
+    .img img {
+        max-width: 80%;
+    }
+
+    /* Cards grid */
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Events section */
+    .leftcard {
+        width: 90%;
+    }
+
+    /* News cards */
+    .cards3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* Full width layout */
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Header spacing */
+    .image {
+        margin-right: 300px;
+    }
+
+    /* Hero text sizing */
+    #heading {
+        font-size: 4.5rem;
+    }
+}
+
+/* Tall Mobile Devices (height adjustments) */
+@media (max-height: 700px) and (orientation: portrait) {
+    .mainbox {
+        height: auto;
+        padding: 50px 0;
+    }
+}
+
+/* Tablet Landscape Optimization */
+@media (min-width: 768px) and (orientation: landscape) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .events {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* 2K+ Screens */
+@media (min-width: 2000px) {
+    html {
+        font-size: 110%;
+    }
+
+    .container {
+        max-width: 1800px;
+    }
+}
+
+/* Navigation Breakpoints */
+@media (max-width: 1100px) {
+    .navbar {
+        font-size: 0.9rem;
+    }
+}
+
+/* Card Stacking Breakpoint */
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card1 {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+/* Mobile Menu Overrides */
+@media (max-width: 768px) {
+    /* Force full-width elements */
+    .leftcard, .rcard, .lastcard {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Adjust hero text */
+    #heading {
+        font-size: 3rem;
+    }
+
+    /* Stack footer content */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Ultra-Mobile Optimization */
+@media (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+
+    .donate-btn {
+        padding: 10px 15px;
+        font-size: 1.2rem;
+    }
+
+    .image p {
+        display: none;
+    }
+}
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+    .mainbox {
+        flex-direction: column;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) {
+    .img {
+        max-width: 50%;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .logo {
+        background-image: url(logo@2x.png);
+    }
+
+    .img {
+        background-image: url(hero@2x.jpg);
+    }
+}
+
+@media print {
+    .navbar, .footer-socials, .menu-icon {
+        display: none !important;
+    }
+
+    .text-content {
+        color: #000 !important;
+    }
+
+    .card1 {
+        break-inside: avoid;
+    }
+}
+
+/* === 320px (Ultra Small Mobile) === */
+@media (max-width: 320px) {
+    /* Optimize for very small screens */
+    html {
+        font-size: 12px;
+    }
+
+    .image img {
+        height: 35px;
+    }
+
+    .donate-btn {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .text-content p {
+        font-size: 2rem;
+    }
+}
+  
+/* === 375px (Standard Mobile) === */
+@media (min-width: 321px) and (max-width: 375px) {
+    /* Adjust padding and margins for mid-sized phones */
+    .mainbox {
+        padding: 0 15px;
+    }
+
+    .card1 {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .navbar a {
+        padding: 8px 10px;
+    }
+
+    .text-content h1 {
+        font-size: 3.2rem;
+    }
+}
+  
+/* === 425px (Large Mobile) === */
+@media (min-width: 376px) and (max-width: 425px) {
+    /* Optimize for phablets and large phones */
+    .cards {
+        gap: 15px;
+    }
+
+    .img img {
+        max-width: 90%;
+    }
+
+    .footer-container {
+        padding: 25px 15px;
+    }
+
+    .events h2 {
+        font-size: 2.5rem;
+    }
+}
+  
+/* === 1024px (Tablet/Desktop) === */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    /* Fine-tune desktop layouts */
+    .container {
+        max-width: 1200px;
+    }
+
+    .navbar {
+        gap: 30px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+    }
+
+    .text-content {
+        padding-right: 50px;
+    }
+
+    .img img {
+        max-width: 85%;
+    }
+}
+
+/* === 1440px (Large Desktop) === */
+@media (min-width: 1440px) {
+    /* Optimize for high-res screens */
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1600px;
+    }
+
+    .mainbox {
+        padding: 0 200px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px;
+    }
+
+    .footer-container {
+        padding: 60px 100px;
+    }
+}
