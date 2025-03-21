@@ -35,6 +35,14 @@
     width: fit-content !important;
 }
 
+.mobileBtn{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: left !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
 .rightitems a svg {
     margin: 15px;
     margin-top: 20px;
@@ -90,10 +98,11 @@ header {
 .lower {
     padding: 0.01% 4vw;
     display: flex;
-    justify-content: space-between !important;
+    justify-content: space-around !important;
     align-items: center !important;
     width: 65vw !important;
-    gap: 2vw;
+    gap: 1rem !important;
+    padding-right: 15% !important;
 }
 
 .image {
@@ -1218,7 +1227,7 @@ margin-top: 25px;
       align-items: center;
       justify-content: flex-start;
       width: 100%;
-      padding: 0 15px;  /* add some side padding */
+      padding: 0 15px !important;  /* add some side padding */
     }
   
     /* Remove excessive right margin from the logo container */
@@ -1448,7 +1457,7 @@ margin-top: 25px;
     top: 0;
     left: -100%; /* Start off-screen */
     width: 75%;
-    height: 20vh;
+    height: 100vh !important;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -1515,5 +1524,11 @@ margin-top: 25px;
     }
     .navbar{
         left: 100px;
+    }
+}
+
+@media (max-width: 480px){
+    .desktopBtn{
+        display: none !important;
     }
 }
