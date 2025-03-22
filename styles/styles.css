@@ -1,53 +1,15 @@
+/*************************************/
+/************ GLOBAL CSS *************/
+/*************************************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Social Icons */
-.rightitems {
-    margin-left: 40px;
-}
 
-.socialssvg {
-    color: #000;
-}
-
-.main {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Socials Section */
-.modalbtn {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-
-.socials {
-    display: flex;
-    padding: 0 3%;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 4%;
-    width: fit-content !important;
-}
-
-.mobileBtn{
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: left !important;
-    align-items: flex-start !important;
-    padding: 0 !important;
-}
-
-.rightitems a svg {
-    margin: 15px;
-    margin-top: 20px;
-}
-
+/*************************************/
+/********** HEADER (NAVBAR) **********/
+/*************************************/
 /* Header */
 header {
     background: #fff;
@@ -63,36 +25,11 @@ header {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
 }
 
-.hero{
-    margin-top: 8vh !important;
-}
-
-.navBtn {
-    white-space: nowrap;
-    margin: 0 !important;
-}
-
-.login {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Logo */
-.logoContainer {
+.main {
     display: flex;
-    gap: 8px;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-}
-
-.logoContainer img {
-    margin: 0 !important;
-    width: 3rem;
-    height: auto;
-}
-
-.logoContainer p {
-    margin: 0 !important;
 }
 
 /* Lower Navbar */
@@ -123,6 +60,78 @@ header {
     font-size: 1.1rem;
     white-space: nowrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo */
+.logoContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer img {
+    margin: 0 !important;
+    width: 3rem;
+    height: auto;
+}
+
+.logoContainer p {
+    margin: 0 !important;
+}
+
+.socials {
+    display: flex;
+    padding: 0 3%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4%;
+    width: fit-content !important;
+}
+
+.mobileBtn{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: left !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+/* Login */
+.login {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+.login-btn {
+    margin-left: 20px;
+    min-width: 110px;
+}
+
+.login-btn:hover {
+    color: white;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: #e04444;
+}
+
+.login-btn a:hover {
+    color: white;
+}
+
+.navBtn {
+    white-space: nowrap;
+    margin: 0 !important;
 }
 
 /* Navbar */
@@ -169,32 +178,150 @@ header {
     transform: scaleX(1);
 }
 
-/* Login */
-.login {
-    display: flex;
-    align-items: center;
-    margin-left: 120px;
+/* Socials Section */
+.modalbtn {
     margin-top: 10px;
-}
-
-.login-btn {
     margin-left: 20px;
-    min-width: 110px;
 }
 
-.login-btn:hover {
-    color: white;
-}
+.menu-icon {
+    display: none; /* Hidden on desktop */
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
 
-.login-btn a {
+  /* Hamburger icon styling */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 15px;
+    display: inline-block;
+  }
+  
+  /* Fullscreen overlay container */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0; /* or left: 0, if you want it to slide in from the left */
+    width: 100%;
+    height: 100%;
+    background: #fff; /* White background */
+    transform: translateX(100%); /* Initially hidden off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 9999; /* Ensure it appears above other elements */
+  }
+  
+  /* When "open" class is added, slide it in */
+  .menu-overlay.open {
+    transform: translateX(0);
+  }
+  
+  /* Close icon in the top-right corner */
+  .close-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  
+  /* Center and style the menu items */
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; /* space from top so it doesn't collide with close icon */
+    padding: 0 30px;
+  }
+
+  /* Individual menu links */
+  .menu-content a {
+    font-size: 24px;
+    color: #000;
     text-decoration: none;
-    color: #e04444;
+    margin: 15px 0; /* spacing between links */
+    transition: color 0.2s;
+  }
+  
+  /* Hover effect for links */
+  .menu-content a:hover {
+    color: #555;
+  }
+
+/* Mobile Menu Icon (Hamburger) */
+.menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-.login-btn a:hover {
-    color: white;
+/* Mobile Menu Styling */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 75%;
+    height: 100vh !important;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    transition: left 0.4s ease-in-out;
+    z-index: 1000;
 }
 
+/* When menu is active, slide in */
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Menu Header */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+}
+
+/* Close Button */
+.menu-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Menu Links */
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: red;
+}
+
+/*************************************/
+/*********** HERO SECTION ************/
+/*************************************/
 /* Hero Section */
 .mainbox {
     height: 630px;
@@ -264,6 +391,14 @@ header {
     max-width: 100%; /* Prevents overflow */
     object-fit: contain; /* Maintains aspect ratio */
 }
+
+.hero{
+    margin-top: 8vh !important;
+}
+
+/*************************************/
+/********** DONATION CARDS ***********/
+/*************************************/
 .third{
     height: 280px;
 }
@@ -351,6 +486,23 @@ header {
     color: crimson;
 }
 
+/* Social Icons */
+.rightitems {
+    margin-left: 40px;
+}
+
+.socials svg {
+    color: #000;
+}
+
+.rightitems a svg {
+    margin: 15px;
+    margin-top: 20px;
+}
+
+/*************************************/
+/********** POVERTY SECTION **********/
+/*************************************/
 .sad{
     /* background-color: pink; */
     width: 100%;
@@ -405,18 +557,20 @@ header {
     font-weight: 500;
 }
 
+/*************************************/
+/********** EVENTS SECTION ***********/
+/*************************************/
+.fourth{
+    margin-top: 10px;
+    height: 900px;
+    background-color:white;
+}
+
 .events{
     margin-top: 150px;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-}
-.fourth{
-    margin-top: 10px;
-    height: 900px;
-    background-color:white;
-    /* justify-content: center;
-    align-items: center; */
 }
 
 .head2{
@@ -471,7 +625,6 @@ header {
     display:table;
 }
 .rcard{
-    /* width: 550px; */
     width: 48vw;
     height: 210px;
     margin-bottom: 30px;
@@ -485,7 +638,6 @@ header {
 }
 
 .lastcard{
-    /* width: 550px; */
     width: 48vw;
     height: 210px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -519,7 +671,9 @@ margin-top: 25px;
     margin-right: 10px;
 }
 
-
+/*************************************/
+/******* FUND RAISING BANNER *********/
+/*************************************/
 .image1{
     width: 100%;
     justify-content: center;
@@ -543,9 +697,11 @@ margin-top: 25px;
     transform: translate(-50% , -50%);
     width: 70%;
 }
+
 .break{
     height:160px;
 }
+
 .conto{
     display: flex;
     align-items: center;
@@ -557,10 +713,13 @@ margin-top: 25px;
     padding: 0 30px;
 }
 
-/* *********************************** */
+/*************************************/
+/******* INFORMATION BANNER *********/
+/*************************************/
 .break2{
     height: 100px;
 }
+
 .horizontal{
        width: 100%;
        height: 200px;
@@ -569,6 +728,7 @@ margin-top: 25px;
        background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
        
 }
+
 .bar{
     background-color: white;
     height:200px;
@@ -587,6 +747,7 @@ margin-top: 25px;
     align-items: center;
     text-align: center;
 }
+
 .ok{
     margin-left: 30px;
 }
@@ -596,6 +757,9 @@ margin-top: 25px;
     height:120px;
 }
 
+/*************************************/
+/*********** NEWS SECTION ************/
+/*************************************/
 .cards3{
     display: flex;
     gap: 1px;
@@ -603,10 +767,9 @@ margin-top: 25px;
     margin-top: 50px;
 }
 
-
-
-
-
+/*************************************/
+/************** FOOTER ***************/
+/*************************************/
 .footer {
     background-color: #333;
     color: #fff;
@@ -674,6 +837,7 @@ margin-top: 25px;
     font-size: 14px;
     color: #aaa;
 }
+
 /* Scroll to Top Button */
 #scrollToTop {
     position: fixed;
@@ -736,8 +900,55 @@ margin-top: 25px;
     font-variant-numeric: tabular-nums; /* Ensures numbers maintain consistent width */
 }
 
-@media only screen and (max-width: 905px)
-{
+/*************************************/
+/************** OTHERS ***************/
+/*************************************/
+  /* Smaller subheading at the top (e.g. "Demos") */
+  .small-heading {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+/* Contact Section */
+.menu-contact-title {
+    font-size: 14px;
+    color: gray;
+    margin-top: 20px;
+}
+
+.menu-contact-info {
+    font-size: 14px;
+    color: black;
+}
+
+
+
+
+
+/*************************************/
+/*********** MEDIA QUERIES ***********/
+/*************************************/
+
+/* Ultra Wide (4K+) - Above 1920px */
+@media only screen and (min-width: 1921px) {
+    /* Styles for ultra-wide screens */
+}
+
+/* Extra Large (High-Resolution Screens) - 1441px to 1920px */
+@media only screen and (max-width: 1920px) {
+    /* Styles for extra large screens */
+}
+
+/* Large (Desktops & Large Screens) - 906px to 1440px */
+@media only screen and (max-width: 1440px) {
+    /* Styles for large screens */
+}
+
+/* Medium (Tablets & Small Laptops) - 769px to 905px */
+@media only screen and (max-width: 905px) {
+    /* Styles for medium screens */
     .navBtn{
         font-size: 70% !important;
     }
@@ -751,167 +962,128 @@ margin-top: 25px;
     }
 }
 
-/* Mobile Responsive Styles */
-/* Mobile Responsive Styles */
+/* Hide the menu icon on desktop */
+@media only screen and (min-width: 769px) 
+{
+    .menu-icon, .mobile-menu {
+        display: none !important;
+    }
+    .navbar{
+        left: 100px;
+    }
+}
+
+/* Small (Tablets & Small Screens) - 481px to 768px */
 @media only screen and (max-width: 768px) {
+    /* Styles for small screens */
+
     /* Constrain the body width to 768px & prevent horizontal scroll */
     body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
-    }
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+    
+      /* Hide desktop navbar, show hamburger icon (if any) */
+      .navbar {
+        display: none !important;
+      }
   
-    /* Hide desktop navbar, show hamburger icon (if any) */
-    .navbar {
-      display: none !important;
-    }
-
-    .logoContainer{
-        margin-left: 20% !important;
-    }
-
-    .menu-icon {
-      display: block;
-      position: absolute;
-      top: 14px !important;
-      right: 1px !important;
-      margin: 0 !important;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 999;
-    }
-    .menu {
-      display: none; /* Toggled via JS */
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      background: white;
-      flex-direction: column;
-      text-align: center;
-      z-index: 998;
-    }
-    .menu a {
-      display: block;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
+      .logoContainer{
+          margin-left: 20% !important;
+      }
   
-    /* Make main container vertical & centered */
-    .mainbox,
-    .content-section,
-    .events,
-    .third,
-    .fourth {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 768px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .mainbox{
-        margin-top: 8vh !important;
-    }
-  
-    /* Force all card sections to stack vertically with spacing */
-    .cards,
-    .cards2,
-    .cards3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      width: 100%;
-      margin-bottom: 50px; /* Space above the footer */
-    }
-  
-    /* Individual cards expand to fit content & no overlap */
-    .card1,
-    .leftcard,
-    .rcard,
-    .lastcard {
-      width: 90%;
-      height: auto;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .sad{
+      .menu-icon {
+        display: block;
+        position: absolute;
+        top: 14px !important;
+        right: 1px !important;
         margin: 0 !important;
-    }
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 999;
+      }
+      .menu {
+        display: none; /* Toggled via JS */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        z-index: 998;
+      }
+      .menu a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+    
+      /* Make main container vertical & centered */
+      .mainbox,
+      .content-section,
+      .events,
+      .third,
+      .fourth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-    .para{
-        width: fit-content;
-        margin: 0;
-        padding: 0 10vw;
-    }
+       /* Make sure the parent sections auto-expand */
+       .fourth,
+       .events,
+       .content-section {
+         height: auto !important;
+         position: static !important;
+         overflow: visible !important;
+       }
   
-    /* Image & text blocks: vertical, no overlap */
-    .img,
-    .text-content {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  
-    /* Add spacing before footer so cards don't collide */
-    .footer {
-      margin-top: 40px; 
-    }
-  
-    /* Ensure text wraps inside small screens */
-    h1, h2, h3, p {
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    /* Make sure the parent sections auto-expand */
-    .fourth,
-    .events,
-    .content-section {
-      height: auto !important;
-      position: static !important;
-      overflow: visible !important;
-    }
-  
-    /* Stack the news cards vertically, ensure spacing */
+      .mainbox{
+          margin-top: 8vh !important;
+      }
+    
+      /* Force all card sections to stack vertically with spacing */
+      .cards,
+      .cards2,
+      .cards3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        margin-bottom: 50px; /* Space above the footer */
+      }
+
+       /* Stack the news cards vertically, ensure spacing */
     .cards3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;                 /* spacing between each card */
-      width: 100%;
-      margin: 0 auto 80px auto; /* 80px bottom margin to separate from footer */
-    }
-  
-    /* Remove any fixed height on individual cards */
-    .rcard,
-    .lastcard {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      position: static !important;
-    }
-  
-    /* Add extra spacing above footer if needed */
-    .footer {
-      margin-top: 40px;    /* gap before footer */
-      padding-top: 20px;   /* ensures footer content isn't squashed */
-      position: relative;  /* no overlap */
-      z-index: 0;          /* stays behind any card if needed */
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    /* Force card containers to be wide enough for images */
+        margin: 0 auto 80px auto; /* 80px bottom margin to separate from footer */
+      }
+    
+      /* Individual cards expand to fit content & no overlap */
+      .card1,
+      .leftcard,
+      .rcard,
+      .lastcard {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Remove any fixed height on individual cards */
+      .rcard,
+      .lastcard {
+        height: auto !important;
+        position: static !important;
+      }
+
+      /* Force card containers to be wide enough for images */
     .cards3 .rcard,
     .cards3 .lastcard,
     .cards3 .leftcard {
@@ -932,8 +1104,7 @@ margin-top: 25px;
       border-radius: 5%; /* Keep your rounded corners if desired */
       display: block;
     }
-  }
-  @media only screen and (max-width: 768px) {
+
     /* Center the entire bar */
     .horizontal,
     .bar {
@@ -953,50 +1124,82 @@ margin-top: 25px;
       margin: 10px !important;       /* Add spacing around each item */
       text-align: center !important; /* Center text and icons */
     }
-  }
-      
-  @media only screen and (max-width: 768px) {
-    /* Remove fixed heights and ensure space below main image */
+  
+      .sad{
+          margin: 0 !important;
+      }
+  
+      .para{
+          width: fit-content;
+          margin: 0;
+          padding: 0 10vw;
+      }
+    
+      /* Image & text blocks: vertical, no overlap */
+      .img,
+      .text-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .img img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    
+      /* Add spacing before footer so cards don't collide */
+      .footer {
+        margin-top: 40px;    /* gap before footer */
+        padding-top: 20px;   /* ensures footer content isn't squashed */
+        position: relative;  /* no overlap */
+        z-index: 0;          /* stays behind any card if needed */
+      }
+    
+      /* Ensure text wraps inside small screens */
+      h1, h2, h3, p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      /* Remove fixed heights and ensure space below main image */
     .mainbox {
-      margin-bottom: 40px !important; /* space after hero image */
-    }
-  
-    /* If your card section is in .third, remove any fixed heights */
-    main.third {
-      height: auto !important;
-      margin: 0 !important;
-      padding: 20px 0 !important;
-      position: static !important;
-    }
-  
-    /* Stack the cards vertically with spacing */
-    .cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      width: 100%;
-      margin-top: 0 !important; /* remove any negative margin that might cause overlap */
-      position: static !important;
-    }
-  
-    /* Ensure each card is auto-height and centered */
-    .card1 {
-      width: 90% !important;
-      height: auto !important;
-      margin-bottom: 20px; /* spacing between cards */
-      position: static !important;
-    }
-  
-    /* Remove large left margin from the icon container if it exists */
-    .circle {
-      margin: 0 auto !important;
-    }
-  }
-  
-  /* Mobile Responsive Styles */
-@media only screen and (max-width: 768px) {
-    /* Hamburger Menu */
+        margin-bottom: 40px !important; /* space after hero image */
+      }
+    
+      /* If your card section is in .third, remove any fixed heights */
+      main.third {
+        height: auto !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        position: static !important;
+      }
+    
+      /* Stack the cards vertically with spacing */
+      .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 0 !important; /* remove any negative margin that might cause overlap */
+        position: static !important;
+      }
+    
+      /* Ensure each card is auto-height and centered */
+      .card1 {
+        width: 90% !important;
+        height: auto !important;
+        margin-bottom: 20px; /* spacing between cards */
+        position: static !important;
+      }
+    
+      /* Remove large left margin from the icon container if it exists */
+      .circle {
+        margin: 0 auto !important;
+      }
+
+      /* Hamburger Menu */
     .navbar {
         display: none;
     }
@@ -1122,12 +1325,7 @@ margin-top: 25px;
         margin-top: 700px;
 
     }
-    
-    
-  
-}
 
-@media only screen and (max-width: 768px) {
     .image1 {
         position: relative;
         width: 100%;
@@ -1156,8 +1354,7 @@ margin-top: 25px;
         color: white;
         padding: 20px;
     }
-}
-@media only screen and (max-width: 768px) {
+
     .image1 {
         position: relative;
         width: 100%;
@@ -1189,353 +1386,169 @@ margin-top: 25px;
         display: flex;
         flex-direction: column;
     }
-}
-@media only screen and (max-width: 768px) {
+
     /* Ensure the entire page stays within 768px */
     body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
-    }
-  
-    /* Change the layout of the top buttons */
-    .socials {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px; /* adjust spacing as needed */
-      width: 100%;
-    }
-  
-    /* Remove extra left margins that may cause overflow */
-    .socials > div {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  
-    /* Optional: Adjust button widths if needed */
-    .btn, .login-btn, .modalbtn {
-      width: auto;
-      padding: 10px 20px; /* tweak for better mobile appearance */
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    /* Constrain overall width */
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+    
+      /* Change the layout of the top buttons */
+      .socials {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px; /* adjust spacing as needed */
+        width: 100%;
+      }
+    
+      /* Remove extra left margins that may cause overflow */
+      .socials > div {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    
+      /* Optional: Adjust button widths if needed */
+      .btn, .login-btn, .modalbtn {
+        width: auto;
+        padding: 10px 20px; /* tweak for better mobile appearance */
+      }
+
+      /* Constrain overall width */
     body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
-    }
-    
-    /* Adjust the lower header container to align items in one row */
-    header .lower {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 100%;
-      padding: 0 15px !important;  /* add some side padding */
-    }
-  
-    /* Remove excessive right margin from the logo container */
-    header .image {
-      margin-right: 10px;
-      /* You might also adjust margin-top if needed */
-    }
-    
-    /* Ensure the socials container displays its items horizontally */
-    header .socials {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 10px; /* adjust spacing as needed */
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .header-btn {
-      width: 110px;  /* same width as the login button */
-      padding: 10px 0; /* adjust padding for a uniform look */
-      text-align: center;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    /* Constrain the page width */
-    body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
-    }
-  
-    /* Hamburger Icon - show only on mobile */
-    .menu-icon {
-      display: block;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1100;
-      color: #000; /* Adjust as needed */
-    }
-  
-    /* Position the navbar off-canvas by default */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%; /* Adjust width as needed */
-      height: 100%;
-      background: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-  
-    /* When active, slide the navbar into view */
-    .navbar.active {
-      left: 0;
-    }
-  
-    /* Optionally style the navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.2rem;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-    }
-  }
-  /* Desktop styles */
-.menu-icon {
-    display: none; /* Hidden on desktop */
-  }
-  
-  .navbar {
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Mobile styles */
-  @media only screen and (max-width: 768px) {
-    /* Show the hamburger icon on mobile */
-    .menu-icon {
-      display: block;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1100;
-      color: #000;
-    }
-    
-    /* Hide the navbar off-canvas by default */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%; /* Adjust width as needed */
-      height: 100%;
-      background: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: row; /* Arrange links vertically */
-      gap: 20px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-      background-color: white;
-    }
-    
-    /* Slide the navbar into view when active */
-    .navbar.active {
-      left: 0;
-      background-color: white;
-    }
-    
-    /* Style the navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.2rem;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
       
-    }
-  }
-  
-/* Basic reset (optional) */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Hamburger icon styling */
-  .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    margin: 15px;
-    display: inline-block;
-    /* Position it as needed in your design:
-       e.g., position: fixed; top: 20px; left: 20px; */
-  }
-  
-  /* Fullscreen overlay container */
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    right: 0; /* or left: 0, if you want it to slide in from the left */
-    width: 100%;
-    height: 100%;
-    background: #fff; /* White background */
-    transform: translateX(100%); /* Initially hidden off-screen to the right */
-    transition: transform 0.3s ease;
-    z-index: 9999; /* Ensure it appears above other elements */
-  }
-  
-  /* When "open" class is added, slide it in */
-  .menu-overlay.open {
-    transform: translateX(0);
-  }
-  
-  /* Close icon in the top-right corner */
-  .close-icon {
-    font-size: 40px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-    line-height: 1;
-  }
-  
-  /* Center and style the menu items */
-  .menu-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px; /* space from top so it doesn't collide with close icon */
-    padding: 0 30px;
-  }
-  
-  /* Smaller subheading at the top (e.g. "Demos") */
-  .small-heading {
-    font-size: 18px;
-    color: #999;
-    margin-bottom: 20px;
-    display: block;
-  }
-  
-  /* Individual menu links */
-  .menu-content a {
-    font-size: 24px;
-    color: #000;
-    text-decoration: none;
-    margin: 15px 0; /* spacing between links */
-    transition: color 0.2s;
-  }
-  
-  /* Hover effect for links */
-  .menu-content a:hover {
-    color: #555;
-  }
-  /* Hide the menu icon on desktop */
-@media (min-width: 769px) {
+      /* Adjust the lower header container to align items in one row */
+      header .lower {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 15px !important;  /* add some side padding */
+      }
+    
+      /* Remove excessive right margin from the logo container */
+      header .image {
+        margin-right: 10px;
+        /* You might also adjust margin-top if needed */
+      }
+      
+      /* Ensure the socials container displays its items horizontally */
+      header .socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px; /* adjust spacing as needed */
+      }
+
+      .header-btn {
+        width: 110px;  /* same width as the login button */
+        padding: 10px 0; /* adjust padding for a uniform look */
+        text-align: center;
+      }
+
+      /* Constrain the page width */
+    body, html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+      }
+    
+      /* Hamburger Icon - show only on mobile */
+      .menu-icon {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000; /* Adjust as needed */
+      }
+    
+      /* Position the navbar off-canvas by default */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%; /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+      }
+    
+      /* When active, slide the navbar into view */
+      .navbar.active {
+        left: 0;
+      }
+    
+      /* Optionally style the navbar links */
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+       /* Show the hamburger icon on mobile */
     .menu-icon {
-        display: none;
-    }
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000;
+      }
+      
+      /* Hide the navbar off-canvas by default */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%; /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: row; /* Arrange links vertically */
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        background-color: white;
+      }
+      
+      /* Slide the navbar into view when active */
+      .navbar.active {
+        left: 0;
+        background-color: white;
+      }
+      
+      /* Style the navbar links */
+      .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        
+      }
 }
 
-/* Mobile Menu Icon (Hamburger) */
-.menu-icon {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-/* Mobile Menu Styling */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: -100%; /* Start off-screen */
-    width: 75%;
-    height: 100vh !important;
-    background: white;
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-
-    padding: 20px;
-    transition: left 0.4s ease-in-out;
-    z-index: 1000;
-}
-
-/* When menu is active, slide in */
-.mobile-menu.active {
-    left: 0;
-}
-
-/* Menu Header */
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.menu-title {
-    font-size: 18px;
-    color: gray;
-    font-weight: bold;
-}
-
-/* Close Button */
-.menu-close {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* Menu Links */
-.mobile-menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    padding: 10px 0;
-    display: block;
-    transition: color 0.3s;
-}
-
-.mobile-menu a:hover {
-    color: red;
-}
-
-/* Contact Section */
-.menu-contact-title {
-    font-size: 14px;
-    color: gray;
-    margin-top: 20px;
-}
-
-.menu-contact-info {
-    font-size: 14px;
-    color: black;
-}
-/* Hide the mobile menu on desktop */
-@media (min-width: 769px) {
-    .menu-icon, .mobile-menu {
-        display: none !important;
-    }
-    .navbar{
-        left: 100px;
-    }
-}
-
-@media (max-width: 480px){
+/* Extra Small (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
+    /* Styles for extra small screens */
     .desktopBtn{
         display: none !important;
     }
