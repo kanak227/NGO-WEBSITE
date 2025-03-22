@@ -67,3 +67,17 @@ const statsSection = document.querySelector('.horizontal');
 if (statsSection) {
     observer.observe(statsSection);
 }
+
+// To open and close collapsible navbar
+function toggleMenu() {
+    document.querySelector('.mobile-menu').classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+    let menu = document.querySelector('.mobile-menu');
+    let icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});

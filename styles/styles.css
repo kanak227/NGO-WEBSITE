@@ -103,7 +103,7 @@ header {
     align-items: center !important;
     width: 65vw !important;
     gap: 1rem !important;
-    padding-right: 15% !important;
+    /* padding-right: 15% !important; */
 }
 
 .image {
@@ -136,6 +136,7 @@ header {
     width: fit-content !important;
     margin: 0 !important;
     padding: 0 ;
+    padding-left: 10% !important;
 }
 
 .navbar a {
@@ -1467,6 +1468,7 @@ margin-top: 25px;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+
     padding: 20px;
     transition: left 0.4s ease-in-out;
     z-index: 1000;
