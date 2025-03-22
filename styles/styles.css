@@ -90,7 +90,7 @@ header {
     width: fit-content !important;
 }
 
-.mobileBtn{
+.mobileBtn {
     display: flex !important;
     flex-direction: column !important;
     justify-content: left !important;
@@ -144,7 +144,7 @@ header {
     gap: 2vw !important;
     width: fit-content !important;
     margin: 0 !important;
-    padding: 0 ;
+    padding: 0;
     padding-left: 10% !important;
 }
 
@@ -185,71 +185,78 @@ header {
 }
 
 .menu-icon {
-    display: none; /* Hidden on desktop */
-  }
-  
-  .navbar {
+    display: none;
+    /* Hidden on desktop */
+}
+
+.navbar {
     display: flex;
     gap: 20px;
-  }
+}
 
-  /* Hamburger icon styling */
-  .menu-icon {
+/* Hamburger icon styling */
+.menu-icon {
     font-size: 30px;
     cursor: pointer;
     margin: 15px;
     display: inline-block;
-  }
-  
-  /* Fullscreen overlay container */
-  .menu-overlay {
+}
+
+/* Fullscreen overlay container */
+.menu-overlay {
     position: fixed;
     top: 0;
-    right: 0; /* or left: 0, if you want it to slide in from the left */
+    right: 0;
+    /* or left: 0, if you want it to slide in from the left */
     width: 100%;
     height: 100%;
-    background: #fff; /* White background */
-    transform: translateX(100%); /* Initially hidden off-screen to the right */
+    background: #fff;
+    /* White background */
+    transform: translateX(100%);
+    /* Initially hidden off-screen to the right */
     transition: transform 0.3s ease;
-    z-index: 9999; /* Ensure it appears above other elements */
-  }
-  
-  /* When "open" class is added, slide it in */
-  .menu-overlay.open {
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+}
+
+/* When "open" class is added, slide it in */
+.menu-overlay.open {
     transform: translateX(0);
-  }
-  
-  /* Close icon in the top-right corner */
-  .close-icon {
+}
+
+/* Close icon in the top-right corner */
+.close-icon {
     font-size: 40px;
     position: absolute;
     top: 20px;
     right: 30px;
     cursor: pointer;
     line-height: 1;
-  }
-  
-  /* Center and style the menu items */
-  .menu-content {
+}
+
+/* Center and style the menu items */
+.menu-content {
     display: flex;
     flex-direction: column;
-    margin-top: 100px; /* space from top so it doesn't collide with close icon */
+    margin-top: 100px;
+    /* space from top so it doesn't collide with close icon */
     padding: 0 30px;
-  }
+}
 
-  /* Individual menu links */
-  .menu-content a {
+/* Individual menu links */
+.menu-content a {
     font-size: 24px;
     color: #000;
     text-decoration: none;
-    margin: 15px 0; /* spacing between links */
+    margin: 15px 0;
+    /* spacing between links */
     transition: color 0.2s;
-  }
-  
-  /* Hover effect for links */
-  .menu-content a:hover {
+}
+
+/* Hover effect for links */
+.menu-content a:hover {
     color: #555;
-  }
+}
 
 /* Mobile Menu Icon (Hamburger) */
 .menu-icon {
@@ -266,7 +273,8 @@ header {
 .mobile-menu {
     position: fixed;
     top: 0;
-    left: -100%; /* Start off-screen */
+    left: -100%;
+    /* Start off-screen */
     width: 75%;
     height: 100vh !important;
     background: white;
@@ -387,19 +395,22 @@ header {
 }
 
 .img img {
-    height: 610px; /* Keeps the image height consistent */
-    max-width: 100%; /* Prevents overflow */
-    object-fit: contain; /* Maintains aspect ratio */
+    height: 610px;
+    /* Keeps the image height consistent */
+    max-width: 100%;
+    /* Prevents overflow */
+    object-fit: contain;
+    /* Maintains aspect ratio */
 }
 
-.hero{
+.hero {
     margin-top: 8vh !important;
 }
 
 /*************************************/
 /********** DONATION CARDS ***********/
 /*************************************/
-.third{
+.third {
     height: 280px;
 }
 
@@ -421,45 +432,56 @@ header {
     border-radius: 5%;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow change */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth scaling and shadow change */
     cursor: pointer;
 }
 
 .card1:hover {
-    transform: scale(1.05); /* Enlarge slightly on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-    background-color: rgb(255, 248, 220); /* Slight color change on hover */
+    transform: scale(1.05);
+    /* Enlarge slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Enhance shadow on hover */
+    background-color: rgb(255, 248, 220);
+    /* Slight color change on hover */
 }
 
-.card1 p, .card1 h3 {
-    margin: 5px 0; /* Ensure consistent spacing */
-    color: #333; /* Text color */
+.card1 p,
+.card1 h3 {
+    margin: 5px 0;
+    /* Ensure consistent spacing */
+    color: #333;
+    /* Text color */
 }
 
-.card1:hover h3, .card1:hover p {
-    color: #555; /* Slight text color change on hover */
+.card1:hover h3,
+.card1:hover p {
+    color: #555;
+    /* Slight text color change on hover */
 }
 
 
-.circle{
+.circle {
     border-radius: 50%;
     background-color: white;
-    height:70px;
-    width:70px;
+    height: 70px;
+    width: 70px;
     align-items: center;
     align-self: center;
     margin-left: 100px;
     margin-top: 10px;
 }
-.circle svg{
+
+.circle svg {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
- 
+
 }
 
-#donate{
+#donate {
     margin-left: 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -469,7 +491,7 @@ header {
     margin-bottom: 0%;
 }
 
-.card1 h3{
+.card1 h3 {
     margin-left: 20px;
     margin-top: 2px;
     position: relative;
@@ -503,7 +525,7 @@ header {
 /*************************************/
 /********** POVERTY SECTION **********/
 /*************************************/
-.sad{
+.sad {
     /* background-color: pink; */
     width: 100%;
     /* height: 420px; */
@@ -516,43 +538,48 @@ header {
     margin-top: 50px;
 }
 
-.para{
+.para {
     width: 40%;
     /* height: 450px; */
     height: fit-content;
     align-items: baseline;
     justify-content: center;
 }
-.para p{
+
+.para p {
     line-height: 1.5;
     font-size: 1.1rem;
 }
 
 
-#head{
+#head {
     font-size: 1.3rem;
     font-weight: 500;
     opacity: 70%;
     margin-bottom: 3px;
 }
 
-.button{
+.button {
     margin-top: 30px;
     display: flex;
     align-items: center;
- 
+
 }
-.btn{
+
+.btn {
     transition: transform 0.9s ease;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.03);
 }
-.button svg{
+
+.button svg {
     margin-left: 40px;
     margin-right: 10px;
 }
-.button p{
+
+.button p {
     margin-top: 8px;
     font-weight: 500;
 }
@@ -560,71 +587,78 @@ header {
 /*************************************/
 /********** EVENTS SECTION ***********/
 /*************************************/
-.fourth{
+.fourth {
     margin-top: 10px;
     height: 900px;
-    background-color:white;
+    background-color: white;
 }
 
-.events{
+.events {
     margin-top: 150px;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
 
-.head2{
+.head2 {
     width: 100%;
     line-height: 1;
     justify-content: center;
     text-align: center;
 }
-#upper{
+
+#upper {
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2;
-    
+
 }
-.head2 p{
+
+.head2 p {
     font-size: 2.9rem;
     font-weight: 600;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 0.9;
 }
-.cards2{
+
+.cards2 {
     justify-content: center;
     align-items: center;
     gap: 40px;
     display: flex;
 }
-.leftcard{
+
+.leftcard {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height:700px;
+    height: 700px;
     width: 500px;
     margin-left: 120px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
     transition: transform 0.3s ease;
 }
-.leftcard:hover{
+
+.leftcard:hover {
     transform: scale(1.03);
 }
-.text{
+
+.text {
     margin-left: 30px;
     width: 450px;
 }
 
-.rightcards{
-    
+.rightcards {
+
     height: 700px;
     width: 600px;
     justify-content: center;
     gap: 150px;
-    display:table;
+    display: table;
 }
-.rcard{
+
+.rcard {
     width: 48vw;
     height: 210px;
     margin-bottom: 30px;
@@ -633,48 +667,53 @@ header {
     transition: transform 0.3s ease;
 }
 
-.rcard:hover{
+.rcard:hover {
     transform: scale(1.03);
 }
 
-.lastcard{
+.lastcard {
     width: 48vw;
     height: 210px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4%;
     transition: transform 0.3s ease;
 }
-.lastcard:hover{
+
+.lastcard:hover {
     transform: scale(1.03);
 }
-.text1{
+
+.text1 {
     margin-left: 15px;
 }
-.icons{
+
+.icons {
     display: flex;
     margin-left: 25px;
-margin-top: 25px;
+    margin-top: 25px;
     height: 100px;
     width: 400px;
     border-radius: 10%;
-    
+
 }
-.Location{
+
+.Location {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 50px;
 }
-.text1 p{
+
+.text1 p {
     font-size: 0.9rem;
     margin-bottom: 30px;
-     line-height: 1.4;
+    line-height: 1.4;
     margin-right: 10px;
 }
 
 /*************************************/
 /******* FUND RAISING BANNER *********/
 /*************************************/
-.image1{
+.image1 {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -683,26 +722,27 @@ margin-top: 25px;
     height: 100vh;
     overflow: hidden;
 }
-.image1 img{
-    height:700px;
-    width:100%;
+
+.image1 img {
+    height: 700px;
+    width: 100%;
     object-fit: cover;
 }
 
-.contento{
-    color:white;
+.contento {
+    color: white;
     position: absolute;
     top: 430%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     width: 70%;
 }
 
-.break{
-    height:160px;
+.break {
+    height: 160px;
 }
 
-.conto{
+.conto {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -716,22 +756,22 @@ margin-top: 25px;
 /*************************************/
 /******* INFORMATION BANNER *********/
 /*************************************/
-.break2{
+.break2 {
     height: 100px;
 }
 
-.horizontal{
-       width: 100%;
-       height: 200px;
-       justify-content: center;
-       align-items: center;
-       background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
-       
+.horizontal {
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
+
 }
 
-.bar{
+.bar {
     background-color: white;
-    height:200px;
+    height: 200px;
     width: 80%;
     margin-left: 150px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -739,31 +779,31 @@ margin-top: 25px;
     gap: 20px;
 }
 
-.cont1{
-    height:200px;
+.cont1 {
+    height: 200px;
     width: 300px;
-    background-color:white;
+    background-color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.ok{
+.ok {
     margin-left: 30px;
 }
 
-.no2{
+.no2 {
     background-color: rgb(216, 231, 234);
-    height:120px;
+    height: 120px;
 }
 
 /*************************************/
 /*********** NEWS SECTION ************/
 /*************************************/
-.cards3{
+.cards3 {
     display: flex;
     gap: 1px;
-    width:100%;
+    width: 100%;
     margin-top: 50px;
 }
 
@@ -798,7 +838,9 @@ margin-top: 25px;
     margin-bottom: 15px;
 }
 
-.footer p, .footer ul, .footer a {
+.footer p,
+.footer ul,
+.footer a {
     font-size: 14px;
     line-height: 1.6;
     text-decoration: none;
@@ -897,19 +939,20 @@ margin-top: 25px;
 
 .cont1 h1 {
     transition: all 0.3s ease;
-    font-variant-numeric: tabular-nums; /* Ensures numbers maintain consistent width */
+    font-variant-numeric: tabular-nums;
+    /* Ensures numbers maintain consistent width */
 }
 
 /*************************************/
 /************** OTHERS ***************/
 /*************************************/
-  /* Smaller subheading at the top (e.g. "Demos") */
-  .small-heading {
+/* Smaller subheading at the top (e.g. "Demos") */
+.small-heading {
     font-size: 18px;
     color: #999;
     margin-bottom: 20px;
     display: block;
-  }
+}
 
 /* Contact Section */
 .menu-contact-title {
@@ -948,27 +991,30 @@ margin-top: 25px;
 
 /* Medium (Tablets & Small Laptops) - 769px to 905px */
 @media only screen and (max-width: 905px) {
+
     /* Styles for medium screens */
-    .navBtn{
+    .navBtn {
         font-size: 70% !important;
     }
 
-    .lower{
+    .lower {
         width: 65vw !important;
     }
 
-    .navbar a{
+    .navbar a {
         font-size: 0.9rem !important;
     }
 }
 
 /* Hide the menu icon on desktop */
-@media only screen and (min-width: 769px) 
-{
-    .menu-icon, .mobile-menu {
+@media only screen and (min-width: 769px) {
+
+    .menu-icon,
+    .mobile-menu {
         display: none !important;
     }
-    .navbar{
+
+    .navbar {
         left: 100px;
     }
 }
@@ -978,22 +1024,23 @@ margin-top: 25px;
     /* Styles for small screens */
 
     /* Constrain the body width to 768px & prevent horizontal scroll */
-    body, html {
+    body,
+    html {
         max-width: 768px;
         margin: 0 auto;
         overflow-x: hidden;
-      }
-    
-      /* Hide desktop navbar, show hamburger icon (if any) */
-      .navbar {
+    }
+
+    /* Hide desktop navbar, show hamburger icon (if any) */
+    .navbar {
         display: none !important;
-      }
-  
-      .logoContainer{
-          margin-left: 20% !important;
-      }
-  
-      .menu-icon {
+    }
+
+    .logoContainer {
+        margin-left: 20% !important;
+    }
+
+    .menu-icon {
         display: block;
         position: absolute;
         top: 14px !important;
@@ -1002,9 +1049,11 @@ margin-top: 25px;
         font-size: 30px;
         cursor: pointer;
         z-index: 999;
-      }
-      .menu {
-        display: none; /* Toggled via JS */
+    }
+
+    .menu {
+        display: none;
+        /* Toggled via JS */
         position: absolute;
         top: 60px;
         right: 0;
@@ -1013,19 +1062,20 @@ margin-top: 25px;
         flex-direction: column;
         text-align: center;
         z-index: 998;
-      }
-      .menu a {
+    }
+
+    .menu a {
         display: block;
         padding: 10px;
         border-bottom: 1px solid #ddd;
-      }
-    
-      /* Make main container vertical & centered */
-      .mainbox,
-      .content-section,
-      .events,
-      .third,
-      .fourth {
+    }
+
+    /* Make main container vertical & centered */
+    .mainbox,
+    .content-section,
+    .events,
+    .third,
+    .fourth {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1033,176 +1083,200 @@ margin-top: 25px;
         width: 100%;
         margin: 0 auto;
         padding: 20px;
-      }
+    }
 
-       /* Make sure the parent sections auto-expand */
-       .fourth,
-       .events,
-       .content-section {
-         height: auto !important;
-         position: static !important;
-         overflow: visible !important;
-       }
-  
-      .mainbox{
-          margin-top: 8vh !important;
-      }
-    
-      /* Force all card sections to stack vertically with spacing */
-      .cards,
-      .cards2,
-      .cards3 {
+    /* Make sure the parent sections auto-expand */
+    .fourth,
+    .events,
+    .content-section {
+        height: auto !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .mainbox {
+        margin-top: 8vh !important;
+    }
+
+    /* Force all card sections to stack vertically with spacing */
+    .cards,
+    .cards2,
+    .cards3 {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
         width: 100%;
-        margin-bottom: 50px; /* Space above the footer */
-      }
+        margin-bottom: 50px;
+        /* Space above the footer */
+    }
 
-       /* Stack the news cards vertically, ensure spacing */
+    /* Stack the news cards vertically, ensure spacing */
     .cards3 {
-        margin: 0 auto 80px auto; /* 80px bottom margin to separate from footer */
-      }
-    
-      /* Individual cards expand to fit content & no overlap */
-      .card1,
-      .leftcard,
-      .rcard,
-      .lastcard {
+        margin: 0 auto 80px auto;
+        /* 80px bottom margin to separate from footer */
+    }
+
+    /* Individual cards expand to fit content & no overlap */
+    .card1,
+    .leftcard,
+    .rcard,
+    .lastcard {
         width: 90%;
         height: auto;
         margin: 0 auto;
         padding: 20px;
-      }
+    }
 
-      /* Remove any fixed height on individual cards */
-      .rcard,
-      .lastcard {
+    /* Remove any fixed height on individual cards */
+    .rcard,
+    .lastcard {
         height: auto !important;
         position: static !important;
-      }
+    }
 
-      /* Force card containers to be wide enough for images */
+    /* Force card containers to be wide enough for images */
     .cards3 .rcard,
     .cards3 .lastcard,
     .cards3 .leftcard {
-      width: 90% !important;
-      max-width: 500px; /* or 100% if you want full width */
-      margin: 0 auto 30px;
-      padding: 10px;
-      box-sizing: border-box;
+        width: 90% !important;
+        max-width: 500px;
+        /* or 100% if you want full width */
+        margin: 0 auto 30px;
+        padding: 10px;
+        box-sizing: border-box;
     }
-  
+
     /* Ensure images don’t overflow */
     .cards3 .rcard img,
     .cards3 .lastcard img,
     .cards3 .leftcard img {
-      width: 100%;
-      height: auto;
-      object-fit: cover; /* or 'contain' if you prefer no cropping */
-      border-radius: 5%; /* Keep your rounded corners if desired */
-      display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* or 'contain' if you prefer no cropping */
+        border-radius: 5%;
+        /* Keep your rounded corners if desired */
+        display: block;
     }
 
     /* Center the entire bar */
     .horizontal,
     .bar {
-      margin: 0 auto !important;     /* Overrides large left margins */
-      width: 90% !important;         /* Fit within mobile screen */
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      flex-wrap: wrap;               /* Allow items to wrap on smaller screens */
-      gap: 20px;                     /* Space between items */
-      height: auto !important;       /* Let it grow with content */
+        margin: 0 auto !important;
+        /* Overrides large left margins */
+        width: 90% !important;
+        /* Fit within mobile screen */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        /* Allow items to wrap on smaller screens */
+        gap: 20px;
+        /* Space between items */
+        height: auto !important;
+        /* Let it grow with content */
     }
-  
+
     /* Each stat container is centered */
     .cont1 {
-      width: auto !important;
-      margin: 10px !important;       /* Add spacing around each item */
-      text-align: center !important; /* Center text and icons */
+        width: auto !important;
+        margin: 10px !important;
+        /* Add spacing around each item */
+        text-align: center !important;
+        /* Center text and icons */
     }
-  
-      .sad{
-          margin: 0 !important;
-      }
-  
-      .para{
-          width: fit-content;
-          margin: 0;
-          padding: 0 10vw;
-      }
-    
-      /* Image & text blocks: vertical, no overlap */
-      .img,
-      .text-content {
+
+    .sad {
+        margin: 0 !important;
+    }
+
+    .para {
+        width: fit-content;
+        margin: 0;
+        padding: 0 10vw;
+    }
+
+    /* Image & text blocks: vertical, no overlap */
+    .img,
+    .text-content {
         width: 100%;
         text-align: center;
         margin-bottom: 20px;
-      }
-      .img img {
+    }
+
+    .img img {
         width: 100%;
         height: auto;
         display: block;
-      }
-    
-      /* Add spacing before footer so cards don't collide */
-      .footer {
-        margin-top: 40px;    /* gap before footer */
-        padding-top: 20px;   /* ensures footer content isn't squashed */
-        position: relative;  /* no overlap */
-        z-index: 0;          /* stays behind any card if needed */
-      }
-    
-      /* Ensure text wraps inside small screens */
-      h1, h2, h3, p {
+    }
+
+    /* Add spacing before footer so cards don't collide */
+    .footer {
+        margin-top: 40px;
+        /* gap before footer */
+        padding-top: 20px;
+        /* ensures footer content isn't squashed */
+        position: relative;
+        /* no overlap */
+        z-index: 0;
+        /* stays behind any card if needed */
+    }
+
+    /* Ensure text wraps inside small screens */
+    h1,
+    h2,
+    h3,
+    p {
         word-wrap: break-word;
         overflow-wrap: break-word;
-      }
+    }
 
-      /* Remove fixed heights and ensure space below main image */
+    /* Remove fixed heights and ensure space below main image */
     .mainbox {
-        margin-bottom: 40px !important; /* space after hero image */
-      }
-    
-      /* If your card section is in .third, remove any fixed heights */
-      main.third {
+        margin-bottom: 40px !important;
+        /* space after hero image */
+    }
+
+    /* If your card section is in .third, remove any fixed heights */
+    main.third {
         height: auto !important;
         margin: 0 !important;
         padding: 20px 0 !important;
         position: static !important;
-      }
-    
-      /* Stack the cards vertically with spacing */
-      .cards {
+    }
+
+    /* Stack the cards vertically with spacing */
+    .cards {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
         width: 100%;
-        margin-top: 0 !important; /* remove any negative margin that might cause overlap */
+        margin-top: 0 !important;
+        /* remove any negative margin that might cause overlap */
         position: static !important;
-      }
-    
-      /* Ensure each card is auto-height and centered */
-      .card1 {
+    }
+
+    /* Ensure each card is auto-height and centered */
+    .card1 {
         width: 90% !important;
         height: auto !important;
-        margin-bottom: 20px; /* spacing between cards */
+        margin-bottom: 20px;
+        /* spacing between cards */
         position: static !important;
-      }
-    
-      /* Remove large left margin from the icon container if it exists */
-      .circle {
-        margin: 0 auto !important;
-      }
+    }
 
-      /* Hamburger Menu */
+    /* Remove large left margin from the icon container if it exists */
+    .circle {
+        margin: 0 auto !important;
+    }
+
+    /* Hamburger Menu */
     .navbar {
         display: none;
     }
+
     .menu-icon {
         display: block;
         position: absolute;
@@ -1211,6 +1285,7 @@ margin-top: 25px;
         font-size: 30px;
         cursor: pointer;
     }
+
     .menu {
         display: none;
         position: absolute;
@@ -1221,33 +1296,36 @@ margin-top: 25px;
         flex-direction: column;
         text-align: center;
     }
+
     .menu a {
         display: block;
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
-    
+
     /* Ensure Image Appears Above Donate Cards */
     .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-bottom: 40px; /* Space between image and cards */
+        margin-bottom: 40px;
+        /* Space between image and cards */
     }
-    
+
     .img {
         width: 100%;
         text-align: center;
         position: relative;
     }
+
     .img img {
         width: 100%;
         height: auto;
         max-width: 100%;
         display: block;
     }
-    
+
     /* Cards in Vertical Layout */
     .cards {
         display: flex;
@@ -1256,7 +1334,7 @@ margin-top: 25px;
         gap: 40px;
         width: 100%;
     }
-    
+
     .card1 {
         width: 90%;
         height: auto;
@@ -1266,7 +1344,7 @@ margin-top: 25px;
         align-items: center;
         justify-content: center;
     }
-    
+
     /* Ensure Proper Layout */
     .mainbox {
         flex-direction: column;
@@ -1276,11 +1354,12 @@ margin-top: 25px;
         max-width: 768px;
         margin: 0 auto;
     }
+
     .text-content {
         max-width: 100%;
         word-wrap: break-word;
     }
-    
+
     /* Fix Overlapping Issues */
     .content-section {
         display: flex;
@@ -1291,37 +1370,46 @@ margin-top: 25px;
         margin: 0 auto;
         padding: 10px;
     }
+
     .content-box {
         width: 90%;
         padding: 20px;
         background: white;
     }
-    
+
     /* Ensure text fits within width */
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-    
+
     /* Add space between .third and .fourth sections */
     main.third {
         margin-bottom: 150px !important;
     }
+
     main.fourth {
         margin-top: 600px !important;
         margin-bottom: 7px !important;
     }
-    main.third{
+
+    main.third {
         margin-top: 500px !important;
     }
-    div.sad{
+
+    div.sad {
         margin-top: 80px !important;
     }
-    div.image1{
-        margin-top:-600px !important;
-        margin-bottom:-500px !important;
+
+    div.image1 {
+        margin-top: -600px !important;
+        margin-bottom: -500px !important;
     }
-    main.fight{
+
+    main.fight {
         margin-top: 700px;
 
     }
@@ -1350,7 +1438,7 @@ margin-top: 25px;
         align-items: center;
         justify-content: center;
         text-align: center;
-        
+
         color: white;
         padding: 20px;
     }
@@ -1359,7 +1447,7 @@ margin-top: 25px;
         position: relative;
         width: 100%;
         height: auto;
-        bottom:300px;
+        bottom: 300px;
     }
 
     .image1 img {
@@ -1370,16 +1458,18 @@ margin-top: 25px;
     }
 
     .contento {
-        width :30px;
-        position: relative; /* Remove absolute positioning */
-        order: -2; /* Moves it above the .image1 div */
+        width: 30px;
+        position: relative;
+        /* Remove absolute positioning */
+        order: -2;
+        /* Moves it above the .image1 div */
         width: 100%;
         text-align: center;
         padding: 15px;
-       
+
         color: white;
-        left:50%;
-        
+        left: 50%;
+
     }
 
     .image1 {
@@ -1388,119 +1478,88 @@ margin-top: 25px;
     }
 
     /* Ensure the entire page stays within 768px */
-    body, html {
+    body,
+    html {
         max-width: 768px;
         margin: 0 auto;
         overflow-x: hidden;
-      }
-    
-      /* Change the layout of the top buttons */
-      .socials {
+    }
+
+    /* Change the layout of the top buttons */
+    .socials {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 10px; /* adjust spacing as needed */
+        gap: 10px;
+        /* adjust spacing as needed */
         width: 100%;
-      }
-    
-      /* Remove extra left margins that may cause overflow */
-      .socials > div {
+    }
+
+    /* Remove extra left margins that may cause overflow */
+    .socials>div {
         margin-left: 0;
         margin-right: 0;
-      }
-    
-      /* Optional: Adjust button widths if needed */
-      .btn, .login-btn, .modalbtn {
-        width: auto;
-        padding: 10px 20px; /* tweak for better mobile appearance */
-      }
+    }
 
-      /* Constrain overall width */
-    body, html {
+    /* Optional: Adjust button widths if needed */
+    .btn,
+    .login-btn,
+    .modalbtn {
+        width: auto;
+        padding: 10px 20px;
+        /* tweak for better mobile appearance */
+    }
+
+    /* Constrain overall width */
+    body,
+    html {
         max-width: 768px;
         margin: 0 auto;
         overflow-x: hidden;
-      }
-      
-      /* Adjust the lower header container to align items in one row */
-      header .lower {
+    }
+
+    /* Adjust the lower header container to align items in one row */
+    header .lower {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         width: 100%;
-        padding: 0 15px !important;  /* add some side padding */
-      }
-    
-      /* Remove excessive right margin from the logo container */
-      header .image {
+        padding: 0 15px !important;
+        /* add some side padding */
+    }
+
+    /* Remove excessive right margin from the logo container */
+    header .image {
         margin-right: 10px;
         /* You might also adjust margin-top if needed */
-      }
-      
-      /* Ensure the socials container displays its items horizontally */
-      header .socials {
+    }
+
+    /* Ensure the socials container displays its items horizontally */
+    header .socials {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 10px; /* adjust spacing as needed */
-      }
+        gap: 10px;
+        /* adjust spacing as needed */
+    }
 
-      .header-btn {
-        width: 110px;  /* same width as the login button */
-        padding: 10px 0; /* adjust padding for a uniform look */
+    .header-btn {
+        width: 110px;
+        /* same width as the login button */
+        padding: 10px 0;
+        /* adjust padding for a uniform look */
         text-align: center;
-      }
+    }
 
-      /* Constrain the page width */
-    body, html {
+    /* Constrain the page width */
+    body,
+    html {
         max-width: 768px;
         margin: 0 auto;
         overflow-x: hidden;
-      }
-    
-      /* Hamburger Icon - show only on mobile */
-      .menu-icon {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 1100;
-        color: #000; /* Adjust as needed */
-      }
-    
-      /* Position the navbar off-canvas by default */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 70%; /* Adjust width as needed */
-        height: 100%;
-        background: #fff;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        transition: left 0.3s ease;
-        z-index: 1000;
-      }
-    
-      /* When active, slide the navbar into view */
-      .navbar.active {
-        left: 0;
-      }
-    
-      /* Optionally style the navbar links */
-      .navbar a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2rem;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-      }
+    }
 
-       /* Show the hamburger icon on mobile */
+    /* Hamburger Icon - show only on mobile */
     .menu-icon {
         display: block;
         position: fixed;
@@ -1510,46 +1569,93 @@ margin-top: 25px;
         cursor: pointer;
         z-index: 1100;
         color: #000;
-      }
-      
-      /* Hide the navbar off-canvas by default */
-      .navbar {
+        /* Adjust as needed */
+    }
+
+    /* Position the navbar off-canvas by default */
+    .navbar {
         position: fixed;
         top: 0;
         left: -100%;
-        width: 70%; /* Adjust width as needed */
+        width: 70%;
+        /* Adjust width as needed */
         height: 100%;
         background: #fff;
         padding: 20px;
         display: flex;
-        flex-direction: row; /* Arrange links vertically */
+        flex-direction: column;
         gap: 20px;
         transition: left 0.3s ease;
         z-index: 1000;
-        background-color: white;
-      }
-      
-      /* Slide the navbar into view when active */
-      .navbar.active {
+    }
+
+    /* When active, slide the navbar into view */
+    .navbar.active {
         left: 0;
-        background-color: white;
-      }
-      
-      /* Style the navbar links */
-      .navbar a {
+    }
+
+    /* Optionally style the navbar links */
+    .navbar a {
         text-decoration: none;
         color: #333;
         font-size: 1.2rem;
         padding: 10px 0;
         border-bottom: 1px solid #ddd;
-        
-      }
+    }
+
+    /* Show the hamburger icon on mobile */
+    .menu-icon {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000;
+    }
+
+    /* Hide the navbar off-canvas by default */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        /* Arrange links vertically */
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        background-color: white;
+    }
+
+    /* Slide the navbar into view when active */
+    .navbar.active {
+        left: 0;
+        background-color: white;
+    }
+
+    /* Style the navbar links */
+    .navbar a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+
+    }
 }
 
 /* Extra Small (Phones) - Up to 480px */
 @media only screen and (max-width: 480px) {
+
     /* Styles for extra small screens */
-    .desktopBtn{
+    .desktopBtn {
         display: none !important;
     }
 }

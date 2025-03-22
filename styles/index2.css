@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -10,6 +11,7 @@ body {
   color: white;
   padding: 10px;
 }
+
 .navbar button {
   padding: 10px 15px;
   margin-left: 10px;
@@ -19,9 +21,11 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
+
 .navbar button:hover {
   background-color: #777;
 }
+
 #content {
   margin-top: 10px;
   width: 100%;

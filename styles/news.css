@@ -34,7 +34,7 @@ body {
 
 .news-grid {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "card1 card1 card2"
     "card3 card4 card4"
     "card5 card6 card6";
@@ -154,69 +154,71 @@ body {
 /************** FOOTER ***************/
 /*************************************/
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-about,
 .footer-links,
 .footer-contact {
-    flex: 1;
-    min-width: 250px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-.footer p, .footer ul, .footer a {
-    font-size: 14px;
-    line-height: 1.6;
-    text-decoration: none;
-    color: #ccc;
+.footer p,
+.footer ul,
+.footer a {
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  color: #ccc;
 }
 
 .footer ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .footer-socials a {
-    margin-right: 10px;
-    color: #ccc;
-    font-size: 18px;
-    transition: color 0.3s;
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+  transition: color 0.3s;
 }
 
 .footer-socials a:hover {
-    color: #fff;
+  color: #fff;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
-    font-size: 14px;
-    color: #aaa;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
 }

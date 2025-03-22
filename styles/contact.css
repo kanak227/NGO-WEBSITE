@@ -120,8 +120,9 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow change */
-cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth scaling and shadow change */
+  cursor: pointer;
 }
 
 .info-card img {
@@ -151,10 +152,14 @@ cursor: pointer;
 .info-card a:hover {
   text-decoration: underline;
 }
-.info-card:hover{
-transform: scale(1.05); /* Enlarge slightly on hover */
-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-background-color: rgb(255, 248, 220); /* Slight color change on hover */
+
+.info-card:hover {
+  transform: scale(1.05);
+  /* Enlarge slightly on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  /* Enhance shadow on hover */
+  background-color: rgb(255, 248, 220);
+  /* Slight color change on hover */
 }
 
 /*************************************/
@@ -241,7 +246,9 @@ background-color: rgb(255, 248, 220); /* Slight color change on hover */
   margin-bottom: 15px;
 }
 
-.footer p, .footer ul, .footer a {
+.footer p,
+.footer ul,
+.footer a {
   font-size: 14px;
   line-height: 1.6;
   text-decoration: none;

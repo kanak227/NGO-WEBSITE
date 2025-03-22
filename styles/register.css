@@ -73,7 +73,7 @@ body {
   margin-bottom: 5px;
 }
 
-.flex-column > label {
+.flex-column>label {
   color: #151717;
   font-weight: 600;
 }

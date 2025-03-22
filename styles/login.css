@@ -77,7 +77,7 @@ body {
   margin-bottom: 5px;
 }
 
-.flex-column > label {
+.flex-column>label {
   color: #151717;
   font-weight: 600;
 }
@@ -163,7 +163,7 @@ label {
   justify-content: space-between;
 }
 
-.flex-row > div > label {
+.flex-row>div>label {
   font-size: 14px;
   color: black;
   font-weight: 400;
