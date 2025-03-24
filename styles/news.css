@@ -17,7 +17,7 @@ body {
   padding: 20px;
 }
 
-.header {
+.header { 
   text-align: center;
   margin-bottom: 30px;
 }
@@ -35,7 +35,7 @@ body {
 .news-grid {
   display: grid;
   grid-template-areas:
-    "card1 card1 card2"
+    "card1 card2 card2"
     "card3 card4 card4"
     "card5 card6 card6";
   gap: 20px;
@@ -45,7 +45,7 @@ body {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -58,18 +58,20 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 18px 18px 0 0;
 }
 
 .news-card-content {
   padding: 15px;
+  text-align:left;
 }
 
 .news-tag {
   color: #f95b3c;
+  background-color: bisque;
   font-weight: bold;
   font-size: 0.9rem;
   margin-bottom: 10px;
-  display: inline-block;
 }
 
 .news-title {
@@ -77,6 +79,11 @@ body {
   color: #333;
   font-weight: bold;
   margin: 10px 0;
+  /* text-align:left; */
+}
+
+.news-title:hover{
+  text-decoration: underline;
 }
 
 .news-meta {
@@ -126,27 +133,27 @@ body {
   background: #ffe3dc;
 }
 
-.card1 {
+.n-card1 {
   grid-area: card1;
 }
 
-.card2 {
+.n-card2 {
   grid-area: card2;
 }
 
-.card3 {
+.n-card3 {
   grid-area: card3;
 }
 
-.card4 {
+.n-card4 {
   grid-area: card4;
 }
 
-.card5 {
+.n-card5 {
   grid-area: card5;
 }
 
-.card6 {
+.n-card6 {
   grid-area: card6;
 }
 
