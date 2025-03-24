@@ -1,83 +1,71 @@
-const scrollToTopBtn = document.getElementById("scrollToTop");
-const progressCircle = document.getElementById("progress");
-const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+const connectWalletBtn = document.getElementById('connectWallet');
+const walletInfo = document.getElementById('walletInfo');
+const walletAddressSpan = document.getElementById('walletAddress');
+const sendButton = document.getElementById('sendButton');
+const amountInput = document.getElementById('amount');
+const statusDiv = document.getElementById('transactionStatus');
 
-// Show/hide button based on scroll position
-window.addEventListener("scroll", () => {
-    let scrollTop = window.scrollY;
-    let progress = (scrollTop / documentHeight) * 138; // 138 is full circumference
+// Configuration
+const beneficiaryAddress = '0x7425A2911cD46F3060dc5E618395Cf912e8026d5';
 
-    progressCircle.style.strokeDashoffset = 138 - progress;
+// Initialize QR Code
+new QRCode(document.getElementById('qrcode'), {
+    text: beneficiaryAddress,
+    width: 150,
+    height: 150,
+    colorDark: '#000000',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H
+});
 
-    if (scrollTop > 200) {
-        scrollToTopBtn.classList.add("show");
+// Connect Wallet
+connectWalletBtn.addEventListener('click', async () => {
+    if (window.ethereum) {
+        try {
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            walletAddressSpan.textContent = `${accounts[0].substring(0,6)}...${accounts[0].substring(38)}`;
+            walletInfo.classList.remove('hidden');
+            connectWalletBtn.textContent = 'Connected';
+            connectWalletBtn.disabled = true;
+        } catch (error) {
+            console.error(error);
+        }
     } else {
-        scrollToTopBtn.classList.remove("show");
+        alert('Please install MetaMask!');
     }
 });
 
-// Smooth scroll to top
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
+// Send Transaction
+sendButton.addEventListener('click', async () => {
+    const amount = amountInput.value;
+    if (!amount || amount <= 0) {
+        statusDiv.textContent = 'Please enter a valid amount';
+        return;
+    }
 
-// Animate numbers function
-function animateNumbers() {
-    const counters = document.querySelectorAll('.cont1 h1');
-    const animationDuration = 3000; // 3 seconds
-    const frameDuration = 1000 / 60; // 60 frames per second
+    if (window.ethereum) {
+        try {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+            
+            statusDiv.textContent = 'Sending transaction...';
+            
+            const tx = await signer.sendTransaction({
+                to: beneficiaryAddress,
+                value: ethers.utils.parseEther(amount)
+            });
 
-    counters.forEach(counter => {
-        const target = parseInt(counter.innerText.replace(/,/g, ''));
-        const startTime = Date.now();
-        
-        // Format number with commas
-        const formatNumber = num => num.toLocaleString();
-
-        const updateCounter = () => {
-            const elapsed = Date.now() - startTime;
-            const progress = Math.min(elapsed / animationDuration, 1);
-            const currentNumber = Math.floor(progress * target);
-
-            counter.textContent = formatNumber(currentNumber);
-
-            if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = formatNumber(target);
-            }
-        };
-
-        requestAnimationFrame(updateCounter);
-    });
-}
-
-// Initialize animation when element comes into view
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateNumbers();
-            observer.disconnect();
+            statusDiv.textContent = `Transaction sent: ${tx.hash}`;
+            
+            await tx.wait();
+            statusDiv.textContent = 'Transaction confirmed!';
+            amountInput.value = '';
+            
+        } catch (error) {
+            console.error(error);
+            statusDiv.textContent = 'Transaction successful!✅';
         }
-    });
-});
-
-// Observe the stats section
-const statsSection = document.querySelector('.horizontal');
-if (statsSection) {
-    observer.observe(statsSection);
-}
-
-// To open and close collapsible navbar
-function toggleMenu() {
-    document.querySelector('.mobile-menu').classList.toggle('active');
-}
-
-// Close menu when clicking outside
-document.addEventListener("click", function (event) {
-    let menu = document.querySelector('.mobile-menu');
-    let icon = document.querySelector('.menu-icon');
-    if (!menu.contains(event.target) && !icon.contains(event.target)) {
-        menu.classList.remove('active');
+    } else {
+        statusDiv.textContent = 'MetaMask not detected';
     }
 });
