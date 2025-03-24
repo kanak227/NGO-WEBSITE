@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Donation Page</title>
     <style>
-       
+
     </style>
 </head>
+
 <body>
+    <!-- ************************************* -->
+    <!-- ********** HEADER (NAVBAR) ********** -->
+    <!-- ************************************* -->
     <header class="main">
         <div class="lower">
             <div class="image">
@@ -23,12 +28,12 @@
                     <p>Jago Welfare</p>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu Icon (For Mobile Only) -->
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
-    
+
             <!-- Mobile Menu -->
             <div class="mobile-menu">
                 <div class="menu-header">
@@ -42,21 +47,23 @@
 
                 <div class="socials mobileBtn">
                     <div class="login">
-                        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+                        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                            Now</button>
                     </div>
-            
+
                     <div>
                         <a href="pages/login.html">
                             <button type="button" class="navBtn btn btn-outline-danger">Login</button>
                         </a>
                     </div>
-            
+
                     <div>
-                        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Info</button>
+                        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Contact Info</button>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Desktop Navbar -->
             <nav class="navbar">
                 <a href="../index.html">Home</a>
@@ -66,24 +73,26 @@
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
-    
+
         <!-- Social & Login Buttons -->
         <div class="socials desktopBtn">
             <div class="login">
-                <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+                <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                    Now</button>
             </div>
-    
+
             <div>
                 <a href="pages/login.html">
                     <button type="button" class="navBtn btn btn-outline-danger">Login</button>
                 </a>
             </div>
-    
+
             <div>
-                <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Info</button>
+                <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Contact Info</button>
             </div>
         </div>
-    
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -102,13 +111,18 @@
                 </div>
             </div>
         </div>
-      </header>
+    </header>
 
+    <!-- ************************************* -->
+    <!-- *********** DONATION FORM *********** -->
+    <!-- ************************************* -->
     <div class="container hero">
         <div class="donation-form">
+            <!-- Donation Amount -->
             <h3>Enter your donation amount</h3>
             <input class="full-width" type="number" placeholder="$">
 
+            <!-- Donation Details -->
             <h3>Enter your donation details</h3>
             <div class="form-group">
                 <input type="text" placeholder="First name">
@@ -120,6 +134,7 @@
             </div>
             <textarea class="full-width" placeholder="Write your comment"></textarea>
 
+            <!-- Different Payment Options and Details -->
             <h3>Payment Options</h3>
             <div class="payment-options">
                 <img src="/assets/visa.png" alt="Visa">
@@ -136,7 +151,9 @@
             <button>Donate now</button>
         </div>
 
+        <!-- Side Bar with Donation Details -->
         <div class="sidebar">
+            <!-- Card 1 -->
             <div class="card">
                 <img src="/assets/pic1.png" alt="Cause Image">
                 <h3>Collect fund for drinking water & healthy food</h3>
@@ -149,6 +166,8 @@
                     <p>Polin Sarika<br>Manager at ABC Company<br>Location: Lagos, Nigeria<br>Dates: Dec 20, 2024</p>
                 </div>
             </div>
+
+            <!-- Card 2 -->
             <div class="card">
                 <h3>Recent Donations</h3>
                 <ul>
@@ -161,6 +180,9 @@
         </div>
     </div>
 
+    <!-- ************************************* -->
+    <!-- ************** FOOTER *************** -->
+    <!-- ************************************* -->
     <footer class="footer">
         <div>
             <h3>To get weekly & monthly news, <span>Subscribe</span> to our newsletter.</h3>
@@ -187,4 +209,5 @@
 
     <script src="../app.js"></script>
 </body>
+
 </html>

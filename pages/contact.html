@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-   
+
 </head>
+
 <body>
+    <!-- ************************************* -->
+    <!-- ********** HEADER (NAVBAR) ********** -->
+    <!-- ************************************* -->
     <header class="main">
         <div class="lower">
             <div class="image">
@@ -21,12 +26,12 @@
                     <p>Jago Welfare</p>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu Icon (For Mobile Only) -->
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
-    
+
             <!-- Mobile Menu -->
             <div class="mobile-menu">
                 <div class="menu-header">
@@ -40,21 +45,23 @@
 
                 <div class="socials mobileBtn">
                     <div class="login">
-                        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+                        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                            Now</button>
                     </div>
-            
+
                     <div>
                         <a href="pages/login.html">
                             <button type="button" class="navBtn btn btn-outline-danger">Login</button>
                         </a>
                     </div>
-            
+
                     <div>
-                        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Info</button>
+                        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Contact Info</button>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Desktop Navbar -->
             <nav class="navbar">
                 <a href="../index.html">Home</a>
@@ -64,24 +71,26 @@
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
-    
+
         <!-- Social & Login Buttons -->
         <div class="socials desktopBtn">
             <div class="login">
-                <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+                <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                    Now</button>
             </div>
-    
+
             <div>
                 <a href="pages/login.html">
                     <button type="button" class="navBtn btn btn-outline-danger">Login</button>
                 </a>
             </div>
-    
+
             <div>
-                <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact Info</button>
+                <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Contact Info</button>
             </div>
         </div>
-    
+
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -100,8 +109,11 @@
                 </div>
             </div>
         </div>
-      </header>
+    </header>
 
+    <!-- ************************************* -->
+    <!-- ******* CONTACT INFO AND FORM ******* -->
+    <!-- ************************************* -->
     <div class="container hero">
         <div class="heading">
             <h1>Get in <span>touch</span> with us & stay updates</h1>
@@ -123,98 +135,99 @@
                 <form id="contactForm">
                     <input type="text" id="name" placeholder="Your full name*" required>
                     <span class="error" id="nameError"></span>
-            
+
                     <input type="email" id="email" placeholder="Your email address*" required>
                     <span class="error" id="emailError"></span>
-            
+
                     <input type="text" id="subject" placeholder="Subject*" required>
                     <span class="error" id="subjectError"></span>
-            
+
                     <textarea id="message" placeholder="Message*" required></textarea>
                     <span class="error" id="messageError"></span>
-            
+
                     <button type="submit">Send message</button>
                 </form>
             </div>
-            
+
+            <!-- Javascript for Contact Form -->
             <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("contactForm");
-                const nameInput = document.getElementById("name");
-                const emailInput = document.getElementById("email");
-                const subjectInput = document.getElementById("subject");
-                const messageInput = document.getElementById("message");
-            
-                const nameError = document.getElementById("nameError");
-                const emailError = document.getElementById("emailError");
-                const subjectError = document.getElementById("subjectError");
-                const messageError = document.getElementById("messageError");
-            
-                function validateName() {
-                    const nameRegex = /^[A-Za-z\s]+$/;
-                    if (!nameRegex.test(nameInput.value)) {
-                        nameError.textContent = "Only alphabets and spaces allowed!";
-                        nameInput.style.borderColor = "red";
-                        return false;
-                    } else {
-                        nameError.textContent = "";
-                        nameInput.style.borderColor = "green";
-                        return true;
+                document.addEventListener("DOMContentLoaded", function () {
+                    const form = document.getElementById("contactForm");
+                    const nameInput = document.getElementById("name");
+                    const emailInput = document.getElementById("email");
+                    const subjectInput = document.getElementById("subject");
+                    const messageInput = document.getElementById("message");
+
+                    const nameError = document.getElementById("nameError");
+                    const emailError = document.getElementById("emailError");
+                    const subjectError = document.getElementById("subjectError");
+                    const messageError = document.getElementById("messageError");
+
+                    function validateName() {
+                        const nameRegex = /^[A-Za-z\s]+$/;
+                        if (!nameRegex.test(nameInput.value)) {
+                            nameError.textContent = "Only alphabets and spaces allowed!";
+                            nameInput.style.borderColor = "red";
+                            return false;
+                        } else {
+                            nameError.textContent = "";
+                            nameInput.style.borderColor = "green";
+                            return true;
+                        }
                     }
-                }
-            
-                function validateEmail() {
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(emailInput.value)) {
-                        emailError.textContent = "Enter a valid email address!";
-                        emailInput.style.borderColor = "red";
-                        return false;
-                    } else {
-                        emailError.textContent = "";
-                        emailInput.style.borderColor = "green";
-                        return true;
+
+                    function validateEmail() {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(emailInput.value)) {
+                            emailError.textContent = "Enter a valid email address!";
+                            emailInput.style.borderColor = "red";
+                            return false;
+                        } else {
+                            emailError.textContent = "";
+                            emailInput.style.borderColor = "green";
+                            return true;
+                        }
                     }
-                }
-            
-                function validateSubject() {
-                    if (subjectInput.value.trim() === "") {
-                        subjectError.textContent = "Subject is required!";
-                        subjectInput.style.borderColor = "red";
-                        return false;
-                    } else {
-                        subjectError.textContent = "";
-                        subjectInput.style.borderColor = "green";
-                        return true;
+
+                    function validateSubject() {
+                        if (subjectInput.value.trim() === "") {
+                            subjectError.textContent = "Subject is required!";
+                            subjectInput.style.borderColor = "red";
+                            return false;
+                        } else {
+                            subjectError.textContent = "";
+                            subjectInput.style.borderColor = "green";
+                            return true;
+                        }
                     }
-                }
-            
-                function validateMessage() {
-                    if (messageInput.value.trim() === "") {
-                        messageError.textContent = "Message cannot be empty!";
-                        messageInput.style.borderColor = "red";
-                        return false;
-                    } else {
-                        messageError.textContent = "";
-                        messageInput.style.borderColor = "green";
-                        return true;
+
+                    function validateMessage() {
+                        if (messageInput.value.trim() === "") {
+                            messageError.textContent = "Message cannot be empty!";
+                            messageInput.style.borderColor = "red";
+                            return false;
+                        } else {
+                            messageError.textContent = "";
+                            messageInput.style.borderColor = "green";
+                            return true;
+                        }
                     }
-                }
-            
-                // Real-time validation
-                nameInput.addEventListener("input", validateName);
-                emailInput.addEventListener("input", validateEmail);
-                subjectInput.addEventListener("input", validateSubject);
-                messageInput.addEventListener("input", validateMessage);
-            
-                form.addEventListener("submit", function (event) {
-                    if (!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
-                        event.preventDefault(); // Prevent form submission if validation fails
-                        alert("Please fix the errors before submitting!");
-                    }
+
+                    // Real-time validation
+                    nameInput.addEventListener("input", validateName);
+                    emailInput.addEventListener("input", validateEmail);
+                    subjectInput.addEventListener("input", validateSubject);
+                    messageInput.addEventListener("input", validateMessage);
+
+                    form.addEventListener("submit", function (event) {
+                        if (!validateName() || !validateEmail() || !validateSubject() || !validateMessage()) {
+                            event.preventDefault(); // Prevent form submission if validation fails
+                            alert("Please fix the errors before submitting!");
+                        }
+                    });
                 });
-            });
             </script>
-            
+
             <style>
                 .error {
                     color: red;
@@ -223,28 +236,40 @@
                     margin-bottom: 5px;
                 }
             </style>
-            
         </div>
+        <!-- Contact Cards -->
         <div class="info-section">
+            <!-- Contact Card 1 -->
             <div class="info-card" style="background-color: rgb(231, 204, 204)">
                 <img src="../assets/message.png" alt="Chat">
                 <h4>Chat with live experts</h4>
                 <a href="#">Chat now</a>
             </div>
-            <div class="info-card" style="background-color: rgb(203, 217, 232)";>
+
+            <!-- Contact Card 2 -->
+            <div class="info-card" style="background-color: rgb(203, 217, 232)" ;>
                 <img src="../assets/shake.png" alt="Partner">
                 <h4>Enhance your helping hand</h4>
                 <a href="#">Join now</a>
             </div>
-            <div class="info-card" style="background-color: rgb(178, 210, 178)";>
+
+            <!-- Contact Card 3 -->
+            <div class="info-card" style="background-color: rgb(178, 210, 178)" ;>
                 <img src="../assets/querty.png" alt="FAQ">
                 <h4>Ask your question & get updates</h4>
                 <a href="#">Ask now</a>
             </div>
         </div>
+
+        <!-- Google Map Integration -->
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224176.69698534257!2d76.76037529453126!3d28.60694920000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bebddef3a4b%3A0xf7ea2f4af17a9076!2sAsha%20Foundation%20(NGO)%2C%20Best%20NGO%20in%20Delhi%20NCR%2CTop%20NGO%20in%20Delhi!5e0!3m2!1sen!2sin!4v1734764611463!5m2!1sen!2sin" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224176.69698534257!2d76.76037529453126!3d28.60694920000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1bebddef3a4b%3A0xf7ea2f4af17a9076!2sAsha%20Foundation%20(NGO)%2C%20Best%20NGO%20in%20Delhi%20NCR%2CTop%20NGO%20in%20Delhi!5e0!3m2!1sen!2sin!4v1734764611463!5m2!1sen!2sin"
+                width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
+        <!-- Newsletter -->
         <div class="newsletter">
             <p>To get weekly & monthly news, <strong>Subscribe</strong> to our newsletter.</p>
             <form>
@@ -253,6 +278,10 @@
             </form>
         </div>
     </div>
+
+    <!-- ************************************* -->
+    <!-- ************** FOOTER *************** -->
+    <!-- ************************************* -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-about">
@@ -288,4 +317,5 @@
 
     <script src="../app.js"></script>
 </body>
+
 </html>
