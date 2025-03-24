@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Donation Portal</title>
+    <link rel="stylesheet" href="styled.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Crypto Donation Portal</h1>
+        
+        <!-- Wallet Connection Section -->
+        <button id="connectWallet">Connect MetaMask</button>
+        <div id="walletInfo" class="hidden">
+            Connected: <span id="walletAddress"></span>
+        </div>
+
+        <!-- Beneficiary Information -->
+        <div class="info-box">
+            <h2>Beneficiary Details</h2>
+            <p>Wallet Address: 0x7425A2911cD46F3060dc5E618395Cf912e8026d5</p>
+        </div>
+
+        <!-- QR Code Section (Moved to the middle) -->
+        <div class="qr-section">
+            <h2>Scan to Donate</h2>
+            <div id="qrcode" class="qr-center"></div>
+        </div>
+
+        <!-- Donation Form -->
+        <div class="donation-box">
+            <h2>Send Crypto</h2>
+            <input type="number" id="amount" placeholder="Amount in ETH">
+            <button id="sendButton">Send Now</button>
+            <div id="transactionStatus"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
