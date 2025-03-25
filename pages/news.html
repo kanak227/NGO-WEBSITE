@@ -273,57 +273,118 @@
     <!-- ************************************* -->
     <!-- ************** FOOTER *************** -->
     <!-- ************************************* -->
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-about">
-          <h3>About Us</h3>
-          <p>
-            Jago Welfare is dedicated to improving lives by addressing critical
-            issues such as hunger, education, and shelter. We work tirelessly to
-            bring hope and support to those in need.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="./causes.html">Causes</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <p>
-            Email:
-            <a href="mailto:example@example.com">jagowelfare@gmail.com</a>
-          </p>
-          <p>Phone: +123-456-7890</p>
-          <div class="footer-socials">
-            <a href="#" aria-label="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </div>
-        </div>
+<!-- Footer Section -->
+<footer>
+  <div class="footer-content"
+    style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 20px; background-color: white; color: black;">
+    <!-- About Section -->
+    <div class="footer-section about"
+      style="flex: 2; min-width: 300px; display: flex; align-items:flex-start; margin: 10px; transition: transform 0.3s ease-in-out;"
+      onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+      <img src="assets\logo.png.png" alt="Jago Welfare Logo" style="width: 100px; margin-right: 20px;">
+      <p style="margin: 0;">Jago Welfare is dedicated to creating positive change through community development, education, and humanitarian aid programs. Our passion for serving communities drives us to make a meaningful impact in people's lives.</p>
+    </div>
+    <!-- Jago Welfare Links -->
+    <div class="footer-section services" style="flex: 1; min-width: 150px; margin: 10px;">
+      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+        onmouseover="this.style.color='#27ae60'" onmouseout="this.style.color='black'">Jago Welfare</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="about.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">About Us</a></li>
+        <li><a href="blog.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Blog</a></li>
+        <li><a href="volunteer.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Volunteer With Us</a></li>
+        <li><a href="donor-relations.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Donor Relations</a></li>
+        <li><a href="#contact-us" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Contact Us</a></li>
+        <li><a href="transparency/transparency.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Transparency</a></li>
+      </ul>
+    </div>
+    <!-- Our Programs Links -->
+    <div class="footer-section services" style="flex: 1; min-width: 150px; margin: 10px;">
+      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+        onmouseover="this.style.color='#27ae60'" onmouseout="this.style.color='black'">Our Programs</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="education.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Education</a></li>
+        <li><a href="healthcare.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Healthcare</a></li>
+        <li><a href="women-empowerment.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Women Empowerment</a></li>
+      </ul>
+      <!--donation options-->
+      <div class="donations" class="footer-section services" style="flex: 1; min-width: 150px; margin: -2px;">
+        <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+        onmouseover="this.style.color='#27ae60'" onmouseout="this.style.color='black'">Donate Via</h2>
+        <a href="https://pay.google.com/intl/en_in/about/" style="color: black; text-decoration: none; transition: all 0.3s ease; font-size:27px" onmouseover="this.style.color='#27ae60';" onmouseout="this.style.color='black'";><i class="fa-brands fa-google-pay" title="Google pay" style="padding: 2px;"></i></a>
+        <a href="https://www.apple.com/apple-pay/" style="color: black; text-decoration: none; transition: all 0.3s ease; font-size:27px" onmouseover="this.style.color='#27ae60';" onmouseout="this.style.color='black'";><i class="fa-brands fa-apple-pay" title="Apple pay" style="padding: 2px;"></i></a>
+        <a href="https://www.visa.co.in/" style="color: black; text-decoration: none; transition: all 0.3s ease; font-size:25px" onmouseover="this.style.color='#27ae60';" onmouseout="this.style.color='black'";><i class="fa-brands fa-cc-visa" title="Visa pay" style="padding: 2px;"></i></a>
+        <a href="https://www.mastercard.co.in/en-in.html" style="color: black; text-decoration: none; transition: all 0.3s ease; font-size:25px" onmouseover="this.style.color='#27ae60';" onmouseout="this.style.color='black'";><i class="fa-brands fa-cc-mastercard" title="Master card" style="padding: 2px;"></i></a>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Jago Welfare. All Rights Reserved.</p>
-      </div>
-      <div id="scrollToTop">
-        <svg class="progress-circle" width="50" height="50">
-          <circle cx="25" cy="25" r="22"></circle>
-          <circle cx="25" cy="25" r="22" id="progress"></circle>
-        </svg>
-        <span class="arrow">▲</span>
-      </div>
-    </footer>
+    </div>
+    <!-- Learn More Links -->
+    <div class="footer-section learn-more" style="flex: 1; min-width: 150px; margin: 10px;">
+      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+        onmouseover="this.style.color='#27ae60'" onmouseout="this.style.color='black'">Learn More</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="privacy.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Privacy Policy</a></li>
+        <li><a href="security.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Security</a></li>
+        <li><a href="Terms.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Terms of Service</a></li>
+        <li><a href="report-concern.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Report Concern</a></li>
+        <li><a href="success-stories.html" style="color: black; text-decoration: none; transition: all 0.3s ease;"
+            onmouseover="this.style.color='#27ae60'; this.style.paddingLeft='10px'"
+            onmouseout="this.style.color='black'; this.style.paddingLeft='0'">Success Stories</a></li>
+      </ul>
+    </div>
+    <!-- Social Media Links -->
+    <div class="footer-section social-links" style="flex: 1; min-width: 150px; margin: 10px;">
+      <h2 style="font-size: 18px; margin-bottom: 10px; transition: color 0.3s ease;"
+        onmouseover="this.style.color='#27ae60'" onmouseout="this.style.color='black'">Follow Us</h2>
+      <ul class="social-icons" style="list-style: none; padding: 0; display: flex; gap: 10px;">
+        <li><a href="https://www.instagram.com/jagowelfare" target="_blank" rel="noopener noreferrer"
+            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/jagowelfare" target="_blank" rel="noopener noreferrer"
+            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+            aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/jagowelfare/" target="_blank" rel="noopener noreferrer"
+            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://x.com/jagowelfare" target="_blank" rel="noopener noreferrer"
+            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+            aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.youtube.com/jagowelfare" target="_blank" rel="noopener noreferrer"
+            style="color: black; text-decoration: none; font-size: 24px; transition: all 0.3s ease;"
+            aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Footer Bottom -->
+  <div class="footer-bottom" style="margin:10px; padding: 10px; text-align: center;">
+    <p style="margin: 0; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='#27ae60'"
+      onmouseout="this.style.color='black'">© 2025 Jago Welfare NGO. All rights reserved.</p>
+  </div>
+</footer>
 
     <script src="../app.js"></script>
   </body>
