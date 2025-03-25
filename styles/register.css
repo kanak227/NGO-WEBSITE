@@ -1,3 +1,6 @@
+/*************************************/
+/************ GLOBAL CSS *************/
+/*************************************/
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +16,9 @@ body {
   justify-content: center;
 }
 
+/*************************************/
+/********** REGISTER FORM ************/
+/*************************************/
 .container {
   display: flex;
   justify-content: center;
@@ -67,7 +73,7 @@ body {
   margin-bottom: 5px;
 }
 
-.flex-column > label {
+.flex-column>label {
   color: #151717;
   font-weight: 600;
 }

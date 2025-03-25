@@ -1,3 +1,6 @@
+/*************************************/
+/************ GLOBAL CSS *************/
+/*************************************/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +9,9 @@ body {
   background-color: #f7f8fa;
 }
 
+/*************************************/
+/********** HEADER (NAVBAR) **********/
+/*************************************/
 header {
   text-align: center;
   margin: 20px 0;
@@ -21,6 +27,9 @@ header span {
   font-weight: bold;
 }
 
+/*************************************/
+/*********** DONATION FORM ***********/
+/*************************************/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,7 +58,9 @@ header span {
   flex-wrap: wrap;
 }
 
-.donation-form input, .donation-form textarea, .donation-form select {
+.donation-form input,
+.donation-form textarea,
+.donation-form select {
   width: calc(50% - 10px);
   padding: 12px;
   margin: 10px 0;
@@ -60,12 +71,14 @@ header span {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.donation-form input:hover, .donation-form textarea:hover {
+.donation-form input:hover,
+.donation-form textarea:hover {
   background-color: #ffd9e8;
   box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
 }
 
-.donation-form input.full-width, .donation-form textarea {
+.donation-form input.full-width,
+.donation-form textarea {
   width: 100%;
 }
 
@@ -164,6 +177,9 @@ header span {
   height: 100%;
 }
 
+/*************************************/
+/*************** FOOTER **************/
+/*************************************/
 .footer {
   background-color: #fff;
   padding: 20px;

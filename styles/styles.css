@@ -1,5 +1,8 @@
-*{
-    margin : 0;
+/*************************************/
+/************ GLOBAL CSS *************/
+/*************************************/
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -8,128 +11,153 @@ body {
     overflow-x: hidden;
 }
 
-/*
-.upper{
-    width: 100%;
-    height: 30px;
+/*************************************/
+/********** HEADER (NAVBAR) **********/
+/*************************************/
+/* Header */
+header {
+    background: #fff;
+    height: fit-content;
+    width: fit-content;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999 !important;
+    padding: 0.4em 0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.main {
+    display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid azure 0.1px;
-}
-.leftitems{
-    width: 100%;
-    margin-left: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-    gap: 40px;
-}
-.email{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 80px;
-}
-.email p{
-    margin-top: 8px;
-}
-.email svg{
-    margin-bottom: 5px;
-    color: #e04444;
 }
 
-.call{
+/* Lower Navbar */
+.lower {
+    padding: 0.01% 4vw;
     display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-right: 100px;
-}
-.call p{
-    margin-top: 8px;
-}
-.call svg{
-    margin-bottom: 3px;
-    color: #e04444;
+    justify-content: space-around !important;
+    align-items: center !important;
+    width: 65vw !important;
+    gap: 1rem !important;
+    /* padding-right: 15% !important; */
 }
 
-.rightitems{
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    gap: 35px;
-    margin-bottom: 9px;
-}
-*/
-.rightitems {
-    margin-left: 40px;
-}
-.socialssvg {
-    color: #000;
-   
+.image {
+    display: flex !important;
+    align-items: center !important;
 }
 
-/*for socials div*/
-.modalbtn {
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.rightitems a svg {
-    margin: 15px;
-    margin-top: 20px;
-    
-}
-.lower{
-    /* background-color: violet; */
-    height: 60px;
-    display: flex;
-    
-    
-}
-
-header {
-    height: 60px;
-    display: flex;
-    justify-content: center;
-}
-.image{
-    height: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 200px;
-    margin-top: 7px;
-}
-.image img{
+.image img {
     height: 50px;
     margin-left: 70px;
     margin-top: 10px;
 }
-.image p{
+
+.image p {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.1rem;
+    white-space: nowrap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.navbar {
+
+/* Logo */
+.logoContainer {
     display: flex;
-    gap: 20px; /* Adjust spacing between items */
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoContainer img {
+    margin: 0 !important;
+    width: 3rem;
+    height: auto;
+}
+
+.logoContainer p {
+    margin: 0 !important;
+}
+
+.socials {
+    display: flex;
+    padding: 0 3%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4%;
+    width: fit-content !important;
+}
+
+.mobileBtn {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: left !important;
+    align-items: flex-start !important;
+    padding: 0 !important;
+}
+
+/* Login */
+.login {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+
+.login-btn {
+    margin-left: 20px;
+    min-width: 110px;
+}
+
+.login-btn:hover {
+    color: white;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: #e04444;
+}
+
+.login-btn a:hover {
+    color: white;
+}
+
+.navBtn {
+    white-space: nowrap;
+    margin: 0 !important;
+}
+
+/* Navbar */
+.navbar {
+    position: static !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2vw !important;
+    width: fit-content !important;
+    margin: 0 !important;
+    padding: 0;
+    padding-left: 10% !important;
 }
 
 .navbar a {
+    position: relative;
     text-decoration: none;
     color: black;
     font-weight: 400;
-    position: relative;
-    padding: 10px 15px; /* Adds some padding for better spacing */
-    display: inline-block; /* Ensures the underline stays within each item */
+    display: inline-block;
     transition: color 0.3s ease-in-out;
 }
 
@@ -137,65 +165,193 @@ header {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0; /* Ensures the line appears below each navbar item */
+    bottom: 0;
     width: 100%;
     height: 2px;
     background: red;
-    transform: scaleX(0); /* Initially hidden */
+    transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease-in-out;
 }
 
 .navbar a:hover {
     color: red;
-    /* scale: 1.2; */
 }
 
 .navbar a:hover::after {
-    transform: scaleX(1); /* Expands fully on hover */
+    transform: scaleX(1);
 }
 
-
-
-.login{
-    justify-content: right;
-    align-items: center;
-    margin-top: 7px;
-    margin-left: 120px;
-    margin-top: 10px;
-}
-.login-btn{
-    justify-content: right;
-    align-items: center;
+/* Socials Section */
+.modalbtn {
     margin-top: 10px;
     margin-left: 20px;
-    width: 110px;
 }
-.login-btn:hover{
-    color: white;
+
+.menu-icon {
+    display: none;
+    /* Hidden on desktop */
 }
-.login-btn a {
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hamburger icon styling */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 15px;
+    display: inline-block;
+}
+
+/* Fullscreen overlay container */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* or left: 0, if you want it to slide in from the left */
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    /* White background */
+    transform: translateX(100%);
+    /* Initially hidden off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+}
+
+/* When "open" class is added, slide it in */
+.menu-overlay.open {
+    transform: translateX(0);
+}
+
+/* Close icon in the top-right corner */
+.close-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Center and style the menu items */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    /* space from top so it doesn't collide with close icon */
+    padding: 0 30px;
+}
+
+/* Individual menu links */
+.menu-content a {
+    font-size: 24px;
+    color: #000;
     text-decoration: none;
-    color: #e04444;
+    margin: 15px 0;
+    /* spacing between links */
+    transition: color 0.2s;
 }
-.login-btn a:hover{
-    color: white;
+
+/* Hover effect for links */
+.menu-content a:hover {
+    color: #555;
 }
+
+/* Mobile Menu Icon (Hamburger) */
+.menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    /* Start off-screen */
+    width: 75%;
+    height: 100vh !important;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    transition: left 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+/* When menu is active, slide in */
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Menu Header */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+}
+
+/* Close Button */
+.menu-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Menu Links */
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+    color: red;
+}
+
+/*************************************/
+/*********** HERO SECTION ************/
+/*************************************/
+/* Hero Section */
 .mainbox {
     height: auto;
     width: 100%;
     background-color: rgb(219, 229, 234);
-    display: flex; /* Enables Flexbox for layout */
-    align-items: center; /* Vertically centers text and image */
-    justify-content: space-between; /* Ensures spacing between text and image */
-    padding: 0 100px; /* Adds horizontal padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    margin-top: 8vh;
 }
 
+/* Text Content */
 .text-content {
-    max-width: 100%; 
+    max-width: 45%;
     display: flex;
-    flex-direction: column; /* Aligns text vertically */
-    gap: 10px; /* Adds consistent spacing between elements */
+    flex-direction: column;
+    gap: 10px;
 }
 
 .text-content p {
@@ -208,48 +364,58 @@ header {
 }
 
 #heading {
-    font-size: 4rem; /* Main heading larger and bolder */
+    font-size: 4rem;
     font-weight: bold;
-    color: #000; /* Stronger contrast for emphasis */
-    margin-bottom: 1px; /* Adds spacing below the heading */
+    color: #000;
+    margin-bottom: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-} 
-
-
-#text {
-    font-size: 1.2rem; /* Smaller font for paragraph text */
-    color: #555; /* Softer tone for descriptive text */
-    line-height: 1.5; /* Adds more space for better readability */
-    margin-top: 15px;
-    margin-bottom: 10px; /* Separates from preceding text */
 }
 
+#text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Donate Button */
 .donate-btn {
     margin-top: 20px;
     padding: 12px 24px;
-    background-color: #ff4d4d; /* Button color */
-    color: #fff; /* White text */
+    background-color: #ff4d4d;
+    color: #fff;
     font-size: 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     max-width: fit-content;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .donate-btn:hover {
     transform: scale(1.03);
-    background-color: #e04444; /* Slightly darker on hover */
+    background-color: #e04444;
 }
 
 .img img {
-    height: auto;
-    max-width: 100%; /* Prevents overflow */
-    object-fit: contain; /* Maintains aspect ratio */
+    height: 610px;
+    /* Keeps the image height consistent */
+    max-width: 100%;
+    /* Prevents overflow */
+    object-fit: contain;
+    /* Maintains aspect ratio */
 }
-.third{
+
+.hero {
+    margin-top: 8vh !important;
+}
+
+/*************************************/
+/********** DONATION CARDS ***********/
+/*************************************/
+.third {
     height: 280px;
 }
 
@@ -271,45 +437,56 @@ header {
     border-radius: 5%;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow change */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adds a shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth scaling and shadow change */
     cursor: pointer;
 }
 
 .card1:hover {
-    transform: scale(1.05); /* Enlarge slightly on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
-    background-color: rgb(255, 248, 220); /* Slight color change on hover */
+    transform: scale(1.05);
+    /* Enlarge slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Enhance shadow on hover */
+    background-color: rgb(255, 248, 220);
+    /* Slight color change on hover */
 }
 
-.card1 p, .card1 h3 {
-    margin: 5px 0; /* Ensure consistent spacing */
-    color: #333; /* Text color */
+.card1 p,
+.card1 h3 {
+    margin: 5px 0;
+    /* Ensure consistent spacing */
+    color: #333;
+    /* Text color */
 }
 
-.card1:hover h3, .card1:hover p {
-    color: #555; /* Slight text color change on hover */
+.card1:hover h3,
+.card1:hover p {
+    color: #555;
+    /* Slight text color change on hover */
 }
 
 
-.circle{
+.circle {
     border-radius: 50%;
     background-color: white;
-    height:70px;
-    width:70px;
+    height: 70px;
+    width: 70px;
     align-items: center;
     align-self: center;
     margin-left: 100px;
     margin-top: 10px;
 }
-.circle svg{
+
+.circle svg {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
- 
+
 }
 
-#donate{
+#donate {
     margin-left: 20px;
     font-size: 1rem;
     font-weight: bold;
@@ -319,7 +496,7 @@ header {
     margin-bottom: 0%;
 }
 
-.card1 h3{
+.card1 h3 {
     margin-left: 20px;
     margin-top: 2px;
     position: relative;
@@ -336,124 +513,158 @@ header {
     color: crimson;
 }
 
-.sad{
+/* Social Icons */
+.rightitems {
+    margin-left: 40px;
+}
+
+.socials svg {
+    color: #000;
+}
+
+.rightitems a svg {
+    margin: 15px;
+    margin-top: 20px;
+}
+
+/*************************************/
+/********** POVERTY SECTION **********/
+/*************************************/
+.sad {
     /* background-color: pink; */
     width: 100%;
-    height: 420px;
+    /* height: 420px; */
+    height: fit-content;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
 }
 
-.para{
+.para {
     width: 40%;
-    height: 450px;
+    /* height: 450px; */
+    height: fit-content;
     align-items: baseline;
     justify-content: center;
 }
-.para p{
+
+.para p {
     line-height: 1.5;
     font-size: 1.1rem;
 }
 
 
-#head{
+#head {
     font-size: 1.3rem;
     font-weight: 500;
     opacity: 70%;
     margin-bottom: 3px;
 }
 
-.button{
+.button {
     margin-top: 30px;
     display: flex;
     align-items: center;
- 
+
 }
-.btn{
+
+.btn {
     transition: transform 0.9s ease;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale(1.03);
 }
-.button svg{
+
+.button svg {
     margin-left: 40px;
     margin-right: 10px;
 }
-.button p{
+
+.button p {
     margin-top: 8px;
     font-weight: 500;
 }
 
-.events{
+/*************************************/
+/********** EVENTS SECTION ***********/
+/*************************************/
+.fourth {
+    margin-top: 10px;
+    height: 900px;
+    background-color: white;
+}
+
+.events {
     margin-top: 150px;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
-.fourth{
-    margin-top: 10px;
-    height: 900px;
-    background-color:white;
-    /* justify-content: center;
-    align-items: center; */
-}
 
-.head2{
+.head2 {
     width: 100%;
     line-height: 1;
     justify-content: center;
     text-align: center;
 }
-#upper{
+
+#upper {
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2;
-    
+
 }
-.head2 p{
+
+.head2 p {
     font-size: 2.9rem;
     font-weight: 600;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 0.9;
 }
-.cards2{
+
+.cards2 {
     justify-content: center;
     align-items: center;
     gap: 40px;
     display: flex;
 }
-.leftcard{
+
+.leftcard {
     justify-content: center;
     align-items: center;
     background-color: white;
-    height:700px;
+    height: 700px;
     width: 500px;
     margin-left: 120px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
     transition: transform 0.3s ease;
 }
-.leftcard:hover{
+
+.leftcard:hover {
     transform: scale(1.03);
 }
-.text{
+
+.text {
     margin-left: 30px;
     width: 450px;
 }
 
-.rightcards{
-    
+.rightcards {
+
     height: 700px;
     width: 600px;
     justify-content: center;
     gap: 150px;
-    display:table;
+    display: table;
 }
-.rcard{
-    width: 550px;
+
+.rcard {
+    width: 48vw;
     height: 210px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -461,46 +672,53 @@ header {
     transition: transform 0.3s ease;
 }
 
-.rcard:hover{
+.rcard:hover {
     transform: scale(1.03);
 }
 
-.lastcard{
-    width: 550px;
+.lastcard {
+    width: 48vw;
     height: 210px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4%;
     transition: transform 0.3s ease;
 }
-.lastcard:hover{
+
+.lastcard:hover {
     transform: scale(1.03);
 }
-.text1{
+
+.text1 {
     margin-left: 15px;
 }
-.icons{
+
+.icons {
     display: flex;
     margin-left: 25px;
-margin-top: 25px;
+    margin-top: 25px;
     height: 100px;
     width: 400px;
     border-radius: 10%;
-    
+
 }
-.Location{
+
+.Location {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 50px;
 }
-.text1 p{
+
+.text1 p {
     font-size: 0.9rem;
     margin-bottom: 30px;
-     line-height: 1.4;
+    line-height: 1.4;
     margin-right: 10px;
 }
 
-
-.image1{
+/*************************************/
+/******* FUND RAISING BANNER *********/
+/*************************************/
+.image1 {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -509,24 +727,27 @@ margin-top: 25px;
     height: 100vh;
     overflow: hidden;
 }
-.image1 img{
-    height:700px;
-    width:100%;
+
+.image1 img {
+    height: 700px;
+    width: 100%;
     object-fit: cover;
 }
 
-.contento{
-    color:white;
+.contento {
+    color: white;
     position: absolute;
     top: 430%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     width: 70%;
 }
-.break{
-    height:160px;
+
+.break {
+    height: 160px;
 }
-.conto{
+
+.conto {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -537,21 +758,25 @@ margin-top: 25px;
     padding: 0 30px;
 }
 
-/* *********************************** */
-.break2{
+/*************************************/
+/******* INFORMATION BANNER *********/
+/*************************************/
+.break2 {
     height: 100px;
 }
-.horizontal{
-       width: 100%;
-       height: 200px;
-       justify-content: center;
-       align-items: center;
-       background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
-       
+
+.horizontal {
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
+
 }
-.bar{
+
+.bar {
     background-color: white;
-    height:200px;
+    height: 200px;
     width: 80%;
     margin-left: 150px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -559,34 +784,37 @@ margin-top: 25px;
     gap: 20px;
 }
 
-.cont1{
-    height:200px;
+.cont1 {
+    height: 200px;
     width: 300px;
-    background-color:white;
+    background-color: white;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.ok{
+
+.ok {
     margin-left: 30px;
 }
 
-.no2{
+.no2 {
     background-color: rgb(216, 231, 234);
-    height:120px;
+    height: 120px;
 }
 
-.cards3{
+/*************************************/
+/*********** NEWS SECTION ************/
+/*************************************/
+.cards3 {
     display: flex;
     gap: 1px;
-    width:100%;
+    width: 100%;
     margin-top: 50px;
 }
 
-
-
-
-
+/*************************************/
+/************** FOOTER ***************/
+/*************************************/
 .footer {
     background-color: #333;
     color: #fff;
@@ -618,7 +846,9 @@ margin-top: 25px;
     margin-bottom: 15px;
 }
 
-.footer p, .footer ul, .footer a {
+.footer p,
+.footer ul,
+.footer a {
     font-size: 14px;
     line-height: 1.6;
     text-decoration: none;
@@ -657,6 +887,7 @@ margin-top: 25px;
     font-size: 14px;
     color: #aaa;
 }
+
 /* Scroll to Top Button */
 #scrollToTop {
     position: fixed;
@@ -716,75 +947,184 @@ margin-top: 25px;
 
 .cont1 h1 {
     transition: all 0.3s ease;
-    font-variant-numeric: tabular-nums; /* Ensures numbers maintain consistent width */
+    font-variant-numeric: tabular-nums;
+    /* Ensures numbers maintain consistent width */
 }
-/* Mobile Responsive Styles */
-/* Mobile Responsive Styles */
-@media only screen and (max-width: 768px) {
-    /* Constrain the body width to 768px & prevent horizontal scroll */
-    body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
+
+/*************************************/
+/************** OTHERS ***************/
+/*************************************/
+/* Smaller subheading at the top (e.g. "Demos") */
+.small-heading {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Contact Section */
+.menu-contact-title {
+    font-size: 14px;
+    color: gray;
+    margin-top: 20px;
+}
+
+.menu-contact-info {
+    font-size: 14px;
+    color: black;
+}
+
+
+
+
+
+/*************************************/
+/*********** MEDIA QUERIES ***********/
+/*************************************/
+
+/* Ultra Wide (4K+) - Above 1920px */
+@media only screen and (min-width: 1921px) {
+    /* Styles for ultra-wide screens */
+}
+
+/* Extra Large (High-Resolution Screens) - 1441px to 1920px */
+@media only screen and (max-width: 1920px) {
+    /* Styles for extra large screens */
+}
+
+/* Large (Desktops & Large Screens) - 906px to 1440px */
+@media only screen and (max-width: 1440px) {
+    /* Styles for large screens */
+}
+
+/* Medium (Tablets & Small Laptops) - 769px to 905px */
+@media only screen and (max-width: 905px) {
+
+    /* Styles for medium screens */
+    .navBtn {
+        font-size: 70% !important;
     }
-  
+
+    .lower {
+        width: 65vw !important;
+    }
+
+    .navbar a {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Hide the menu icon on desktop */
+@media only screen and (min-width: 769px) {
+
+    .menu-icon,
+    .mobile-menu {
+        display: none !important;
+    }
+
+    .navbar {
+        left: 100px;
+    }
+}
+
+/* Small (Tablets & Small Screens) - 481px to 768px */
+@media only screen and (max-width: 768px) {
+    /* Styles for small screens */
+
+    /* Constrain the body width to 768px & prevent horizontal scroll */
+    body,
+    html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
     /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
-      display: none;
+        display: none !important;
     }
+
+    .logoContainer {
+        margin-left: 20% !important;
+    }
+
     .menu-icon {
-      display: block;
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 999;
+        display: block;
+        position: absolute;
+        top: 14px !important;
+        right: 1px !important;
+        margin: 0 !important;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 999;
     }
+
     .menu {
-      display: none; /* Toggled via JS */
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      background: white;
-      flex-direction: column;
-      text-align: center;
-      z-index: 998;
+        display: none;
+        /* Toggled via JS */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        z-index: 998;
     }
+
     .menu a {
-      display: block;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
     }
-  
+
     /* Make main container vertical & centered */
     .mainbox,
     .content-section,
     .events,
     .third,
     .fourth {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 768px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
     }
-  
+
+    /* Make sure the parent sections auto-expand */
+    .fourth,
+    .events,
+    .content-section {
+        height: auto !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .mainbox {
+        margin-top: 8vh !important;
+    }
+
     /* Force all card sections to stack vertically with spacing */
     .cards,
     .cards2,
     .cards3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      width: 100%;
-      margin-bottom: 50px; /* Space above the footer */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        margin-bottom: 50px;
+        /* Space above the footer */
     }
-  
+
+    /* Stack the news cards vertically, ensure spacing */
+    .cards3 {
+        margin: 0 auto 80px auto;
+        /* 80px bottom margin to separate from footer */
+    }
+
     /* Individual cards expand to fit content & no overlap */
     .rcard,
     .lastcard {
@@ -843,59 +1183,44 @@ margin-top: 25px;
       height: auto !important;
       position: static !important;
       overflow: visible !important;
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
     }
-  
-    /* Stack the news cards vertically, ensure spacing */
-    .cards3 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;                 /* spacing between each card */
-      width: 100%;
-      margin: 0 auto 80px auto; /* 80px bottom margin to separate from footer */
-    }
-  
+
     /* Remove any fixed height on individual cards */
     .rcard,
     .lastcard {
-      width: 90%;
-      height: auto !important;
-      margin: 0 auto;
-      position: static !important;
+        height: auto !important;
+        position: static !important;
     }
-  
-    /* Add extra spacing above footer if needed */
-    .footer {
-      margin-top: 40px;    /* gap before footer */
-      padding-top: 20px;   /* ensures footer content isn't squashed */
-      position: relative;  /* no overlap */
-      z-index: 0;          /* stays behind any card if needed */
-    }
-  }
-  @media only screen and (max-width: 768px) {
+
     /* Force card containers to be wide enough for images */
     .cards3 .rcard,
     .cards3 .lastcard,
     .cards3 .leftcard {
-      width: 90% !important;
-      max-width: 500px; /* or 100% if you want full width */
-      margin: 0 auto 30px;
-      padding: 10px;
-      box-sizing: border-box;
+        width: 90% !important;
+        max-width: 500px;
+        /* or 100% if you want full width */
+        margin: 0 auto 30px;
+        padding: 10px;
+        box-sizing: border-box;
     }
-  
+
     /* Ensure images don’t overflow */
     .cards3 .rcard img,
     .cards3 .lastcard img,
     .cards3 .leftcard img {
-      width: 100%;
-      height: auto;
-      object-fit: cover; /* or 'contain' if you prefer no cropping */
-      border-radius: 5%; /* Keep your rounded corners if desired */
-      display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* or 'contain' if you prefer no cropping */
+        border-radius: 5%;
+        /* Keep your rounded corners if desired */
+        display: block;
     }
-  }
-  @media only screen and (max-width: 768px) {
+
     /* Center the entire bar */
     .horizontal,
     .bar {
@@ -916,57 +1241,121 @@ margin-top: 25px;
   
     /* Each stat container is centered */
     .cont1 {
-      width: auto !important;
-      margin: 10px 0 !important;       /* Add spacing around each item */
-      text-align: center !important; /* Center text and icons */
+        text-align: center !important; /* Center text and icons */
+        margin: 0 auto !important;
+        /* Overrides large left margins */
+        width: 90% !important;
+        /* Fit within mobile screen */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        /* Allow items to wrap on smaller screens */
+        gap: 20px;
+        /* Space between items */
+        height: auto !important;
+        /* Let it grow with content */
     }
-  }
-      
-  @media only screen and (max-width: 768px) {
+
+    /* Each stat container is centered */
+    .cont1 {
+        width: auto !important;
+        margin: 10px !important;
+        /* Add spacing around each item */
+        text-align: center !important;
+        /* Center text and icons */
+    }
+
+    .sad {
+        margin: 0 !important;
+    }
+
+    .para {
+        width: fit-content;
+        margin: 0;
+        padding: 0 10vw;
+    }
+
+    /* Image & text blocks: vertical, no overlap */
+    .img,
+    .text-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Add spacing before footer so cards don't collide */
+    .footer {
+        margin-top: 40px;
+        /* gap before footer */
+        padding-top: 20px;
+        /* ensures footer content isn't squashed */
+        position: relative;
+        /* no overlap */
+        z-index: 0;
+        /* stays behind any card if needed */
+    }
+
+    /* Ensure text wraps inside small screens */
+    h1,
+    h2,
+    h3,
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
     /* Remove fixed heights and ensure space below main image */
     .mainbox {
-      margin-bottom: 40px !important; /* space after hero image */
+        margin-bottom: 40px !important;
+        /* space after hero image */
     }
-  
+
     /* If your card section is in .third, remove any fixed heights */
     main.third {
-      height: auto !important;
-      margin: 0 !important;
-      padding: 20px 0 !important;
-      position: static !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 20px 0 !important;
+        position: static !important;
     }
-  
+
     /* Stack the cards vertically with spacing */
     .cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      width: 100%;
-      margin-top: 0 !important; /* remove any negative margin that might cause overlap */
-      position: static !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 0 !important;
+        /* remove any negative margin that might cause overlap */
+        position: static !important;
     }
-  
+
     /* Ensure each card is auto-height and centered */
     .card1 {
-      width: 90% !important;
-      height: auto !important;
-      margin-bottom: 20px; /* spacing between cards */
-      position: static !important;
+        width: 90% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+        /* spacing between cards */
+        position: static !important;
     }
-  
+
     /* Remove large left margin from the icon container if it exists */
     .circle {
-      margin: 0 auto !important;
+        margin: 0 auto !important;
     }
-  }
-  
-  /* Mobile Responsive Styles */
-@media only screen and (max-width: 768px) {
+
     /* Hamburger Menu */
     .navbar {
         display: none;
     }
+
     .menu-icon {
         display: block;
         position: absolute;
@@ -975,6 +1364,7 @@ margin-top: 25px;
         font-size: 30px;
         cursor: pointer;
     }
+
     .menu {
         display: none;
         position: absolute;
@@ -985,33 +1375,36 @@ margin-top: 25px;
         flex-direction: column;
         text-align: center;
     }
+
     .menu a {
         display: block;
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
-    
+
     /* Ensure Image Appears Above Donate Cards */
     .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-bottom: 40px; /* Space between image and cards */
+        margin-bottom: 40px;
+        /* Space between image and cards */
     }
-    
+
     .img {
         width: 100%;
         text-align: center;
         position: relative;
     }
+
     .img img {
         width: 100%;
         height: auto;
         max-width: 100%;
         display: block;
     }
-    
+
     /* Cards in Vertical Layout */
     .cards {
         display: flex;
@@ -1020,7 +1413,7 @@ margin-top: 25px;
         gap: 40px;
         width: 100%;
     }
-    
+
     .card1 {
         width: 90%;
         height: auto;
@@ -1030,7 +1423,7 @@ margin-top: 25px;
         align-items: center;
         justify-content: center;
     }
-    
+
     /* Ensure Proper Layout */
     .mainbox {
         flex-direction: column;
@@ -1040,11 +1433,12 @@ margin-top: 25px;
         max-width: 768px;
         margin: 0 auto;
     }
+
     .text-content {
         max-width: 100%;
         word-wrap: break-word;
     }
-    
+
     /* Fix Overlapping Issues */
     .content-section {
         display: flex;
@@ -1055,46 +1449,50 @@ margin-top: 25px;
         margin: 0 auto;
         padding: 10px;
     }
+
     .content-box {
         width: 90%;
         padding: 20px;
         background: white;
     }
-    
+
     /* Ensure text fits within width */
-    h1, h2, h3, p {
+    h1,
+    h2,
+    h3,
+    p {
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-    
+
     /* Add space between .third and .fourth sections */
     main.third {
         margin-bottom: 150px !important;
     }
+
     main.fourth {
         margin-top: 600px !important;
         margin-bottom: 7px !important;
     }
-    main.third{
+
+    main.third {
         margin-top: 500px !important;
     }
-    div.sad{
+
+    div.sad {
         margin-top: 80px !important;
     }
-    div.image1{
-        margin-top:-600px !important;
-        margin-bottom:-500px !important;
+
+    div.image1 {
+        margin-top: -600px !important;
+        margin-bottom: -500px !important;
     }
-    main.fight{
+
+    main.fight {
         margin-top: 700px;
 
     }
-    
-    
-  
-}
 
-@media only screen and (max-width: 768px) {
     .image1 {
         position: relative;
         width: 100%;
@@ -1119,17 +1517,16 @@ margin-top: 25px;
         align-items: center;
         justify-content: center;
         text-align: center;
-        
+
         color: white;
         padding: 20px;
     }
-}
-@media only screen and (max-width: 768px) {
+
     .image1 {
         position: relative;
         width: 100%;
         height: auto;
-        bottom:300px;
+        bottom: 300px;
     }
 
     .image1 img {
@@ -1140,130 +1537,142 @@ margin-top: 25px;
     }
 
     .contento {
-        width :30px;
-        position: relative; /* Remove absolute positioning */
-        order: -2; /* Moves it above the .image1 div */
+        width: 30px;
+        position: relative;
+        /* Remove absolute positioning */
+        order: -2;
+        /* Moves it above the .image1 div */
         width: 100%;
         text-align: center;
         padding: 15px;
-       
+
         color: white;
-        left:50%;
-        
+        left: 50%;
+
     }
 
     .image1 {
         display: flex;
         flex-direction: column;
     }
-}
-@media only screen and (max-width: 768px) {
+
     /* Ensure the entire page stays within 768px */
-    body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
+    body,
+    html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
     }
-  
+
     /* Change the layout of the top buttons */
     .socials {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px; /* adjust spacing as needed */
-      width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        /* adjust spacing as needed */
+        width: 100%;
     }
-  
+
     /* Remove extra left margins that may cause overflow */
-    .socials > div {
-      margin-left: 0;
-      margin-right: 0;
+    .socials>div {
+        margin-left: 0;
+        margin-right: 0;
     }
-  
+
     /* Optional: Adjust button widths if needed */
-    .btn, .login-btn, .modalbtn {
-      width: auto;
-      padding: 10px 20px; /* tweak for better mobile appearance */
+    .btn,
+    .login-btn,
+    .modalbtn {
+        width: auto;
+        padding: 10px 20px;
+        /* tweak for better mobile appearance */
     }
-  }
-  @media only screen and (max-width: 768px) {
+
     /* Constrain overall width */
-    body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
+    body,
+    html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
     }
-    
+
     /* Adjust the lower header container to align items in one row */
     header .lower {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 15px;  /* add some side padding */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 15px !important;
+        /* add some side padding */
     }
-  
+
     /* Remove excessive right margin from the logo container */
     header .image {
-      margin-right: 10px;
-      /* You might also adjust margin-top if needed */
+        margin-right: 10px;
+        /* You might also adjust margin-top if needed */
     }
-    
+
     /* Ensure the socials container displays its items horizontally */
     header .socials {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 10px; /* adjust spacing as needed */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        /* adjust spacing as needed */
     }
-  }
-  @media only screen and (max-width: 768px) {
+
     .header-btn {
-      width: 110px;  /* same width as the login button */
-      padding: 10px 0; /* adjust padding for a uniform look */
-      text-align: center;
+        width: 110px;
+        /* same width as the login button */
+        padding: 10px 0;
+        /* adjust padding for a uniform look */
+        text-align: center;
     }
-  }
-  @media only screen and (max-width: 768px) {
+
     /* Constrain the page width */
-    body, html {
-      max-width: 768px;
-      margin: 0 auto;
-      overflow-x: hidden;
+    body,
+    html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
     }
-  
+
     /* Hamburger Icon - show only on mobile */
     .menu-icon {
-      display: block;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1100;
-      color: #000; /* Adjust as needed */
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000;
+        /* Adjust as needed */
     }
-  
+
     /* Position the navbar off-canvas by default */
     .navbar {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%; /* Adjust width as needed */
-      height: 100%;
-      background: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      transition: left 0.3s ease;
-      z-index: 1000;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
     }
-  
+
     /* When active, slide the navbar into view */
     .navbar.active {
-      left: 0;
+        left: 0;
     }
-  
+
     /* Optionally style the navbar links */
     .navbar a {
       text-decoration: none;
@@ -1286,41 +1695,50 @@ margin-top: 25px;
   
   /* Mobile styles */
   @media only screen and (max-width: 768px) {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
     /* Show the hamburger icon on mobile */
     .menu-icon {
-      display: block;
-      position: fixed;
-      top: 15px;
-      left: 15px;
-      font-size: 30px;
-      cursor: pointer;
-      z-index: 1100;
-      color: #000;
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000;
     }
-    
+
     /* Hide the navbar off-canvas by default */
     .navbar {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 70%; /* Adjust width as needed */
-      height: 100%;
-      background: #fff;
-      padding: 20px;
-      display: flex;
-      flex-direction: row; /* Arrange links vertically */
-      gap: 20px;
-      transition: left 0.3s ease;
-      z-index: 1000;
-      background-color: white;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        /* Arrange links vertically */
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        background-color: white;
     }
-    
+
     /* Slide the navbar into view when active */
     .navbar.active {
-      left: 0;
-      background-color: white;
+        left: 0;
+        background-color: white;
     }
-    
+
     /* Style the navbar links */
     .navbar a {
       text-decoration: none;
@@ -1476,26 +1894,14 @@ margin-top: 25px;
     transition: color 0.3s;
 }
 
-.mobile-menu a:hover {
-    color: red;
-}
+/* Extra Small (Phones) - Up to 480px */
+@media only screen and (max-width: 480px) {
 
-/* Contact Section */
-.menu-contact-title {
-    font-size: 14px;
-    color: gray;
-    margin-top: 20px;
-}
-
-.menu-contact-info {
-    font-size: 14px;
-    color: black;
-}
-/* Hide the mobile menu on desktop */
-@media (min-width: 769px) {
-    .menu-icon, .mobile-menu {
+    /* Styles for extra small screens */
+    .desktopBtn {
         display: none !important;
     }
+
     .navbar{
         left: 100px;
     }
