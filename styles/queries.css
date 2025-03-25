@@ -298,8 +298,8 @@
     }
 }
 
-/* === 1440px (Large Desktop) === */
-@media (min-width: 1440px) {
+/* === 2000px (Large Desktop) === */
+@media (min-width: 2000px) {
     /* Optimize for high-res screens */
     html {
         font-size: 18px;
@@ -320,5 +320,10 @@
 
     .footer-container {
         padding: 60px 100px;
+    }
+
+    .image {
+        flex-shrink: 0; /* Prevent logo from shrinking */
+        margin-right: 2rem;
     }
 }
