@@ -112,7 +112,7 @@ header span {
 }
 
 .donation-form button:hover {
-  background-color: #d1283b;
+  background-color: #e21029;
 }
 
 .sidebar {
@@ -240,5 +240,5 @@ header span {
   background-color: #f7f8fa;
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: #050505;
 }
