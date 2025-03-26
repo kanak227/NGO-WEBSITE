@@ -136,6 +136,21 @@ header {
 .navBtn {
     white-space: nowrap;
     margin: 0 !important;
+    transition: all 0.3s ease;
+    /* min-width: 120px; */
+    text-align: center;
+}
+
+.navBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Modal Positioning Fix */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -262,15 +277,21 @@ header {
     color: #555;
 }
 
+.socials.desktopBtn {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
 /* Mobile Menu Icon (Hamburger) */
 .menu-icon {
     display: block;
     position: fixed;
     top: 20px;
     left: 20px;
+    right: 20px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1000;
 }
 
 /* Mobile Menu Styling */
@@ -279,7 +300,7 @@ header {
     top: 0;
     left: -100%;
     /* Start off-screen */
-    width: 75%;
+    width: 80%;
     height: 100vh !important;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
@@ -287,13 +308,14 @@ header {
     flex-direction: column;
 
     padding: 20px;
-    transition: left 0.4s ease-in-out;
+    transition: right 0.3s ease;
     z-index: 1000;
 }
 
 /* When menu is active, slide in */
 .mobile-menu.active {
     left: 0;
+    right: 0;
 }
 
 /* Menu Header */
@@ -325,6 +347,20 @@ header {
     padding: 10px 0;
     display: block;
     transition: color 0.3s;
+}
+
+.mobile-menu .socials.mobileBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.mobile-menu .navBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
 }
 
 .mobile-menu a:hover {
@@ -634,6 +670,8 @@ header {
 }
 
 .leftcard {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -1695,13 +1733,6 @@ header {
   
   /* Mobile styles */
   @media only screen and (max-width: 768px) {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2rem;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-    }
-
     /* Show the hamburger icon on mobile */
     .menu-icon {
         display: block;
@@ -1831,17 +1862,6 @@ header {
     }
 }
 
-/* Mobile Menu Icon (Hamburger) */
-.menu-icon {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
 /* Mobile Menu Styling */
 .mobile-menu {
     position: fixed;
@@ -1910,4 +1930,8 @@ header {
 img {
     max-width: 100%;
     height: auto;
+}
+
+.donatebutton {
+    width: 100%;
 }

@@ -12,11 +12,6 @@
 
 /* Medium Devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Header adjustments */
-    .image {
-        margin-right: 100px;
-    }
-
     /* Hero section */
     .text-content p {
         font-size: 2.8rem;
@@ -75,14 +70,16 @@
         margin: 0 auto;
     }
 
-    /* Header spacing */
-    .image {
-        margin-right: 300px;
-    }
-
     /* Hero text sizing */
     #heading {
         font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1350px) {
+    /* Header spacing */
+    .image {
+        margin-right: 300px;
     }
 }
 
@@ -153,6 +150,23 @@
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .donate-btn {
+        margin-left: 28vw;
+    }
+
+    .socials.desktopBtn {
+        display: none;
+    }
+      
+    .navbar {
+        display: none;
+    }
+
+    .donatebutton {
+        width: auto;
+        padding: 0 10px;
     }
 }
 
@@ -326,4 +340,31 @@
         flex-shrink: 0; /* Prevent logo from shrinking */
         margin-right: 2rem;
     }
+}
+
+@media (max-width: 660px) {
+    .contento p:first-child {
+        padding-top: 150px;
+    }
+
+    .btn-lg {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 1024px ) and (min-width: 768px) {
+    .contento p:first-child {
+        padding-top: 72rem;
+    }
+
+    .contento button {
+        margin-left: 15rem;
+    }
+}
+
+@media (min-width: 769px) {
+  .menu-icon,
+  .mobile-menu {
+    display: none;
+  }
 }
