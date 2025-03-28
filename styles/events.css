@@ -349,4 +349,20 @@ li::marker {
   .map iframe {
     width: 95% !important;
   }
+
+  /*************************************/
+  /************ NEWSLETTER *************/
+  /*************************************/
+  .newsletter {
+    padding: 20px 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+  }
 }
