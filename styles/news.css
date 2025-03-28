@@ -8,6 +8,10 @@ body {
   background-color: #f9f9f9;
 }
 
+.hero {
+  margin-top: 10vh !important;
+}
+
 /*************************************/
 /*********** NEWS SECTION ************/
 /*************************************/
@@ -221,4 +225,44 @@ body {
   padding-top: 10px;
   font-size: 14px;
   color: #aaa;
+}
+
+/* Media Queries for Small devices (phones) */
+@media (max-width: 480px) {
+
+  /*************************************/
+  /*********** NEWS SECTION ************/
+  /*************************************/
+  .container {
+    padding: 20px 5px;
+  }
+
+  .news-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 100% !important;
+  }
+
+  .card1 {
+    padding: 0;
+  }
+
+  .newsletter {
+    padding: 20px 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+  }
 }

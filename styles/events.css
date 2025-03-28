@@ -8,6 +8,10 @@ body {
   background-color: #f9f9f9;
 }
 
+.hero {
+  margin-top: 10vh !important;
+}
+
 /*************************************/
 /************* MAIN TITLE ************/
 /*************************************/
@@ -289,4 +293,60 @@ li::marker {
   padding-top: 10px;
   font-size: 14px;
   color: #aaa;
+}
+
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+
+  /*************************************/
+  /*********** EVENT DETAILS ***********/
+  /*************************************/
+  .container {
+    width: 90%;
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Media Queries for Small devices (phones) */
+@media (max-width: 480px) {
+
+  /*************************************/
+  /*********** EVENT DETAILS ***********/
+  /*************************************/
+  .container {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 !important;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 10px;
+    width: 98vw;
+  }
+
+  .main-content h2 {
+    font-size: 2rem !important;
+  }
+
+  .card {
+    padding: 10px;
+    width: 98vw;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map iframe {
+    width: 95% !important;
+  }
 }
