@@ -9,22 +9,8 @@ body {
   background-color: #f7f8fa;
 }
 
-/*************************************/
-/********** HEADER (NAVBAR) **********/
-/*************************************/
-header {
-  text-align: center;
-  margin: 20px 0;
-}
-
-header h1 {
-  font-size: 28px;
-  color: #333;
-}
-
-header span {
-  color: #e63946;
-  font-weight: bold;
+.hero {
+  margin-top: 15vh !important;
 }
 
 /*************************************/
@@ -241,4 +227,83 @@ header span {
   text-align: center;
   font-size: 14px;
   color: #555;
+}
+
+/*************************************/
+/************ NEWSLETTER *************/
+/*************************************/
+.newsletter {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.newsletter p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* Media Queries for Small devices (phones) */
+@media (max-width: 480px) {
+  /*************************************/
+  /*********** DONATION FORM ***********/
+  /*************************************/
+  .container{
+    padding: 0 2px !important;
+  }
+
+  .donation-form{
+    padding: 10px;
+    width: 100% !important;
+  }
+  /*************************************/
+  /************ NEWSLETTER *************/
+  /*************************************/
+  .newsletter {
+    padding: 20px 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+  }
+
+  /*************************************/
+  /*************** FOOTER **************/
+  /*************************************/
+  .links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerLink{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .footerLink strong{
+    color: #333;
+  }
 }
