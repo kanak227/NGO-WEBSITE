@@ -10,7 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <title>Latest News </title>
-
+  <link rel="shortcut icon" href="/NGO-WEBSITE/assets/favicon.png">
 </head>
 
 <body> 
@@ -26,95 +26,142 @@
         </div>
       </div>
 
-      <!-- Mobile Menu Icon (For Mobile Only) -->
-      <div class="menu-icon" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div class="mobile-menu">
-        <div class="menu-header">
-          <div class="menu-close" onclick="toggleMenu()">&times;</div>
+        <!-- Mobile Menu Icon (For Mobile Only) -->
+        <div class="menu-icon" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
         </div>
-        <a href="../index.html">Home</a>
-        <a href="causes.html">Causes</a>
-        <a href="events.html">Events</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
 
-        <div class="socials mobileBtn">
-          <div class="login">
-            <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+          <div class="menu-header">
+            <div class="menu-close" onclick="toggleMenu()">&times;</div>
           </div>
+          <a href="../index.html">Home</a>
+          <a href="causes.html">Causes</a>
+          <a href="events.html">Events</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
 
-          <div>
-            <a href="pages/login.html">
-              <button type="button" class="navBtn btn btn-outline-danger">Login</button>
-            </a>
-          </div>
+          <div class="socials mobileBtn">
+            <div class="login">
+              <button
+                type="button"
+                class="navBtn btn btn-outline-danger"
+                onclick="redirectToPage()"
+              >
+                Donate Now
+              </button>
+            </div>
 
-          <div>
-            <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">Contact Info</button>
-          </div>
-        </div>
-      </div>
+            <div>
+              <a href="pages/login.html">
+                <button type="button" class="navBtn btn btn-outline-danger">
+                  Login
+                </button>
+              </a>
+            </div>
 
-      <!-- Desktop Navbar -->
-      <nav class="navbar">
-        <a href="../index.html">Home</a>
-        <a href="causes.html">Causes</a>
-        <a href="events.html">Events</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-
-    <!-- Social & Login Buttons -->
-    <div class="socials desktopBtn">
-      <div class="login">
-        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate Now</button>
-      </div>
-
-      <div>
-        <a href="pages/login.html">
-          <button type="button" class="navBtn btn btn-outline-danger">Login</button>
-        </a>
-      </div>
-
-      <div>
-        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">Contact Info</button>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Information</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Phone No: +9145673824</p>
-            <p>Email: kanakverma325@gmail.com</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <div>
+              <button
+                type="button"
+                class="navBtn btn btn-danger"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Contact Info
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <!-- ************************************* -->
-  <!-- *********** NEWS SECTION ************ -->
-  <!-- ************************************* -->
-  <div class="hero container">
-    <div class="header">
-      <h1>Read and <span>explore</span> your knowledge through our news</h1>
-    </div>
+        <!-- Desktop Navbar -->
+        <nav class="navbar">
+          <a href="../index.html">Home</a>
+          <a href="causes.html">Causes</a>
+          <a href="events.html">Events</a>
+          <a href="news.html">News</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Social & Login Buttons -->
+      <div class="socials desktopBtn">
+        <div class="login">
+          <button
+            type="button"
+            class="navBtn btn btn-outline-danger"
+            onclick="redirectToPage()"
+          >
+            Donate Now
+          </button>
+        </div>
+
+        <div>
+          <a href="pages/login.html">
+            <button type="button" class="navBtn btn btn-outline-danger">
+              Login
+            </button>
+          </a>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            class="navBtn btn btn-danger"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Contact Info
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Contact Information
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Phone No: +9145673824</p>
+              <p>Email: kanakverma325@gmail.com</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ************************************* -->
+    <!-- *********** NEWS SECTION ************ -->
+    <!-- ************************************* -->
+    <div class="hero container">
+      <div class="header">
+        <h1>Read and <span>explore</span> your knowledge through our news</h1>
+      </div>
 
     <div class="news-grid">
       <!-- News Card 1 -->
@@ -196,49 +243,71 @@
       </div>
     </div>
 
-    <div class="newsletter">
-      <p>To get weekly & monthly news, <strong>Subscribe</strong> to our newsletter.</p>
-      <input type="email" placeholder="Your email address">
-      <button>Subscribe</button>
+      <div class="newsletter">
+        <p>
+          To get weekly & monthly news, <strong>Subscribe</strong> to our
+          newsletter.
+        </p>
+        <input type="email" placeholder="Your email address" />
+        <button>Subscribe</button>
+      </div>
     </div>
-  </div>
 
-  <!-- ************************************* -->
-  <!-- ************** FOOTER *************** -->
-  <!-- ************************************* -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-about">
-        <h3>About Us</h3>
-        <p>Jago Welfare is dedicated to improving lives by addressing critical issues such as hunger, education, and shelter. We work tirelessly to bring hope and support to those in need.</p>
-      </div>
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="./causes.html">Causes</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:example@example.com">jagowelfare@gmail.com</a></p>
-        <p>Phone: +123-456-7890</p>
-        <div class="footer-socials">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <!-- ************************************* -->
+    <!-- ************** FOOTER *************** -->
+    <!-- ************************************* -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>
+            Jago Welfare is dedicated to improving lives by addressing critical
+            issues such as hunger, education, and shelter. We work tirelessly to
+            bring hope and support to those in need.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./causes.html">Causes</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            Email:
+            <a href="mailto:example@example.com">jagowelfare@gmail.com</a>
+          </p>
+          <p>Phone: +123-456-7890</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Jago Welfare. All Rights Reserved.</p>
-    </div>
-  </footer>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Jago Welfare. All Rights Reserved.</p>
+      </div>
+      <div id="scrollToTop">
+        <svg class="progress-circle" width="50" height="50">
+          <circle cx="25" cy="25" r="22"></circle>
+          <circle cx="25" cy="25" r="22" id="progress"></circle>
+        </svg>
+        <span class="arrow">▲</span>
+      </div>
+    </footer>
 
-  <script src="../app.js"></script>
-</body>
-
+    <script src="../app.js"></script>
+  </body>
 </html>
