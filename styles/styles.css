@@ -72,6 +72,8 @@ header {
     gap: 8px;
     justify-content: center;
     align-items: center;
+    min-width: 120px;
+    padding: 0 10px;
 }
 
 .logoContainer img {
@@ -203,24 +205,6 @@ header {
     margin-left: 20px;
 }
 
-.menu-icon {
-    display: none;
-    /* Hidden on desktop */
-}
-
-.navbar {
-    display: flex;
-    gap: 20px;
-}
-
-/* Hamburger icon styling */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    margin: 15px;
-    display: inline-block;
-}
-
 /* Fullscreen overlay container */
 .menu-overlay {
     position: fixed;
@@ -292,6 +276,8 @@ header {
     right: 20px;
     font-size: 24px;
     cursor: pointer;
+    margin: 15px;
+    z-index: 1001;
 }
 
 /* Mobile Menu Styling */
@@ -300,15 +286,14 @@ header {
     top: 0;
     left: -100%;
     /* Start off-screen */
-    width: 80%;
+    width: 100%;
     height: 100vh !important;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-
     padding: 20px;
-    transition: right 0.3s ease;
+    transition: left 0.3s ease;
     z-index: 1000;
 }
 
@@ -378,21 +363,29 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
-    margin-top: 8vh;
+    padding: 40px 20px;
+    margin-top: 60px !important;
+    flex-direction: column-reverse;
+    text-align: center;
 }
 
 /* Text Content */
 .text-content {
-    max-width: 45%;
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
+    order: 2;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .text-content p {
-    font-size: 3.4rem; /* Adjusted size for subtext */
+    font-size: 2.2rem; /* Adjusted size for subtext */
     margin: 30px 0 0 0;
+    line-height: 1.2;
     color: #333; /* Neutral color for readability */
     line-height: 0.8;
     font-family:'Times New Roman', Times, serif; /* Ensures proper line spacing for clarity */
@@ -400,11 +393,17 @@ header {
 }
 
 #heading {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
+    line-height: 1.1;
     color: #000;
     margin-bottom: 1px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#heading b u {
+    text-decoration-color: goldenrod; 
+    text-decoration-line: bold;
 }
 
 #text {
@@ -417,8 +416,8 @@ header {
 
 /* Donate Button */
 .donate-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
+    margin: 25px auto 0;
+    padding: 15px 40px;
     background-color: #ff4d4d;
     color: #fff;
     font-size: 1.5rem;
@@ -435,13 +434,19 @@ header {
     background-color: #e04444;
 }
 
+.img {
+    order: 1; /* Image first on mobile */
+    margin: 20px 0;
+}
+
 .img img {
-    height: 610px;
+    height: auto;
     /* Keeps the image height consistent */
     max-width: 100%;
     /* Prevents overflow */
     object-fit: contain;
     /* Maintains aspect ratio */
+    margin: 0 auto;
 }
 
 .hero {
@@ -461,15 +466,17 @@ header {
     align-items: center;
     width: 100%;
     margin-top: 130px;
-    display: flex;
-    gap: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 15px;
 }
 
 .card1 {
     justify-content: center;
     background-color: beige;
-    width: 280px;
-    height: 200px;
+    width: 100% !important;
+    height: auto;
     border-radius: 5%;
     align-items: center;
     text-align: center;
@@ -478,6 +485,8 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth scaling and shadow change */
     cursor: pointer;
+    margin: 0;
+    padding: 20px;
 }
 
 .card1:hover {
@@ -532,6 +541,10 @@ header {
     margin-bottom: 0%;
 }
 
+.donate {
+    margin-top: 20px; 
+}
+
 .card1 h3 {
     margin-left: 20px;
     margin-top: 2px;
@@ -576,15 +589,19 @@ header {
     gap: 50px;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 350px;
+    flex-direction: column;
+    padding: 20px;
 }
 
 .para {
-    width: 40%;
+    width: 100%;
     /* height: 450px; */
     height: fit-content;
     align-items: baseline;
     justify-content: center;
+    text-align: center;
+    padding: 0 15px;
 }
 
 .para p {
@@ -598,6 +615,24 @@ header {
     font-weight: 500;
     opacity: 70%;
     margin-bottom: 3px;
+}
+
+.para h2 {
+    font-size: 3rem; 
+    margin-bottom: 25px; 
+    font-weight: 600;
+}
+
+.para h2 u {
+    text-decoration-color: goldenrod; 
+    text-decoration-thickness: 5px;
+}
+
+.para p:nth-of-type(2) {
+    font-size: 1.7rem; 
+    margin-bottom: 15px; 
+    color: crimson; font-weight: 500; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .button {
@@ -639,6 +674,8 @@ header {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    background: linear-gradient(rgb(216, 231, 234) 60% , rgb(197, 234, 241) 60%) no-repeat;
+    height: 900px";
 }
 
 .head2 {
@@ -648,11 +685,16 @@ header {
     text-align: center;
 }
 
+.head2 p:nth-of-type(2) u {
+    text-decoration-color: goldenrod; 
+    text-decoration-thickness: 6px;
+}
+
 #upper {
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2;
-
+    opacity: 70%; 
 }
 
 .head2 p {
@@ -660,6 +702,11 @@ header {
     font-weight: 600;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 0.9;
+}
+
+.head2 p:nth-child(2) u {
+    text-decoration-color: goldenrod; 
+    text-decoration-thickness: 6px;
 }
 
 .cards2 {
@@ -677,10 +724,16 @@ header {
     background-color: white;
     height: 700px;
     width: 500px;
-    margin-left: 120px;
+    margin-left: 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
     transition: transform 0.3s ease;
+    margin-right:5px;
+}
+
+.leftcard img {
+    margin-bottom: 20px; 
+    border-radius: 5%;
 }
 
 .leftcard:hover {
@@ -690,6 +743,21 @@ header {
 .text {
     margin-left: 30px;
     width: 450px;
+}
+
+.text h1 {
+    color: crimson;
+    margin-bottom: 10px; 
+    font-size: 1.2rem;
+}
+
+.text h2 {
+    margin-bottom: 20px;
+}
+
+.text p {
+    width: 420px; 
+    margin-bottom: 20px;
 }
 
 .rightcards {
@@ -730,6 +798,22 @@ header {
     margin-left: 15px;
 }
 
+.text1 h6 {
+    padding-top: 10px;
+    font-weight:700; 
+    color:crimson; 
+    font-size: 1.2rem;
+}
+
+.text1 h4 {
+    font-weight: 600;
+}
+
+.text1 p {
+    margin-bottom: 8px; 
+    line-height: 1.4;
+}
+
 .icons {
     display: flex;
     margin-left: 25px;
@@ -744,6 +828,15 @@ header {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 50px;
+}
+
+.Location h6 {
+    margin-bottom: 1px; 
+    margin-left: 5px;
+}
+
+.Location p {
+    margin-bottom: 20px;
 }
 
 .text1 p {
@@ -774,11 +867,25 @@ header {
 
 .contento {
     color: white;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 430%;
+    top: 240rem;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
+    align-items: center;
+}
+
+.contento p:nth-of-type(1) {
+    text-align: center; 
+    font-size: 2rem;
+}
+
+.contento p:nth-of-type(2) {
+    text-align: center; 
+    font-size: 3.2rem; 
+    font-weight: 500;
 }
 
 .break {
@@ -796,6 +903,11 @@ header {
     padding: 0 30px;
 }
 
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
 /*************************************/
 /******* INFORMATION BANNER *********/
 /*************************************/
@@ -808,8 +920,6 @@ header {
     height: 200px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(transparent 40%, rgb(216, 231, 234) 40%) no-repeat;
-
 }
 
 .bar {
@@ -836,7 +946,6 @@ header {
 }
 
 .no2 {
-    background-color: rgb(216, 231, 234);
     height: 120px;
 }
 
@@ -989,6 +1098,12 @@ header {
     /* Ensures numbers maintain consistent width */
 }
 
+.cont1 p:last-child {
+    font-size: 1.5rem; 
+    opacity: 70%; 
+    font-weight: 500;
+}
+
 /*************************************/
 /************** OTHERS ***************/
 /*************************************/
@@ -1020,21 +1135,6 @@ header {
 /*********** MEDIA QUERIES ***********/
 /*************************************/
 
-/* Ultra Wide (4K+) - Above 1920px */
-@media only screen and (min-width: 1921px) {
-    /* Styles for ultra-wide screens */
-}
-
-/* Extra Large (High-Resolution Screens) - 1441px to 1920px */
-@media only screen and (max-width: 1920px) {
-    /* Styles for extra large screens */
-}
-
-/* Large (Desktops & Large Screens) - 906px to 1440px */
-@media only screen and (max-width: 1440px) {
-    /* Styles for large screens */
-}
-
 /* Medium (Tablets & Small Laptops) - 769px to 905px */
 @media only screen and (max-width: 905px) {
 
@@ -1052,6 +1152,20 @@ header {
     }
 }
 
+.bi-geo-alt, .bi-clock {
+    margin-top: 6px;
+}
+
+.bi-megaphone-fill, .bi-emoji-smile-fill, .bi-hand-thumbs-up {
+    margin-top: 20px; 
+    margin-bottom: 15px;
+}
+
+.bi-cash-coin {
+    margin-top: 25px; 
+    margin-bottom: 10px;
+}
+
 /* Hide the menu icon on desktop */
 @media only screen and (min-width: 769px) {
 
@@ -1062,740 +1176,15 @@ header {
 
     .navbar {
         left: 100px;
+        display: flex;
     }
 }
-
-/* Small (Tablets & Small Screens) - 481px to 768px */
-@media only screen and (max-width: 768px) {
-    /* Styles for small screens */
-
-    /* Constrain the body width to 768px & prevent horizontal scroll */
-    body,
-    html {
-        max-width: 768px;
-        margin: 0 auto;
-        overflow-x: hidden;
-    }
-
-    /* Hide desktop navbar, show hamburger icon (if any) */
-    .navbar {
-        display: none !important;
-    }
-
-    .logoContainer {
-        margin-left: 20% !important;
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 14px !important;
-        right: 1px !important;
-        margin: 0 !important;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    .menu {
-        display: none;
-        /* Toggled via JS */
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        text-align: center;
-        z-index: 998;
-    }
-
-    .menu a {
-        display: block;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    /* Make main container vertical & centered */
-    .mainbox,
-    .content-section,
-    .events,
-    .third,
-    .fourth {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 768px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Make sure the parent sections auto-expand */
-    .fourth,
-    .events,
-    .content-section {
-        height: auto !important;
-        position: static !important;
-        overflow: visible !important;
-    }
-
-    .mainbox {
-        margin-top: 8vh !important;
-    }
-
-    /* Force all card sections to stack vertically with spacing */
-    .cards,
-    .cards2,
-    .cards3 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        width: 100%;
-        margin-bottom: 50px;
-        /* Space above the footer */
-    }
-
-    /* Stack the news cards vertically, ensure spacing */
-    .cards3 {
-        margin: 0 auto 80px auto;
-        /* 80px bottom margin to separate from footer */
-    }
-
-    /* Individual cards expand to fit content & no overlap */
-    .rcard,
-    .lastcard {
-      width: 90%;
-      height: auto;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .leftcard {
-      height: auto;
-      padding: 20px;
-    }
-
-    .leftcard, .rightcards {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .card1 {
-      width: 90%;
-      height: auto;
-      margin: 10px 0;
-      padding: 20px;
-    }
-  
-    /* Image & text blocks: vertical, no overlap */
-    .img,
-    .text-content {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .img img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  
-    /* Add spacing before footer so cards don't collide */
-    .footer {
-      margin-top: 40px; 
-    }
-  
-    /* Ensure text wraps inside small screens */
-    h1, h2, h3, p {
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    /* Make sure the parent sections auto-expand */
-    .fourth,
-    .events,
-    .content-section {
-      height: auto !important;
-      position: static !important;
-      overflow: visible !important;
-      width: 90%;
-      height: auto;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Remove any fixed height on individual cards */
-    .rcard,
-    .lastcard {
-        height: auto !important;
-        position: static !important;
-    }
-
-    /* Force card containers to be wide enough for images */
-    .cards3 .rcard,
-    .cards3 .lastcard,
-    .cards3 .leftcard {
-        width: 90% !important;
-        max-width: 500px;
-        /* or 100% if you want full width */
-        margin: 0 auto 30px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    /* Ensure images don’t overflow */
-    .cards3 .rcard img,
-    .cards3 .lastcard img,
-    .cards3 .leftcard img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* or 'contain' if you prefer no cropping */
-        border-radius: 5%;
-        /* Keep your rounded corners if desired */
-        display: block;
-    }
-
-    /* Center the entire bar */
-    .horizontal,
-    .bar {
-      margin: 0 auto !important;     /* Overrides large left margins */
-      width: 90% !important;         /* Fit within mobile screen */
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      flex-wrap: wrap;               /* Allow items to wrap on smaller screens */
-      gap: 20px;                     /* Space between items */
-      height: auto !important;       /* Let it grow with content */
-    }
-
-    .bar {
-        flex-direction: column;
-        padding: 20px;
-    }
-  
-    /* Each stat container is centered */
-    .cont1 {
-        text-align: center !important; /* Center text and icons */
-        margin: 0 auto !important;
-        /* Overrides large left margins */
-        width: 90% !important;
-        /* Fit within mobile screen */
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap;
-        /* Allow items to wrap on smaller screens */
-        gap: 20px;
-        /* Space between items */
-        height: auto !important;
-        /* Let it grow with content */
-    }
-
-    /* Each stat container is centered */
-    .cont1 {
-        width: auto !important;
-        margin: 10px !important;
-        /* Add spacing around each item */
-        text-align: center !important;
-        /* Center text and icons */
-    }
-
-    .sad {
-        margin: 0 !important;
-    }
-
-    .para {
-        width: fit-content;
-        margin: 0;
-        padding: 0 10vw;
-    }
-
-    /* Image & text blocks: vertical, no overlap */
-    .img,
-    .text-content {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .img img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    /* Add spacing before footer so cards don't collide */
-    .footer {
-        margin-top: 40px;
-        /* gap before footer */
-        padding-top: 20px;
-        /* ensures footer content isn't squashed */
-        position: relative;
-        /* no overlap */
-        z-index: 0;
-        /* stays behind any card if needed */
-    }
-
-    /* Ensure text wraps inside small screens */
-    h1,
-    h2,
-    h3,
-    p {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* Remove fixed heights and ensure space below main image */
-    .mainbox {
-        margin-bottom: 40px !important;
-        /* space after hero image */
-    }
-
-    /* If your card section is in .third, remove any fixed heights */
-    main.third {
-        height: auto !important;
-        margin: 0 !important;
-        padding: 20px 0 !important;
-        position: static !important;
-    }
-
-    /* Stack the cards vertically with spacing */
-    .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        margin-top: 0 !important;
-        /* remove any negative margin that might cause overlap */
-        position: static !important;
-    }
-
-    /* Ensure each card is auto-height and centered */
-    .card1 {
-        width: 90% !important;
-        height: auto !important;
-        margin-bottom: 20px;
-        /* spacing between cards */
-        position: static !important;
-    }
-
-    /* Remove large left margin from the icon container if it exists */
-    .circle {
-        margin: 0 auto !important;
-    }
-
-    /* Hamburger Menu */
-    .navbar {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    .menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        background: white;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu a {
-        display: block;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    /* Ensure Image Appears Above Donate Cards */
-    .image-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 40px;
-        /* Space between image and cards */
-    }
-
-    .img {
-        width: 100%;
-        text-align: center;
-        position: relative;
-    }
-
-    .img img {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        display: block;
-    }
-
-    /* Cards in Vertical Layout */
-    .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        width: 100%;
-    }
-
-    .card1 {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Ensure Proper Layout */
-    .mainbox {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-        width: 100%;
-        max-width: 768px;
-        margin: 0 auto;
-    }
-
-    .text-content {
-        max-width: 100%;
-        word-wrap: break-word;
-    }
-
-    /* Fix Overlapping Issues */
-    .content-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 768px;
-        margin: 0 auto;
-        padding: 10px;
-    }
-
-    .content-box {
-        width: 90%;
-        padding: 20px;
-        background: white;
-    }
-
-    /* Ensure text fits within width */
-    h1,
-    h2,
-    h3,
-    p {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* Add space between .third and .fourth sections */
-    main.third {
-        margin-bottom: 150px !important;
-    }
-
-    main.fourth {
-        margin-top: 600px !important;
-        margin-bottom: 7px !important;
-    }
-
-    main.third {
-        margin-top: 500px !important;
-    }
-
-    div.sad {
-        margin-top: 80px !important;
-    }
-
-    div.image1 {
-        margin-top: -600px !important;
-        margin-bottom: -500px !important;
-    }
-
-    main.fight {
-        margin-top: 700px;
-
-    }
-
-    .image1 {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .image1 img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-
-    .contento {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        color: white;
-        padding: 20px;
-    }
-
-    .image1 {
-        position: relative;
-        width: 100%;
-        height: auto;
-        bottom: 300px;
-    }
-
-    .image1 img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-
-    .contento {
-        width: 30px;
-        position: relative;
-        /* Remove absolute positioning */
-        order: -2;
-        /* Moves it above the .image1 div */
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-
-        color: white;
-        left: 50%;
-
-    }
-
-    .image1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Ensure the entire page stays within 768px */
-    body,
-    html {
-        max-width: 768px;
-        margin: 0 auto;
-        overflow-x: hidden;
-    }
-
-    /* Change the layout of the top buttons */
-    .socials {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        /* adjust spacing as needed */
-        width: 100%;
-    }
-
-    /* Remove extra left margins that may cause overflow */
-    .socials>div {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* Optional: Adjust button widths if needed */
-    .btn,
-    .login-btn,
-    .modalbtn {
-        width: auto;
-        padding: 10px 20px;
-        /* tweak for better mobile appearance */
-    }
-
-    /* Constrain overall width */
-    body,
-    html {
-        max-width: 768px;
-        margin: 0 auto;
-        overflow-x: hidden;
-    }
-
-    /* Adjust the lower header container to align items in one row */
-    header .lower {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        padding: 0 15px !important;
-        /* add some side padding */
-    }
-
-    /* Remove excessive right margin from the logo container */
-    header .image {
-        margin-right: 10px;
-        /* You might also adjust margin-top if needed */
-    }
-
-    /* Ensure the socials container displays its items horizontally */
-    header .socials {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        /* adjust spacing as needed */
-    }
-
-    .header-btn {
-        width: 110px;
-        /* same width as the login button */
-        padding: 10px 0;
-        /* adjust padding for a uniform look */
-        text-align: center;
-    }
-
-    /* Constrain the page width */
-    body,
-    html {
-        max-width: 768px;
-        margin: 0 auto;
-        overflow-x: hidden;
-    }
-
-    /* Hamburger Icon - show only on mobile */
-    .menu-icon {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 1100;
-        color: #000;
-        /* Adjust as needed */
-    }
-
-    /* Position the navbar off-canvas by default */
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 70%;
-        /* Adjust width as needed */
-        height: 100%;
-        background: #fff;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        transition: left 0.3s ease;
-        z-index: 1000;
-    }
-
-    /* When active, slide the navbar into view */
-    .navbar.active {
-        left: 0;
-    }
-
-    /* Optionally style the navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.2rem;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-    }
-  }
-  /* Desktop styles */
-.menu-icon {
-    display: block;
-    z-index: 1001;
-  }
-  
-  .navbar {
-    display: flex;
-    gap: 20px;
-  }
-  
-  /* Mobile styles */
-  @media only screen and (max-width: 768px) {
-    /* Show the hamburger icon on mobile */
-    .menu-icon {
-        display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 1100;
-        color: #000;
-    }
-
-    /* Hide the navbar off-canvas by default */
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 70%;
-        /* Adjust width as needed */
-        height: 100%;
-        background: #fff;
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        /* Arrange links vertically */
-        gap: 20px;
-        transition: left 0.3s ease;
-        z-index: 1000;
-        background-color: white;
-    }
-
-    /* Slide the navbar into view when active */
-    .navbar.active {
-        left: 0;
-        background-color: white;
-    }
-
-    /* Style the navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1.2rem;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-      
-    }
-  }
   
 /* Basic reset (optional) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Hamburger icon styling */
-  .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    margin: 15px;
-    display: inline-block;
-    /* Position it as needed in your design:
-       e.g., position: fixed; top: 20px; left: 20px; */
   }
   
   /* Fullscreen overlay container */
@@ -1930,8 +1319,54 @@ header {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .donatebutton {
     width: 100%;
+    border-radius: 5%; 
+    margin-top: 30px; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center; 
+    height: 40px;
+    justify-content: center; 
+    background-color: rgb(199, 41, 41);
+}
+
+.donatebutton p {
+    text-align: center; 
+    margin-top: 1px; 
+    font-size: 1.3rem; 
+    color: wheat; 
+    margin-bottom: 5px;
+}
+
+.leftcard, .rightcards {
+    width: 100% !important;
+    margin: 15px 0;
+}
+
+.rcard, .lastcard {
+    width: 100% !important;
+    height: auto;
+    margin: 15px 0;
+}
+
+.poverty img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-about, 
+.footer-links, 
+.footer-contact {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.footer-socials {
+    justify-content: center;
+    margin-top: 15px;
 }

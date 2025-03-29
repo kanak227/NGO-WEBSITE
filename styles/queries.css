@@ -5,8 +5,12 @@
     }
 
     .card1 {
-        width: 45%;
+        width: 48%;
         margin: 10px;
+    }
+
+    .cards { 
+        grid-template-columns: repeat(2,1fr); 
     }
 }
 
@@ -48,7 +52,7 @@
 
     /* Cards grid */
     .cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* Events section */
@@ -94,11 +98,51 @@
 /* Tablet Landscape Optimization */
 @media (min-width: 768px) and (orientation: landscape) {
     .cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .events {
         grid-template-columns: 1fr 1fr;
+    }
+    
+    .mainbox { 
+        flex-direction: row;
+        margin-top: 8vh;
+        text-align: left;
+        padding: 80px 40px;
+    }
+
+    .text-content { 
+        max-width: 50%; 
+        order: 1;
+        padding-right: 40px;
+    }
+
+    .text-content p {
+        font-size: 3rem;
+    }
+
+    .sad { 
+        flex-direction: row; 
+    }
+
+    .para { 
+        width: 50%; 
+    }
+
+    .img {
+        order: 2;
+        width: 50%;
+        margin: 0;
+    }
+
+    .donate-btn {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }   
+
+    #heading {
+        font-size: 4rem;
     }
 }
 
@@ -132,8 +176,494 @@
     }
 }
 
-/* Mobile Menu Overrides */
-@media (max-width: 768px) {
+/* Small (Tablets & Small Screens) - 481px to 768px */
+@media only screen and (max-width: 768px) {
+    /* Styles for small screens */
+
+    /* Constrain the body width to 768px & prevent horizontal scroll */
+    body,
+    html {
+        max-width: 768px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .logoContainer {
+        margin-left: 20% !important;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 14px !important;
+        right: 1px !important;
+        margin: 0 !important;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1100;
+        color: #000;
+        left: 15px;
+    }
+
+    .menu {
+        display: none;
+        /* Toggled via JS */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        z-index: 998;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Make main container vertical & centered */
+    .mainbox,
+    .content-section,
+    .events,
+    .third,
+    .fourth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 768px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Make sure the parent sections auto-expand */
+    .fourth,
+    .events,
+    .content-section {
+        height: auto !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    .mainbox {
+        margin-top: 8vh !important;
+        margin-bottom: 40px !important;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Force all card sections to stack vertically with spacing */
+    .cards,
+    .cards2,
+    .cards3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        margin-bottom: 50px !important;
+        /* Space above the footer */
+    }
+
+    /* Stack the news cards vertically, ensure spacing */
+    .cards3 {
+        margin: 0 auto 80px auto;
+        /* 80px bottom margin to separate from footer */
+    }
+
+    /* Individual cards expand to fit content & no overlap */
+    .rcard,
+    .lastcard {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .leftcard {
+      height: auto;
+      padding: 20px;
+    }
+
+    .leftcard, .rightcards {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card1 {
+      width: 90%;
+      height: auto;
+      margin: 10px 0 20px 0;
+      padding: 20px;
+      position: static !important;
+    }
+  
+    /* Image & text blocks: vertical, no overlap */
+    .img,
+    .text-content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    /* Ensure text wraps inside small screens */
+    h1, h2, h3, p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .fourth,
+    .events,
+    .content-section {
+      height: auto !important;
+      position: static !important;
+      overflow: visible !important;
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Remove any fixed height on individual cards */
+    .rcard,
+    .lastcard {
+        height: auto !important;
+        position: static !important;
+    }
+
+    /* Force card containers to be wide enough for images */
+    .cards3 .rcard,
+    .cards3 .lastcard,
+    .cards3 .leftcard {
+        width: 90% !important;
+        max-width: 500px;
+        /* or 100% if you want full width */
+        margin: 0 auto 30px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Ensure images don’t overflow */
+    .cards3 .rcard img,
+    .cards3 .lastcard img,
+    .cards3 .leftcard img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* or 'contain' if you prefer no cropping */
+        border-radius: 5%;
+        /* Keep your rounded corners if desired */
+        display: block;
+    }
+
+    /* Center the entire bar */
+    .horizontal,
+    .bar {
+      margin: 0 auto !important;     /* Overrides large left margins */
+      width: 90% !important;         /* Fit within mobile screen */
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap;               /* Allow items to wrap on smaller screens */
+      gap: 20px;                     /* Space between items */
+      height: auto !important;       /* Let it grow with content */
+    }
+
+    .bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+  
+    /* Each stat container is centered */
+    .cont1 {
+        text-align: center !important; /* Center text and icons */
+        margin: 0 auto !important;
+        /* Overrides large left margins */
+        width: auto !important;
+        /* Fit within mobile screen */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap;
+        /* Allow items to wrap on smaller screens */
+        gap: 20px;
+        /* Space between items */
+        height: auto !important;
+        /* Let it grow with content */
+    }
+
+    .sad {
+        margin: 0 !important;
+    }
+
+    .para {
+        width: fit-content;
+        margin: 0;
+        padding: 0 10vw;
+    }
+
+    /* Image & text blocks: vertical, no overlap */
+    .img,
+    .text-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Add spacing before footer so cards don't collide */
+    .footer {
+        margin-top: 40px;
+        /* gap before footer */
+        padding-top: 20px;
+        /* ensures footer content isn't squashed */
+        position: relative;
+        /* no overlap */
+        z-index: 0;
+        /* stays behind any card if needed */
+    }
+
+    /* Ensure text wraps inside small screens */
+    h1,
+    h2,
+    h3,
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* If your card section is in .third, remove any fixed heights */
+    main.third {
+        height: auto !important;
+        padding: 20px 0 !important;
+        position: static !important;
+    }
+
+    /* Stack the cards vertically with spacing */
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 0 !important;
+        /* remove any negative margin that might cause overlap */
+        position: static !important;
+    }
+
+    /* Remove large left margin from the icon container if it exists */
+    .circle {
+        margin: 0 auto !important;
+    }
+
+    /* Ensure Image Appears Above Donate Cards */
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+        /* Space between image and cards */
+    }
+
+    .img {
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+
+    .img img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+    }
+
+    /* Cards in Vertical Layout */
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+
+    .card1 {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    /* Fix Overlapping Issues */
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .content-box {
+        width: 90%;
+        padding: 20px;
+        background: white;
+    }
+
+    /* Ensure text fits within width */
+    h1,
+    h2,
+    h3,
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    main.fourth {
+        margin-bottom: 7px !important;
+    }
+
+    div.sad {
+        margin-top: 80px !important;
+    }
+
+    .image1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image1 img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+    .contento {
+        position:absolute;
+        top:333rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        order: -2;
+        color: white;
+        padding: 20px;
+    }
+
+    /* Change the layout of the top buttons */
+    .socials {  
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        /* adjust spacing as needed */
+        width: 100%;
+    }
+
+    /* Remove extra left margins that may cause overflow */
+    .socials>div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Optional: Adjust button widths if needed */
+    .btn,
+    .login-btn,
+    .modalbtn {
+        width: auto;
+        padding: 10px 20px;
+        /* tweak for better mobile appearance */
+    }
+
+    /* Adjust the lower header container to align items in one row */
+    header .lower {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0 15px !important;
+        /* add some side padding */
+    }
+
+    /* Remove excessive right margin from the logo container */
+    header .image {
+        margin-right: 10px;
+        /* You might also adjust margin-top if needed */
+    }
+
+    /* Ensure the socials container displays its items horizontally */
+    header .socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        /* adjust spacing as needed */
+    }
+
+    .header-btn {
+        width: 110px;
+        /* same width as the login button */
+        padding: 10px 0;
+        /* adjust padding for a uniform look */
+        text-align: center;
+    }
+
+    /* Position the navbar off-canvas by default */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        /* Adjust width as needed */
+        height: 100%;
+        background: #fff;
+        padding: 20px;
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        background-color: white;
+        display: none !important;
+    }
+
+    /* Optionally style the navbar links */
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Slide the navbar into view when active */
+    .navbar.active {
+        left: 0;
+        background-color: white;
+    }
+
     /* Force full-width elements */
     .leftcard, .rcard, .lastcard {
         width: 100% !important;
@@ -153,14 +683,11 @@
     }
 
     .donate-btn {
-        margin-left: 28vw;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .socials.desktopBtn {
-        display: none;
-    }
-      
-    .navbar {
         display: none;
     }
 
@@ -168,8 +695,8 @@
         width: auto;
         padding: 0 10px;
     }
-}
 
+}
 /* Ultra-Mobile Optimization */
 @media (max-width: 400px) {
     html {
@@ -343,22 +870,15 @@
 }
 
 @media (max-width: 660px) {
-    .contento p:first-child {
-        padding-top: 150px;
-    }
-
     .btn-lg {
         margin-left: 0;
     }
 }
 
-@media (max-width: 1024px ) and (min-width: 768px) {
-    .contento p:first-child {
-        padding-top: 72rem;
-    }
-
-    .contento button {
-        margin-left: 15rem;
+@media (max-width: 1140px ) and (min-width: 768px) {
+    .contento {
+        position: absolute;
+        top: 210rem;
     }
 }
 
@@ -367,4 +887,10 @@
   .mobile-menu {
     display: none;
   }
+}
+
+@media (max-width: 1140px) {
+    .contento {
+        margin-top: 60rem;
+    }
 }
