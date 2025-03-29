@@ -1,296 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/donation.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>Donation Page</title>
-    <style></style>
-  </head>
 
-  <body>
-    <!-- ************************************* -->
-    <!-- ********** HEADER (NAVBAR) ********** -->
-    <!-- ************************************* -->
-    <header class="main">
-      <div class="lower">
-        <div class="image">
-          <div class="logoContainer">
-            <img src="../assets/logo.png.png" alt="Logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/donation.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <title>Donation Page</title>
+  <style></style>
+</head>
 
-            <p>Jago Welfare</p>
-          </div>
+<body>
+  <!-- ************************************* -->
+  <!-- ********** HEADER (NAVBAR) ********** -->
+  <!-- ************************************* -->
+  <header class="main">
+    <div class="lower">
+      <div class="image">
+        <div class="logoContainer">
+          <img src="../assets/logo.png.png" alt="Logo" />
+
+          <p>Jago Welfare</p>
         </div>
-
-        <!-- Mobile Menu Icon (For Mobile Only) -->
-        <div class="menu-icon" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-          <div class="menu-header">
-            <div class="menu-close" onclick="toggleMenu()">&times;</div>
-          </div>
-          <a href="../index.html">Home</a>
-          <a href="causes.html">Causes</a>
-          <a href="events.html">Events</a>
-          <a href="news.html">News</a>
-          <a href="contact.html">Contact</a>
-
-          <div class="socials mobileBtn">
-            <div class="login">
-              <button
-                type="button"
-                class="navBtn btn btn-outline-danger"
-                onclick="redirectToPage()"
-              >
-                Donate Now
-              </button>
-            </div>
-
-            <div>
-              <a href="pages/login.html">
-                <button type="button" class="navBtn btn btn-outline-danger">
-                  Login
-                </button>
-              </a>
-            </div>
-
-            <div>
-              <button
-                type="button"
-                class="navBtn btn btn-danger"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                Contact Info
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Desktop Navbar -->
-        <nav class="navbar">
-          <a href="../index.html">Home</a>
-          <a href="causes.html">Causes</a>
-          <a href="events.html">Events</a>
-          <a href="news.html">News</a>
-          <a href="contact.html">Contact</a>
-        </nav>
       </div>
 
-      <!-- Social & Login Buttons -->
-      <div class="socials desktopBtn">
-        <div class="login">
-          <button
-            type="button"
-            class="navBtn btn btn-outline-danger"
-            onclick="redirectToPage()"
-          >
-            Donate Now
-          </button>
-        </div>
+      <!-- Mobile Menu Icon (For Mobile Only) -->
+      <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
 
-        <div>
-          <a href="pages/login.html">
-            <button type="button" class="navBtn btn btn-outline-danger">
-              Login
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="menu-header">
+          <div class="menu-close" onclick="toggleMenu()">&times;</div>
+        </div>
+        <a href="../index.html">Home</a>
+        <a href="causes.html">Causes</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="socials mobileBtn">
+          <div class="login">
+            <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">
+              Donate Now
             </button>
-          </a>
-        </div>
+          </div>
 
-        <div>
-          <button
-            type="button"
-            class="navBtn btn btn-danger"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Contact Info
-          </button>
-        </div>
-      </div>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Contact Information
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>Phone No: +9145673824</p>
-              <p>Email: kanakverma325@gmail.com</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-bs-dismiss="modal"
-              >
-                Close
+          <div>
+            <a href="pages/login.html">
+              <button type="button" class="navBtn btn btn-outline-danger">
+                Login
               </button>
-            </div>
+            </a>
+          </div>
+
+          <div>
+            <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Contact Info
+            </button>
           </div>
         </div>
       </div>
-    </header>
 
-    <!-- ************************************* -->
-    <!-- *********** DONATION FORM *********** -->
-    <!-- ************************************* -->
-    <div class="container hero">
-      <div class="donation-form">
-        <!-- Donation Amount -->
-        <h3>Enter your donation amount</h3>
-        <input class="full-width" type="number" placeholder="$" />
-
-        <!-- Donation Details -->
-        <h3>Enter your donation details</h3>
-        <div class="form-group">
-          <input type="text" placeholder="First name" />
-          <input type="text" placeholder="Last name" />
-          <input type="email" placeholder="Email address" />
-          <input type="text" placeholder="Phone number" />
-          <input class="full-width" type="text" placeholder="Address" />
-          <input type="text" placeholder="Country" />
-        </div>
-        <textarea
-          class="full-width"
-          placeholder="Write your comment"
-        ></textarea>
-
-        <!-- Different Payment Options and Details -->
-        <h3>Payment Options</h3>
-        <div class="payment-options">
-          <img src="/assets/visa.png" alt="Visa" />
-          <img src="/assets/skrill.png" alt="Skrill" />
-          <img src="/assets/paypal.png" alt="PayPal" />
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Account holder name" />
-          <input type="text" placeholder="Card number" />
-          <input type="text" placeholder="Expiry date" />
-          <input type="text" placeholder="CVV" />
-        </div>
-
-        <button>Donate now</button>
-      </div>
-
-      <!-- Side Bar with Donation Details -->
-      <div class="sidebar">
-        <!-- Card 1 -->
-        <div class="card">
-          <img src="/assets/pic1.png" alt="Cause Image" />
-          <h3>Collect fund for drinking water & healthy food</h3>
-          <p>Goal: $10,000 (85%)</p>
-          <div class="progress-bar">
-            <div></div>
-          </div>
-          <div class="project-organizer">
-            <strong>Project Organizer:</strong>
-            <p>
-              Polin Sarika<br />Manager at ABC Company<br />Location: Lagos,
-              Nigeria<br />Dates: Dec 20, 2024
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-          <h3>Recent Donations</h3>
-          <ul>
-            <li>
-              <img src="/assets/donor3.png" alt="Mike" /><strong
-                >Mike Richard</strong
-              >: $300
-            </li>
-            <li>
-              <img src="/assets/donor2.png" alt="Jennifer" /><strong
-                >Jennifer Lawrence</strong
-              >: $200
-            </li>
-            <li>
-              <img src="/assets/donor4.png" alt="David" /><strong
-                >David Ryan</strong
-              >: $150
-            </li>
-            <li>
-              <img src="/assets/donor1.png" alt="Calvin" /><strong
-                >Calvin Ray</strong
-              >: $100
-            </li>
-          </ul>
-        </div>
-      </div>
+      <!-- Desktop Navbar -->
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="causes.html">Causes</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
 
-    <!-- ************************************* -->
-    <!-- ************** FOOTER *************** -->
-    <!-- ************************************* -->
-    <footer class="footer">
+    <!-- Social & Login Buttons -->
+    <div class="socials desktopBtn">
+      <div class="login">
+        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">
+          Donate Now
+        </button>
+      </div>
+
       <div>
-        <h3>
-          To get weekly & monthly news, <span>Subscribe</span> to our
-          newsletter.
-        </h3>
-        <input type="email" placeholder="Your email address" />
-        <button>Subscribe</button>
+        <a href="pages/login.html">
+          <button type="button" class="navBtn btn btn-outline-danger">
+            Login
+          </button>
+        </a>
       </div>
 
-      <div class="links">
-        <div>
-          <strong>Quick Links:</strong> <a href="#">Home</a>
-          <a href="#">About</a>
-        </div>
-        <div>
-          <strong>Support:</strong> <a href="#">Help & FAQ</a>
-          <a href="#">Contact</a>
-        </div>
-        <div>
-          <strong>Social:</strong> <a href="#">Twitter</a>
-          <a href="#">Facebook</a>
+      <div>
+        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Contact Info
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Contact Information
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Phone No: +9145673824</p>
+            <p>Email: kanakverma325@gmail.com</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
-      <div id="scrollToTop">
-        <svg class="progress-circle" width="50" height="50">
-            <circle cx="25" cy="25" r="22"></circle>
-            <circle cx="25" cy="25" r="22" id="progress"></circle>
-        </svg>
-        <span class="arrow">▲</span>
     </div>
-    </footer>
+  </header>
 
-    <div class="bottom-section">
-      <p>&copy; 2024 Jago Welfare. All Rights Reserved.</p>
+  <!-- ************************************* -->
+  <!-- *********** DONATION FORM *********** -->
+  <!-- ************************************* -->
+  <div class="container hero">
+    <div class="donation-form">
+      <!-- Donation Amount -->
+      <h3>Enter your donation amount</h3>
+      <input class="full-width" type="number" placeholder="$" />
+
+      <!-- Donation Details -->
+      <h3>Enter your donation details</h3>
+      <div class="form-group">
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="email" placeholder="Email address" />
+        <input type="text" placeholder="Phone number" />
+        <input class="full-width" type="text" placeholder="Address" />
+        <input type="text" placeholder="Country" />
+      </div>
+      <textarea class="full-width" placeholder="Write your comment"></textarea>
+
+      <!-- Different Payment Options and Details -->
+      <h3>Payment Options</h3>
+      <div class="payment-options">
+        <img src="/assets/visa.png" alt="Visa" />
+        <img src="/assets/skrill.png" alt="Skrill" />
+        <img src="/assets/paypal.png" alt="PayPal" />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Account holder name" />
+        <input type="text" placeholder="Card number" />
+        <input type="text" placeholder="Expiry date" />
+        <input type="text" placeholder="CVV" />
+      </div>
+
+      <button>Donate now</button>
     </div>
 
-    <script src="../app.js"></script>
-  </body>
+    <!-- Side Bar with Donation Details -->
+    <div class="sidebar">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="/assets/pic1.png" alt="Cause Image" />
+        <h3>Collect fund for drinking water & healthy food</h3>
+        <p>Goal: $10,000 (85%)</p>
+        <div class="progress-bar">
+          <div></div>
+        </div>
+        <div class="project-organizer">
+          <strong>Project Organizer:</strong>
+          <p>
+            Polin Sarika<br />Manager at ABC Company<br />Location: Lagos,
+            Nigeria<br />Dates: Dec 20, 2024
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Recent Donations</h3>
+        <ul>
+          <li>
+            <img src="/assets/donor3.png" alt="Mike" /><strong>Mike Richard</strong>: $300
+          </li>
+          <li>
+            <img src="/assets/donor2.png" alt="Jennifer" /><strong>Jennifer Lawrence</strong>: $200
+          </li>
+          <li>
+            <img src="/assets/donor4.png" alt="David" /><strong>David Ryan</strong>: $150
+          </li>
+          <li>
+            <img src="/assets/donor1.png" alt="Calvin" /><strong>Calvin Ray</strong>: $100
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ************************************* -->
+  <!-- ************** FOOTER *************** -->
+  <!-- ************************************* -->
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <p>To get weekly & monthly news, <strong>Subscribe</strong> to our newsletter.</p>
+      <form>
+        <input type="email" placeholder="Your mail address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <div class="links">
+      <div class="footerLink">
+        <strong>Quick Links:</strong> 
+        <a href="#">Home</a>
+        <a href="#">About</a>
+      </div>
+      <div class="footerLink">
+        <strong>Support:</strong> 
+        <a href="#">Help & FAQ</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footerLink">
+        <strong>Social:</strong> 
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    
+    <div id="scrollToTop">
+      <svg class="progress-circle" width="50" height="50">
+        <circle cx="25" cy="25" r="22"></circle>
+        <circle cx="25" cy="25" r="22" id="progress"></circle>
+      </svg>
+      <span class="arrow">▲</span>
+    </div>
+  </footer>
+
+  <div class="bottom-section">
+    <p>&copy; 2024 Jago Welfare. All Rights Reserved.</p>
+  </div>
+
+  <script src="../app.js"></script>
+</body>
+
 </html>
