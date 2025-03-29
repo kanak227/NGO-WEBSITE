@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /*************************************/
 /********** HEADER (NAVBAR) **********/
 /*************************************/
@@ -132,6 +136,21 @@ header {
 .navBtn {
     white-space: nowrap;
     margin: 0 !important;
+    transition: all 0.3s ease;
+    /* min-width: 120px; */
+    text-align: center;
+}
+
+.navBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Modal Positioning Fix */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -258,15 +277,21 @@ header {
     color: #555;
 }
 
+.socials.desktopBtn {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
 /* Mobile Menu Icon (Hamburger) */
 .menu-icon {
     display: block;
     position: fixed;
     top: 20px;
     left: 20px;
+    right: 20px;
     font-size: 24px;
     cursor: pointer;
-    z-index: 1000;
 }
 
 /* Mobile Menu Styling */
@@ -275,7 +300,7 @@ header {
     top: 0;
     left: -100%;
     /* Start off-screen */
-    width: 75%;
+    width: 80%;
     height: 100vh !important;
     background: white;
     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
@@ -283,13 +308,14 @@ header {
     flex-direction: column;
 
     padding: 20px;
-    transition: left 0.4s ease-in-out;
+    transition: right 0.3s ease;
     z-index: 1000;
 }
 
 /* When menu is active, slide in */
 .mobile-menu.active {
     left: 0;
+    right: 0;
 }
 
 /* Menu Header */
@@ -323,6 +349,20 @@ header {
     transition: color 0.3s;
 }
 
+.mobile-menu .socials.mobileBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.mobile-menu .navBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
 .mobile-menu a:hover {
     color: red;
 }
@@ -332,7 +372,7 @@ header {
 /*************************************/
 /* Hero Section */
 .mainbox {
-    height: 630px;
+    height: auto;
     width: 100%;
     background-color: rgb(219, 229, 234);
     display: flex;
@@ -351,11 +391,12 @@ header {
 }
 
 .text-content p {
-    font-size: 3.4rem;
-    margin: 0;
-    color: #333;
+    font-size: 3.4rem; /* Adjusted size for subtext */
+    margin: 30px 0 0 0;
+    color: #333; /* Neutral color for readability */
     line-height: 0.8;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif; /* Ensures proper line spacing for clarity */
+    text-align: center;
 }
 
 #heading {
@@ -629,6 +670,8 @@ header {
 }
 
 .leftcard {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -824,6 +867,8 @@ header {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
 }
 
 .footer-about,
@@ -831,6 +876,7 @@ header {
 .footer-contact {
     flex: 1;
     min-width: 250px;
+    margin-bottom: 30px;
 }
 
 .footer h3 {
@@ -1118,14 +1164,67 @@ header {
     }
 
     /* Individual cards expand to fit content & no overlap */
-    .card1,
-    .leftcard,
     .rcard,
     .lastcard {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .leftcard {
+      height: auto;
+      padding: 20px;
+    }
+
+    .leftcard, .rightcards {
         width: 90%;
-        height: auto;
-        margin: 0 auto;
-        padding: 20px;
+        margin: 10px auto;
+    }
+
+    .card1 {
+      width: 90%;
+      height: auto;
+      margin: 10px 0;
+      padding: 20px;
+    }
+  
+    /* Image & text blocks: vertical, no overlap */
+    .img,
+    .text-content {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    /* Add spacing before footer so cards don't collide */
+    .footer {
+      margin-top: 40px; 
+    }
+  
+    /* Ensure text wraps inside small screens */
+    h1, h2, h3, p {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    /* Make sure the parent sections auto-expand */
+    .fourth,
+    .events,
+    .content-section {
+      height: auto !important;
+      position: static !important;
+      overflow: visible !important;
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     /* Remove any fixed height on individual cards */
@@ -1163,6 +1262,24 @@ header {
     /* Center the entire bar */
     .horizontal,
     .bar {
+      margin: 0 auto !important;     /* Overrides large left margins */
+      width: 90% !important;         /* Fit within mobile screen */
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap;               /* Allow items to wrap on smaller screens */
+      gap: 20px;                     /* Space between items */
+      height: auto !important;       /* Let it grow with content */
+    }
+
+    .bar {
+        flex-direction: column;
+        padding: 20px;
+    }
+  
+    /* Each stat container is centered */
+    .cont1 {
+        text-align: center !important; /* Center text and icons */
         margin: 0 auto !important;
         /* Overrides large left margins */
         width: 90% !important;
@@ -1596,13 +1713,26 @@ header {
 
     /* Optionally style the navbar links */
     .navbar a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2rem;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
     }
-
+  }
+  /* Desktop styles */
+.menu-icon {
+    display: block;
+    z-index: 1001;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Mobile styles */
+  @media only screen and (max-width: 768px) {
     /* Show the hamburger icon on mobile */
     .menu-icon {
         display: block;
@@ -1642,13 +1772,146 @@ header {
 
     /* Style the navbar links */
     .navbar a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2rem;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-
+      text-decoration: none;
+      color: #333;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      
     }
+  }
+  
+/* Basic reset (optional) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hamburger icon styling */
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin: 15px;
+    display: inline-block;
+    /* Position it as needed in your design:
+       e.g., position: fixed; top: 20px; left: 20px; */
+  }
+  
+  /* Fullscreen overlay container */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0; /* or left: 0, if you want it to slide in from the left */
+    width: 100%;
+    height: 100%;
+    background: #fff; /* White background */
+    transform: translateX(100%); /* Initially hidden off-screen to the right */
+    transition: transform 0.3s ease;
+    z-index: 9999; /* Ensure it appears above other elements */
+  }
+  
+  /* When "open" class is added, slide it in */
+  .menu-overlay.open {
+    transform: translateX(0);
+  }
+  
+  /* Close icon in the top-right corner */
+  .close-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+    line-height: 1;
+  }
+  
+  /* Center and style the menu items */
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; /* space from top so it doesn't collide with close icon */
+    padding: 0 30px;
+  }
+  
+  /* Smaller subheading at the top (e.g. "Demos") */
+  .small-heading {
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  /* Individual menu links */
+  .menu-content a {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    margin: 15px 0; /* spacing between links */
+    transition: color 0.2s;
+  }
+  
+  /* Hover effect for links */
+  .menu-content a:hover {
+    color: #555;
+  }
+  /* Hide the menu icon on desktop */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+/* When menu is active, slide in */
+.mobile-menu.active {
+    left: 0;
+}
+
+/* Menu Header */
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu-title {
+    font-size: 18px;
+    color: gray;
+    font-weight: bold;
+}
+
+/* Close Button */
+.menu-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Menu Links */
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s;
 }
 
 /* Extra Small (Phones) - Up to 480px */
@@ -1658,4 +1921,17 @@ header {
     .desktopBtn {
         display: none !important;
     }
+
+    .navbar{
+        left: 100px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.donatebutton {
+    width: 100%;
 }
