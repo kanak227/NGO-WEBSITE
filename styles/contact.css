@@ -9,6 +9,10 @@ body {
   color: #333;
 }
 
+.hero {
+  margin-top: 15vh !important;
+}
+
 /*************************************/
 /******* CONTACT INFO AND FORM *******/
 /*************************************/
@@ -167,10 +171,14 @@ body {
 /*************************************/
 .map {
   width: 100%;
-  height: 300px;
+  height: fit-content;
   background: url('https://via.placeholder.com/1200x300') no-repeat center center/cover;
   border-radius: 8px;
   margin-bottom: 40px;
+}
+
+.map iframe{
+  width: 100%;
 }
 
 /*************************************/
@@ -286,4 +294,45 @@ body {
   padding-top: 10px;
   font-size: 14px;
   color: #aaa;
+}
+
+/* Media Queries for Small devices (phones) */
+@media (max-width: 480px) {
+  /*************************************/
+  /******* CONTACT INFO AND FORM *******/
+  /*************************************/
+  .container{
+    padding: 0px 5px !important;
+  }
+
+  .contact-box, .form-box{
+    width: 96vw !important;
+  }
+
+  /*************************************/
+  /******** CONTACT INFO CARDS *********/
+  /*************************************/
+  .info-section{
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .info-card{
+    padding: 20px 10px;
+  }
+
+  /*************************************/
+  /************ NEWSLETTER *************/
+  /*************************************/
+  .newsletter {
+    padding: 20px 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+  }
 }

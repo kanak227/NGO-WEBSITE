@@ -9,6 +9,10 @@ body {
   color: #333;
 }
 
+.hero {
+  margin-top: 15vh !important;
+}
+
 /*************************************/
 /********** CAUSES SECTION ***********/
 /*************************************/
@@ -247,4 +251,38 @@ body {
   padding-top: 10px;
   font-size: 14px;
   color: #aaa;
+}
+
+/* Media Queries for Small devices (phones) */
+@media (max-width: 480px) {
+
+  /*************************************/
+  /********** CAUSES SECTION ***********/
+  /*************************************/
+  .container {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  /*************************************/
+  /************ NEWSLETTER *************/
+  /*************************************/
+  .newsletter {
+    padding: 20px 5px;
+  }
+
+  .newsletter input {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .newsletter button {
+    padding: 8px 16px;
+  }
 }
