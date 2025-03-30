@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/news.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    
-    <title>Latest News</title>
-  </head>
 
-  <body>
-    <!-- ************************************* -->
-    <!-- ********** HEADER (NAVBAR) ********** -->
-    <!-- ************************************* -->
-    <header class="main">
-      <div class="lower">
-        <div class="image">
-          <div class="logoContainer">
-            <img src="../assets/logo.png.png" alt="Logo" />
-            <p>Jago Welfare</p>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/news.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <title>Latest News </title>
+  <link rel="shortcut icon" href="/NGO-WEBSITE/assets/favicon.png">
+</head>
+
+<body> 
+  <!-- ************************************* -->
+  <!-- ********** HEADER (NAVBAR) ********** -->
+  <!-- ************************************* -->
+  <header class="main">
+    <div class="lower">
+      <div class="image">
+        <div class="logoContainer">
+          <img src="../assets/logo.png.png" alt="Logo">
+          <p>Jago Welfare</p>
         </div>
+      </div>
 
         <!-- Mobile Menu Icon (For Mobile Only) -->
         <div class="menu-icon" onclick="toggleMenu()">
@@ -117,7 +110,6 @@
             class="navBtn btn btn-danger"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
-            data-bs-backdrop="false"
           >
             Contact Info
           </button>
@@ -126,12 +118,11 @@
 
       <!-- Modal -->
       <div
-        class="modal "
+        class="modal fade"
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
-        data-bs-backdrop="false"
       >
         <div class="modal-dialog">
           <div class="modal-content">
@@ -172,104 +163,90 @@
         <h1>Read and <span>explore</span> your knowledge through our news</h1>
       </div>
 
-      <div class="news-grid">
-        <!-- News Card 1 -->
-        <div class="news-card card1">
-          <img src="../assets/img1.png" alt="News 1" />
-          <div class="news-card-content">
-            <span class="news-tag">#FoodCamp</span>
-            <div class="news-title">
-              Healthy food and nutrition awareness campaign December
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Card 2 -->
-        <div class="news-card card2">
-          <img src="../assets/img2.png" alt="News 2" />
-          <div class="news-card-content">
-            <span class="news-tag">#WomenRights</span>
-            <div class="news-title">
-              Stop early marriage and educate your girl child
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Card 3 -->
-        <div class="news-card card3">
-          <img src="../assets/img3.png" alt="News 3" />
-          <div class="news-card-content">
-            <span class="news-tag">#Water</span>
-            <div class="news-title">
-              Ensure pure and mineral drinking water for rural people
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Card 4 -->
-        <div class="news-card card4">
-          <img src="../assets/img3.jpg" alt="News 4" />
-          <div class="news-card-content">
-            <span class="news-tag">#Work</span>
-            <div class="news-title">
-              "Work for food" programme for the elder people
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Card 5 -->
-        <div class="news-card card5">
-          <img src="../assets/img5.png" alt="News 5" />
-          <div class="news-card-content">
-            <span class="news-tag">#Education</span>
-            <div class="news-title">
-              Give children a good education & better life
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- News Card 6 -->
-        <div class="news-card card6">
-          <img src="../assets/img6.png" alt="News 6" />
-          <div class="news-card-content">
-            <span class="news-tag">#Health</span>
-            <div class="news-title">
-              Give 10,000+ clothes to the street children
-            </div>
-            <div class="news-meta">
-              <span>Date: 23 Dec, 2021</span>
-              <span>By: Admin</span>
-            </div>
+    <div class="news-grid">
+      <!-- News Card 1 -->
+      <div class="news-card n-card1">
+        <img src="../assets/img1.png" alt="News 1">
+        <div class="news-card-content">
+          <span class="news-tag">#FoodCamp</span>
+          <div class="news-title">Healthy food and nutrition awareness campaign</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
           </div>
         </div>
       </div>
 
-      <!-- ************************************* -->
-      <!-- ************ NEWSLETTER ************* -->
-      <!-- ************************************* -->
+      <!-- News Card 2 -->
+      <div class="news-card n-card2">
+        <img src="../assets/img2.png" alt="News 2">
+        <div class="news-card-content">
+          <span class="news-tag">#WomenRights</span>
+          <div class="news-title">Stop early marriage and educate your girl child</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Card 3 -->
+      <div class="news-card n-card3">
+        <img src="../assets/img3.png" alt="News 3">
+        <div class="news-card-content">
+          <span class="news-tag">#Water</span>
+          <div class="news-title">Ensure pure and mineral drinking water for rural people</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Card 4 -->
+      <div class="news-card n-card4">
+        <img src="../assets/img3.jpg" alt="News 4">
+        <div class="news-card-content">
+          <span class="news-tag">#Work</span>
+          <div class="news-title">"Work for food" programme for the elder people</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Card 5 -->
+      <div class="news-card n-card5">
+        <img src="../assets/img5.png" alt="News 5">
+        <div class="news-card-content">
+          <span class="news-tag">#Education</span>
+          <div class="news-title">Give children a good education & better life</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Card 6 -->
+      <div class="news-card n-card6">
+        <img src="../assets/img6.png" alt="News 6">
+        <div class="news-card-content">
+          <span class="news-tag">#Health</span>
+          <div class="news-title">Give 10,000+ clothes to the street children</div>
+          <div class="news-meta">
+            <span>Date: 23 Dec, 2021</span>
+            <span>By: Admin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <div class="newsletter">
         <p>
-          To get weekly & monthly news, <strong>Subscribe</strong> to our newsletter.
+          To get weekly & monthly news, <strong>Subscribe</strong> to our
+          newsletter.
         </p>
         <input type="email" placeholder="Your email address" />
         <button>Subscribe</button>
@@ -330,7 +307,7 @@
         <span class="arrow">▲</span>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="../app.js"></script>
     <script>
       function redirectToPage() {
