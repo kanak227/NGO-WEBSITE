@@ -225,14 +225,14 @@ header {
 }
 
 /* Close icon in the top-right corner */
-.close-icon {
+/* .close-icon {
     font-size: 40px;
     position: absolute;
     top: 20px;
     right: 30px;
     cursor: pointer;
     line-height: 1;
-}
+} */
 
 /* Center and style the menu items */
 .menu-content {
@@ -272,7 +272,7 @@ header {
 /* Mobile Menu Styling */
 .mobile-menu {
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -100%;
     /* Start off-screen */
     width: 75%;
@@ -311,6 +311,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    display: none;
 }
 
 /* Menu Links */
