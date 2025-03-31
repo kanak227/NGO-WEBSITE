@@ -339,29 +339,36 @@ header {
     background-color: rgb(219, 229, 234);
     display: flex;
     align-items: center;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 40px 20px;
     margin-top: 8vh;
+    text-align: center;
 }
 
 /* Text Content */
 .text-content {
-    max-width: 45%;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    order: 2;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .text-content p {
-    font-size: 3.4rem;
+    font-size: 2.2rem;
     margin: 0;
     color: #333;
-    line-height: 0.8;
+    line-height: 1.2;
     font-family: 'Times New Roman', Times, serif;
 }
 
 #heading {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 1.1;
     font-weight: bold;
     color: #000;
     margin-bottom: 1px;
@@ -378,8 +385,8 @@ header {
 
 /* Donate Button */
 .donate-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
+    margin: 25px auto 0;
+    padding: 15px 40px;
     background-color: #ff4d4d;
     color: #fff;
     font-size: 1.5rem;
@@ -396,8 +403,13 @@ header {
     background-color: #e04444;
 }
 
+.img {
+    order: 2; /* Image first on mobile */
+    margin: 20px 0;
+}
+
 .img img {
-    height: 610px;
+    height: auto;
     /* Keeps the image height consistent */
     max-width: 100%;
     /* Prevents overflow */
@@ -976,21 +988,6 @@ header {
 /*********** MEDIA QUERIES ***********/
 /*************************************/
 
-/* Ultra Wide (4K+) - Above 1920px */
-@media only screen and (min-width: 1921px) {
-    /* Styles for ultra-wide screens */
-}
-
-/* Extra Large (High-Resolution Screens) - 1441px to 1920px */
-@media only screen and (max-width: 1920px) {
-    /* Styles for extra large screens */
-}
-
-/* Large (Desktops & Large Screens) - 906px to 1440px */
-@media only screen and (max-width: 1440px) {
-    /* Styles for large screens */
-}
-
 /* Medium (Tablets & Small Laptops) - 769px to 905px */
 @media only screen and (max-width: 905px) {
 
@@ -1018,6 +1015,37 @@ header {
 
     .navbar {
         left: 100px;
+    }
+
+    .mainbox {
+        flex-direction: row;
+        text-align: left;
+        padding: 80px 40px;
+    }
+
+    .text-content {
+        order: 1;
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    .img {
+        order: 2;
+        width: 50%;
+        margin: 0;
+    }
+
+    .donate-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #heading {
+        font-size: 4rem;
+    }
+      
+    .text-content p {
+        font-size: 3rem;
     }
 }
 
@@ -1650,6 +1678,15 @@ header {
         padding: 10px 0;
         border-bottom: 1px solid #ddd;
 
+    }
+
+    .donate-btn {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .text-content {
+        order: 2;
     }
 }
 
