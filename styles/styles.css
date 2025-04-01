@@ -759,7 +759,7 @@ header {
     width: 100vw !important;
     background: url("../assets/kids.jpg") no-repeat center center/cover;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     padding: 2em !important;
 }
