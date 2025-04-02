@@ -264,6 +264,13 @@ header {
     color: #555;
 }
 
+.bttn{
+    transition: transform 0.3s ease;
+}
+.bttn:hover{
+    transform:scale(1.1);
+}
+
 /* Mobile Menu Icon (Hamburger) */
 .menu-icon {
     display: block;
@@ -663,8 +670,13 @@ header {
     padding-bottom: 1em !important;
 }
 
-.leftcard:hover {
-    transform: scale(1.03);
+.donatebutton{
+    color: white;
+    transition: transform 0.2s ease-in-out ;
+}
+
+.donatebutton:hover {
+    transform: scale(1.01);
 }
 
 .text {
