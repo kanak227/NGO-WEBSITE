@@ -100,7 +100,7 @@ header {
     display: flex !important;
     flex-direction: column !important;
     justify-content: left !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     padding: 0 !important;
 }
 
@@ -152,6 +152,11 @@ header {
     margin: 0 !important;
     padding: 0;
     padding-left: 10% !important;
+    pointer-events: none; /* Disable interaction by default */
+}
+
+.navbar.active {
+    pointer-events: auto; /* Enable interaction when active */
 }
 
 .navbar a {
@@ -161,6 +166,7 @@ header {
     font-weight: 400;
     display: inline-block;
     transition: color 0.3s ease-in-out;
+    pointer-events: auto; /* Allow interaction with links */
 }
 
 .navbar a::after {
@@ -228,6 +234,7 @@ header {
 /* When "open" class is added, slide it in */
 .menu-overlay.open {
     transform: translateX(0);
+    pointer-events: auto; /* Ensure menu remains interactive */
 }
 
 /* Close icon in the top-right corner */
@@ -280,6 +287,7 @@ header {
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
+    width: 10px;
 }
 
 /* Mobile Menu Styling */
@@ -303,6 +311,7 @@ header {
 /* When menu is active, slide in */
 .mobile-menu.active {
     left: 0;
+    pointer-events: auto; /* Ensure menu remains interactive */
 }
 
 /* Menu Header */
@@ -1681,7 +1690,7 @@ header {
         left: 15px;
         font-size: 30px;
         cursor: pointer;
-        z-index: 1100;
+       
         color: #000;
         /* Adjust as needed */
     }
