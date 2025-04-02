@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 /*************************************/
 /********** HEADER (NAVBAR) **********/
 /*************************************/
@@ -68,6 +73,7 @@ header {
     gap: 8px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .logoContainer img {
@@ -225,14 +231,14 @@ header {
 }
 
 /* Close icon in the top-right corner */
-.close-icon {
+/* .close-icon {
     font-size: 40px;
     position: absolute;
     top: 20px;
     right: 30px;
     cursor: pointer;
     line-height: 1;
-}
+} */
 
 /* Center and style the menu items */
 .menu-content {
@@ -272,7 +278,7 @@ header {
 /* Mobile Menu Styling */
 .mobile-menu {
     position: fixed;
-    top: 0;
+    top: 10%;
     left: -100%;
     /* Start off-screen */
     width: 75%;
@@ -311,6 +317,7 @@ header {
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    display: none;
 }
 
 /* Menu Links */
@@ -337,29 +344,36 @@ header {
     background-color: rgb(219, 229, 234);
     display: flex;
     align-items: center;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 40px 20px;
     margin-top: 8vh;
+    text-align: center;
 }
 
 /* Text Content */
 .text-content {
-    max-width: 45%;
+    max-width: 800px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    order: 2;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .text-content p {
-    font-size: 3.4rem;
+    font-size: 2.2rem;
     margin: 0;
     color: #333;
-    line-height: 0.8;
+    line-height: 1.2;
     font-family: 'Times New Roman', Times, serif;
 }
 
 #heading {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 1.1;
     font-weight: bold;
     color: #000;
     margin-bottom: 1px;
@@ -376,8 +390,8 @@ header {
 
 /* Donate Button */
 .donate-btn {
-    margin-top: 20px;
-    padding: 12px 24px;
+    margin: 25px auto 0;
+    padding: 15px 40px;
     background-color: #ff4d4d;
     color: #fff;
     font-size: 1.5rem;
@@ -394,8 +408,13 @@ header {
     background-color: #e04444;
 }
 
+.img {
+    order: 2; /* Image first on mobile */
+    margin: 20px 0;
+}
+
 .img img {
-    height: 610px;
+    height: auto;
     /* Keeps the image height consistent */
     max-width: 100%;
     /* Prevents overflow */
@@ -421,14 +440,14 @@ header {
     width: 100%;
     margin-top: 130px;
     display: flex;
-    gap: 30px;
+    gap: 1vw;
 }
 
 .card1 {
     justify-content: center;
     background-color: beige;
     width: 280px;
-    height: 200px;
+    height: 230px;
     border-radius: 5%;
     align-items: center;
     text-align: center;
@@ -437,6 +456,10 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth scaling and shadow change */
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .card1:hover {
@@ -450,7 +473,7 @@ header {
 
 .card1 p,
 .card1 h3 {
-    margin: 5px 0;
+    margin: 0;
     /* Ensure consistent spacing */
     color: #333;
     /* Text color */
@@ -470,8 +493,6 @@ header {
     width: 70px;
     align-items: center;
     align-self: center;
-    margin-left: 100px;
-    margin-top: 10px;
 }
 
 .circle svg {
@@ -482,7 +503,7 @@ header {
 }
 
 #donate {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 1rem;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -492,8 +513,6 @@ header {
 }
 
 .card1 h3 {
-    margin-left: 20px;
-    margin-top: 2px;
     position: relative;
     text-decoration: none;
     font-weight: bold;
@@ -502,8 +521,6 @@ header {
 }
 
 .card1 p {
-    margin-left: 20px;
-    margin-bottom: 3px;
     font-size: 1rem;
     color: crimson;
 }
@@ -526,9 +543,7 @@ header {
 /********** POVERTY SECTION **********/
 /*************************************/
 .sad {
-    /* background-color: pink; */
     width: 100%;
-    /* height: 420px; */
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
@@ -540,7 +555,6 @@ header {
 
 .para {
     width: 40%;
-    /* height: 450px; */
     height: fit-content;
     align-items: baseline;
     justify-content: center;
@@ -584,12 +598,17 @@ header {
     font-weight: 500;
 }
 
+.povert{
+    width: 90%;
+    height: auto;
+}
+
 /*************************************/
 /********** EVENTS SECTION ***********/
 /*************************************/
 .fourth {
     margin-top: 10px;
-    height: 900px;
+    height: fit-content;
     background-color: white;
 }
 
@@ -611,7 +630,6 @@ header {
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2;
-
 }
 
 .head2 p {
@@ -622,22 +640,27 @@ header {
 }
 
 .cards2 {
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
     display: flex;
+    justify-content: center !important;
+    align-items: start !important;
+    padding: 2em auto !important;
+    gap: 2em;
+    width: 100vw;
+    height: fit-content;
 }
 
 .leftcard {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     background-color: white;
-    height: 700px;
-    width: 500px;
-    margin-left: 120px;
+    height: fit-content !important;
+    width: 48vw !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
     transition: transform 0.3s ease;
+    padding-bottom: 1em !important;
 }
 
 .leftcard:hover {
@@ -645,21 +668,24 @@ header {
 }
 
 .text {
-    margin-left: 30px;
-    width: 450px;
+    padding: 0.5em !important;
+    width: 100% !important;
 }
 
 .rightcards {
 
-    height: 700px;
-    width: 600px;
+    height: fit-content;
+    width: 46vw !important;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 150px;
-    display: table;
+    align-items: center;
+    gap: 0.2em;
+    /* display: table; */
 }
 
 .rcard {
-    width: 48vw;
+    width: 100%;
     height: 210px;
     margin-bottom: 30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -673,14 +699,33 @@ header {
 
 .lastcard {
     width: 48vw;
-    height: 210px;
+    height: fit-content;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4%;
     transition: transform 0.3s ease;
 }
 
+.rcard, .lastcard{
+    border-radius: 2em;
+    padding: 0.5em !important;
+    padding-bottom: 0.1em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 45vw !important;
+    height: fit-content !important;
+}
+
 .lastcard:hover {
     transform: scale(1.03);
+}
+
+.eventImage{
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
 }
 
 .text1 {
@@ -689,18 +734,13 @@ header {
 
 .icons {
     display: flex;
-    margin-left: 25px;
-    margin-top: 25px;
-    height: 100px;
-    width: 400px;
+    justify-content: start;
+    align-content: center;
+    gap: 1em;
+    height: 100%;
+    width: 100%;
     border-radius: 10%;
 
-}
-
-.Location {
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 50px;
 }
 
 .text1 p {
@@ -713,29 +753,41 @@ header {
 /*************************************/
 /******* FUND RAISING BANNER *********/
 /*************************************/
-.image1 {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.fight{
+    min-height: 100vh;
+    height: fit-content;
+    width: 100vw !important;
+    background: url("../assets/kids.jpg") no-repeat center center/cover;
     display: flex;
-    overflow: hidden;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.image1 img {
-    height: 700px;
-    width: 100%;
-    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    padding: 2em !important;
 }
 
 .contento {
     color: white;
-    position: absolute;
-    top: 430%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1{
+    text-align: center; 
+    font-size: 2rem;
+}
+
+.p2{
+    text-align: center; 
+    font-size: 3.2rem; 
+    font-weight: 500;
+}
+
+.b1{
+    --bs-btn-padding-y: 0.8rem !important; 
+    --bs-btn-padding-x: 3rem !important; 
+    --bs-btn-font-size: 1.5rem !important;
 }
 
 .break {
@@ -802,9 +854,20 @@ header {
 /*************************************/
 .cards3 {
     display: flex;
-    gap: 1px;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100vw;
+    height: fit-content;
     margin-top: 50px;
+    padding: 2px 1em;
+}
+
+.leftcard{
+    height: 580px; 
+    width: 33%;
+    overflow: hidden;
+    margin: 0;
 }
 
 /*************************************/
@@ -974,21 +1037,6 @@ header {
 /*********** MEDIA QUERIES ***********/
 /*************************************/
 
-/* Ultra Wide (4K+) - Above 1920px */
-@media only screen and (min-width: 1921px) {
-    /* Styles for ultra-wide screens */
-}
-
-/* Extra Large (High-Resolution Screens) - 1441px to 1920px */
-@media only screen and (max-width: 1920px) {
-    /* Styles for extra large screens */
-}
-
-/* Large (Desktops & Large Screens) - 906px to 1440px */
-@media only screen and (max-width: 1440px) {
-    /* Styles for large screens */
-}
-
 /* Medium (Tablets & Small Laptops) - 769px to 905px */
 @media only screen and (max-width: 905px) {
 
@@ -1004,6 +1052,19 @@ header {
     .navbar a {
         font-size: 0.9rem !important;
     }
+
+    .cards3{
+        flex-wrap: wrap;
+    }
+
+    .leftcard{
+        margin-bottom: 2em;
+        width: 48vw !important;
+    }
+
+    .rcard, .lastcard{
+        width: 48vw !important;
+    }
 }
 
 /* Hide the menu icon on desktop */
@@ -1016,6 +1077,43 @@ header {
 
     .navbar {
         left: 100px;
+    }
+
+    .mainbox {
+        flex-direction: row;
+        text-align: left;
+        padding: 80px 40px;
+    }
+
+    .text-content {
+        order: 1;
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    .img {
+        order: 2;
+        width: 50%;
+        margin: 0;
+    }
+
+    .donate-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #heading {
+        font-size: 4rem;
+    }
+      
+    .text-content p {
+        font-size: 3rem;
+    }
+
+    .leftcard{
+        width: 48%;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -1105,7 +1203,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 3px;
         width: 100%;
         margin-bottom: 50px;
         /* Space above the footer */
@@ -1119,13 +1217,26 @@ header {
 
     /* Individual cards expand to fit content & no overlap */
     .card1,
-    .leftcard,
     .rcard,
     .lastcard {
-        width: 90%;
+        width: 98% !important;
         height: auto;
         margin: 0 auto;
-        padding: 20px;
+        padding: 10px;
+    }
+
+    .leftcard{
+        width: 98% !important;
+    }
+
+    .rightcards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: fit-content;
+        gap: 1em !important;
+        width: 100% !important;
     }
 
     /* Remove any fixed height on individual cards */
@@ -1197,6 +1308,24 @@ header {
         padding: 0 10vw;
     }
 
+    .contento{
+        width: 85%;
+    }
+
+    .p1{ 
+        font-size: 1.5rem;
+    }
+    
+    .p2{
+        font-size: 2.8rem; 
+    }
+    
+    .b1{
+        --bs-btn-padding-y: 0.8rem !important; 
+        --bs-btn-padding-x: 3rem !important; 
+        --bs-btn-font-size: 1.2rem !important;
+    }
+
     /* Image & text blocks: vertical, no overlap */
     .img,
     .text-content {
@@ -1251,7 +1380,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
+        gap: 2em;
         width: 100%;
         margin-top: 0 !important;
         /* remove any negative margin that might cause overlap */
@@ -1331,7 +1460,7 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px;
+        gap: 0.5em;
         width: 100%;
     }
 
@@ -1409,8 +1538,12 @@ header {
         margin-bottom: -500px !important;
     }
 
+    main.fourth{
+        margin-top: 150px !important;
+    }
+
     main.fight {
-        margin-top: 700px;
+        margin-top: 80px;
 
     }
 
@@ -1425,22 +1558,6 @@ header {
         height: auto;
         object-fit: cover;
         display: block;
-    }
-
-    .contento {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        color: white;
-        padding: 20px;
     }
 
     .image1 {
@@ -1455,21 +1572,6 @@ header {
         height: auto;
         object-fit: cover;
         display: block;
-    }
-
-    .contento {
-        width: 30px;
-        position: relative;
-        /* Remove absolute positioning */
-        order: -2;
-        /* Moves it above the .image1 div */
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-
-        color: white;
-        left: 50%;
-
     }
 
     .image1 {
@@ -1649,6 +1751,15 @@ header {
         border-bottom: 1px solid #ddd;
 
     }
+
+    .donate-btn {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .text-content {
+        order: 2;
+    }
 }
 
 /* Extra Small (Phones) - Up to 480px */
@@ -1657,5 +1768,66 @@ header {
     /* Styles for extra small screens */
     .desktopBtn {
         display: none !important;
+    }
+
+    .para {
+        width: 98%;
+        padding: 1em;
+    }
+    
+    .para p {
+        font-size: 0.9rem;
+    }
+    
+    #head {
+        font-size: 1.1rem;
+    }
+
+    .para h2{
+        font-size: 2.5rem !important;
+    }
+
+    .paraLearn{
+        width: fit-content !important;
+        padding: auto 0.2em !important;
+        font-size: 1em !important;
+    }
+
+    .events{
+        padding: 0;
+    }
+
+    .head2 p{
+        font-size: 1.8rem !important;
+    }
+
+    #upper {
+        font-size: 1.2rem !important;
+    }
+
+    .leftcard{
+        width: 100%;
+    }
+
+    .rcard, .lastcard{
+        width: 92vw;
+    }
+
+    .contento{
+        width: 95%;
+    }
+
+    .p1{ 
+        font-size: 1rem;
+    }
+    
+    .p2{
+        font-size: 2rem; 
+    }
+    
+    .b1{
+        --bs-btn-padding-y: 0.6rem !important; 
+        --bs-btn-padding-x: 2.5rem !important; 
+        --bs-btn-font-size: 1rem !important;
     }
 }

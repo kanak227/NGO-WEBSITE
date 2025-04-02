@@ -41,6 +41,8 @@
     font-family: Audiowide;
     text-shadow: 0px 0px 4px #12000a;
     animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate 6s ease-in-out 3s infinite;
+    text-align: center;
+    width: 90%;
   }
 
   #svgWrap_1,
@@ -349,29 +351,101 @@
     }
   }
 
-  @media only screen and (max-width:500px) {
-
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
     #svgWrap_1,
     #svgWrap_2 {
-      width: 90% !important;
+      width: 80%;
+      margin-top: -50px;
+    }
+
+    #text {
+      font-size: 28px;
+      margin-top: 120px;
+      width: 80%;
+    }
+
+    #homeButton {
+      margin-top: 180px;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #svgWrap_1,
+    #svgWrap_2 {
+      width: 90%;
+      margin-top: -80px;
+    }
+
+    #text {
+      font-size: 22px;
+      margin-top: 100px;
+      width: 90%;
+    }
+
+    #homeButton {
+      margin-top: 150px;
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    #text {
+      font-size: 18px;
+      margin-top: 80px;
+    }
+
+    #homeButton {
+      margin-top: 130px;
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+
+  @media only screen and (max-height: 600px) {
+    #svgWrap_1,
+    #svgWrap_2 {
+      width: 70%;
       margin-top: -100px;
     }
 
     #text {
-      margin-top: 10px;
+      margin-top: 80px;
     }
 
     #homeButton {
-      margin-top: 80px;
-      font-size: 16px;
-      padding: 8px 16px;
+      margin-top: 140px;
+    }
+  }
+
+  @media only screen and (max-height: 400px) {
+    #svgWrap_1,
+    #svgWrap_2 {
+      width: 60%;
+      margin-top: -120px;
+    }
+
+    #text {
+      margin-top: 60px;
+      font-size: 18px;
+    }
+
+    #homeButton {
+      margin-top: 100px;
+      font-size: 12px;
+      padding: 5px 10px;
     }
   }
 </style>
 
 <body>
   <div class="main"></div>
-  <svg id="svgWrap_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250">
+  <svg id="svgWrap_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250" aria-labelledby="svg2Title svg2Desc" role="img">
+    <title id="svg2Title">404 Error Graphic</title>
+    <desc id="svg2Desc">A decorative graphic representing the 404 error message.</desc>
     <g>
       <path id="id3_2"
         d="M195.7 232.67h-37.1V149.7H27.76c-2.64 0-5.1-.5-7.36-1.49-2.27-.99-4.23-2.31-5.88-3.96-1.65-1.65-2.95-3.61-3.89-5.88s-1.42-4.67-1.42-7.22V29.62h36.82v82.98H158.6V29.62h37.1v203.05z" />
@@ -381,7 +455,9 @@
         d="M688.33 232.67h-37.1V149.7H520.39c-2.64 0-5.1-.5-7.36-1.49-2.27-.99-4.23-2.31-5.88-3.96-1.65-1.65-2.95-3.61-3.89-5.88s-1.42-4.67-1.42-7.22V29.62h36.82v82.98h112.57V29.62h37.1v203.05z" />
     </g>
   </svg>
-  <svg id="svgWrap_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250">
+  <svg id="svgWrap_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 700 250" aria-labelledby="svg1Title svg1Desc" role="img">
+    <title id="svg1Title">404 Error Outline</title>
+    <desc id="svg1Desc">An outline graphic for the 404 error message.</desc>
     <g>
       <path id="id3_1"
         d="M195.7 232.67h-37.1V149.7H27.76c-2.64 0-5.1-.5-7.36-1.49-2.27-.99-4.23-2.31-5.88-3.96-1.65-1.65-2.95-3.61-3.89-5.88s-1.42-4.67-1.42-7.22V29.62h36.82v82.98H158.6V29.62h37.1v203.05z" />
@@ -392,7 +468,7 @@
     </g>
   </svg>
 
-  <svg>
+  <svg aria-hidden="true">
     <defs>
       <filter id="glow">
         <fegaussianblur class="blur" result="coloredBlur" stddeviation="4"></fegaussianblur>
