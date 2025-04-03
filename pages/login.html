@@ -7,68 +7,8 @@
   <title>Login | Jago Welfare</title>
   <link rel="stylesheet" href="../styles/login.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/d8373423c5.js" crossorigin="anonymous"></script>
-  <!-- Firebase SDKs -->
-  <script type="module">
-    // Import Firebase functions
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-    import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
 
-    // Firebase configuration
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-      appId: "YOUR_APP_ID",
-      measurementId: "YOUR_MEASUREMENT_ID"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    // Login with Email and Password
-    async function login(event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-
-      try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        alert("Login successful!");
-        console.log("User:", userCredential.user);
-        redirectToPage();
-      } catch (error) {
-        alert("Login failed: " + error.message);
-        console.error("Error:", error);
-      }
-    }
-
-    // Google Sign-In
-    async function googleSignIn() {
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        alert("Login with Google successful!");
-        console.log("User:", result.user);
-        redirectToPage();
-      } catch (error) {
-        alert("Google Sign-In failed: " + error.message);
-        console.error("Error:", error);
-      }
-    }
-
-    // Redirect to the donation page
-    function redirectToPage() {
-      window.location.href = 'donation.html';
-    }
-
-    // Expose functions to the global scope
-    window.login = login;
-    window.googleSignIn = googleSignIn;
-  </script>
+  <link rel="shortcut icon" href="../assets/favicon.png">
 </head>
 
 <body>

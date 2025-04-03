@@ -6,67 +6,8 @@
   <title>Register | Jago Welfare</title>
   <link rel="stylesheet" href="../styles/register.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/d8373423c5.js" crossorigin="anonymous"></script>
-  <!-- Firebase SDKs -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
 
-    const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-      appId: "YOUR_APP_ID",
-      measurementId: "YOUR_MEASUREMENT_ID"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-
-    async function registerUser(event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const password = document.getElementById("password").value;
-      const confirmPassword = document.getElementById("confirmPassword").value;
-
-      if (password !== confirmPassword) {
-        alert("Passwords do not match");
-        return;
-      }
-
-      try {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-        alert("User registered successfully!");
-        console.log("User:", userCredential.user);
-        redirectToPage();
-      } catch (error) {
-        alert("Registration failed: " + error.message);
-        console.error("Error:", error);
-      }
-    }
-
-    async function googleSignUp() {
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        alert("Registration with Google successful!");
-        console.log("User:", result.user);
-        redirectToPage();
-      } catch (error) {
-        alert("Google Sign-Up failed: " + error.message);
-        console.error("Error:", error);
-      }
-    }
-
-    function redirectToPage() {
-      window.location.href = 'donation.html';
-    }
-
-    window.registerUser = registerUser;
-    window.googleSignUp = googleSignUp;
-  </script>
+  <link rel="shortcut icon" href="../assets/favicon.png">
 </head>
 <body>
   <div class="container">
