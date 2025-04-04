@@ -878,18 +878,28 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    width: 100vw;
-    height: fit-content;
+    width: 100%;
+    /* height: fit-content; */
     margin-top: 50px;
-    padding: 2px 1em;
-}
+    padding-left: 20px;
+    padding-right: 20px;}
 
-.leftcard{
-    height: 580px; 
-    width: 33%;
+.leftcard1{
+    height: 550px; 
+    width: 100%;
     overflow: hidden;
     margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;
+
 }
+.leftcard1 img{
+    object-fit:fill;
+    border-image: fill;
+    min-width:fit-content ;
+}
+
+
 
 /*************************************/
 /************** FOOTER ***************/
@@ -1285,7 +1295,7 @@ header {
     .cards3 .leftcard img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
         /* or 'contain' if you prefer no cropping */
         border-radius: 5%;
         /* Keep your rounded corners if desired */
