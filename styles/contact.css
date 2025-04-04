@@ -46,7 +46,7 @@ body {
 .contact-box {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px;
   text-align: left;
 }
@@ -73,7 +73,7 @@ body {
 .form-box {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px;
 }
 
@@ -85,6 +85,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 14px;
+  background-color: #fae4e6;
 }
 
 .form-box textarea {
@@ -188,7 +189,7 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: center;
 }
 
@@ -205,21 +206,24 @@ body {
   border-radius: 5px;
   margin-right: 10px;
   font-size: 14px;
+  background-color: #fae4e6;
 }
 
 .newsletter button {
   padding: 10px 20px;
-  background: #007bff;
+  background: #e63946;
   color: #fff;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .newsletter button:hover {
-  background: #0056b3;
+  background: #9b0511;
+  transform: scale(1.05);
 }
 
 

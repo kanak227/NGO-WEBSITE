@@ -669,15 +669,17 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     background-color: white;
-    height: fit-content !important;
+    height: 740px;
     width: 48vw !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 5%;
+    border-radius: 2%;
     transition: transform 0.3s ease;
     padding-bottom: 1em !important;
 }
+
+
 
 .donatebutton{
     color: white;
@@ -742,11 +744,17 @@ header {
     transform: scale(1.03);
 }
 
+.eventImage img{
+    width: 100% !important; /* Ensure the image covers the div horizontally */
+    height:fit-content !important; /* Ensure the image covers the div vertically */
+    object-fit: fill !important;
+    /* Fill the div without distortion */
+    border-radius: 5%; /* Retain rounded corners */
+}
 .eventImage{
-    display: flex;
-    width: 100% !important;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    /* height: 100%; */
 }
 
 .text1 {
@@ -878,18 +886,28 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    width: 100vw;
-    height: fit-content;
+    width: 100%;
+    /* height: fit-content; */
     margin-top: 50px;
-    padding: 2px 1em;
-}
+    padding-left: 20px;
+    padding-right: 20px;}
 
-.leftcard{
-    height: 580px; 
-    width: 33%;
+.leftcard1{
+    height: 550px; 
+    width: 100%;
     overflow: hidden;
     margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5%;
+
 }
+.leftcard1 img{
+    object-fit:fill;
+    border-image: fill;
+    min-width:fit-content ;
+}
+
+
 
 /*************************************/
 /************** FOOTER ***************/
@@ -1287,7 +1305,7 @@ header {
     .cards3 .leftcard img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        object-fit: contain;
         /* or 'contain' if you prefer no cropping */
         border-radius: 5%;
         /* Keep your rounded corners if desired */
