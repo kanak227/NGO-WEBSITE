@@ -9,6 +9,7 @@
     --hover-color: #555; /* Hover text color */
     --border-color: rgba(0, 0, 0, 0.1); /* Border color */
     --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+    --animation-timing: 0.3s ease-in-out; /* Generalized animation timing */
 }
 
 * {
@@ -175,7 +176,7 @@ header {
     color: black;
     font-weight: 400;
     display: inline-block;
-    transition: color 0.3s ease-in-out;
+    transition: color var(--animation-timing);
     pointer-events: auto; /* Allow interaction with links */
 }
 
@@ -189,7 +190,7 @@ header {
     background: red;
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform var(--animation-timing);
 }
 
 .navbar a:hover {
@@ -236,7 +237,7 @@ header {
     /* White background */
     transform: translateX(100%);
     /* Initially hidden off-screen to the right */
-    transition: transform 0.3s ease;
+    transition: transform var(--animation-timing);
     z-index: 9999;
     /* Ensure it appears above other elements */
 }
@@ -282,10 +283,11 @@ header {
 }
 
 .bttn{
-    transition: transform 0.3s ease;
+    transition: transform var(--animation-timing);
 }
 .bttn:hover{
     transform:scale(1.1);
+    transition: transform var(--animation-timing);
 }
 
 /* Mobile Menu Icon (Hamburger) */
@@ -426,12 +428,13 @@ header {
     cursor: pointer;
     text-align: center;
     max-width: fit-content;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color var(--animation-timing), transform var(--animation-timing);
 }
 
 .donate-btn:hover {
     transform: scale(1.03);
     background-color: var(--secondary-color);
+    transition: background-color var(--animation-timing), transform var(--animation-timing);
 }
 
 .img {
@@ -480,7 +483,7 @@ header {
     text-align: center;
     box-shadow: 0 4px 6px var(--shadow-color);
     /* Adds a shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--animation-timing), box-shadow var(--animation-timing);
     /* Smooth scaling and shadow change */
     cursor: pointer;
     display: flex;
@@ -496,6 +499,7 @@ header {
     /* Enhance shadow on hover */
     background-color: var(--hover-color);
     /* Slight color change on hover */
+    transition: transform var(--animation-timing), box-shadow var(--animation-timing);
 }
 
 .card1 p,
@@ -604,20 +608,18 @@ header {
     margin-top: 30px;
     display: flex;
     align-items: center;
-
 }
 
-.btn {
-    transition: transform 0.9s ease;
-}
 
-.btn:hover {
-    transform: scale(1.03);
+.button svg:hover {
+    transform: scale(1.05);
 }
 
 .button svg {
     margin-left: 40px;
     margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .button p {
@@ -695,11 +697,12 @@ header {
     margin-bottom: 30px; /* Space between cards */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Subtle shadow for depth */
     border-radius: 4%; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform var(--animation-timing); /* Smooth hover effect */
 }
 
 .rcard:hover {
     transform: scale(1.03); /* Slight enlargement on hover */
+    transition: transform var(--animation-timing);
 }
 
 .lastcard {
@@ -707,11 +710,12 @@ header {
     height: fit-content; /* Dynamic height based on content */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Consistent shadow */
     border-radius: 4%; /* Rounded corners */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+    transition: transform var(--animation-timing); /* Smooth hover effect */
 }
 
 .lastcard:hover {
     transform: scale(1.03); /* Slight enlargement on hover */
+    transition: transform var(--animation-timing);
 }
 
 .rcard, .lastcard {

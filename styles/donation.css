@@ -1,12 +1,24 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+  --primary-color: #e63946;
+  --primary-hover-color: #d1283b;
+  --secondary-color: #555;
+  --background-color: #f7f8fa;
+  --card-background: #fff;
+  --input-background: #ffe6f0;
+  --input-hover-background: #ffd9e8;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --animation-timing: 0.3s ease-in-out;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f7f8fa;
+  background-color: var(--background-color);
 }
 
 .hero {
@@ -25,11 +37,11 @@ body {
 }
 
 .donation-form {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
   padding: 20px;
   flex: 2;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px var(--card-shadow);
 }
 
 .donation-form h3 {
@@ -53,13 +65,13 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
-  background-color: #ffe6f0;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--input-background);
+  transition: background-color var(--animation-timing), box-shadow var(--animation-timing);
 }
 
 .donation-form input:hover,
 .donation-form textarea:hover {
-  background-color: #ffd9e8;
+  background-color: var(--input-hover-background);
   box-shadow: 0 0 5px rgba(230, 57, 70, 0.5);
 }
 
@@ -88,17 +100,18 @@ body {
 }
 
 .donation-form button {
-  background-color: #e63946;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color var(--animation-timing);
 }
 
 .donation-form button:hover {
-  background-color: #d1283b;
+  background-color: var(--primary-hover-color);
 }
 
 .sidebar {
@@ -106,11 +119,11 @@ body {
 }
 
 .sidebar .card {
-  background: #fff;
+  background: var(--card-background);
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px var(--card-shadow);
 }
 
 .sidebar .card img {
@@ -126,7 +139,7 @@ body {
 
 .sidebar .card ul li {
   margin-bottom: 8px;
-  color: #555;
+  color: var(--secondary-color);
   display: flex;
   align-items: center;
 }
@@ -141,7 +154,7 @@ body {
 .sidebar .project-organizer {
   margin-top: 15px;
   font-size: 14px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .sidebar .project-organizer strong {
@@ -159,15 +172,14 @@ body {
 
 .progress-bar div {
   width: 85%;
-  background: #e63946;
-  height: 100%;
+  background: var(--primary-color);
 }
 
 /*************************************/
 /*************** FOOTER **************/
 /*************************************/
 .footer {
-  background-color: #fff;
+  background-color: var(--card-background);
   padding: 20px;
   margin-top: 20px;
   text-align: center;
@@ -183,20 +195,21 @@ body {
 }
 
 .footer input:hover {
-  background-color: #ffe6f0;
+  background-color: var(--input-background);
 }
 
 .footer button {
-  background-color: #e63946;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color var(--animation-timing);
 }
 
 .footer button:hover {
-  background-color: #d1283b;
+  background-color: var(--primary-hover-color);
 }
 
 .footer .links {
@@ -217,23 +230,23 @@ body {
 }
 
 .footer .links a:hover {
-  color: #e63946;
+  color: var(--primary-color);
 }
 
 .bottom-section {
   margin-top: 20px;
   padding: 15px;
-  background-color: #f7f8fa;
+  background-color: var(--background-color);
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 /*************************************/
 /************ NEWSLETTER *************/
 /*************************************/
 .newsletter {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -243,7 +256,7 @@ body {
 .newsletter p {
   font-size: 16px;
   margin-bottom: 15px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .newsletter input {
