@@ -1,6 +1,16 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+    --primary-color: #ff4d4d; /* Primary color */
+    --secondary-color: #e04444; /* Secondary color */
+    --background-color: #f9f9f9; /* Background color */
+    --text-color: #333; /* Default text color */
+    --hover-color: #555; /* Hover text color */
+    --border-color: rgba(0, 0, 0, 0.1); /* Border color */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -408,7 +418,7 @@ header {
 .donate-btn {
     margin: 25px auto 0;
     padding: 15px 40px;
-    background-color: #ff4d4d;
+    background-color: var(--primary-color);
     color: #fff;
     font-size: 1.5rem;
     border: none;
@@ -421,7 +431,7 @@ header {
 
 .donate-btn:hover {
     transform: scale(1.03);
-    background-color: #e04444;
+    background-color: var(--secondary-color);
 }
 
 .img {
@@ -461,13 +471,14 @@ header {
 
 .card1 {
     justify-content: center;
-    background-color: beige;
+    background-color: var(--background-color);
+    color: var(--text-color);
     width: 280px;
     height: 230px;
     border-radius: 5%;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px var(--shadow-color);
     /* Adds a shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth scaling and shadow change */
@@ -483,7 +494,7 @@ header {
     /* Enlarge slightly on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     /* Enhance shadow on hover */
-    background-color: rgb(255, 248, 220);
+    background-color: var(--hover-color);
     /* Slight color change on hover */
 }
 
@@ -660,9 +671,8 @@ header {
     justify-content: center !important;
     align-items: start !important;
     padding: 2em auto !important;
-    gap: 2em;
-    width: 100vw;
-    height: fit-content;
+    gap: 0.2em; /* Adjusted gap for better spacing */
+    /* display: table; */
 }
 
 .leftcard {
@@ -679,7 +689,42 @@ header {
     padding-bottom: 1em !important;
 }
 
+.rcard {
+    width: 100%; /* Full width for responsiveness */
+    height: 210px; /* Fixed height for uniformity */
+    margin-bottom: 30px; /* Space between cards */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Subtle shadow for depth */
+    border-radius: 4%; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
 
+.rcard:hover {
+    transform: scale(1.03); /* Slight enlargement on hover */
+}
+
+.lastcard {
+    width: 48vw; /* Adjusted width for layout */
+    height: fit-content; /* Dynamic height based on content */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Consistent shadow */
+    border-radius: 4%; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.lastcard:hover {
+    transform: scale(1.03); /* Slight enlargement on hover */
+}
+
+.rcard, .lastcard {
+    border-radius: 2em; /* Consistent border radius */
+    padding: 0.5em !important; /* Inner padding for spacing */
+    padding-bottom: 0.1em !important; /* Adjusted bottom padding */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: start; /* Align content to the start */
+    width: 45vw !important; /* Adjusted width for layout */
+    height: fit-content !important; /* Dynamic height based on content */
+}
 
 .donatebutton{
     color: white;
@@ -705,43 +750,6 @@ header {
     align-items: center;
     gap: 0.2em;
     /* display: table; */
-}
-
-.rcard {
-    width: 100%;
-    height: 210px;
-    margin-bottom: 30px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 4%;
-    transition: transform 0.3s ease;
-}
-
-.rcard:hover {
-    transform: scale(1.03);
-}
-
-.lastcard {
-    width: 48vw;
-    height: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 4%;
-    transition: transform 0.3s ease;
-}
-
-.rcard, .lastcard{
-    border-radius: 2em;
-    padding: 0.5em !important;
-    padding-bottom: 0.1em !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    width: 45vw !important;
-    height: fit-content !important;
-}
-
-.lastcard:hover {
-    transform: scale(1.03);
 }
 
 .eventImage img{
@@ -814,17 +822,6 @@ header {
 }
 
 .b1{
-    --bs-btn-padding-y: 0.8rem !important; 
-    --bs-btn-padding-x: 3rem !important; 
-    --bs-btn-font-size: 1.5rem !important;
-}
-
-.break {
-    height: 160px;
-}
-
-.conto {
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
