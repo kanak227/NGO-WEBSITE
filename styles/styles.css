@@ -1149,7 +1149,7 @@ header {
         margin: 0 auto;
         overflow-x: hidden;
     }
-
+  
     /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
         display: none !important;
@@ -1159,6 +1159,8 @@ header {
         margin-left: 20% !important;
     }
 
+
+    
     .menu-icon {
         display: block;
         position: absolute;
@@ -1852,3 +1854,5 @@ header {
         --bs-btn-font-size: 1rem !important;
     }
 }
+
+
