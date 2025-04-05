@@ -920,16 +920,20 @@ input:focus {
     /* height: fit-content; */
     margin-top: 50px;
     padding-left: 20px;
-    padding-right: 20px;}
+    padding-right: 20px;
+}
 
 .leftcard1{
-    height: 550px; 
     width: 100%;
     overflow: hidden;
     margin: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5%;
-
+    padding: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
 }
 .leftcard1 img{
     object-fit:fill;
