@@ -275,7 +275,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Your Website. All Rights Reserved.</p>
     </div>
     <div id="scrollToTop">
         <svg class="progress-circle" width="50" height="50">
@@ -293,6 +293,10 @@
           window.open('donation.html'); // Replace with your HTML file name
       }
   </script>
-  </body>
+  <script>
+  // Dynamically set the current year in the footer
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>
 
