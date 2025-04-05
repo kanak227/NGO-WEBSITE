@@ -362,6 +362,36 @@ header {
     color: red;
 }
 
+/* Focus Styles */
+a:focus, button:focus, .donate-btn:focus, .login-btn a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 4px var(--primary-color);
+}
+
+.navbar a:focus::after {
+    transform: scaleX(1);
+    background: var(--primary-color);
+}
+
+/* Enhanced Focus Styles */
+a:focus, button:focus, input:focus, .donate-btn:focus, .login-btn a:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    box-shadow: 0 0 6px var(--primary-color);
+    border-radius: 4px;
+}
+
+.navbar a:focus::after {
+    transform: scaleX(1);
+    background: var(--primary-color);
+}
+
+input:focus {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 4px var(--primary-color);
+}
+
 /*************************************/
 /*********** HERO SECTION ************/
 /*************************************/
@@ -499,7 +529,7 @@ header {
     /* Enhance shadow on hover */
     background-color: var(--hover-color);
     /* Slight color change on hover */
-    transition: transform var(--animation-timing), box-shadow var(--animation-timing);
+    transition: transform var(--animation-timing), box-shadow var (--animation-timing);
 }
 
 .card1 p,
@@ -609,7 +639,6 @@ header {
     display: flex;
     align-items: center;
 }
-
 
 .button svg:hover {
     transform: scale(1.05);
@@ -1389,7 +1418,6 @@ header {
         padding-top: 20px;
         /* ensures footer content isn't squashed */
         position: relative;
-        /* no overlap */
         z-index: 0;
         /* stays behind any card if needed */
     }
