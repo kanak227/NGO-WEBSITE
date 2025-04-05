@@ -1,11 +1,23 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+  --primary-color: #e63946;
+  --primary-hover-color: #c02634;
+  --secondary-color: #555;
+  --background-color: #f9f9f9;
+  --card-background: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.35);
+  --animation-timing: 0.3s ease-in-out;
+  --input-background: #fae4e6;
+  --input-hover-background: #ffe6f0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   color: #333;
 }
 
@@ -33,7 +45,7 @@ body {
 }
 
 .heading span {
-  color: #e63946;
+  color: var(--primary-color);
 }
 
 .contact-section {
@@ -44,9 +56,9 @@ body {
 }
 
 .contact-box {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--card-shadow) 0px 5px 15px;
   padding: 20px;
   text-align: left;
 }
@@ -59,21 +71,21 @@ body {
 
 .contact-box p {
   font-size: 14px;
-  color: #555;
+  color: var(--secondary-color);
   line-height: 1.6;
   margin: 5px 0;
 }
 
 .contact-box i {
   font-size: 20px;
-  color: #e63946;
+  color: var(--primary-color);
   margin-right: 10px;
 }
 
 .form-box {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--card-shadow) 0px 5px 15px;
   padding: 20px;
 }
 
@@ -85,7 +97,12 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 14px;
-  background-color: #fae4e6;
+  background-color: var(--input-background);
+}
+
+.inputForm:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(199, 41, 41, 0.2);
 }
 
 .form-box textarea {
@@ -95,18 +112,18 @@ body {
 
 .form-box button {
   padding: 10px 20px;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--animation-timing);
 }
 
 .form-box button:hover {
-  background: #c02634;
+  background: var(--primary-hover-color);
 }
 
 /*************************************/
@@ -121,12 +138,11 @@ body {
 }
 
 .info-card {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth scaling and shadow change */
+  transition: transform var(--animation-timing), box-shadow var(--animation-timing);
   cursor: pointer;
 }
 
@@ -142,14 +158,14 @@ body {
 
 .info-card p {
   font-size: 14px;
-  color: #555;
+  color: var(--secondary-color);
   margin-bottom: 1px;
 }
 
 .info-card a {
   display: inline-block;
   font-size: 14px;
-  color: #e63946;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -160,11 +176,8 @@ body {
 
 .info-card:hover {
   transform: scale(1.05);
-  /* Enlarge slightly on hover */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  /* Enhance shadow on hover */
   background-color: rgb(255, 248, 220);
-  /* Slight color change on hover */
 }
 
 /*************************************/
@@ -186,17 +199,17 @@ body {
 /************ NEWSLETTER *************/
 /*************************************/
 .newsletter {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--card-shadow) 0px 5px 15px;
   text-align: center;
 }
 
 .newsletter p {
   font-size: 16px;
   margin-bottom: 15px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .newsletter input {
@@ -206,26 +219,25 @@ body {
   border-radius: 5px;
   margin-right: 10px;
   font-size: 14px;
-  background-color: #fae4e6;
+  background-color: var(--input-background);
 }
 
 .newsletter button {
   padding: 10px 20px;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--animation-timing);
 }
 
 .newsletter button:hover {
   background: #9b0511;
   transform: scale(1.05);
 }
-
 
 /*************************************/
 /************** FOOTER ***************/
@@ -284,7 +296,7 @@ body {
   margin-right: 10px;
   color: #ccc;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: color var(--animation-timing);
 }
 
 .footer-socials a:hover {
