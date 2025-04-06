@@ -79,6 +79,11 @@ body {
   text-align:left;
 }
 
+.news-card-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .news-tag {
   color: var(--primary-color);
   background-color: bisque;
@@ -86,6 +91,13 @@ body {
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
+
+.news-tag:hover{
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+
 
 .news-title {
   font-size: 1.2rem;
