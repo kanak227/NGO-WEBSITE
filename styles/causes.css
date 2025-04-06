@@ -1,3 +1,16 @@
+/* Define CSS variables */
+:root {
+  --primary-color: #e63946;
+  --primary-hover-color: #c02634;
+  --secondary-color: #777;
+  --background-color: #f9f9f9;
+  --card-background: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --animation-timing: 0.3s ease-in-out;
+  --input-background: #f9f9f9;
+  --input-hover-background: #ffe6f0;
+}
+
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
@@ -5,7 +18,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
   color: #333;
 }
 
@@ -42,11 +55,11 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform var(--animation-timing), box-shadow var(--animation-timing);
 }
 
 .card:hover {
@@ -67,7 +80,7 @@ body {
 .card-content .category {
   display: inline-block;
   padding: 5px 10px;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   border-radius: 4px;
   font-size: 12px;
@@ -79,7 +92,7 @@ body {
 }
 
 .card-content .category.shelter {
-  background: #e63946;
+  background: var(--primary-color);
 }
 
 .card-content h3 {
@@ -106,7 +119,7 @@ body {
 .progress-bar span {
   display: block;
   height: 100%;
-  background: #e63946;
+  background: var(--primary-color);
 }
 
 .progress-bar span.education {
@@ -114,7 +127,7 @@ body {
 }
 
 .progress-bar span.shelter {
-  background: #e63946;
+  background: var(--primary-color);
 }
 
 .load-more {
@@ -124,28 +137,28 @@ body {
 
 .load-more button {
   padding: 10px 20px;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--animation-timing);
 }
 
 .load-more button:hover {
-  background: #c02634;
+  background: var(--primary-hover-color);
 }
 
 /*************************************/
 /************ NEWSLETTER *************/
 /*************************************/
 .newsletter {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
   text-align: center;
   margin-top: 40px;
 }
@@ -167,17 +180,18 @@ body {
 
 .newsletter button {
   padding: 10px 20px;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
+  transition: background var(--animation-timing);
 }
 
 .newsletter button:hover {
-  background: #e63946;
+  background: var(--primary-hover-color);
 }
 
 /*************************************/
@@ -230,7 +244,7 @@ body {
 }
 
 .footer ul li a:hover {
-  color: #fff;
+  color: var(--card-background);
 }
 
 .footer-socials a {
@@ -241,7 +255,7 @@ body {
 }
 
 .footer-socials a:hover {
-  color: #fff;
+  color: var(--card-background);
 }
 
 .footer-bottom {

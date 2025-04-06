@@ -1,6 +1,14 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+  --primary-color: #c72929;
+  --primary-hover-color: #b52323;
+  --input-background: #f8f9fa;
+  --input-focus-shadow: rgba(199, 41, 41, 0.2);
+  --animation-timing: 0.3s ease-in-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +60,7 @@ body {
 }
 
 .form-header h2 {
-  color: #c72929;
+  color: var(--primary-color);
   margin-bottom: 5px;
   font-size: 1.7rem;
 }
@@ -104,8 +112,8 @@ label {
 }
 
 .inputForm:focus-within {
-  border-color: #c72929;
-  box-shadow: 0 0 0 3px rgba(199, 41, 41, 0.2);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--input-focus-shadow);
 }
 
 .inputForm svg {
@@ -113,7 +121,7 @@ label {
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  fill: #c72929;
+  fill: var(--primary-color);
 }
 
 .input {
@@ -149,7 +157,7 @@ label {
 }
 
 .remember input {
-  accent-color: #c72929;
+  accent-color: var(--primary-color);
   height: 12px;
 }
 
@@ -170,7 +178,7 @@ label {
 }
 
 .span {
-  color: #c72929;
+  color: var(--primary-color);
   font-weight: 500;
   cursor: pointer;
   font-size: 14px;
@@ -189,14 +197,14 @@ label {
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  background-color: #c72929;
+  background-color: var(--primary-color);
   color: white;
   box-shadow: 0 5px 15px rgba(199, 41, 41, 0.35);
-  transition: all 0.3s;
+  transition: all var(--animation-timing);
 }
 
 .button-submit:hover {
-  background-color: #b52323;
+  background-color: var(--primary-hover-color);
   transform: translateY(-2px);
 }
 
@@ -212,7 +220,7 @@ label {
 }
 
 .span-2 {
-  color: #c72929;
+  color: var(--primary-color);
   font-weight: 600;
   cursor: pointer;
   font-size: 14px;
@@ -264,7 +272,7 @@ a {
 
 .google:hover {
   background-color: #f8f9fa;
-  border-color: #c72929;
+  border-color: var(--primary-color);
 }
 
 .return-home {
@@ -279,7 +287,7 @@ a {
 }
 
 .return-home a:hover {
-  color: #c72929;
+  color: var(--primary-color);
 }
 
 @media (max-width: 480px) {

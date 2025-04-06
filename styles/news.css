@@ -1,11 +1,21 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+  --primary-color: #f95b3c;
+  --primary-hover-color: #ffe3dc;
+  --secondary-color: #777;
+  --background-color: #f9f9f9;
+  --card-background: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --animation-timing: 0.3s ease-in-out;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
 }
 
 .hero {
@@ -32,7 +42,7 @@ body {
 }
 
 .header span {
-  color: #f95b3c;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -46,11 +56,10 @@ body {
 }
 
 .news-card {
-  background: #fff;
+  background: var(--card-background);
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* overflow: hidden; */
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px var(--card-shadow);
+  transition: transform var(--animation-timing), box-shadow var(--animation-timing);
 }
 
 .news-card:hover {
@@ -70,13 +79,25 @@ body {
   text-align:left;
 }
 
+.news-card-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .news-tag {
-  color: #f95b3c;
+  color: var(--primary-color);
   background-color: bisque;
   font-weight: bold;
   font-size: 0.9rem;
   margin-bottom: 10px;
 }
+
+.news-tag:hover{
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+
 
 .news-title {
   font-size: 1.2rem;
@@ -92,7 +113,7 @@ body {
 
 .news-meta {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--secondary-color);
   margin-top: 10px;
 }
 
@@ -106,7 +127,7 @@ body {
 .newsletter {
   margin-top: 40px;
   text-align: center;
-  background: #f95b3c;
+  background: var(--primary-color);
   color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -129,15 +150,16 @@ body {
   padding: 10px 20px;
   font-size: 1rem;
   background: #fff;
-  color: #f95b3c;
+  color: var(--primary-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: background var(--animation-timing);
 }
 
 .newsletter button:hover {
-  background: #ffe3dc;
+  background: var(--primary-hover-color);
 }
 
 .n-card1 {

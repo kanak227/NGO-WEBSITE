@@ -1,11 +1,21 @@
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
+:root {
+  --primary-color: #e63946;
+  --primary-hover-color: #c02634;
+  --secondary-color: #555;
+  --background-color: #f9f9f9;
+  --card-background: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --animation-timing: 0.3s ease-in-out;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  background-color: var(--background-color);
 }
 
 .hero {
@@ -18,7 +28,7 @@ body {
 .header {
   text-align: center;
   padding: 30px 20px;
-  background-color: #e63946;
+  background-color: var(--primary-color);
   color: #fff;
 }
 
@@ -40,10 +50,10 @@ body {
 }
 
 .main-content {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
 }
 
 .main-content img.header-image {
@@ -60,7 +70,7 @@ body {
 
 .main-content h2 {
   font-size: 20px;
-  color: #555;
+  color: var(--secondary-color);
   margin-bottom: 20px;
 }
 
@@ -72,7 +82,7 @@ body {
 }
 
 .main-content p {
-  color: #555;
+  color: var(--secondary-color);
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -97,10 +107,11 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
+  transition: transform var(--animation-timing), box-shadow var(--animation-timing);
 }
 
 .card h3 {
@@ -111,12 +122,12 @@ body {
 
 .card p,
 .card a {
-  color: #555;
+  color: var(--secondary-color);
   font-size: 14px;
 }
 
 .card a {
-  color: #e63946;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -127,7 +138,7 @@ body {
 
 .register-btn {
   display: block;
-  background: #e63946;
+  background: var(--primary-color);
   color: #fff;
   text-align: center;
   padding: 12px 20px;
@@ -135,7 +146,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   margin-top: 10px;
-  transition: transform 0.3s ease;
+  transition: transform var(--animation-timing);
 }
 
 .register-btn:hover {
@@ -146,10 +157,10 @@ body {
 /************ NEWSLETTER *************/
 /*************************************/
 .newsletter {
-  background: #fff;
+  background: var(--card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
   text-align: center;
   margin-top: 20px;
 }
@@ -157,7 +168,7 @@ body {
 .newsletter p {
   font-size: 14px;
   margin-bottom: 15px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 .newsletter input {
@@ -178,6 +189,7 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
+  transition: background var(--animation-timing);
 }
 
 .newsletter button:hover {
@@ -214,12 +226,12 @@ body {
 }
 
 li::marker {
-  color: #e63946;
+  color: var(--primary-color);
 }
 
 .list {
   line-height: 40px;
-  color: #555;
+  color: var(--secondary-color);
 }
 
 /*************************************/
