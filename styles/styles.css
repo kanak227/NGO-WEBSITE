@@ -465,6 +465,7 @@ input:focus {
     transform: scale(1.03);
     background-color: var(--secondary-color);
     transition: background-color var(--animation-timing), transform var(--animation-timing);
+    background-color: #e04444;
 }
 
 .img {
@@ -675,6 +676,9 @@ input:focus {
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center
 }
 
 .head2 {
@@ -688,6 +692,8 @@ input:focus {
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 2;
+        color: #333; 
+        margin-bottom: 20px; 
 }
 
 .head2 p {
@@ -704,6 +710,8 @@ input:focus {
     padding: 2em auto !important;
     gap: 0.2em; /* Adjusted gap for better spacing */
     /* display: table; */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; 
 }
 
 .leftcard {
@@ -716,8 +724,20 @@ input:focus {
     width: 48vw !important;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 2%;
-    transition: transform 0.3s ease;
     padding-bottom: 1em !important;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+}
+.leftcard:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+.eventImage img {
+    width: 100%; 
+    height: auto;
 }
 
 .rcard {
@@ -727,6 +747,11 @@ input:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Subtle shadow for depth */
     border-radius: 4%; /* Rounded corners */
     transition: transform var(--animation-timing); /* Smooth hover effect */
+}
+
+.rcard text
+{
+        padding: 20px; 
 }
 
 .rcard:hover {
