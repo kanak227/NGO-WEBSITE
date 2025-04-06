@@ -1300,6 +1300,10 @@ input:focus {
         width: 98% !important;
     }
 
+    .leftcard h1:hover{
+        text-decoration: underline;
+    }
+
     .rightcards{
         display: flex;
         justify-content: center;
