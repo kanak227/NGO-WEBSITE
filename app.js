@@ -72,6 +72,38 @@ if (statsSection) {
 function toggleMenu() {
     document.querySelector('.mobile-menu').classList.toggle('active');
 }
+window.addEventListener("DOMContentLoaded", () => {
+    const currentTheme = localStorage.getItem("theme");
+    const body = document.body;
+    const icons = document.querySelectorAll(".themeIcon");
+
+    const isDark = currentTheme === "dark";
+    if (isDark) {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+
+    icons.forEach(icon => {
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+    });
+});
+
+function toggleTheme() {
+    const body = document.body;
+    const icons = document.querySelectorAll(".themeIcon");
+
+    const isDark = body.classList.toggle("dark-mode");
+
+    icons.forEach(icon => {
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+    });
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
 
 // Close menu when clicking outside
 document.addEventListener("click", function (event) {

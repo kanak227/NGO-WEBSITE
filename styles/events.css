@@ -11,6 +11,16 @@
   --animation-timing: 0.3s ease-in-out;
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -190,6 +200,7 @@ body {
   cursor: pointer;
   font-size: 14px;
   transition: background var(--animation-timing);
+  margin-top:15px;
 }
 
 .newsletter button:hover {
@@ -232,6 +243,7 @@ li::marker {
 .list {
   line-height: 40px;
   color: var(--secondary-color);
+  list-style: none;
 }
 
 /*************************************/
@@ -377,4 +389,22 @@ li::marker {
   .newsletter button {
     padding: 8px 16px;
   }
+}
+
+.dark-mode .main-content,.dark-mode .card,.dark-mode .newsletter{
+  background-color:var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .newsletter p,.dark-mode .card p, .dark-mode .card a,.dark-mode ul li, .dark-mode .main-content p{
+  color: var(--text-muted);
+}
+.dark-mode .organizer .details,.dark-mode .card h3,.dark-mode .main-content h2,.dark-mode .main-content h3{
+  color:var(--text-color) !important;
+}
+
+.dark-mode .newsletter input{
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border: 1px solid var(--text-muted);
 }

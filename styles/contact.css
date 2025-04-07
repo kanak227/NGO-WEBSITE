@@ -21,6 +21,16 @@ body {
   color: #333;
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
+
 .hero {
   margin-top: 15vh !important;
 }
@@ -351,4 +361,21 @@ body {
   .newsletter button {
     padding: 8px 16px;
   }
+}
+
+.dark-mode .heading h1,.dark-mode .contact-box h3 ,.dark-mode .contact-box,.dark-mode .form-box{
+  color: var(--text-color);
+}
+
+.dark-mode .contact-box,.dark-mode .form-box,.dark-mode .newsletter{
+  background: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .contact-box p,.dark-mode .newsletter p{
+  color: var(--text-muted);
+}
+
+.dark-mode .newsletter input,.dark-mode .form-box input, .dark-mode .form-box textarea{
+  background-color:var(--input-background);
 }
