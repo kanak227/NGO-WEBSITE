@@ -318,7 +318,7 @@ body.dark-mode {
   background: linear-gradient(135deg, var(--card-background) 0%, var(--background-color) 100%) ;
 }
 
-.dark-mode .form{
+.dark-mode .form,.dark-mode .return-home{
   background-color: var(--card-background);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

@@ -363,7 +363,7 @@ body.dark-mode{
   }
 }
 
-.dark-mode .heading h1,.dark-mode .contact-box h3 ,.dark-mode .contact-box,.dark-mode .form-box{
+.dark-mode .heading h1,.dark-mode .contact-box h3 ,.dark-mode .contact-box,.dark-mode .form-box,.dark-mode input,.dark-mode textarea{
   color: var(--text-color);
 }
 
