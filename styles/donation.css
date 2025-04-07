@@ -19,6 +19,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--background-color);
+  color: var(--secondary-color); /* Set default text color */
 }
 
 .hero {
@@ -47,7 +48,7 @@ body {
 .donation-form h3 {
   margin-bottom: 10px;
   font-size: 20px;
-  color: #333;
+  color: var(--primary-color); /* Updated to primary color */
 }
 
 .donation-form .form-group {
@@ -114,6 +115,18 @@ body {
   background-color: var(--primary-hover-color);
 }
 
+.donate-now-heading {
+  font-size: 3.5rem; /* Larger font size */
+  text-align: center;
+  margin-top: 90px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase; /* Make text uppercase */
+  letter-spacing: 2px; /* Add spacing between letters */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  height: 0px;
+}
+
 .sidebar {
   flex: 1;
 }
@@ -139,7 +152,7 @@ body {
 
 .sidebar .card ul li {
   margin-bottom: 8px;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Ensure consistent text color */
   display: flex;
   align-items: center;
 }
@@ -154,12 +167,12 @@ body {
 .sidebar .project-organizer {
   margin-top: 15px;
   font-size: 14px;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Ensure consistent text color */
 }
 
 .sidebar .project-organizer strong {
   display: block;
-  color: #333;
+  color: var(--primary-color); /* Updated to primary color */
 }
 
 .progress-bar {
@@ -225,12 +238,12 @@ body {
 
 .footer .links a {
   text-decoration: none;
-  color: #333;
+  color: var(--secondary-color); /* Ensure consistent text color */
   margin: 0 5px;
 }
 
 .footer .links a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Updated hover color */
 }
 
 .bottom-section {
@@ -239,7 +252,7 @@ body {
   background-color: var(--background-color);
   text-align: center;
   font-size: 14px;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Ensure consistent text color */
 }
 
 /*************************************/
@@ -256,7 +269,7 @@ body {
 .newsletter p {
   font-size: 16px;
   margin-bottom: 15px;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Ensure consistent text color */
 }
 
 .newsletter input {
