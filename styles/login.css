@@ -27,7 +27,7 @@ body.dark-mode{
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,9 +59,9 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.form:hover {
+/* .form:hover {
   transform: translateY(-5px);
-}
+} */
 
 .form-header {
   text-align: center;
@@ -113,16 +113,16 @@ label {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 2px 5px rgba(15, 15, 15, 0.1);
-  border: 1.5px solid #ecedec;
+  border: 2px solid #d1d1d1; /* Retain only the outer border */
   display: flex;
   align-items: center;
   padding-left: 10px;
-  transition: 0.2s ease-in-out;
+  transition: border-color 0.3s ease-in-out; /* Removed box-shadow transition */
 }
 
 .inputForm:focus-within {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px var(--input-focus-shadow);
+  /* Removed box-shadow effect */
 }
 
 .inputForm svg {
@@ -137,13 +137,12 @@ label {
   width: 100%;
   height: 100%;
   background: transparent;
-  border: none;
+  border: none; /* Removed inner border */
   outline: none;
   border-radius: 10px;
   padding: 0 15px 0 25px;
   font-size: 15px;
   transition: all 0.3s;
-  border: 1px solid #e1e5ee;
   margin-left: 15px;
 }
 
@@ -326,4 +325,33 @@ body.dark-mode {
 
 .dark-mode .return-home a,.dark-mode .divider,.dark-mode .divider span,.dark-mode .p,.dark-mode .form-header p, .dark-mode .flex-column>label,.dark-mode input{
   color:var(--text-muted);
+}
+
+
+.return-home {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.return-home a {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.return-home:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.return-home a:hover {
+  color: white;
 }
