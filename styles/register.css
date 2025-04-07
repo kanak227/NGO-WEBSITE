@@ -12,6 +12,16 @@
   --animation-timing: 0.3s ease-in-out;
 }
 
+
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
@@ -265,4 +275,17 @@ a {
   .form {
     padding: 18px;
   }
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, var(--card-background) 0%, var(--background-color) 100%) ;
+}
+
+.dark-mode .form{
+  background-color: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .return-home a,.dark-mode .divider,.dark-mode .divider span,.dark-mode .p,.dark-mode .form-header p, .dark-mode .flex-column>label,.dark-mode input{
+  color:var(--text-muted);
 }
