@@ -415,17 +415,17 @@ input:focus {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px; /* Reduce vertical spacing between elements */
     order: 2;
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: 0 auto; /* Center horizontally */
+    padding: 10px 0; /* Reduce vertical padding */
 }
 
 .text-content p {
     font-size: 2.2rem;
-    margin: 0;
+    margin: 3px 0; /* Reduce vertical margin */
     color: #333;
-    line-height: 1.2;
+    line-height: 1; /* Reduce vertical spacing between lines */
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -470,6 +470,7 @@ input:focus {
 .img {
     order: 2; /* Image first on mobile */
     margin: 20px 0;
+    height: 44rem;
 }
 
 .img img {
