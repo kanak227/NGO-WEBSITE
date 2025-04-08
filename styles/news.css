@@ -18,6 +18,15 @@ body {
   background-color: var(--background-color);
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
 .hero {
   margin-top: 10vh !important;
 }
@@ -77,11 +86,6 @@ body {
 .news-card-content {
   padding: 15px;
   text-align:left;
-}
-
-.news-card-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .news-tag {
@@ -144,6 +148,8 @@ body {
   border: none;
   border-radius: 5px;
   margin-right: 10px;
+  width:70%;
+  margin-bottom: 15px;
 }
 
 .newsletter button {
@@ -292,12 +298,33 @@ body {
     padding: 20px 5px;
   }
 
-  .newsletter input {
-    margin-bottom: 15px;
-    width: 100%;
-  }
 
   .newsletter button {
     padding: 8px 16px;
   }
+}
+
+
+.dark-mode .newsletter input,.dark-mode .newsletter button,.dark-mode .container h1,.dark-mode .news-title{
+  color:var(--text-color);
+}
+
+.dark-mode .news-card,.dark-mode .newsletter{
+  background: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .news-meta,.dark-mode .newsletter p{
+  color: var(--text-muted);
+}
+
+.dark-mode .newsletter input{
+  background: var(--input-background);
+}
+
+.dark-mode .newsletter button{
+  background-color:#f95b3c;
+}
+.dark-mode .newsletter button:hover{
+  background-color:	#cc442a;
 }

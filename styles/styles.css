@@ -23,6 +23,16 @@ body{
     overflow-x: hidden;
 }
 
+body.dark-mode{
+    --background-color:#191919;
+    --card-background:#212121;
+    --primary-background:#121212;
+    --input-background:#000000;
+    --text-color:#FFFFFF;
+    --text-muted:#DDDDDD;
+    --input-hover-border:#DDDDDD
+  }
+  
 /*************************************/
 /********** HEADER (NAVBAR) **********/
 /*************************************/
@@ -551,6 +561,7 @@ input:focus {
 .circle {
     border-radius: 50%;
     background-color: white;
+    color:#212529;
     height: 70px;
     width: 70px;
     align-items: center;
@@ -1198,7 +1209,11 @@ input:focus {
         margin: 0 auto;
         overflow-x: hidden;
     }
-  
+
+    .desktopBtn {
+        display: none !important;
+    }
+    
     /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
         display: none !important;
@@ -1906,5 +1921,50 @@ input:focus {
         --bs-btn-font-size: 1rem !important;
     }
 }
+
+
+.dark-mode .main,.dark-mode .mobile-menu, .dark-mode .footer,.dark-mode .bar,.dark-mode .cont1{
+    background-color: var(--primary-background) !important;
+}
+.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer,
+.dark-mode .mainbox,.dark-mode .dark-bg,.dark-mode .leftcard, .dark-mode .rcard, .dark-mode .lastcard{
+    background-color:  var(--card-background) !important;
+}
+body.dark-mode , .dark-mode .fourth{
+    background-color:var(--background-color);
+}
+
+.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer .dark-mode .leftcard, .dark-mode .rcard, .dark-mode .lastcard{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer,
+.dark-mode .head2 p,body.dark-mode , .dark-mode .fourth,.dark-mode .navbar a, .dark-mode .mobile-menu a, .dark-mode .menu-icon{
+    color:var(--text-color) !important;
+}
+.dark-mode #head,.dark-mode #upper, .dark-mode .cont1 p,.dark-mode .subsection{
+    opacity:100% !important;
+}
+
+.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer{
+    border-color: var(--text-muted);
+}
+    
+.dark-mode #head,.dark-mode #upper, .dark-mode .cont1 p,.dark-mode .subsection ,.dark-mode .text-content p, .dark-mode #text, .dark-mode u,.dark-mode b{
+    color: var(--text-muted) !important;
+}
+
+
+.dark-mode .modal-header .btn-close {
+        filter: brightness(0) invert(1); /* Makes the default black X icon white */
+}
+
+.dark-mode .horizontal{
+    background: linear-gradient(transparent 40%,var(--card-background) 40%) no-repeat;
+}
+
+.dark-mode .events-primary{
+    background: linear-gradient(var(--card-background) 60% , transparent 30%) no-repeat !important;
+}
+    
 
 
