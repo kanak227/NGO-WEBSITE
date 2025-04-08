@@ -58,6 +58,11 @@
                         <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Contact Info</button>
                     </div>
+                    <div>
+                        <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                            <i class="themeIcon fas fa-moon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -87,6 +92,11 @@
             <div>
                 <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">Contact Info</button>
+            </div>
+            <div>
+                <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                    <i class="themeIcon fas fa-moon"></i>
+                </button>
             </div>
         </div>
 
@@ -119,10 +129,10 @@
             <div class="text-content">
                 <p id="heading"><b><u style="text-decoration-color: goldenrod; text-decoration-line: bold;">Share</u>
                         your love</b></p>
-                <p>to make</p>
-                <p>someone's life</p>
-                <p>better</p>
-                <p id="text">We believe in spreading love and kindness to uplift lives and create a better future for
+                <p class="subsection">to make</p>
+                <p class="subsection">someone's life</p>
+                <p class="subsection">better</p>
+                <p id="text" class="subsection">We believe in spreading love and kindness to uplift lives and create a better future for
                     those in need. Join us in making a difference.</p>
                 <button class="donate-btn" onclick="redirectToPage()">Donate now</button>
             </div>
@@ -459,14 +469,14 @@
         </div>
     </main>
 
-    <div class="break no2"></div>
+    <div class="break no2  dark-bg"></div>
 
     <!-- ************************************* -->
     <!-- *********** NEWS SECTION ************ -->
     <!-- ************************************* -->
     <main>
         <div style="background: linear-gradient(rgb(216, 231, 234) 60% , transparent 30%) no-repeat; margin-top: 0px; height: fit-content"
-            class="events">
+            class="events events-primary">
 
             <!-- Title and Subtitle -->
             <div class="head2">
