@@ -7,6 +7,7 @@
   --input-background: #f8f9fa;
   --input-focus-shadow: rgba(199, 41, 41, 0.2);
   --animation-timing: 0.3s ease-in-out;
+  --input-border-color: #ecedec;
 }
 
 body.dark-mode{
@@ -41,7 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 450px !important;
   padding: 15px;
 }
 
@@ -72,6 +73,7 @@ body {
   color: var(--primary-color);
   margin-bottom: 5px;
   font-size: 1.7rem;
+  font-weight: bold;
 }
 
 .form-header p {
@@ -143,6 +145,7 @@ label {
   padding: 0 15px 0 25px;
   font-size: 15px;
   transition: all 0.3s;
+  border: 1px solid var(--input-border-color);
   margin-left: 15px;
 }
 
@@ -234,6 +237,10 @@ label {
   font-size: 14px;
 }
 
+.p a{
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -258,20 +265,21 @@ a {
   font-size: 14px;
 }
 
-.btn {
+.btn1 {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 45px;
   border-radius: 10px;
-  border: 1px solid #ddd;
-  background-color: white;
+  border: 1px solid #ddd !important;
+  background-color: white !important;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 5px;
   gap: 10px;
+  font-size: 14px;
 }
 
 .btn svg {
@@ -279,8 +287,8 @@ a {
 }
 
 .google:hover {
-  background-color: #f8f9fa;
-  border-color: var(--primary-color);
+  background-color: #f8f9fa !important;
+  border-color: var(--primary-color) !important;
 }
 
 .return-home {
