@@ -21,6 +21,16 @@ body {
   color: #333;
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
+
 .hero {
   margin-top: 15vh !important;
 }
@@ -119,11 +129,16 @@ body {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background var(--animation-timing);
+  -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+  -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .form-box button:hover {
   background: var(--primary-hover-color);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /*************************************/
@@ -231,11 +246,15 @@ body {
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
-  transition: transform var(--animation-timing);
+  -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+  -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .newsletter button:hover {
   background: #9b0511;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
@@ -351,4 +370,21 @@ body {
   .newsletter button {
     padding: 8px 16px;
   }
+}
+
+.dark-mode .heading h1,.dark-mode .contact-box h3 ,.dark-mode .contact-box,.dark-mode .form-box,.dark-mode input,.dark-mode textarea{
+  color: var(--text-color);
+}
+
+.dark-mode .contact-box,.dark-mode .form-box,.dark-mode .newsletter{
+  background: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .contact-box p,.dark-mode .newsletter p{
+  color: var(--text-muted);
+}
+
+.dark-mode .newsletter input,.dark-mode .form-box input, .dark-mode .form-box textarea{
+  background-color:var(--input-background);
 }

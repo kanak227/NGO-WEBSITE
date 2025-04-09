@@ -11,6 +11,16 @@
   --input-hover-background: #ffe6f0;
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+}
+
+
 /*************************************/
 /************ GLOBAL CSS *************/
 /*************************************/
@@ -65,9 +75,13 @@ body {
 }
 
 .card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -152,6 +166,7 @@ body {
 }
 
 .load-more button:hover {
+  -webkit-background: var(--primary-hover-color);
   background: var(--primary-hover-color);
   transform: scale(1.05);
   font-weight: 600;
@@ -343,4 +358,23 @@ body {
   .newsletter button {
     padding: 8px 16px;
   }
+}
+
+.dark-mode .container h1,.dark-mode .card-content h3{
+  color: var(--text-color);
+}
+
+.dark-mode .card,.dark-mode .newsletter{
+  background-color: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .newsletter p,.dark-mode .container p, .dark-mode .card-content p{
+  color: var(--text-muted);
+}
+
+.dark-mode .newsletter input{
+  background-color:var(--input-background);
+  color: var(--text-color);
+  border: 1px solid var(--text-muted);
 }

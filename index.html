@@ -58,6 +58,11 @@
                         <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Contact Info</button>
                     </div>
+                    <div>
+                        <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                            <i class="themeIcon fas fa-moon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -87,6 +92,11 @@
             <div>
                 <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">Contact Info</button>
+            </div>
+            <div>
+                <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                    <i class="themeIcon fas fa-moon"></i>
+                </button>
             </div>
         </div>
 
@@ -119,10 +129,10 @@
             <div class="text-content">
                 <p id="heading"><b><u style="text-decoration-color: goldenrod; text-decoration-line: bold;">Share</u>
                         your love</b></p>
-                <p>to make</p>
-                <p>someone's life</p>
-                <p>better</p>
-                <p id="text">We believe in spreading love and kindness to uplift lives and create a better future for
+                <p class="subsection">to make</p>
+                <p class="subsection">someone's life</p>
+                <p class="subsection">better</p>
+                <p id="text" class="subsection">We believe in spreading love and kindness to uplift lives and create a better future for
                     those in need. Join us in making a difference.</p>
                 <button class="donate-btn" onclick="redirectToPage()">Donate now</button>
             </div>
@@ -263,7 +273,7 @@
             <div class="leftcard">
                 <div class="eventImage">
                     <img src="assets/donation.jpg"
-                        style="margin-bottom: 20px; height: 320px; width: 500px; border-radius: 5%;" alt="..">
+                        style="margin-bottom: 20px; height: 320px; width: 500px;" alt="..">
                 </div>
                 <div class="text">
                     <h1 style="color: crimson;margin-bottom: 10px; font-size: 1.2rem;"># Healthy India</h1>
@@ -459,14 +469,14 @@
         </div>
     </main>
 
-    <div class="break no2"></div>
+    <div class="break no2  dark-bg"></div>
 
     <!-- ************************************* -->
     <!-- *********** NEWS SECTION ************ -->
     <!-- ************************************* -->
     <main>
         <div style="background: linear-gradient(rgb(216, 231, 234) 60% , transparent 30%) no-repeat; margin-top: 0px; height: fit-content"
-            class="events">
+            class="events events-primary">
 
             <!-- Title and Subtitle -->
             <div class="head2">
@@ -484,7 +494,8 @@
                 <!-- News Card 1 -->
                 <div class="leftcard1">
                     <img src="assets/img1.png"
-                        style="margin-bottom: 20px; height: 260px; width: auto; border-radius: 5%; " alt="..">
+                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <div class="padding" style="padding-left: 5px; padding-right: 5px;">
                     <div class="text">
                         <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Nutrition</h1>
                         <h2 style="margin-bottom: 15px;">Healthy food & nutritions among all children</h2>
@@ -512,12 +523,14 @@
                             <p style="margin-bottom: 20px;"> 25 Dec : 12 Pm</p>
                         </div>
                     </div>
+                    </div>
                 </div>
 
                 <!-- News Card 2 -->
                 <div class="leftcard1">
                     <img src="assets/card6.png"
-                        style="margin-bottom: 20px; height: 260px; width: 450px; border-radius: 5%;" alt="..">
+                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <div class="padding" style="padding-left: 5px; padding-right: 5px;">
                     <div class="text">
                         <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Education</h1>
                         <h2 style="margin-bottom: 15px;">New era of learning and remove discrimination</h2>
@@ -546,11 +559,13 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
                 <!-- News Card 3 -->
                 <div class="leftcard1">
                     <img src="assets/card4.png"
-                        style="margin-bottom: 20px; height: 260px; width: 450px; border-radius: 5%;" alt="..">
+                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <div class="padding" style="padding-left: 5px; padding-right: 5px;">
                     <div class="text">
                         <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem; "># Water</h1>
                         <h2 style="margin-bottom: 15px;">Ensure pure and mineral drinking water for people</h2>
@@ -578,6 +593,7 @@
                             <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
                             <p style="margin-bottom: 20px;"> 19 Apr : 10 Am</p>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
