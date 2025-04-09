@@ -22,6 +22,16 @@ body {
   color: var(--secondary-color); /* Set default text color */
 }
 
+body.dark-mode{
+  --background-color:#191919;
+  --card-background:#212121;
+  --primary-background:#121212;
+  --input-background:#000000;
+  --text-color:#FFFFFF;
+  --text-muted:#DDDDDD;
+  --input-hover-border:#DDDDDD
+}
+
 .hero {
   margin-top: 15vh !important;
 }
@@ -341,4 +351,27 @@ body {
   .footerLink strong{
     color: #333;
   }
+}
+
+.dark-mode .sidebar .project-organizer strong,.dark-mode .donation-form textarea,.dark-mode .container h1,.dark-mode .donation-form input,.dark-mode .sidebar .card,.dark-mode .donation-form h3{
+  color:var(--text-color);
+}
+
+.dark-mode .donation-form,.dark-mode .sidebar .card{
+  background-color: var(--card-background);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .donation-form input,.dark-mode .donation-form textarea{
+  background-color: var(--input-background);
+}
+
+.dark-mode .donation-form input:hover,
+.dark-mode .donation-form textarea:hover {
+  background-color: var(--card-background);
+  box-shadow: 0 0 5px var(--input-hover-border); 
+}
+
+.dark-mode .sidebar .project-organizer p,.dark-mode .sidebar .card ul li strong,.dark-mode .sidebar .card ul li {
+  color:var(--text-muted);
 }

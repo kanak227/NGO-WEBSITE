@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration</title>
+  <link rel="stylesheet" href="../styles/eventRegister.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Event Registration Form</h2>
+      <form class="form" id="registrationForm">
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+        </div>
+
+        <div class="input-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="prefer_not">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" min="1" max="100" placeholder="Enter your age" required />
+        </div>
+
+        <div class="input-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="City, State or Country" required />
+        </div>
+
+        <div class="input-group">
+          <label for="occupation">Occupation</label>
+          <input type="text" id="occupation" name="occupation" placeholder="e.g. Student, Teacher, etc." required />
+        </div>
+
+        <div class="input-group">
+          <label for="diet">Dietary Preferences</label>
+          <select id="diet" name="diet" required>
+            <option value="">Select</option>
+            <option value="veg">Vegetarian</option>
+            <option value="non-veg">Non-Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="no-preference">No Preference</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="participation">Participation Type</label>
+          <select id="participation" name="participation" required>
+            <option value="">Select</option>
+            <option value="individual">Individual</option>
+            <option value="group">Group</option>
+            <option value="volunteer">Volunteer</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="message">Why do you want to join?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your reason or message..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-register">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../validation.js"></script>
+</body>
+</html>
