@@ -129,11 +129,16 @@ body.dark-mode{
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background var(--animation-timing);
+  -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+  -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .form-box button:hover {
   background: var(--primary-hover-color);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /*************************************/
@@ -241,11 +246,15 @@ body.dark-mode{
   font-weight: bold;
   cursor: pointer;
   font-size: 14px;
-  transition: transform var(--animation-timing);
+  -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+  -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .newsletter button:hover {
   background: #9b0511;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
