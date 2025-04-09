@@ -10,6 +10,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/favicon.png">
+    <!-- Font Awesome CDN for version 6+ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -21,10 +24,17 @@
         <div class="lower">
             <div class="image">
                 <div class="logoContainer" onclick="">
-                    <img src="assets/logo.png.png" alt="Logo">
-                    <p>Jago Welfare</p>
-                </div>
+                    
+                
+
+                <!-- Light Mode Logo -->
+                <img src="assets/log.svg" alt="Logo Light" class="logo light-logo">
+
+                <!-- Dark Mode Logo -->
+                <img src="assets/loggo.svg" alt="Logo Dark" class="logo dark-logo">
+
             </div>
+        </div>
 
             <!-- Mobile Menu Icon (For Mobile Only) -->
             <div class="menu-icon" onclick="toggleMenu()">
@@ -132,7 +142,8 @@
                 <p class="subsection">to make</p>
                 <p class="subsection">someone's life</p>
                 <p class="subsection">better</p>
-                <p id="text" class="subsection">We believe in spreading love and kindness to uplift lives and create a better future for
+                <p id="text" class="subsection">We believe in spreading love and kindness to uplift lives and create a
+                    better future for
                     those in need. Join us in making a difference.</p>
                 <button class="donate-btn" onclick="redirectToPage()">Donate now</button>
             </div>
@@ -272,8 +283,7 @@
             <!-- Left News Section -->
             <div class="leftcard">
                 <div class="eventImage">
-                    <img src="assets/donation.jpg"
-                        style="margin-bottom: 20px; height: 320px; width: 500px;" alt="..">
+                    <img src="assets/donation.jpg" style="margin-bottom: 20px; height: 320px; width: 500px;" alt="..">
                 </div>
                 <div class="text">
                     <h1 style="color: crimson;margin-bottom: 10px; font-size: 1.2rem;"># Healthy India</h1>
@@ -493,107 +503,107 @@
 
                 <!-- News Card 1 -->
                 <div class="leftcard1">
-                    <img src="assets/img1.png"
-                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <img src="assets/img1.png" style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
                     <div class="padding" style="padding-left: 5px; padding-right: 5px;">
-                    <div class="text">
-                        <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Nutrition</h1>
-                        <h2 style="margin-bottom: 15px;">Healthy food & nutritions among all children</h2>
-                        <p style="width: 100%; margin-bottom: 20px;">Our nutrition programs aim to ensure that every
-                            child has access to healthy meals, fostering their growth and development.</p>
-                    </div>
-                    <div class="icons">
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                            <path
-                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
-                            <p style="margin-bottom: 20px;">Mumbai , India</p>
+                        <div class="text">
+                            <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Nutrition</h1>
+                            <h2 style="margin-bottom: 15px;">Healthy food & nutritions among all children</h2>
+                            <p style="width: 100%; margin-bottom: 20px;">Our nutrition programs aim to ensure that every
+                                child has access to healthy meals, fostering their growth and development.</p>
                         </div>
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
-                            <p style="margin-bottom: 20px;"> 25 Dec : 12 Pm</p>
+                        <div class="icons">
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
+                                <p style="margin-bottom: 20px;">Mumbai , India</p>
+                            </div>
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
+                                <p style="margin-bottom: 20px;"> 25 Dec : 12 Pm</p>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
                 <!-- News Card 2 -->
                 <div class="leftcard1">
-                    <img src="assets/card6.png"
-                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <img src="assets/card6.png" style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
                     <div class="padding" style="padding-left: 5px; padding-right: 5px;">
-                    <div class="text">
-                        <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Education</h1>
-                        <h2 style="margin-bottom: 15px;">New era of learning and remove discrimination</h2>
-                        <p style="width: 100%; margin-bottom: 20px;">We strive to eliminate educational barriers and
-                            promote equal opportunities for all children, regardless of their background.</p>
-                    </div>
-                    <div class="icons">
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                            <path
-                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
-                            <p style="margin-bottom: 20px;">Lucknow , India</p>
+                        <div class="text">
+                            <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem;"># Education</h1>
+                            <h2 style="margin-bottom: 15px;">New era of learning and remove discrimination</h2>
+                            <p style="width: 100%; margin-bottom: 20px;">We strive to eliminate educational barriers and
+                                promote equal opportunities for all children, regardless of their background.</p>
                         </div>
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
-                            <p style="margin-bottom: 20px;"> 19 Mar : 11 Pm</p>
+                        <div class="icons">
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
+                                <p style="margin-bottom: 20px;">Lucknow , India</p>
+                            </div>
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
+                                <p style="margin-bottom: 20px;"> 19 Mar : 11 Pm</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
 
                 <!-- News Card 3 -->
                 <div class="leftcard1">
-                    <img src="assets/card4.png"
-                        style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
+                    <img src="assets/card4.png" style="margin-bottom: 20px; height: 260px; width: 100%;" alt="..">
                     <div class="padding" style="padding-left: 5px; padding-right: 5px;">
-                    <div class="text">
-                        <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem; "># Water</h1>
-                        <h2 style="margin-bottom: 15px;">Ensure pure and mineral drinking water for people</h2>
-                        <p style="width: 100%; margin-bottom: 20px;">Access to clean drinking water is a fundamental
-                            right. We work tirelessly to provide safe water solutions to communities in
-                            need.</p>
-                    </div>
-                    <div class="icons">
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                            <path
-                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
-                            <p style="margin-bottom: 20px;">Hydrabad , India</p>
+                        <div class="text">
+                            <h1 style="color: crimson;margin-bottom: 15px; font-size: 1.2rem; "># Water</h1>
+                            <h2 style="margin-bottom: 15px;">Ensure pure and mineral drinking water for people</h2>
+                            <p style="width: 100%; margin-bottom: 20px;">Access to clean drinking water is a fundamental
+                                right. We work tirelessly to provide safe water solutions to communities in
+                                need.</p>
                         </div>
-                        <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
-                        </svg>
-                        <div class="Location">
-                            <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
-                            <p style="margin-bottom: 20px;"> 19 Apr : 10 Am</p>
+                        <div class="icons">
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Location:</h6>
+                                <p style="margin-bottom: 20px;">Hydrabad , India</p>
+                            </div>
+                            <svg style="margin-top: 6px;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                            </svg>
+                            <div class="Location">
+                                <h6 style="margin-bottom: 1px; margin-left: 5px;">Date and time:</h6>
+                                <p style="margin-bottom: 20px;"> 19 Apr : 10 Am</p>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -625,9 +635,8 @@
                 <p>Phone: +123-456-7890</p>
                 <div class="footer-socials">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>    
                 </div>
             </div>
         </div>

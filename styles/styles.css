@@ -99,7 +99,7 @@ header {
 
 .logoContainer img {
     margin: 0 !important;
-    width: 3rem;
+    /* width: 3rem; */
     height: auto;
 }
 
@@ -1983,5 +1983,24 @@ body.dark-mode , .dark-mode .fourth{
     background: linear-gradient(var(--card-background) 60% , transparent 30%) no-repeat !important;
 }
 
+.logo {
+    transition: opacity 0.3s ease;
+    margin: 0 !important;
+    height: auto;
+}
 
+.light-logo {
+    display: inline;
+}
 
+.dark-logo {
+    display: none;
+}
+
+body.dark-mode .light-logo {
+    display: none;
+}
+
+body.dark-mode .dark-logo {
+    display: inline;
+}
