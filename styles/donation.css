@@ -118,13 +118,16 @@ body {
 .donate-now-heading {
   font-size: 3.5rem; /* Larger font size */
   text-align: center;
-  margin-top: 90px;
+  margin-top: 120px; /* Increased top margin */
   font-weight: bold;
-  color: var(--primary-color);
+  color: black; /* Default text color */
   text-transform: uppercase; /* Make text uppercase */
   letter-spacing: 2px; /* Add spacing between letters */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-  height: 0px;
+  padding-bottom: 10px; /* Add spacing below text */
+}
+
+.donate-now-heading span {
+  color: var(--primary-color); /* Red color for "Donations" */
 }
 
 .sidebar {
@@ -294,6 +297,12 @@ body {
     padding: 10px;
     width: 100% !important;
   }
+
+  .donate-now-heading {
+    font-size: 2rem; /* Adjusted font size for small screens */
+    margin-top: 70px; /* Increased top margin for small screens */
+  }
+
   /*************************************/
   /************ NEWSLETTER *************/
   /*************************************/
