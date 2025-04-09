@@ -372,6 +372,9 @@ body.dark-mode{
   box-shadow: 0 0 5px var(--input-hover-border); 
 }
 
-.dark-mode .sidebar .project-organizer p,.dark-mode .sidebar .card ul li strong,.dark-mode .sidebar .card ul li {
-  color:var(--text-muted);
+.dark-mode .sidebar .project-organizer p,.dark-mode .sidebar .card ul li strong,.dark-mode .sidebar .card ul li{
+  color:white;
+}
+.dark-mode .donate-now-heading{
+  color: var(--text-color);
 }
