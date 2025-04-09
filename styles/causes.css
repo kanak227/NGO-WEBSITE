@@ -73,7 +73,10 @@ body {
 }
 
 .card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -158,6 +161,7 @@ body {
 }
 
 .load-more button:hover {
+  -webkit-background: var(--primary-hover-color);
   background: var(--primary-hover-color);
 }
 

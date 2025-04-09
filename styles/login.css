@@ -151,7 +151,8 @@ label {
 
 .input:focus {
   border-color: #6c63ff;
-  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .remember-forgot {
@@ -292,8 +293,7 @@ a {
 }
 
 .return-home {
-<<<<<<< HEAD
-=======
+
   text-align: center;
   margin-top: 12px;
 }
@@ -339,7 +339,6 @@ body.dark-mode {
 
 
 .return-home {
->>>>>>> upstream/master
   position: absolute;
   top: 10px;
   left: 10px;

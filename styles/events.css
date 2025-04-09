@@ -163,6 +163,14 @@ body {
   transform: scale(1.05);
 }
 
+.card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 /*************************************/
 /************ NEWSLETTER *************/
 /*************************************/

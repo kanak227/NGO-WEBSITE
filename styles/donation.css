@@ -152,6 +152,14 @@ body.dark-mode{
   box-shadow: 0 4px 10px var(--card-shadow);
 }
 
+.sidebar .card:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 .sidebar .card img {
   width: 100%;
   border-radius: 8px;
