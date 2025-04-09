@@ -1850,6 +1850,10 @@ input:focus {
     .text-content {
         order: 2;
     }
+
+    .cards3{
+        padding: 20px;
+    }
 }
 
 /* Extra Small (Phones) - Up to 480px */
@@ -1919,6 +1923,13 @@ input:focus {
         --bs-btn-padding-y: 0.6rem !important; 
         --bs-btn-padding-x: 2.5rem !important; 
         --bs-btn-font-size: 1rem !important;
+    }
+
+    .cards3{
+        height: fit-content;
+        display: flex;  
+        flex-direction: column;
+        gap: 1em;
     }
 }
 
