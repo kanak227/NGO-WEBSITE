@@ -2,14 +2,22 @@
 /************ GLOBAL CSS *************/
 /*************************************/
 :root {
-    --primary-color: #ff4d4d; /* Primary color */
-    --secondary-color: #e04444; /* Secondary color */
-    --background-color: #f9f9f9; /* Background color */
-    --text-color: #333; /* Default text color */
-    --hover-color: #555; /* Hover text color */
-    --border-color: rgba(0, 0, 0, 0.1); /* Border color */
-    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
-    --animation-timing: 0.3s ease-in-out; /* Generalized animation timing */
+    --primary-color: #ff4d4d;
+    /* Primary color */
+    --secondary-color: #e04444;
+    /* Secondary color */
+    --background-color: #f9f9f9;
+    /* Background color */
+    --text-color: #333;
+    /* Default text color */
+    --hover-color: #555;
+    /* Hover text color */
+    --border-color: rgba(0, 0, 0, 0.1);
+    /* Border color */
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    /* Shadow color */
+    --animation-timing: 0.3s ease-in-out;
+    /* Generalized animation timing */
 }
 
 * {
@@ -18,21 +26,21 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100vw;
     overflow-x: hidden;
 }
 
-body.dark-mode{
-    --background-color:#191919;
-    --card-background:#212121;
-    --primary-background:#121212;
-    --input-background:#000000;
-    --text-color:#FFFFFF;
-    --text-muted:#DDDDDD;
-    --input-hover-border:#DDDDDD
-  }
-  
+body.dark-mode {
+    --background-color: #191919;
+    --card-background: #212121;
+    --primary-background: #121212;
+    --input-background: #000000;
+    --text-color: #FFFFFF;
+    --text-muted: #DDDDDD;
+    --input-hover-border: #DDDDDD
+}
+
 /*************************************/
 /********** HEADER (NAVBAR) **********/
 /*************************************/
@@ -173,11 +181,13 @@ header {
     margin: 0 !important;
     padding: 0;
     padding-left: 10% !important;
-    pointer-events: none; /* Disable interaction by default */
+    pointer-events: none;
+    /* Disable interaction by default */
 }
 
 .navbar.active {
-    pointer-events: auto; /* Enable interaction when active */
+    pointer-events: auto;
+    /* Enable interaction when active */
 }
 
 .navbar a {
@@ -187,7 +197,8 @@ header {
     font-weight: 400;
     display: inline-block;
     transition: color var(--animation-timing);
-    pointer-events: auto; /* Allow interaction with links */
+    pointer-events: auto;
+    /* Allow interaction with links */
 }
 
 .navbar a::after {
@@ -255,7 +266,8 @@ header {
 /* When "open" class is added, slide it in */
 .menu-overlay.open {
     transform: translateX(0);
-    pointer-events: auto; /* Ensure menu remains interactive */
+    pointer-events: auto;
+    /* Ensure menu remains interactive */
 }
 
 /* Close icon in the top-right corner */
@@ -292,11 +304,12 @@ header {
     color: #555;
 }
 
-.bttn{
+.bttn {
     transition: transform var(--animation-timing);
 }
-.bttn:hover{
-    transform:scale(1.1);
+
+.bttn:hover {
+    transform: scale(1.1);
     transition: transform var(--animation-timing);
 }
 
@@ -333,7 +346,8 @@ header {
 /* When menu is active, slide in */
 .mobile-menu.active {
     left: 0;
-    pointer-events: auto; /* Ensure menu remains interactive */
+    pointer-events: auto;
+    /* Ensure menu remains interactive */
 }
 
 /* Menu Header */
@@ -373,7 +387,10 @@ header {
 }
 
 /* Focus Styles */
-a:focus, button:focus, .donate-btn:focus, .login-btn a:focus {
+a:focus,
+button:focus,
+.donate-btn:focus,
+.login-btn a:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
     box-shadow: 0 0 4px var(--primary-color);
@@ -385,7 +402,11 @@ a:focus, button:focus, .donate-btn:focus, .login-btn a:focus {
 }
 
 /* Enhanced Focus Styles */
-a:focus, button:focus, input:focus, .donate-btn:focus, .login-btn a:focus {
+a:focus,
+button:focus,
+input:focus,
+.donate-btn:focus,
+.login-btn a:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
     box-shadow: 0 0 6px var(--primary-color);
@@ -425,17 +446,22 @@ input:focus {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Reduce vertical spacing between elements */
+    gap: 5px;
+    /* Reduce vertical spacing between elements */
     order: 2;
-    margin: 0 auto; /* Center horizontally */
-    padding: 10px 0; /* Reduce vertical padding */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 10px 0;
+    /* Reduce vertical padding */
 }
 
 .text-content p {
     font-size: 2.2rem;
-    margin: 3px 0; /* Reduce vertical margin */
+    margin: 3px 0;
+    /* Reduce vertical margin */
     color: #333;
-    line-height: 1; /* Reduce vertical spacing between lines */
+    line-height: 1;
+    /* Reduce vertical spacing between lines */
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -478,7 +504,8 @@ input:focus {
 }
 
 .img {
-    order: 2; /* Image first on mobile */
+    order: 2;
+    /* Image first on mobile */
     margin: 20px 0;
     height: 44rem;
 }
@@ -561,7 +588,7 @@ input:focus {
 .circle {
     border-radius: 50%;
     background-color: white;
-    color:#212529;
+    color: #212529;
     height: 70px;
     width: 70px;
     align-items: center;
@@ -668,7 +695,7 @@ input:focus {
     font-weight: 500;
 }
 
-.povert{
+.povert {
     width: 90%;
     height: auto;
 }
@@ -714,7 +741,8 @@ input:focus {
     justify-content: center !important;
     align-items: start !important;
     padding: 2em auto !important;
-    gap: 0.2em; /* Adjusted gap for better spacing */
+    gap: 0.2em;
+    /* Adjusted gap for better spacing */
     /* display: table; */
 }
 
@@ -733,47 +761,70 @@ input:focus {
 }
 
 .rcard {
-    width: 100%; /* Full width for responsiveness */
-    height: 210px; /* Fixed height for uniformity */
-    margin-bottom: 30px; /* Space between cards */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Subtle shadow for depth */
-    border-radius: 4%; /* Rounded corners */
-    transition: transform var(--animation-timing); /* Smooth hover effect */
+    width: 100%;
+    /* Full width for responsiveness */
+    height: 210px;
+    /* Fixed height for uniformity */
+    margin-bottom: 30px;
+    /* Space between cards */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* Subtle shadow for depth */
+    border-radius: 4%;
+    /* Rounded corners */
+    transition: transform var(--animation-timing);
+    /* Smooth hover effect */
 }
 
 .rcard:hover {
-    transform: scale(1.03); /* Slight enlargement on hover */
+    transform: scale(1.03);
+    /* Slight enlargement on hover */
     transition: transform var(--animation-timing);
 }
 
 .lastcard {
-    width: 48vw; /* Adjusted width for layout */
-    height: fit-content; /* Dynamic height based on content */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Consistent shadow */
-    border-radius: 4%; /* Rounded corners */
-    transition: transform var(--animation-timing); /* Smooth hover effect */
+    width: 48vw;
+    /* Adjusted width for layout */
+    height: fit-content;
+    /* Dynamic height based on content */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* Consistent shadow */
+    border-radius: 4%;
+    /* Rounded corners */
+    transition: transform var(--animation-timing);
+    /* Smooth hover effect */
 }
 
 .lastcard:hover {
-    transform: scale(1.03); /* Slight enlargement on hover */
+    transform: scale(1.03);
+    /* Slight enlargement on hover */
     transition: transform var(--animation-timing);
 }
 
-.rcard, .lastcard {
-    border-radius: 2em; /* Consistent border radius */
-    padding: 0.5em !important; /* Inner padding for spacing */
-    padding-bottom: 0.1em !important; /* Adjusted bottom padding */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: start; /* Align content to the start */
-    width: 45vw !important; /* Adjusted width for layout */
-    height: fit-content !important; /* Dynamic height based on content */
+.rcard,
+.lastcard {
+    border-radius: 2em;
+    /* Consistent border radius */
+    padding: 0.5em !important;
+    /* Inner padding for spacing */
+    padding-bottom: 0.1em !important;
+    /* Adjusted bottom padding */
+    display: flex;
+    /* Flexbox for layout */
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: start;
+    /* Align content to the start */
+    width: 45vw !important;
+    /* Adjusted width for layout */
+    height: fit-content !important;
+    /* Dynamic height based on content */
 }
 
-.donatebutton{
+.donatebutton {
     color: white;
-    transition: transform 0.2s ease-in-out ;
+    transition: transform 0.2s ease-in-out;
 }
 
 .donatebutton:hover {
@@ -797,14 +848,18 @@ input:focus {
     /* display: table; */
 }
 
-.eventImage img{
-    width: 100% !important; /* Ensure the image covers the div horizontally */
-    height:fit-content !important; /* Ensure the image covers the div vertically */
+.eventImage img {
+    width: 100% !important;
+    /* Ensure the image covers the div horizontally */
+    height: fit-content !important;
+    /* Ensure the image covers the div vertically */
     object-fit: fill !important;
     /* Fill the div without distortion */
-    border-radius: 5%; /* Retain rounded corners */
+    border-radius: 5%;
+    /* Retain rounded corners */
 }
-.eventImage{
+
+.eventImage {
     align-items: center;
     width: 100%;
     /* height: 100%; */
@@ -835,7 +890,7 @@ input:focus {
 /*************************************/
 /******* FUND RAISING BANNER *********/
 /*************************************/
-.fight{
+.fight {
     min-height: 100vh;
     height: fit-content;
     width: 100vw !important;
@@ -855,18 +910,18 @@ input:focus {
     align-items: center;
 }
 
-.p1{
-    text-align: center; 
+.p1 {
+    text-align: center;
     font-size: 2rem;
 }
 
-.p2{
-    text-align: center; 
-    font-size: 3.2rem; 
+.p2 {
+    text-align: center;
+    font-size: 3.2rem;
     font-weight: 500;
 }
 
-.b1{
+.b1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -932,10 +987,11 @@ input:focus {
     /* height: fit-content; */
     margin-top: 50px;
     padding-left: 20px;
-    padding-right: 20px;}
+    padding-right: 20px;
+}
 
-.leftcard1{
-    height: 550px; 
+.leftcard1 {
+    height: 550px;
     width: 100%;
     overflow: hidden;
     margin: 0;
@@ -943,10 +999,11 @@ input:focus {
     border-radius: 5%;
 
 }
-.leftcard1 img{
-    object-fit:fill;
+
+.leftcard1 img {
+    object-fit: fill;
     border-image: fill;
-    min-width:fit-content ;
+    min-width: fit-content;
 }
 
 
@@ -1134,16 +1191,17 @@ input:focus {
         font-size: 0.9rem !important;
     }
 
-    .cards3{
+    .cards3 {
         flex-wrap: wrap;
     }
 
-    .leftcard{
+    .leftcard {
         margin-bottom: 2em;
         width: 48vw !important;
     }
 
-    .rcard, .lastcard{
+    .rcard,
+    .lastcard {
         width: 48vw !important;
     }
 }
@@ -1186,12 +1244,12 @@ input:focus {
     #heading {
         font-size: 4rem;
     }
-      
+
     .text-content p {
         font-size: 3rem;
     }
 
-    .leftcard{
+    .leftcard {
         width: 48%;
         margin: 0;
         padding: 0;
@@ -1213,7 +1271,7 @@ input:focus {
     .desktopBtn {
         display: none !important;
     }
-    
+
     /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
         display: none !important;
@@ -1224,7 +1282,7 @@ input:focus {
     }
 
 
-    
+
     .menu-icon {
         display: block;
         position: absolute;
@@ -1312,15 +1370,15 @@ input:focus {
         padding: 10px;
     }
 
-    .leftcard{
+    .leftcard {
         width: 98% !important;
     }
 
-    .leftcard h1:hover{
+    .leftcard h1:hover {
         text-decoration: underline;
     }
 
-    .rightcards{
+    .rightcards {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1399,21 +1457,21 @@ input:focus {
         padding: 0 10vw;
     }
 
-    .contento{
+    .contento {
         width: 85%;
     }
 
-    .p1{ 
+    .p1 {
         font-size: 1.5rem;
     }
-    
-    .p2{
-        font-size: 2.8rem; 
+
+    .p2 {
+        font-size: 2.8rem;
     }
-    
-    .b1{
-        --bs-btn-padding-y: 0.8rem !important; 
-        --bs-btn-padding-x: 3rem !important; 
+
+    .b1 {
+        --bs-btn-padding-y: 0.8rem !important;
+        --bs-btn-padding-x: 3rem !important;
         --bs-btn-font-size: 1.2rem !important;
     }
 
@@ -1628,7 +1686,7 @@ input:focus {
         margin-bottom: -500px !important;
     }
 
-    main.fourth{
+    main.fourth {
         margin-top: 150px !important;
     }
 
@@ -1759,7 +1817,7 @@ input:focus {
         left: 15px;
         font-size: 30px;
         cursor: pointer;
-       
+
         color: #000;
         /* Adjust as needed */
     }
@@ -1851,7 +1909,7 @@ input:focus {
         order: 2;
     }
 
-    .cards3{
+    .cards3 {
         padding: 20px;
     }
 }
@@ -1868,30 +1926,30 @@ input:focus {
         width: 98%;
         padding: 1em;
     }
-    
+
     .para p {
         font-size: 0.9rem;
     }
-    
+
     #head {
         font-size: 1.1rem;
     }
 
-    .para h2{
+    .para h2 {
         font-size: 2.5rem !important;
     }
 
-    .paraLearn{
+    .paraLearn {
         width: fit-content !important;
         padding: auto 0.2em !important;
         font-size: 1em !important;
     }
 
-    .events{
+    .events {
         padding: 0;
     }
 
-    .head2 p{
+    .head2 p {
         font-size: 1.8rem !important;
     }
 
@@ -1899,83 +1957,145 @@ input:focus {
         font-size: 1.2rem !important;
     }
 
-    .leftcard{
+    .leftcard {
         width: 100%;
     }
 
-    .rcard, .lastcard{
+    .rcard,
+    .lastcard {
         width: 92vw;
     }
 
-    .contento{
+    .contento {
         width: 95%;
     }
 
-    .p1{ 
+    .p1 {
         font-size: 1rem;
     }
-    
-    .p2{
-        font-size: 2rem; 
+
+    .p2 {
+        font-size: 2rem;
     }
-    
-    .b1{
-        --bs-btn-padding-y: 0.6rem !important; 
-        --bs-btn-padding-x: 2.5rem !important; 
+
+    .b1 {
+        --bs-btn-padding-y: 0.6rem !important;
+        --bs-btn-padding-x: 2.5rem !important;
         --bs-btn-font-size: 1rem !important;
     }
 
-    .cards3{
+    .cards3 {
         height: fit-content;
-        display: flex;  
+        display: flex;
         flex-direction: column;
         gap: 1em;
     }
 }
 
 
-.dark-mode .main,.dark-mode .mobile-menu, .dark-mode .footer,.dark-mode .bar,.dark-mode .cont1{
+.dark-mode .main,
+.dark-mode .mobile-menu,
+.dark-mode .footer,
+.dark-mode .bar,
+.dark-mode .cont1 {
     background-color: var(--primary-background) !important;
 }
-.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer,
-.dark-mode .mainbox,.dark-mode .dark-bg,.dark-mode .leftcard, .dark-mode .rcard, .dark-mode .lastcard{
-    background-color:  var(--card-background) !important;
-}
-body.dark-mode , .dark-mode .fourth{
-    background-color:var(--background-color);
+
+.dark-mode .modal-content,
+.dark-mode .modal-header,
+.dark-mode .modal-footer,
+.dark-mode .mainbox,
+.dark-mode .dark-bg,
+.dark-mode .leftcard,
+.dark-mode .rcard,
+.dark-mode .lastcard {
+    background-color: var(--card-background) !important;
 }
 
-.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer .dark-mode .leftcard, .dark-mode .rcard, .dark-mode .lastcard{
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer,
-.dark-mode .head2 p,body.dark-mode , .dark-mode .fourth,.dark-mode .navbar a, .dark-mode .mobile-menu a, .dark-mode .menu-icon{
-    color:var(--text-color) !important;
-}
-.dark-mode #head,.dark-mode #upper, .dark-mode .cont1 p,.dark-mode .subsection{
-    opacity:100% !important;
+body.dark-mode,
+.dark-mode .fourth {
+    background-color: var(--background-color);
 }
 
-.dark-mode .modal-content, .dark-mode .modal-header, .dark-mode .modal-footer{
+.dark-mode .modal-content,
+.dark-mode .modal-header,
+.dark-mode .modal-footer .dark-mode .leftcard,
+.dark-mode .rcard,
+.dark-mode .lastcard {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .modal-content,
+.dark-mode .modal-header,
+.dark-mode .modal-footer,
+.dark-mode .head2 p,
+body.dark-mode,
+.dark-mode .fourth,
+.dark-mode .navbar a,
+.dark-mode .mobile-menu a,
+.dark-mode .menu-icon {
+    color: var(--text-color) !important;
+}
+
+.dark-mode #head,
+.dark-mode #upper,
+.dark-mode .cont1 p,
+.dark-mode .subsection {
+    opacity: 100% !important;
+}
+
+.dark-mode .modal-content,
+.dark-mode .modal-header,
+.dark-mode .modal-footer {
     border-color: var(--text-muted);
 }
-    
-.dark-mode #head,.dark-mode #upper, .dark-mode .cont1 p,.dark-mode .subsection ,.dark-mode .text-content p, .dark-mode #text, .dark-mode u,.dark-mode b{
+
+.dark-mode #head,
+.dark-mode #upper,
+.dark-mode .cont1 p,
+.dark-mode .subsection,
+.dark-mode .text-content p,
+.dark-mode #text,
+.dark-mode u,
+.dark-mode b {
     color: var(--text-muted) !important;
 }
 
 
 .dark-mode .modal-header .btn-close {
-        filter: brightness(0) invert(1); /* Makes the default black X icon white */
+    filter: brightness(0) invert(1);
+    /* Makes the default black X icon white */
 }
 
-.dark-mode .horizontal{
-    background: linear-gradient(transparent 40%,var(--card-background) 40%) no-repeat;
+.dark-mode .horizontal {
+    background: linear-gradient(transparent 40%, var(--card-background) 40%) no-repeat;
 }
 
-.dark-mode .events-primary{
-    background: linear-gradient(var(--card-background) 60% , transparent 30%) no-repeat !important;
+.dark-mode .events-primary {
+    background: linear-gradient(var(--card-background) 60%, transparent 30%) no-repeat !important;
 }
-    
 
+/* Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
 
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f90000, #7d2e44);
+    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #bb6c66, #8e3838);
+}
+
+/* Firefox */
+html {
+    scrollbar-width: auto;
+}
