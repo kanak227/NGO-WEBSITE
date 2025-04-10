@@ -73,6 +73,7 @@
                 <a href="pages/events.html">Events</a>
                 <a href="pages/news.html">News</a>
                 <a href="pages/contact.html">Contact</a>
+                <a class="about-btn" onclick="toggleAboutPopup()">Know Why</a>
             </nav>
         </div>
 
@@ -677,6 +678,38 @@
 
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+
+
+  <!-- About Popup structuring...................................................-->
+<div id="overlay" class="overlay hidden"></div>
+
+<div id="aboutPopup" class="about-popup hidden">
+  <div class="about-content">
+    <h2>Fueling Change, Together!</h2>
+<p>
+  Our NGO's website is more than just a digital platform—it's a bridge between compassion and action. Designed with an intuitive and engaging front-end, it empowers visitors to explore our mission, contribute to meaningful causes, and stay informed about our latest initiatives. Every interaction is crafted to deliver a seamless and inspiring experience, helping us connect with change-makers like you.
+</p>
+<blockquote style="margin-top: 1.5rem; font-style: italic; color: #444;">
+  "The best way to find yourself is to lose yourself in the service of others." — Mahatma Gandhi
+</blockquote>
+<button class="close-about" onclick="toggleAboutPopup()">Close</button>
+
+  </div>
+</div>
+
+
+<script>
+    function toggleAboutPopup() {
+  const popup = document.getElementById("aboutPopup");
+  const overlay = document.getElementById("overlay");
+
+  popup.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
+}
+
+</script>
+
+
 
 
 </body>

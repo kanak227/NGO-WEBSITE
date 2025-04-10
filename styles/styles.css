@@ -1985,3 +1985,133 @@ body.dark-mode , .dark-mode .fourth{
 
 
 
+
+
+
+
+
+
+/*Popover know why card stying............................*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+  }
+  
+  .about-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white; 
+    
+    overflow: hidden;
+    background: transparent;
+  }
+  
+
+.about-popup::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    filter: blur(8px);
+    z-index: -2;
+  }
+  
+  
+  .about-popup::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color:orange;
+    z-index: -1;
+  }
+  
+
+  .about-popup h2,
+  .about-popup p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .about-popup h2,
+  .about-popup p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  
+  .about-popup h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .about-popup p {
+    font-size: 1rem;
+    color:white;
+  }
+  
+  .close-about {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .close-about:hover {
+    background-color: #222;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+  .about-popup h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem; 
+    font-weight: 800; 
+    color: #222;
+  }
+  
+  .about-popup p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color:black;
+    line-height: 1.6;
+  }
+  
+  .about-popup blockquote {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: #222;
+    background-color: rgba(255, 255, 255, 0.6); 
+    padding: 1rem;
+    border-left: 4px solid #f4c430;
+    border-radius: 0.5rem;
+  }
+  
+
