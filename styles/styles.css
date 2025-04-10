@@ -692,7 +692,7 @@ input:focus {
     margin-top: 150px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .head2 {
@@ -715,68 +715,180 @@ input:focus {
     line-height: 0.9;
 }
 
-.cards2 {
+.events-cards2 {
     display: flex;
-    justify-content: center !important;
-    align-items: start !important;
-    padding: 2em auto !important;
-    gap: 0.2em; /* Adjusted gap for better spacing */
-    /* display: table; */
-}
-
-.leftcard {
-    display: flex;
-    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
     justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.events-leftcard {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #fefefe;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(25, 25, 25, 0.2);
+}
+
+.events-rightcards {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.events-rcard {
+    background-color: #fefefe;
+    padding: 20px 25px;
+    border-left: 6px solid #ff6b6b;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(25, 25, 25, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.events-rcard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(255, 102, 102, 0.25);
+}
+
+.events-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.events-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.events-text h1 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+    color: #b22222;
+}
+
+.events-text h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #e63946;
+}
+
+.events-text p,
+.events-text1 p {
+    margin: 0;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.events-text1 h6 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7d7d7d;
+}
+
+.events-text1 h4 {
+    margin: 5px 0;
+    color: #2f3e46;
+    font-size: 1.1rem;
+}
+
+.events-icon-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.events-icon-text {
+    display: flex;
     align-items: center;
-    background-color: white;
-    height: 740px;
-    width: 48vw !important;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 2%;
-    transition: transform 0.3s ease;
-    padding-bottom: 1em !important;
+    gap: 10px;
+    flex: 1;
+    min-width: 150px;
 }
 
-.rcard {
-    width: 100%; /* Full width for responsiveness */
-    height: 210px; /* Fixed height for uniformity */
-    margin-bottom: 30px; /* Space between cards */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Subtle shadow for depth */
-    border-radius: 4%; /* Rounded corners */
-    transition: transform var(--animation-timing); /* Smooth hover effect */
+.events-icon-text span {
+    font-size: 1.4rem;
+    color: #ff6b6b;
 }
 
-.rcard:hover {
-    transform: scale(1.03); /* Slight enlargement on hover */
-    transition: transform var(--animation-timing);
+.events-icon-text h6 {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
 }
 
-.lastcard {
-    width: 48vw; /* Adjusted width for layout */
-    height: fit-content; /* Dynamic height based on content */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* Consistent shadow */
-    border-radius: 4%; /* Rounded corners */
-    transition: transform var(--animation-timing); /* Smooth hover effect */
+.events-icon-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #333;
 }
 
-.lastcard:hover {
-    transform: scale(1.03); /* Slight enlargement on hover */
-    transition: transform var(--animation-timing);
+.events-subscribe-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.35);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    text-align: center;
+    display: block;
 }
 
-.rcard, .lastcard {
-    border-radius: 2em; /* Consistent border radius */
-    padding: 0.5em !important; /* Inner padding for spacing */
-    padding-bottom: 0.1em !important; /* Adjusted bottom padding */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: start; /* Align content to the start */
-    width: 45vw !important; /* Adjusted width for layout */
-    height: fit-content !important; /* Dynamic height based on content */
+.events-subscribe-btn:hover {
+    background-color: #e63946;
+    transform: translateY(-2px);
 }
 
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .events-cards2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .events-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .events-text h2 {
+        font-size: 1rem;
+    }
+
+    .events-text p,
+    .events-text1 p {
+        font-size: 0.9rem;
+    }
+
+    .events-subscribe-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .events-icon-text span {
+        font-size: 1.2rem;
+    }
+}
 .donatebutton{
     color: white;
     transition: transform 0.2s ease-in-out ;
@@ -784,58 +896,6 @@ input:focus {
 
 .donatebutton:hover {
     transform: scale(1.01);
-}
-
-.text {
-    padding: 0.5em !important;
-    width: 100% !important;
-}
-
-.rightcards {
-
-    height: fit-content;
-    width: 46vw !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2em;
-    /* display: table; */
-}
-
-.eventImage img{
-    width: 100% !important; /* Ensure the image covers the div horizontally */
-    height:fit-content !important; /* Ensure the image covers the div vertically */
-    object-fit: fill !important;
-    /* Fill the div without distortion */
-    border-radius: 5%; /* Retain rounded corners */
-}
-.eventImage{
-    align-items: center;
-    width: 100%;
-    /* height: 100%; */
-}
-
-.text1 {
-    margin-left: 15px;
-}
-
-.icons {
-    display: flex;
-    justify-content: start;
-    align-content: center;
-    gap: 1em;
-    height: 100%;
-    width: 100%;
-    border-radius: 10%;
-
-}
-
-.text1 p {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-    line-height: 1.4;
-    margin-right: 10px;
 }
 
 /*************************************/
@@ -941,7 +1001,7 @@ input:focus {
     padding-right: 20px;}
 
 .leftcard1{
-    height: 550px; 
+    height: 690px; 
     width: 100%;
     overflow: hidden;
     margin: 0;
