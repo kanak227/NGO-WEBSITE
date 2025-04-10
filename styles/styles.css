@@ -107,7 +107,7 @@ header {
 
 .logoContainer img {
     margin: 0 !important;
-    width: 3rem;
+    /* width: 3rem; */
     height: auto;
 }
 
@@ -219,6 +219,8 @@ header {
 }
 
 .navbar a:hover::after {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -498,6 +500,8 @@ input:focus {
 }
 
 .donate-btn:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
     transform: scale(1.03);
     background-color: var(--secondary-color);
     transition: background-color var(--animation-timing), transform var(--animation-timing);
@@ -561,6 +565,8 @@ input:focus {
 }
 
 .card1:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
     /* Enlarge slightly on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
@@ -2074,6 +2080,29 @@ body.dark-mode,
 .dark-mode .events-primary {
     background: linear-gradient(var(--card-background) 60%, transparent 30%) no-repeat !important;
 }
+
+.logo {
+    transition: opacity 0.3s ease;
+    margin: 0 !important;
+    height: auto;
+}
+
+.light-logo {
+    display: inline;
+}
+
+.dark-logo {
+    display: none;
+}
+
+body.dark-mode .light-logo {
+    display: none;
+}
+
+body.dark-mode .dark-logo {
+    display: inline;
+}
+
 
 /* Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {

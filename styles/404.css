@@ -1,5 +1,4 @@
-
-  :root {
+:root {
     --primary-color: #ff005d;
     --secondary-color: #12000a;
     --background-gradient-start: #f5f5f5;
@@ -115,6 +114,9 @@
     cursor: pointer;
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in-out;
+    -webkit-transition: background-color 0.3s ease, transform 0.3s ease;
+    -ms-transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   #homeButton:hover {
@@ -122,6 +124,9 @@
     color: var(--button-text-hover);
     border-color: var(--button-border-hover);
     box-shadow: 0 0 15px var(--primary-color);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   @keyframes drawLine1 {

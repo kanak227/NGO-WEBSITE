@@ -72,7 +72,10 @@ body.dark-mode{
 }
 
 .news-card:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
   transform: translateY(-10px);
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -165,6 +168,7 @@ body.dark-mode{
 }
 
 .newsletter button:hover {
+  -webkit-background: var(--primary-hover-color);
   background: var(--primary-hover-color);
 }
 
@@ -284,6 +288,7 @@ body.dark-mode{
   }
 
   .news-card {
+    -webkit-width: 100% !important;
     width: 100% !important;
   }
 
