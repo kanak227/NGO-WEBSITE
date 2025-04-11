@@ -3,21 +3,13 @@
 /*************************************/
 :root {
     --primary-color: #ff4d4d;
-    /* Primary color */
     --secondary-color: #e04444;
-    /* Secondary color */
     --background-color: #f9f9f9;
-    /* Background color */
     --text-color: #333;
-    /* Default text color */
     --hover-color: #555;
-    /* Hover text color */
     --border-color: rgba(0, 0, 0, 0.1);
-    /* Border color */
     --shadow-color: rgba(0, 0, 0, 0.2);
-    /* Shadow color */
     --animation-timing: 0.3s ease-in-out;
-    /* Generalized animation timing */
 }
 
 * {
@@ -44,7 +36,6 @@ body.dark-mode {
 /*************************************/
 /********** HEADER (NAVBAR) **********/
 /*************************************/
-/* Header */
 header {
     background: #fff;
     height: fit-content;
@@ -66,7 +57,6 @@ header {
     align-items: center;
 }
 
-/* Lower Navbar */
 .lower {
     padding: 0.01% 4vw;
     display: flex;
@@ -74,7 +64,6 @@ header {
     align-items: center !important;
     width: 65vw !important;
     gap: 1rem !important;
-    /* padding-right: 15% !important; */
 }
 
 .image {
@@ -107,7 +96,6 @@ header {
 
 .logoContainer img {
     margin: 0 !important;
-    /* width: 3rem; */
     height: auto;
 }
 
@@ -182,12 +170,10 @@ header {
     padding: 0;
     padding-left: 10% !important;
     pointer-events: none;
-    /* Disable interaction by default */
 }
 
 .navbar.active {
     pointer-events: auto;
-    /* Enable interaction when active */
 }
 
 .navbar a {
@@ -198,7 +184,6 @@ header {
     display: inline-block;
     transition: color var(--animation-timing);
     pointer-events: auto;
-    /* Allow interaction with links */
 }
 
 .navbar a::after {
@@ -232,7 +217,6 @@ header {
 
 .menu-icon {
     display: none;
-    /* Hidden on desktop */
 }
 
 .navbar {
@@ -240,7 +224,6 @@ header {
     gap: 20px;
 }
 
-/* Hamburger icon styling */
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
@@ -248,60 +231,38 @@ header {
     display: inline-block;
 }
 
-/* Fullscreen overlay container */
 .menu-overlay {
     position: fixed;
     top: 0;
     right: 0;
-    /* or left: 0, if you want it to slide in from the left */
     width: 100%;
     height: 100%;
     background: #fff;
-    /* White background */
     transform: translateX(100%);
-    /* Initially hidden off-screen to the right */
     transition: transform var(--animation-timing);
     z-index: 9999;
-    /* Ensure it appears above other elements */
 }
 
-/* When "open" class is added, slide it in */
 .menu-overlay.open {
     transform: translateX(0);
     pointer-events: auto;
-    /* Ensure menu remains interactive */
 }
 
-/* Close icon in the top-right corner */
-/* .close-icon {
-    font-size: 40px;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    cursor: pointer;
-    line-height: 1;
-} */
-
-/* Center and style the menu items */
 .menu-content {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    /* space from top so it doesn't collide with close icon */
     padding: 0 30px;
 }
 
-/* Individual menu links */
 .menu-content a {
     font-size: 24px;
     color: #000;
     text-decoration: none;
     margin: 15px 0;
-    /* spacing between links */
     transition: color 0.2s;
 }
 
-/* Hover effect for links */
 .menu-content a:hover {
     color: #555;
 }
@@ -315,7 +276,6 @@ header {
     transition: transform var(--animation-timing);
 }
 
-/* Mobile Menu Icon (Hamburger) */
 .menu-icon {
     display: block;
     position: fixed;
@@ -327,12 +287,10 @@ header {
     width: 10px;
 }
 
-/* Mobile Menu Styling */
 .mobile-menu {
     position: fixed;
     top: 10%;
     left: -100%;
-    /* Start off-screen */
     width: 75%;
     height: 100vh !important;
     background: white;
@@ -345,14 +303,11 @@ header {
     z-index: 1000;
 }
 
-/* When menu is active, slide in */
 .mobile-menu.active {
     left: 0;
     pointer-events: auto;
-    /* Ensure menu remains interactive */
 }
 
-/* Menu Header */
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -449,21 +404,16 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    /* Reduce vertical spacing between elements */
     order: 2;
     margin: 0 auto;
-    /* Center horizontally */
     padding: 10px 0;
-    /* Reduce vertical padding */
 }
 
 .text-content p {
     font-size: 2.2rem;
     margin: 3px 0;
-    /* Reduce vertical margin */
     color: #333;
     line-height: 1;
-    /* Reduce vertical spacing between lines */
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -509,18 +459,14 @@ input:focus {
 
 .img {
     order: 2;
-    /* Image first on mobile */
     margin: 20px 0;
     height: 44rem;
 }
 
 .img img {
     height: auto;
-    /* Keeps the image height consistent */
     max-width: 100%;
-    /* Prevents overflow */
     object-fit: contain;
-    /* Maintains aspect ratio */
 }
 
 .hero {
@@ -554,9 +500,7 @@ input:focus {
     align-items: center;
     text-align: center;
     box-shadow: 0 4px 6px var(--shadow-color);
-    /* Adds a shadow */
     transition: transform var(--animation-timing), box-shadow var(--animation-timing);
-    /* Smooth scaling and shadow change */
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -568,26 +512,20 @@ input:focus {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
-    /* Enlarge slightly on hover */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    /* Enhance shadow on hover */
     background-color: var(--hover-color);
-    /* Slight color change on hover */
     transition: transform var(--animation-timing), box-shadow var (--animation-timing);
 }
 
 .card1 p,
 .card1 h3 {
     margin: 0;
-    /* Ensure consistent spacing */
     color: #333;
-    /* Text color */
 }
 
 .card1:hover h3,
 .card1:hover p {
     color: #555;
-    /* Slight text color change on hover */
 }
 
 
@@ -609,7 +547,6 @@ input:focus {
 }
 
 #donate {
-    /* margin-left: 20px; */
     font-size: 1rem;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -631,7 +568,6 @@ input:focus {
     color: crimson;
 }
 
-/* Social Icons */
 .rightitems {
     margin-left: 40px;
 }
@@ -748,8 +684,6 @@ input:focus {
     align-items: start !important;
     padding: 2em auto !important;
     gap: 0.2em;
-    /* Adjusted gap for better spacing */
-    /* display: table; */
 }
 
 .leftcard {
@@ -768,64 +702,42 @@ input:focus {
 
 .rcard {
     width: 100%;
-    /* Full width for responsiveness */
     height: 210px;
-    /* Fixed height for uniformity */
     margin-bottom: 30px;
-    /* Space between cards */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* Subtle shadow for depth */
     border-radius: 4%;
-    /* Rounded corners */
     transition: transform var(--animation-timing);
-    /* Smooth hover effect */
 }
 
 .rcard:hover {
     transform: scale(1.03);
-    /* Slight enlargement on hover */
     transition: transform var(--animation-timing);
 }
 
 .lastcard {
     width: 48vw;
-    /* Adjusted width for layout */
     height: fit-content;
-    /* Dynamic height based on content */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* Consistent shadow */
     border-radius: 4%;
-    /* Rounded corners */
     transition: transform var(--animation-timing);
-    /* Smooth hover effect */
 }
 
 .lastcard:hover {
     transform: scale(1.03);
-    /* Slight enlargement on hover */
     transition: transform var(--animation-timing);
 }
 
 .rcard,
 .lastcard {
     border-radius: 2em;
-    /* Consistent border radius */
     padding: 0.5em !important;
-    /* Inner padding for spacing */
     padding-bottom: 0.1em !important;
-    /* Adjusted bottom padding */
     display: flex;
-    /* Flexbox for layout */
     flex-direction: column;
-    /* Stack content vertically */
     justify-content: center;
-    /* Center content vertically */
     align-items: start;
-    /* Align content to the start */
     width: 45vw !important;
-    /* Adjusted width for layout */
     height: fit-content !important;
-    /* Dynamic height based on content */
 }
 
 .donatebutton {
@@ -851,24 +763,18 @@ input:focus {
     justify-content: center;
     align-items: center;
     gap: 0.2em;
-    /* display: table; */
 }
 
 .eventImage img {
     width: 100% !important;
-    /* Ensure the image covers the div horizontally */
     height: fit-content !important;
-    /* Ensure the image covers the div vertically */
     object-fit: fill !important;
-    /* Fill the div without distortion */
     border-radius: 5%;
-    /* Retain rounded corners */
 }
 
 .eventImage {
     align-items: center;
     width: 100%;
-    /* height: 100%; */
 }
 
 .text1 {
@@ -990,7 +896,6 @@ input:focus {
     align-items: center;
     gap: 1em;
     width: 100%;
-    /* height: fit-content; */
     margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1147,13 +1052,11 @@ input:focus {
 .cont1 h1 {
     transition: all 0.3s ease;
     font-variant-numeric: tabular-nums;
-    /* Ensures numbers maintain consistent width */
 }
 
 /*************************************/
 /************** OTHERS ***************/
 /*************************************/
-/* Smaller subheading at the top (e.g. "Demos") */
 .small-heading {
     font-size: 18px;
     color: #999;
@@ -1264,9 +1167,6 @@ input:focus {
 
 /* Small (Tablets & Small Screens) - 481px to 768px */
 @media only screen and (max-width: 768px) {
-    /* Styles for small screens */
-
-    /* Constrain the body width to 768px & prevent horizontal scroll */
     body,
     html {
         max-width: 768px;
@@ -1278,7 +1178,6 @@ input:focus {
         display: none !important;
     }
 
-    /* Hide desktop navbar, show hamburger icon (if any) */
     .navbar {
         display: none !important;
     }
@@ -1302,7 +1201,6 @@ input:focus {
 
     .menu {
         display: none;
-        /* Toggled via JS */
         position: absolute;
         top: 60px;
         right: 0;
@@ -1319,7 +1217,6 @@ input:focus {
         border-bottom: 1px solid #ddd;
     }
 
-    /* Make main container vertical & centered */
     .mainbox,
     .content-section,
     .events,
@@ -1334,7 +1231,6 @@ input:focus {
         padding: 20px;
     }
 
-    /* Make sure the parent sections auto-expand */
     .fourth,
     .events,
     .content-section {
@@ -1347,7 +1243,6 @@ input:focus {
         margin-top: 8vh !important;
     }
 
-    /* Force all card sections to stack vertically with spacing */
     .cards,
     .cards2,
     .cards3 {
@@ -1357,16 +1252,12 @@ input:focus {
         gap: 3px;
         width: 100%;
         margin-bottom: 50px;
-        /* Space above the footer */
     }
 
-    /* Stack the news cards vertically, ensure spacing */
     .cards3 {
         margin: 0 auto 80px auto;
-        /* 80px bottom margin to separate from footer */
     }
 
-    /* Individual cards expand to fit content & no overlap */
     .card1,
     .rcard,
     .lastcard {
@@ -1394,20 +1285,17 @@ input:focus {
         width: 100% !important;
     }
 
-    /* Remove any fixed height on individual cards */
     .rcard,
     .lastcard {
         height: auto !important;
         position: static !important;
     }
 
-    /* Force card containers to be wide enough for images */
     .cards3 .rcard,
     .cards3 .lastcard,
     .cards3 .leftcard {
         width: 90% !important;
         max-width: 500px;
-        /* or 100% if you want full width */
         margin: 0 auto 30px;
         padding: 10px;
         box-sizing: border-box;
@@ -1432,7 +1320,6 @@ input:focus {
         margin: 0 auto !important;
         /* Overrides large left margins */
         width: 90% !important;
-        /* Fit within mobile screen */
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
@@ -1481,7 +1368,6 @@ input:focus {
         --bs-btn-font-size: 1.2rem !important;
     }
 
-    /* Image & text blocks: vertical, no overlap */
     .img,
     .text-content {
         width: 100%;
@@ -1495,18 +1381,13 @@ input:focus {
         display: block;
     }
 
-    /* Add spacing before footer so cards don't collide */
     .footer {
         margin-top: 40px;
-        /* gap before footer */
         padding-top: 20px;
-        /* ensures footer content isn't squashed */
         position: relative;
         z-index: 0;
-        /* stays behind any card if needed */
     }
 
-    /* Ensure text wraps inside small screens */
     h1,
     h2,
     h3,
@@ -1515,13 +1396,10 @@ input:focus {
         overflow-wrap: break-word;
     }
 
-    /* Remove fixed heights and ensure space below main image */
     .mainbox {
         margin-bottom: 40px !important;
-        /* space after hero image */
     }
 
-    /* If your card section is in .third, remove any fixed heights */
     main.third {
         height: auto !important;
         margin: 0 !important;
@@ -1529,7 +1407,6 @@ input:focus {
         position: static !important;
     }
 
-    /* Stack the cards vertically with spacing */
     .cards {
         display: flex;
         flex-direction: column;
@@ -1537,20 +1414,16 @@ input:focus {
         gap: 2em;
         width: 100%;
         margin-top: 0 !important;
-        /* remove any negative margin that might cause overlap */
         position: static !important;
     }
 
-    /* Ensure each card is auto-height and centered */
     .card1 {
         width: 90% !important;
         height: auto !important;
         margin-bottom: 20px;
-        /* spacing between cards */
         position: static !important;
     }
 
-    /* Remove large left margin from the icon container if it exists */
     .circle {
         margin: 0 auto !important;
     }
@@ -1586,14 +1459,12 @@ input:focus {
         border-bottom: 1px solid #ddd;
     }
 
-    /* Ensure Image Appears Above Donate Cards */
     .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         margin-bottom: 40px;
-        /* Space between image and cards */
     }
 
     .img {
@@ -1609,7 +1480,6 @@ input:focus {
         display: block;
     }
 
-    /* Cards in Vertical Layout */
     .cards {
         display: flex;
         flex-direction: column;
@@ -1628,7 +1498,6 @@ input:focus {
         justify-content: center;
     }
 
-    /* Ensure Proper Layout */
     .mainbox {
         flex-direction: column;
         padding: 20px;
@@ -1643,7 +1512,6 @@ input:focus {
         word-wrap: break-word;
     }
 
-    /* Fix Overlapping Issues */
     .content-section {
         display: flex;
         flex-direction: column;
@@ -1660,7 +1528,6 @@ input:focus {
         background: white;
     }
 
-    /* Ensure text fits within width */
     h1,
     h2,
     h3,
@@ -1669,7 +1536,6 @@ input:focus {
         overflow-wrap: break-word;
     }
 
-    /* Add space between .third and .fourth sections */
     main.third {
         margin-bottom: 150px !important;
     }
@@ -1733,7 +1599,6 @@ input:focus {
         flex-direction: column;
     }
 
-    /* Ensure the entire page stays within 768px */
     body,
     html {
         max-width: 768px;
@@ -1741,32 +1606,26 @@ input:focus {
         overflow-x: hidden;
     }
 
-    /* Change the layout of the top buttons */
     .socials {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        /* adjust spacing as needed */
         width: 100%;
     }
 
-    /* Remove extra left margins that may cause overflow */
     .socials>div {
         margin-left: 0;
         margin-right: 0;
     }
 
-    /* Optional: Adjust button widths if needed */
     .btn,
     .login-btn,
     .modalbtn {
         width: auto;
         padding: 10px 20px;
-        /* tweak for better mobile appearance */
     }
 
-    /* Constrain overall width */
     body,
     html {
         max-width: 768px;
@@ -1774,40 +1633,31 @@ input:focus {
         overflow-x: hidden;
     }
 
-    /* Adjust the lower header container to align items in one row */
     header .lower {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         width: 100%;
         padding: 0 15px !important;
-        /* add some side padding */
     }
 
-    /* Remove excessive right margin from the logo container */
     header .image {
         margin-right: 10px;
-        /* You might also adjust margin-top if needed */
     }
 
-    /* Ensure the socials container displays its items horizontally */
     header .socials {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
-        /* adjust spacing as needed */
     }
 
     .header-btn {
         width: 110px;
-        /* same width as the login button */
         padding: 10px 0;
-        /* adjust padding for a uniform look */
         text-align: center;
     }
 
-    /* Constrain the page width */
     body,
     html {
         max-width: 768px;
@@ -1815,7 +1665,6 @@ input:focus {
         overflow-x: hidden;
     }
 
-    /* Hamburger Icon - show only on mobile */
     .menu-icon {
         display: block;
         position: fixed;
@@ -1825,16 +1674,13 @@ input:focus {
         cursor: pointer;
 
         color: #000;
-        /* Adjust as needed */
     }
 
-    /* Position the navbar off-canvas by default */
     .navbar {
         position: fixed;
         top: 0;
         left: -100%;
         width: 70%;
-        /* Adjust width as needed */
         height: 100%;
         background: #fff;
         padding: 20px;
@@ -1845,12 +1691,10 @@ input:focus {
         z-index: 1000;
     }
 
-    /* When active, slide the navbar into view */
     .navbar.active {
         left: 0;
     }
 
-    /* Optionally style the navbar links */
     .navbar a {
         text-decoration: none;
         color: #333;
@@ -1859,7 +1703,6 @@ input:focus {
         border-bottom: 1px solid #ddd;
     }
 
-    /* Show the hamburger icon on mobile */
     .menu-icon {
         display: block;
         position: fixed;
@@ -1871,32 +1714,27 @@ input:focus {
         color: #000;
     }
 
-    /* Hide the navbar off-canvas by default */
     .navbar {
         position: fixed;
         top: 0;
         left: -100%;
         width: 70%;
-        /* Adjust width as needed */
         height: 100%;
         background: #fff;
         padding: 20px;
         display: flex;
         flex-direction: row;
-        /* Arrange links vertically */
         gap: 20px;
         transition: left 0.3s ease;
         z-index: 1000;
         background-color: white;
     }
 
-    /* Slide the navbar into view when active */
     .navbar.active {
         left: 0;
         background-color: white;
     }
 
-    /* Style the navbar links */
     .navbar a {
         text-decoration: none;
         color: #333;
@@ -1920,10 +1758,7 @@ input:focus {
     }
 }
 
-/* Extra Small (Phones) - Up to 480px */
 @media only screen and (max-width: 480px) {
-
-    /* Styles for extra small screens */
     .desktopBtn {
         display: none !important;
     }
@@ -2070,7 +1905,6 @@ body.dark-mode,
 
 .dark-mode .modal-header .btn-close {
     filter: brightness(0) invert(1);
-    /* Makes the default black X icon white */
 }
 
 .dark-mode .horizontal {
@@ -2103,8 +1937,6 @@ body.dark-mode .dark-logo {
     display: inline;
 }
 
-
-/* Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -2124,7 +1956,6 @@ body.dark-mode .dark-logo {
     background: linear-gradient(180deg, #bb6c66, #8e3838);
 }
 
-/* Firefox */
 html {
     scrollbar-width: auto;
 }
