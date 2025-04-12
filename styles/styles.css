@@ -1266,9 +1266,44 @@ input:focus {
     color: black;
 }
 
-
-
-
+.newsletter {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center;
+    margin-top: 40px;
+}
+.newsletter p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .newsletter input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .newsletter button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background var(--animation-timing);
+  }
+  
+  .newsletter button:hover {
+    background: var(--primary-hover-color);
+  }
 
 /*************************************/
 /*********** MEDIA QUERIES ***********/
