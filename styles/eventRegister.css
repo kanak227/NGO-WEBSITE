@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root {
+    --primary-color: #c72929;
+    --primary-hover-color: #b52323;
+    --input-background: #f8f9fa;
+    --input-focus-shadow: rgba(199, 41, 41, 0.2);
+    --animation-timing: 0.3s ease-in-out;
+    --input-border-color: #ecedec;
+  }
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +15,7 @@
 }
 
 body {
-    background-color: #f5f6fa;
+    background-color: #e9ecef; /* Greyish background */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,11 +38,7 @@ body {
     padding: 35px 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    /* Removed hover effect */
 }
 
 .card h2 {
@@ -105,3 +108,44 @@ textarea {
 .btn-register:hover {
     background-color: #c0392b;
 }
+
+.return-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    border: 1px solid var(--primary-color); /* Changed border color to red */
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .return-home a {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .return-home:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .return-home a:hover {
+    color: white;
+  }
+
+
+  .return-home {
+
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .return-home a {
+    color: #a62a2a;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
