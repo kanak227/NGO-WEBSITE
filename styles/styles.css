@@ -2074,6 +2074,8 @@ input:focus {
 
 .dark-mode .events-rcard {
     border-left-color: #ff6b6b;
+    border-left: 6px solid #ff6b6b;
+
 }
 
 .dark-mode .events-rcard:hover {
