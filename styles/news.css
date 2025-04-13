@@ -269,47 +269,6 @@ body.dark-mode{
   color: #aaa;
 }
 
-/* Media Queries for Small devices (phones) */
-@media (max-width: 480px) {
-
-  /*************************************/
-  /*********** NEWS SECTION ************/
-  /*************************************/
-  .container {
-    padding: 20px 5px;
-  }
-
-  .news-grid {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .news-card {
-    -webkit-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .card1 {
-    padding: 0;
-  }
-
-  /*************************************/
-  /************ NEWSLETTER *************/
-  /*************************************/
-  .newsletter {
-    padding: 20px 5px;
-  }
-
-
-  .newsletter button {
-    padding: 8px 16px;
-  }
-}
-
-
 .dark-mode .newsletter input,.dark-mode .newsletter button,.dark-mode .container h1,.dark-mode .news-title{
   color:var(--text-color);
 }

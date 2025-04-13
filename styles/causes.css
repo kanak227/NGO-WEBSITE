@@ -281,40 +281,6 @@ body {
   color: #aaa;
 }
 
-/* Media Queries for Small devices (phones) */
-@media (max-width: 480px) {
-
-  /*************************************/
-  /********** CAUSES SECTION ***********/
-  /*************************************/
-  .container {
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-  }
-
-  /*************************************/
-  /************ NEWSLETTER *************/
-  /*************************************/
-  .newsletter {
-    padding: 20px 5px;
-  }
-
-  .newsletter input {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  .newsletter button {
-    padding: 8px 16px;
-  }
-}
-
 .dark-mode .container h1,.dark-mode .card-content h3{
   color: var(--text-color);
 }

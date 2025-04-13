@@ -331,47 +331,6 @@ body.dark-mode{
   color: #aaa;
 }
 
-/* Media Queries for Small devices (phones) */
-@media (max-width: 480px) {
-  /*************************************/
-  /******* CONTACT INFO AND FORM *******/
-  /*************************************/
-  .container{
-    padding: 0px 5px !important;
-  }
-
-  .contact-box, .form-box{
-    width: 96vw !important;
-  }
-
-  /*************************************/
-  /******** CONTACT INFO CARDS *********/
-  /*************************************/
-  .info-section{
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  }
-
-  .info-card{
-    padding: 20px 10px;
-  }
-
-  /*************************************/
-  /************ NEWSLETTER *************/
-  /*************************************/
-  .newsletter {
-    padding: 20px 5px;
-  }
-
-  .newsletter input {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  .newsletter button {
-    padding: 8px 16px;
-  }
-}
-
 .dark-mode .heading h1,.dark-mode .contact-box h3 ,.dark-mode .contact-box,.dark-mode .form-box,.dark-mode input,.dark-mode textarea{
   color: var(--text-color);
 }

@@ -308,22 +308,6 @@ a {
   color: var(--primary-color);
 }
 
-@media (max-width: 480px) {
-  .container {
-    padding: 8px;
-  }
-
-  .form {
-    padding: 18px;
-  }
-
-  .remember-forgot {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-}
-
 body.dark-mode {
   background: linear-gradient(135deg, var(--card-background) 0%, var(--background-color) 100%) ;
 }
@@ -364,20 +348,4 @@ body.dark-mode {
 
 .return-home a:hover {
   color: white;
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 8px;
-  }
-
-  .form {
-    padding: 18px;
-  }
-
-  .remember-forgot {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
 }

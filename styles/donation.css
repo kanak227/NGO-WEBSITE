@@ -302,65 +302,6 @@ body.dark-mode{
   font-size: 14px;
 }
 
-/* Media Queries for Small devices (phones) */
-@media (max-width: 480px) {
-  /*************************************/
-  /*********** DONATION FORM ***********/
-  /*************************************/
-  .container{
-    padding: 0 2px !important;
-  }
-
-  .donation-form{
-    padding: 10px;
-    width: 100% !important;
-  }
-
-  .donate-now-heading {
-    font-size: 2rem; /* Adjusted font size for small screens */
-    margin-top: 70px; /* Increased top margin for small screens */
-  }
-
-  /*************************************/
-  /************ NEWSLETTER *************/
-  /*************************************/
-  .newsletter {
-    padding: 20px 5px;
-  }
-
-  .newsletter input {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  .newsletter button {
-    padding: 8px 16px;
-  }
-
-  /*************************************/
-  /*************** FOOTER **************/
-  /*************************************/
-  .links{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footerLink{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-  }
-
-  .footerLink strong{
-    color: #333;
-  }
-}
-
 .dark-mode .sidebar .project-organizer strong,.dark-mode .donation-form textarea,.dark-mode .container h1,.dark-mode .donation-form input,.dark-mode .sidebar .card,.dark-mode .donation-form h3{
   color:var(--text-color);
 }
