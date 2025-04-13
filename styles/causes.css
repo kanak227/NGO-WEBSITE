@@ -70,6 +70,8 @@ body {
   box-shadow: 0 4px 6px var(--card-shadow);
   overflow: hidden;
   transition: transform var(--animation-timing), box-shadow var(--animation-timing);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 15px;
 }
 
 .card:hover {
@@ -78,6 +80,8 @@ body {
   transform: translateY(-5px);
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
@@ -101,22 +105,22 @@ body {
 }
 
 .card-content .category.education {
-  background: #f77f00;
+  background: #f68206;
 }
 
 .card-content .category.shelter {
-  background: var(--primary-color);
+  background: rgb(255, 191, 0);
 }
 
 .card-content h3 {
   font-size: 20px;
-  color: #333;
   margin: 10px 0;
+  color: #0d0d0d;
 }
 
 .card-content p {
   font-size: 14px;
-  color: #777;
+  color: #333;
   margin-bottom: 10px;
 }
 
@@ -136,11 +140,11 @@ body {
 }
 
 .progress-bar span.education {
-  background: #f77f00;
+  background: #ff890a;
 }
 
 .progress-bar span.shelter {
-  background: var(--primary-color);
+  background: rgb(225, 159, 6);
 }
 
 .load-more {
@@ -157,12 +161,54 @@ body {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  border: #f6f1f1;
+  box-shadow: 5px solid#080808;
   transition: background var(--animation-timing);
 }
 
 .load-more button:hover {
   -webkit-background: var(--primary-hover-color);
   background: var(--primary-hover-color);
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+
+@keyframes gradientAnimation {
+  0% { background-color: #ff4d4d; }
+  50% { background-color: #e04444; }
+  100% { background-color: #ff4d4d; }
+}
+
+.causes-section {
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.text-content {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.text-content.visible {
+  opacity: 1;
+}
+
+.donate-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.img img {
+  transition: transform 0.3s ease;
+}
+
+.img:hover img {
+  transform: scale(1.1);
 }
 
 /*************************************/
