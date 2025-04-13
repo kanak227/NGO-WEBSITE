@@ -28,9 +28,11 @@ To run or modify this project, you will need:
 
 
 ## Demo Video '''
+## Demo Video 🎥
 Here is a screen recording of the NGO Website Project:  
-![Demo Video](assets/Screen%20Recording%20.mp4)
-
+<video width="600" controls>
+  <source src="assets/Screen Recording .mp4" type="video/mp4">
+</video>
 ## Folder Structure 🗂️
 ```
 ngo-website/
