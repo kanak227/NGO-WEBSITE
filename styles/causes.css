@@ -77,19 +77,24 @@ body {
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
   -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(9, 9, 9, 0.5);
 }
 
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .card-content {
   padding: 20px;
 }
-
+  
 .card-content .category {
   display: inline-block;
   padding: 5px 10px;
@@ -100,12 +105,49 @@ body {
   margin-bottom: 10px;
 }
 
+.card-content .category{
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  background-color: #ed3939;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
 .card-content .category.education {
   background: #f77f00;
 }
 
+.card-content .category.education {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  background-color: #ed3939;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .card-content .category.shelter {
   background: var(--primary-color);
+}
+
+.card-content .category.shelter{
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  background-color: #ed3939;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .card-content h3 {
@@ -129,18 +171,29 @@ body {
   overflow: hidden;
 }
 
+
 .progress-bar span {
   display: block;
   height: 100%;
   background: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+  background: linear-gradient(to right, #ff6b6b, #ff8e53);
 }
 
 .progress-bar span.education {
-  background: #f77f00;
+  display: block;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+  background: linear-gradient(to right, #ff6b6b, #ff8e53);
 }
 
 .progress-bar span.shelter {
+  display: block;
+  height: 100%;
   background: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+  background: linear-gradient(to right, #ff6b6b, #ff8e53);
 }
 
 .load-more {
@@ -155,7 +208,7 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   transition: background var(--animation-timing);
 }
@@ -163,6 +216,8 @@ body {
 .load-more button:hover {
   -webkit-background: var(--primary-hover-color);
   background: var(--primary-hover-color);
+  box-shadow: 0 4px 8px #000;
+  font-weight: bold;
 }
 
 /*************************************/
