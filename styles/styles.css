@@ -563,9 +563,10 @@ input:focus {
     margin-bottom: 10px;
 }
 
-.card1 p {
+.card1 p a{
     font-size: 1rem;
     color: crimson;
+    text-decoration: none;
 }
 
 .rightitems {

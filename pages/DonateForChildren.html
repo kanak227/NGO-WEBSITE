@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate for Children Education</title>
+    <link rel="stylesheet" href="/styles/DonateForChildren.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/favicon.png">
+    <!-- Font Awesome CDN for version 6+ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <!-- ************************************* -->
+    <!-- ********** HEADER (NAVBAR) ********** -->
+    <!-- ************************************* -->
+    <header class="main">
+        <div class="lower">
+            <div class="image">
+                <div class="logoContainer" onclick="">
+                    
+                
+
+                <!-- Light Mode Logo -->
+                <img src="/assets/log.svg" alt="Logo Light" class="logo light-logo">
+
+                <!-- Dark Mode Logo -->
+                <img src="/assets/loggo.svg" alt="Logo Dark" class="logo dark-logo">
+
+            </div>
+        </div>
+
+            <!-- Mobile Menu Icon (For Mobile Only) -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <div class="menu-header">
+                    <div class="menu-close" onclick="toggleMenu()">&times;</div>
+                </div>
+                <a href="index.html">Home</a>
+                <a href="/pages/causes.html">Causes</a>
+                <a href="/pages/events.html">Events</a>
+                <a href="/pages/news.html">News</a>
+                <a href="/pages/contact.html">Contact</a>
+
+                <div class="socials mobileBtn">
+                    <div class="login">
+                        <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                            Now</button>
+                    </div>
+
+                    <div>
+                        <a href="/pages/login.html">
+                            <button type="button" class="navBtn btn btn-outline-danger">Login Here</button>
+                        </a>
+                    </div>
+
+                    <div>
+                        <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Contact Info</button>
+                    </div>
+                    <div>
+                        <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                            <i class="themeIcon fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Navbar -->
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="/pages/events.html">Events</a>
+                <a href="/pages/news.html">News</a>
+                <a href="/pages/contact.html">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Social & Login Buttons -->
+        <div class="socials desktopBtn">
+            <div class="login">
+                <button type="button" class="navBtn btn btn-outline-danger" onclick="redirectToPage()">Donate
+                    Now</button>
+            </div>
+
+            <div>
+                <a href="/pages/login.html">
+                    <button type="button" class="navBtn btn btn-outline-danger">Login</button>
+                </a>
+            </div>
+
+            <div>
+                <button type="button" class="navBtn btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Contact Info</button>
+            </div>
+            <div>
+                <button id="themeToggle" class="navBtn btn btn-danger" onclick="toggleTheme()">
+                    <i class="themeIcon fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+            data-bs-backdrop="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Contact Information</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Phone No: +9145673824</p>
+                        <p>Email: kanakverma325@gmail.com</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ************************************* -->
+    <!-- *********** HERO SECTION ************ -->
+    <!-- ************************************* -->
+    <main>
+        <div class="mainbox">
+            <div class="text-content">
+                <p id="heading"><b> Give
+                    the Gift of <u style="text-decoration-color: rgb(245, 61, 61); text-decoration-line: bold;">Learning</u></b></p>
+                <p class="subsection">because no dream</p>
+                <p class="subsection">should be</p>
+                <p class="subsection">out of reach</p>
+                <p id="text" class="subsection">We believe every child deserves a chance to learn, dream, and rise. Your love can turn empty notebooks into bright futures. Join us—let’s build a world where education reaches every little heart.</p>
+                <button class="donate-btn" onclick="redirectToPage()">Donate now</button>
+            </div>
+            <div class="img">
+                <img src="/assets/child_edu.png" alt="image">
+            </div>
+        </div>
+
+    
+    <!-- ************************************* -->
+    <!-- ********** CHILDREN EDUCATION SECTION ********** -->
+    <!-- ************************************* -->
+    <main>
+        <div class="sad">
+            <!-- Pictures Section -->
+            <div class="poverty">
+                <img class="povert" src="/assets/child_education.png" alt="Child Education">
+            </div>
+
+            <!-- Content -->
+            <div class="para">
+                <p id="head">Welcome to Jago</p>
+                <h2 style="margin-bottom: 25px; font-weight: 600;">We are the largest crowdfunding platform<u
+                    style="text-decoration-color: rgb(245, 61, 61); text-decoration-thickness: 5px;"></u>
+                    <br>
+                    
+                <p  
+                    
+                    style="font-size: 1.7rem; margin-bottom: 15px; color: crimson; font-weight: 500; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    dedicated to unlocking education for every child.
+                    </p>
+                <p>We are committed to providing quality education, learning tools, and safe environments to children who are held back by circumstances beyond their control. Together, we can open doors to classrooms and bring hope to countless young minds.</p>
+                <p>Our mission is to empower children and their families by addressing educational gaps and creating sustainable learning opportunities that spark long-term change.</p>
+                <p>Join hands with us to create a world where every child has the chance to learn, dream, and rise. Because education isn’t a privilege—it’s their right.</p>
+                <div class="button">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ************************************* -->
+    <!-- ********** EVENTS SECTION ********** -->
+    <!-- ************************************* -->
+    <main class="fourth">
+
+        <!-- Title and Subtitle -->
+        <div class="events">
+            <div class="head2">
+                <p id="upper" style="background-color:rgb(170, 217, 240);">Upcoming Events</p>
+                <p>Join our upcoming <u
+                        style="text-decoration-color: goldenrod; text-decoration-thickness: 6px;">events</u></p>
+                <p>for contribution</p>
+            </div>
+        </div>
+
+        <!-- News Container -->
+        <div class="events-cards2">
+
+            <!-- Left News Section -->
+            <div class="events-leftcard">
+                <div class="events-image">
+                    <img src="/assets/book_donation.jpg" alt="Event Image">
+                </div>
+                <div class="events-text">
+                    <h1># Educated India</h1>
+                    <h2>Empower Through Education: Awareness & Fundraising Drive</h2>
+                    <p>A bold initiative to spotlight the urgent need for accessible, quality education for underprivileged children. Join us to raise awareness, funds, and futures—one child, one book, one dream at a time.</p>
+                    <button class="events-subscribe-btn">Join Now</button>
+                </div>
+            </div>
+        
+            <!-- Right News Section -->
+            <div class="events-rightcards">
+        
+                <!-- Right News Card 1 -->
+                <div class="events-rcard">
+                    <div class="events-text1">
+                        <h6># Book Donation Camp</h6>
+                        <h4> Books Before Barriers</h4>
+                        <p>A fundraising drive to donate books, supplies, and love to children who deserve more than just survival—they deserve success.</p>
+                    </div>
+                    <div class="events-icon-wrapper">
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-calendar-alt"></i></span>
+                            <div>
+                                <h6>Date</h6>
+                                <p>28tApr – 15th May, 2025</p>
+                            </div>
+                        </div>
+        
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Mumbai, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Right News Card 2 -->
+                <div class="events-rcard">
+                    <div class="events-text1">
+                        <h6># Education</h6>
+                        <h4>Unlock a Child’s World</h4>
+                        <p>A global donation sprint to fund school access, internet tools, and books. Let’s open doors, not just tabs. </p>
+                    </div>
+                    <div class="events-icon-wrapper">
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-calendar-alt"></i></span>
+                            <div>
+                                <h6>Date</h6>
+                                <p>21st June – 15th July, 2025</p>
+                            </div>
+                        </div>
+        
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Chennai, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Right News Card 3 -->
+                <div class="events-rcard">
+                    <div class="events-text1">
+                        <h6># Donation</h6>
+                        <h4>Backpacks to Brilliance</h4>
+                        <p>Sponsor school kits packed with essentials—books, hope, and ambition—for kids ready to chase the stars.</p>
+                    </div>
+                    <div class="events-icon-wrapper">
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-calendar-alt"></i></span>
+                            <div>
+                                <h6>Date</h6>
+                                <p>2 July – 15th Aug, 2025</p>
+                            </div>
+                        </div>
+        
+                        <div class="events-icon-text">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <div>
+                                <h6>Location</h6>
+                                <p>Kolkata, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>      
+    </main>
+<br>
+    <div class="break"></div>
+
+    <!-- ************************************* -->
+    <!-- ******** FUND RAISING BANNER ******** -->
+    <!-- ************************************* -->
+    <main class="fight">
+        <div class="contento">
+            <p class="p1">We’re starting revolutions in learning</p>
+            <p class="p2">We fund futures through education</p>
+            <button type="button" class="btn btn-danger btn-lg b1" onclick="redirectToPage()">Donate Now</button>
+        </div>
+    </main>
+
+    <div class="break2"></div>
+
+    <!-- ************************************* -->
+    <!-- ******** INFORMATION BANNER ********* -->
+    <!-- ************************************* -->
+    <main>
+        <div class="horizontal">
+            <div class="bar">
+                <!-- Total Campaigns -->
+                <div class="cont1 ok">
+                    <svg style="margin-top: 20px; margin-bottom: 15px;" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="50" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25 25 0 0 1 1.088.085c2.053.204 4.038.668 5.912 1.56zm-8 7.841V4.934c-.68.027-1.399.043-2.008.053A2.02 2.02 0 0 0 0 7v2c0 1.106.896 1.996 1.994 2.009l.496.008a64 64 0 0 1 1.51.048m1.39 1.081q.428.032.85.078l.253 1.69a1 1 0 0 1-.983 1.187h-.548a1 1 0 0 1-.916-.599l-1.314-2.48a66 66 0 0 1 1.692.064q.491.026.966.06" />
+                    </svg>
+                    <h1>2,346</h1>
+                    <p style="font-size: 1.5rem; opacity: 70%; font-weight: 500;">Total Campaigns</p>
+                </div>
+
+                <!-- Happy Volunteers -->
+                <div class="cont1">
+                    <svg style="margin-top: 20px; margin-bottom: 15px;" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="50" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                        <path
+                            d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
+                    </svg>
+                    </svg>
+                    <h1>1,294</h1>
+                    <p style="font-size: 1.5rem; opacity: 70%; font-weight: 500;">Happy Volunteers</p>
+                </div>
+
+                <!-- Funds Raised -->
+                <div class="cont1">
+                    <svg style="margin-top: 25px; margin-bottom: 10px;" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="50" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8m5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0" />
+                        <path
+                            d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195z" />
+                        <path
+                            d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083q.088-.517.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1z" />
+                        <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 6 6 0 0 1 3.13-1.567" />
+                    </svg>
+                    <h1>4,285</h1>
+                    <p style="font-size: 1.5rem; opacity: 70%; font-weight: 500;">Funds Raised</p>
+                </div>
+
+                <!-- Satisfied Donors -->
+                <div class="cont1">
+                    <svg style="margin-top: 20px; margin-bottom: 15px;" xmlns="http://www.w3.org/2000/svg" width="50"
+                        height="50" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8" />
+                    </svg>
+                    <h1>1,785</h1>
+                    <p style="font-size: 1.5rem; opacity: 70%; font-weight: 500;">Satisfied Donors</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="break no2  dark-bg"></div>
+
+    
+
+    <!-- ************************************* -->
+    <!-- ************** FOOTER *************** -->
+    <!-- ************************************* -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>We are dedicated to creating a better tomorrow by addressing the root causes of poverty and
+                    empowering communities to become self-reliant.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/pages/causes.html">Causes</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:example@example.com">jagowelfare@gmail.com</a></p>
+                <p>Phone: +123-456-7890</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" style="width: 18px;">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                            </path>
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>    
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Your Website. All Rights Reserved.</p>
+        </div>
+        <div id="scrollToTop">
+            <svg class="progress-circle" width="50" height="50">
+                <circle cx="25" cy="25" r="22"></circle>
+                <circle cx="25" cy="25" r="22" id="progress"></circle>
+            </svg>
+            <span class="arrow">▲</span>
+        </div>
+    </footer>
+
+    <!-- ************************************* -->
+    <!-- ***** JAVASCRIPT FOR THIS PAGE ****** -->
+    <!-- ************************************* -->
+    <script src="app.js"></script>
+    <script>
+        function redirectToPage() {
+            window.open('/pages/donation.html'); // Replace with your HTML file name
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            let menu = document.querySelector('.mobile-menu');
+            let icon = document.querySelector('.menu-icon');
+            if (!menu.contains(event.target) && !icon.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // To open and close collapsible navbar
+function toggleMenu() {
+    document.querySelector('.mobile-menu').classList.toggle('active');
+}
+window.addEventListener("DOMContentLoaded", () => {
+    const currentTheme = localStorage.getItem("theme");
+    const body = document.body;
+    const icons = document.querySelectorAll(".themeIcon");
+
+    const isDark = currentTheme === "dark";
+    if (isDark) {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+
+    icons.forEach(icon => {
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+    });
+});
+
+function toggleTheme() {
+    const body = document.body;
+    const icons = document.querySelectorAll(".themeIcon");
+
+    const isDark = body.classList.toggle("dark-mode");
+
+    icons.forEach(icon => {
+        icon.classList.toggle("fa-moon", !isDark);
+        icon.classList.toggle("fa-sun", isDark);
+    });
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+
+// Close menu when clicking outside
+document.addEventListener("click", function (event) {
+    let menu = document.querySelector('.mobile-menu');
+    let icon = document.querySelector('.menu-icon');
+    if (!menu.contains(event.target) && !icon.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+
+    </script>
+
+
+</body>
+
+</html>
