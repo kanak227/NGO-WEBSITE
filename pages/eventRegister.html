@@ -7,10 +7,37 @@
   <link rel="stylesheet" href="../styles/eventRegister.css" />
   <link rel="stylesheet" href="../styles/Queries.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.js"></script>
+  <style>
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+    .card.dark-mode {
+      background-color: #1e1e1e;
+      border-color: #333333;
+    }
+    .input-group label.dark-mode, .input-group input.dark-mode, 
+    .input-group select.dark-mode, .input-group textarea.dark-mode {
+      background-color: #1e1e1e;
+      color: #ffffff;
+      border-color: #333333;
+    }
+    .btn-register.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+  </style>
 </head>
 <body>
-  <!-- Add Return to Home button -->
-  
+  <!-- Dark mode toggle button -->
+  <div class="dark-mode-toggle" style="position: absolute; top: 10px; right: 10px;">
+    <button id="toggleDarkMode" style="display: flex; align-items: center; gap: 8px;">
+      <i id="darkModeIcon" class="themeIcon fas fa-moon"></i>
+      <span id="darkModeLabel">Dark Mode</span>
+    </button>
+  </div>
 
   <div class="container">
     <div class="return-home" style="position: absolute; top: 10px; left: 10px;">
@@ -91,5 +118,22 @@
   </div>
 
   <script src="../validation.js"></script>
+  <script>
+    // Dark mode toggle functionality
+    const toggleDarkMode = document.getElementById('toggleDarkMode');
+    const darkModeIcon = document.getElementById('darkModeIcon');
+    const darkModeLabel = document.getElementById('darkModeLabel');
+
+    toggleDarkMode.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('.card').classList.toggle('dark-mode');
+      document.querySelectorAll('.input-group label, .input-group input, .input-group select, .input-group textarea, .btn-register')
+        .forEach(el => el.classList.toggle('dark-mode'));
+
+      const isDark = document.body.classList.contains('dark-mode');
+      darkModeIcon.className = isDark ? 'themeIcon fas fa-sun' : 'themeIcon fas fa-moon';
+      darkModeLabel.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    });
+  </script>
 </body>
 </html>
