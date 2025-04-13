@@ -2058,6 +2058,87 @@ input:focus {
     }
 }
 
+/* Dark Mode Styles with Glow on Hover and Thin Borders */
+.dark-mode .events-leftcard,
+.dark-mode .events-rcard {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border: 1px solid #444; /* Thin border */
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.1), 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .events-rightcards {
+    background-color: transparent;
+}
+
+.dark-mode .events-rcard {
+    border-left-color: #ff6b6b;
+}
+
+.dark-mode .events-rcard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.3), 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .events-leftcard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.3), 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .events-image img {
+    border: 2px solid #333;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.1);
+}
+
+.dark-mode .events-text h1 {
+    color: #ff7f7f;
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+.dark-mode .events-text h2 {
+    color: #ff6b6b;
+    text-shadow: 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+.dark-mode .events-text p,
+.dark-mode .events-text1 p {
+    color: #ccc;
+}
+
+.dark-mode .events-text1 h6 {
+    color: #aaa;
+}
+
+.dark-mode .events-text1 h4 {
+    color: #f1f1f1;
+}
+
+.dark-mode .events-icon-text span {
+    color: #ff7f7f;
+    text-shadow: 0 0 6px rgba(255, 107, 107, 0.4);
+}
+
+.dark-mode .events-icon-text h6 {
+    color: #bbb;
+}
+
+.dark-mode .events-icon-text p {
+    color: #e0e0e0;
+}
+
+.dark-mode .events-subscribe-btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode .events-subscribe-btn:hover {
+    background-color: #e63946;
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(255, 107, 107, 0.5);
+}
 
 .dark-mode .main,
 .dark-mode .mobile-menu,
