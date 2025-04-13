@@ -600,11 +600,6 @@ input:focus {
     height: fit-content;
     align-items: baseline;
     justify-content: center;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('assets/about-background.jpg') no-repeat center center/cover;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px;
 }
 
 .para p {
@@ -618,61 +613,12 @@ input:focus {
     font-weight: 500;
     opacity: 70%;
     margin-bottom: 3px;
-    font-size: 2.5rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2{
-    font-size: 2rem;
-    color: #e67e22;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.p1, .p2 {
-    font-size: 1.5rem;
-    color: #2980b9;
-    text-align: center;
-    margin: 10px 0;
 }
 
 .button {
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.btn
-{
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #c0392b;
-    cursor: pointer;
-}
-
-.icons {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-}
-
-.Location h6 {
-    font-weight: bold;
-    color: #34495e;
-}
-
-.Location p {
-    color: #7f8c8d;
 }
 
 .button svg:hover {
@@ -695,24 +641,6 @@ h2{
     width: 90%;
     height: auto;
 }
-@media (max-width: 768px) {
-    .para {
-        padding: 20px;
-    }
-
-    #head {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .p1, .p2 {
-        font-size: 1.2rem;
-    }
-}
-
 
 /*************************************/
 /********** EVENTS SECTION ***********/
