@@ -67,6 +67,11 @@ main {
 .progress {
     display: flex;
     justify-content: space-between;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.progress:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .progress div {
@@ -324,4 +329,22 @@ footer nav ul li a:hover {
 .cont1 h1 {
     transition: all 0.3s ease;
     font-variant-numeric: tabular-nums;
+}
+
+a[href="../index.html"] {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color var(--animation-timing);
+}
+
+a[href="../index.html"]:hover {
+    background-color: var(--secondary-color);
 }
